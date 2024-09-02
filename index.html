@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body id="body">
+    <header id="header" class="header">
+        <div class="container">
+            <a href="" class="header__logo">
+                <img src="./assets/img/common/logo/site.svg" alt="">
+            </a>
+            <div class="header__inner">
+                <nav class="header__nav" id="header__nav">
+                    <ul>
+                        <li>
+                            <a href="">ホーム</a>
+                        </li>
+                        <li>
+                            <a href="./about/">ほけん百花とは？</a>
+                        </li>
+                        <li>
+                            <a href="./guarantee/">取扱保険商品</a>
+                        </li>
+                        <li>
+                            <a href="./after/">アフターフォロー</a>
+                        </li>
+                        <li>
+                            <a href="./worry/">こんなお悩みの方へ</a>
+                        </li>
+                        <li>
+                            <a href="./voice/">お客さまの声</a>
+                        </li>
+                        <li>
+                            <a href="./faq/">よくあるご質問</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__exts">
+                    <ul>
+                        <li>
+                            <a href="https://www.izumi-ld.co.jp/recruit/" class="ext">採用情報</a>
+                        </li>
+                        <li>
+                            <a href="https://www.izumi-ld.co.jp/company/" class="ext">運営会社</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__shop">
+                    <a href="./shop/">お近くの店舗を探す<img src="./assets/img/common/icon/search--fff.svg" alt=""></a>
+                </div>
+                <div class="header__btn" id="header__btn">
+                    <button><span></span><span></span><span></span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="index">
+        <section class="news">
+            <div class="container">
+                <div>
+                    <span class="category">キャンペーン</span>
+                    <p>【期間限定】初めてのご相談&Web予約でもらえる「サマーキャンペーン」開催中！</p>
+                </div>
+            </div>
+        </section>
+        <section class="slider">
+            <div class="swiper-wrapper">
+                <a class="swiper-slide" href="./shop/">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="./assets/img/index/slider/appointment-01_sp.png">
+                        <img src="./assets/img/index/slider/appointment-01_pc.png" alt="">
+                    </picture>
+                </a>
+                <a class="swiper-slide" href="./kenkou/">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="./assets/img/index/slider/health-support_sp.png">
+                        <img src="./assets/img/index/slider/health-support_pc.png" alt="">
+                    </picture>
+                </a>
+                <a class="swiper-slide" href="./shop/">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="./assets/img/index/slider/appointment-02_sp.png">
+                        <img src="./assets/img/index/slider/appointment-02_pc.png" alt="">
+                    </picture>
+                </a>
+                <a class="swiper-slide" href="./inbody/">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="./assets/img/index/slider/inbody_sp.png">
+                        <img src="./assets/img/index/slider/inbody_pc.png" alt="">
+                    </picture>
+                </a>
+            </div>
+        </section>
+        <section class="search-shop dots bg--light">
+            <div class="row-wide">
+                <ul class="search-shop__features">
+                    <li>
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="./img/sp.png">
+                            <img src="./assets/img/index/search-shop/ways_pc.svg" alt="">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="./img/sp.png">
+                            <img src="./assets/img/index/search-shop/appointment_pc.svg" alt="">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="./img/sp.png">
+                            <img src="./assets/img/index/search-shop/location_pc.svg" alt="">
+                        </picture>
+                    </li>
+                </ul>
+                <div class="search-shop__text">
+                    <h2><span>あなたに合った保険選び</span>を<br>納得いくまで<span>無料でお手伝い</span>します。</h2>
+                    <div class="attention">
+                        <p>オンラインで簡単予約</p>
+                    </div>
+                    <div class="btn">
+                        <a href="./shop/">お近くの店舗を探す</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="shop">
+            <div class="row-nar">
+                <h2 class="flowers">店舗検索</h2>
+                <div class="shop__inner">
+                    <div class="shop__list">
+                        <ul class="shop__region">
+                            <li data-region="hokkaido">
+                                <h3>北海道エリア</h3>
+                                <ul class="shop__pref">
+                                    <li>
+                                        <a href="./shop/?pref=hokkaido">北海道</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li data-region="tohoku">
+                                <h3>東北エリア</h3>
+                                <ul class="shop__pref">
+                                    <li>
+                                        <a href="./shop/?pref=miyagi">宮城県</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li data-region="kanto">
+                                <h3>関東エリア</h3>
+                                <ul class="shop__pref">
+                                    <li>
+                                        <a href="./shop/?pref=miyagi">東京都</a>
+                                    </li>
+                                    <li>
+                                        <a href="./shop/?pref=saitama">埼玉県</a>
+                                    </li>
+                                    <li>
+                                        <a href="./shop/?pref=kanagawa">神奈川県</a>
+                                    </li>
+                                    <li>
+                                        <a href="./shop/?pref=chiba">千葉県</a>
+                                    </li>
+                                    <li>
+                                        <a href="./shop/?pref=ibaragi">茨城県</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li data-region="chubu">
+                                <h3>中部エリア</h3>
+                                <ul class="shop__pref">
+                                    <li>
+                                        <a href="./shop/?pref=aichi">愛知県</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li data-region="kansai">
+                                <h3>関西エリア</h3>
+                                <ul class="shop__pref">
+                                    <li>
+                                        <a href="./shop/?pref=osaka">大阪府</a>
+                                    </li>
+                                    <li>
+                                        <a href="./shop/?pref=kyoto">京都府</a>
+                                    </li>
+                                    <li>
+                                        <a href="./shop/?pref=hyogo">兵庫県</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="shop__map">
+                        <img src="./assets/img/index/map.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="recommend">
+            <h2 class="flowers">おすすめコンテンツ</h2>
+            <div class="recommend__slider">
+                <div class="swiper-wrapper">
+                    <a href="" class="swiper-slide" data-reco="worry">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="./assets/img/index/recommend/worry_sp.svg">
+                            <img src="./assets/img/index/recommend/worry_pc.svg" alt="">
+                        </picture>
+                        <div>
+                            <h3>こんな保険のお悩みは<br>ございませんか？</h3>
+                            <p>保険に関するどんなお悩みでも、<br>まずはお気軽に相談してください。</p>
+                        </div>
+                    </a>
+                    <a href="" class="swiper-slide" data-reco="kenkou">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="./assets/img/index/recommend/kenkou_sp.svg">
+                            <img src="./assets/img/index/recommend/kenkou_pc.svg" alt="">
+                        </picture>
+                        <div>
+                            <span>特設ページ</span>
+                            <p>ココロとカラダの<br>健康お役立ち情報</p>
+                            <h3><span>「</span>ヘルスサポート<span>」</span></h3>
+                        </div>
+                    </a>
+                    <a href="" class="swiper-slide" data-reco="knowledge">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="./assets/img/index/recommend/knowledge_sp.svg">
+                            <img src="./assets/img/index/recommend/knowledge_pc.svg" alt="">
+                        </picture>
+                        <div>
+                            <h3><span>「</span>ほけん知っトク情報<span>」</span></h3>
+                            <p>「保険ってなんだかよくわからない」<br>「まだ必要ないんじゃないか？」<br>そんな保険に関する？を分かりやすく解説します</p>
+                        </div>
+                    </a>
+                    <a href="" class="swiper-slide" data-reco="worry">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="./assets/img/index/recommend/worry_sp.svg">
+                            <img src="./assets/img/index/recommend/worry_pc.svg" alt="">
+                        </picture>
+                        <div>
+                            <h3>こんな保険のお悩みは<br>ございませんか？</h3>
+                            <p>保険に関するどんなお悩みでも、<br>まずはお気軽に相談してください。</p>
+                        </div>
+                    </a>
+                    <a href="" class="swiper-slide" data-reco="kenkou">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="./assets/img/index/recommend/kenkou_sp.svg">
+                            <img src="./assets/img/index/recommend/kenkou_pc.svg" alt="">
+                        </picture>
+                        <div>
+                            <span>特設ページ</span>
+                            <p>ココロとカラダの<br>健康お役立ち情報</p>
+                            <h3><span>「</span>ヘルスサポート<span>」</span></h3>
+                        </div>
+                    </a>
+                    <a href="" class="swiper-slide" data-reco="knowledge">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="./assets/img/index/recommend/knowledge_sp.svg">
+                            <img src="./assets/img/index/recommend/knowledge_pc.svg" alt="">
+                        </picture>
+                        <div>
+                            <h3><span>「</span>ほけん知っトク情報<span>」</span></h3>
+                            <p>「保険ってなんだかよくわからない」<br>「まだ必要ないんじゃないか？」<br>そんな保険に関する？を分かりやすく解説します</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section class="about bg--light dots">
+            <div class="row">
+                <h2><img src="./assets/img/common/logo/site--short.svg" alt="">とは?</h2>
+                <h3><span>「</span>おもてなしの心<span>」</span>を大切にしている<br>来店型保険ショップです。</h3>
+                <p>保険のプロであるスタッフが、お客さまの“未来”を守るための大切な保険選びをお手伝いします。<br>また、ご加入後も安心のフォローサービスで、生涯にわたりお客さまをサポートします。</p>
+                <div class="about__features">
+                    <ul>
+                        <li>
+                            <img src="./assets/img/common/icon/flower-indicator-01.svg" alt="" class="indicator">
+                            <img class="main-img" src="./about/assets/img/features/free.svg" alt="">
+                            <p class="name">何度でも相談無料！</p>
+                            <p>ご相談・お見積もりは何度でも無料です。<br>ご納得いくまでご検討いただけます。</p>
+                        </li>
+                        <li>
+                            <img src="./assets/img/common/icon/flower-indicator-02.svg" alt="" class="indicator">
+                            <img class="main-img" src="./about/assets/img/features/access.svg" alt="">
+                            <p class="name">土日祝日もオープン！</p>
+                            <p>ショッピングセンター内や駅チカの店舗も多く、お仕事帰りやお買いものの合間にもお立ち寄りいただけます。</p>
+                        </li>
+                        <li>
+                            <img src="./assets/img/common/icon/flower-indicator-03.svg" alt="" class="indicator">
+                            <img class="main-img" src="./about/assets/img/features/female.svg" alt="">
+                            <p class="name">女性にやさしい！</p>
+                            <p>ほけん百花のスタッフは9割以上が女性。<br>男性には話しにくい女性特有の病歴やお悩みもお気軽にご相談ください。</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btns btn">
+                    <a href="./about/">ほけん百花とは？</a>
+                    <a href="./after/">アフターフォロー</a>
+                    <a href="./guarantee/">取扱保険商品</a>
+                </div>
+                <a href="./guarantee/other/">損害保険のお見積り・お申込みはこちらから</a>
+            </div>
+        </section>
+
+        <section class="connection">
+            <div class="row-wide">
+                <h2 class="flowers">取扱保険会社</h2>
+                <p>30社以上の保険会社から、お客さまのご要望に沿った保険商品をご提案いたします。</p>
+            </div>
+            <div class="connection__list">
+                <h3 class="dot-line">生命保険会社</h3>
+                <div class="connection__slider life">
+                    <ul>
+                        <li>
+                            <img src="./connection/assets/img/life/axa.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/life/asahi.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/life/afrac.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/life/aeon.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/life/fwd.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/life/orix.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/life/gibraltar.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/life/sumitomo.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/life/sony.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/life/sompo.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/life/daiichi-frontier.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/life/taiju.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/life/zurich.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/life/t-and-d.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/life/tokyo-kaijo.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/life/nanairo.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/life/nihon.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/life/neo-first.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/life/hanasaku.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/life/manulife.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/life/mitsui-sumitomo.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/life/metlife.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/life/medicare.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="connection__list">
+                <h3 class="dot-line">損害保険会社</h3>
+                <div class="connection__slider damage">
+                    <ul>
+                        <li>
+                            <img src="./connection/assets/img/damage/ipet.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/damage/anicom.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/damage/aig.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/damage/au.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/damage/secom.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/damage/sony.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/damage/tokyo-kaijo.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/damage/mitsui.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./connection/assets/img/damage/mitsui-direct.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="btn">
+                    <a href="./connection/">取扱保険会社</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="voice bg--light">
+            <div class="row">
+                <h2 class="flowers">お客さまの声</h2>
+                <p>「ほけん百花」にご相談いただいたお客さまからのお声をご紹介いたします。</p>
+                <p class="att">当社お客さまアンケート結果より(2023年4月～2023年11月実施)</p>
+                <div class="voice__satisfaction">
+                    <h3 class="dot-line">お客さま満足度</h3>
+                    <div class="voice__list">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <img src="./voice/assets/img/variation.svg" alt="">
+                            </li>
+                            <li class="swiper-slide">
+                                <img src="./voice/assets/img/satisfaction.svg" alt="">
+                            </li>
+                            <li class="swiper-slide">
+                                <img src="./voice/assets/img/explanation.svg" alt="">
+                            </li>
+                            <li class="swiper-slide">
+                                <img src="./voice/assets/img/process.svg" alt="">
+                            </li>
+                            <li class="swiper-slide">
+                                <img src="./voice/assets/img/attitude.svg" alt="">
+                            </li>
+                            <li class="swiper-slide">
+                                <img src="./voice/assets/img/appearance.svg" alt="">
+                            </li>
+                        </ul>
+                        <div class="swiper-button swiper-button-prev">
+                            <img src="./assets/img/common/icon/arrow--prm.svg" alt="">
+                        </div>
+                        <div class="swiper-button swiper-button-next">
+                            <img src="./assets/img/common/icon/arrow--prm.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="btn">
+                    <a href="./voice/">お客さまの声</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="row-nar">
+                <h2 class="flowers">よくあるご質問</h2>
+                <p>「ほけん百花」にお客さまからよくお寄せいただく質問の一覧です。</p>
+                <ul class="faq__list">
+                    <li>
+                        <details>
+                            <summary>相談したら必ず保険に入らないといけませんか？</summary>
+                            <div>お客さまのライフプランシミュレーションの結果、今の保険が最適である場合には切り替えずにご継続いただくことをおすすめしています。<br>相談したからといって、ご加入いただく必要はございません。<br>ご自身やご家族の不安を解消できる保険だとご納得いただいた場合のみご加入していただきたいと考えております。</div>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>相談にはお金がかかりますか？</summary>
+                            <div>ご納得いただけるまで相談は何度でも無料です。ご安心してご相談ください。</div>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>予約しないと相談できませんか？</summary>
+                            <div>ご予約いただかなくても大丈夫です。<br>ただし、ご予約優先とさせていただいておりますので、ご来店いただいてからお待たせすることのないよう、事前に電話予約（フリーダイヤル）もしくは24時間受付のインターネット予約をぜひご活用ください。</div>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>パンフレットなどの資料を郵送してもらうことは可能ですか？</summary>
+                            <div>もちろん可能です。<br>ご希望の保険商品や保険種類を最寄りの店舗のフリーダイヤルまでご連絡ください。</div>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>お店に行かないで相談することはできますか？</summary>
+                            <div>ご来店が難しい場合は、ご自宅にいながらオンラインでの相談も承っております。<br>詳しくはこちらのページをご覧ください。</div>
+                        </details>
+                    </li>
+                </ul>
+                <div class="btn">
+                    <a href="./faq/">よくあるご質問</a>
+                </div>
+            </div>
+        </section>
+        <section class="search-shop dots bg--light">
+            <div class="row-wide">
+                <ul class="search-shop__features">
+                    <li>
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="./img/sp.png">
+                            <img src="./assets/img/index/search-shop/ways_pc.svg" alt="">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="./img/sp.png">
+                            <img src="./assets/img/index/search-shop/appointment_pc.svg" alt="">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="./img/sp.png">
+                            <img src="./assets/img/index/search-shop/location_pc.svg" alt="">
+                        </picture>
+                    </li>
+                </ul>
+                <div class="search-shop__text">
+                    <h2><span>あなたに合った保険選び</span>を<br>納得いくまで<span>無料でお手伝い</span>します。</h2>
+                    <div class="attention">
+                        <p>オンラインで簡単予約</p>
+                    </div>
+                    <div class="btn">
+                        <a href="./shop/">お近くの店舗を探す</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="recruit">
+            <div class="row">
+                <h2 class="flowers">採用情報</h2>
+                <a href="https://www.izumi-ld.co.jp/recruit/index.html">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="./assets/img/index/recruit_sp.png">
+                        <img src="./assets/img/index/recruit_pc.png" alt="">
+                    </picture>
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <a id="backToTop" href="#body">
+            <img src="../../../assets/img/common/icon/reverse-arrow--fff.svg" alt="">
+        </a>
+        <div class="row">
+            <div class="footer__site">
+                <a href=""><img src="./assets/img/common/logo/site.svg" alt=""></a>
+            </div>
+            <div class="footer__map">
+                <ul class="footer__nav">
+                    <li>
+                        <a href="">ホーム</a>
+                    </li>
+                    <li>
+                        <a href="./about/">ほけん百花とは？</a>
+                    </li>
+                    <li>
+                        <a href="./after/">アフターフォロー</a>
+                    </li>
+                    <li>
+                        <a href="./voice/">お客さまの声</a>
+                    </li>
+                    <li>
+                        <a href="./faq/">よくあるご質問</a>
+                    </li>
+                    <li>
+                        <a href="./online/">オンライン保険相談</a>
+                    </li>
+                    <li>
+                        <a href="./inbody/">InBody無料体験</a>
+                    </li>
+                    <li>
+                        <a href="./connection/">取扱保険会社</a>
+                    </li>
+                    <li>
+                        <a href="./guarantee/">取扱保険商品</a>
+                    </li>
+                    <li>
+                        <a href="./knowledge/">ほけん知っとく情報</a>
+                    </li>
+                    <li>
+                        <a href="./kenkou/">ヘルスサポート（健康情報ページ）</a>
+                    </li>
+                    <li>
+                        <a href="./news/">ニュース&トピックス</a>
+                    </li>
+                    <li>
+                        <a href="./sitemap/">サイトマップ</a>
+                    </li>
+                </ul>
+                <span></span>
+                <ul class="footer__shop">
+                    <li>
+                        <a href="./shop/">店舗検索</a>
+                    </li>
+                    <li>
+                        <a href="./shop/?pref=tokyo">東京都の店舗一覧</a>
+                    </li>
+                    <li>
+                        <a href="./shop/?pref=saitama">埼玉県の店舗一覧</a>
+                    </li>
+                    <li>
+                        <a href="./shop/?pref=kanagawa">神奈川県の店舗一覧</a>
+                    </li>
+                    <li>
+                        <a href="./shop/?pref=chiba">千葉県の店舗一覧</a>
+                    </li>
+                    <li>
+                        <a href="./shop/?pref=ibaragi">茨城県の店舗一覧</a>
+                    </li>
+                    <li>
+                        <a href="./shop/?pref=hokkaido">北海道の店舗一覧</a>
+                    </li>
+                    <li>
+                        <a href="./shop/?pref=miyagi">宮城県の店舗一覧</a>
+                    </li>
+                    <li>
+                        <a href="./shop/?pref=osaka">大阪府の店舗一覧</a>
+                    </li>
+                    <li>
+                        <a href="./shop/?pref=hyogo">兵庫県の店舗一覧</a>
+                    </li>
+                    <li>
+                        <a href="./shop/?pref=kyoto">京都府の店舗一覧</a>
+                    </li>
+                    <li>
+                        <a href="./shop/?pref=aichi">愛知県の店舗一覧</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__company">
+                <a href=""><img src="./assets/img/common/logo/company.svg" alt=""></a>
+                <p>いずみライフデザイナーズ株式会社は、<br>来店型保険ショップ「ほけん百花」を運営する会社です。<br>住友生命保険相互会社100％出資のもと、多種多様な各保険会社の商品から、<br>お客さまのニーズに合ったプランを提案いたします。</p>
+            </div>
+            <div class="footer__exts">
+                <ul>
+                    <li>
+                        <a href="https://www.izumi-ld.co.jp/company/" class="ext">運営会社</a>
+                    </li>
+                    <li>
+                        <a href="https://www.izumi-ld.co.jp/recruit/" class="ext">採用情報</a>
+                    </li>
+                    <li>
+                        <a href="https://www.izumi-ld.co.jp/privacy_policy/" class="ext">プライバシーポリシー</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <span>Copyright &copy; Izumi Life Designers Co.,Ltd. All Rights Reserved.</span>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/common.js"></script>
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>
