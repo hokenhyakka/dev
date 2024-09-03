@@ -1,0 +1,63 @@
+.knowledge-one{
+    .row-nar{
+        > p{
+            &:first-child{
+                margin-bottom: 0;
+            }
+
+            & + p{
+                margin-top: 24px;
+            }
+        }
+    }
+
+    .btn{
+        margin-top: 72px;
+    }
+}
+
+.knowledge-one__content{
+    margin-top: 120px;
+
+    > p{
+        &:first-of-type{
+            margin-top: 48px;
+        }
+
+        a{
+            font-weight: 700;
+            color: var(--pink--primary);
+            text-decoration: underline;
+
+            &::before{
+                display: none;
+            }
+
+            @media (hover: hover){
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    > img{
+        margin: 56px auto 0;
+
+        + p{
+            margin-top: 72px;
+        }
+    }
+
+    .text--center{
+        text-align: center;
+    }
+
+    .dots{
+        margin: 24px auto 0;
+
+        & + p{
+            margin-top: 32px;
+        }
+    }
+}

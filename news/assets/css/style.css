@@ -1,0 +1,64 @@
+.news__list {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  margin-top: 88px;
+}
+.news__list li {
+  display: grid;
+  grid-template-columns: 170px auto;
+  gap: 22px;
+}
+.news__list .category {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 100%;
+  letter-spacing: 0;
+  width: 100%;
+  height: 40px;
+  border-radius: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.news__list .content {
+  font-size: 1.6rem;
+  line-height: 162%;
+  letter-spacing: 0.06em;
+  padding-top: 4px;
+}
+.news__list .content a {
+  color: var(--pink--primary);
+  font-weight: 700;
+  text-decoration: underline;
+}
+.news__list .content a::before {
+  display: none;
+}
+@media (hover: hover) {
+  .news__list .content a:hover {
+    text-decoration: none;
+  }
+}
+.news__list .content .ext::after {
+  width: 14px;
+  height: 14px;
+  margin-left: 2px;
+  margin-right: 4px;
+  background-image: url(../../../assets/img/common/icon/ext--prm.svg);
+}
+
+[data-category=campaign] {
+  background-color: var(--pink--dusty-light);
+  color: var(--pink--primary);
+}
+
+[data-category=info] {
+  background-color: var(--pink--primary);
+  color: #fff;
+}
+
+[data-category=other] {
+  background-color: #998b8f;
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */

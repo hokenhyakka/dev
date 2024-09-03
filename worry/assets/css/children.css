@@ -1,17 +1,8 @@
-.title {
-  padding-top: 96px;
-  padding-bottom: 96px;
-}
-.title hgroup {
-  align-items: start;
-}
-
 .thumb + .worry-one__details {
   margin-top: 96px;
 }
 
 .worry-one__details h2 {
-  font-size: 3.4rem;
   margin-bottom: 40px;
 }
 .worry-one__details p + p {
@@ -100,7 +91,7 @@
   justify-content: center;
   gap: 10px;
   height: 132px;
-  box-shadow: 4px 4px 0px 0px #F2D5E1;
+  box-shadow: 4px 4px 0px 0px #f2d5e1;
 }
 .worry__list a::before {
   display: none;

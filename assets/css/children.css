@@ -4,6 +4,13 @@
   padding-top: 112px;
   padding-bottom: 112px;
 }
+.title.gchild {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+.title.gchild hgroup {
+  align-items: start;
+}
 .title hgroup {
   display: flex;
   flex-direction: column;
@@ -114,15 +121,19 @@
     width: clamp(16px, 4vw, 18px);
   }
 }
-h2.flower, h3.flower {
-  font-size: 3.4rem;
+@media screen and (min-width: 769px) {
+  h2,
+  h3 {
+    font-size: 3.4rem;
+  }
 }
-
 @media screen and (max-width: 768px) {
-  h2.flower, h3.flower {
+  h2.flower,
+  h3.flower {
     font-size: clamp(2.2rem, 5.75vw, 3rem);
   }
-  h2.dot-line, h3.dot-line {
+  h2.dot-line,
+  h3.dot-line {
     font-size: clamp(2rem, 5vw, 3rem);
   }
 }

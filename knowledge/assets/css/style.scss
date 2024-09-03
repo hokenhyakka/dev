@@ -1,0 +1,22 @@
+.knowledge__list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 88px 44px;
+
+    a{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    img{
+        box-shadow: 6px 5px 0px 0px var(--pink--primary);
+        border: 4px solid var(--pink--primary);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    p{
+        font-size: 1.4rem;
+    }
+}
