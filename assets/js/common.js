@@ -46,21 +46,17 @@ window.addEventListener("resize", handleResize);
 const stickyHeader = document.querySelector(".header--stick");
 
 if (stickyHeader) {
-    let lastScrollTop = 0;
-
     window.addEventListener("scroll", () => {
         const currentScrollTop = window.scrollY;
 
-        if (currentScrollTop <= 20) {
-            stickyHeader.classList.remove("is-visible");
-        } else if (currentScrollTop > lastScrollTop) {
+        if (currentScrollTop > 100) {
             stickyHeader.classList.add("is-visible");
         } else {
             stickyHeader.classList.remove("is-visible");
         }
-        lastScrollTop = currentScrollTop;
     });
 }
+
 
 
 /* header responsive */

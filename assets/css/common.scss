@@ -365,12 +365,14 @@ h3 {
 .header--stick {
     position: fixed;
     top: 0;
-    z-index: 9999;
+    z-index: 9998;
     transform: translateY(-100%);
-    transition: 0.7s;
+    transition: 0.5s;
+    opacity: 0;
 
     &.is-visible {
         transform: none;
+        opacity: 1;
     }
 
     .header__inner {
@@ -799,6 +801,7 @@ h3 {
 footer {
     background-color: var(--black--dark);
     background-color: #f1f0f0;
+    background-color: #f8f8f8;
     padding-bottom: 24px;
 
     .row {
