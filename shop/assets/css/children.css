@@ -584,10 +584,13 @@
     margin-top: clamp(24px, 6vw, 40px);
   }
   .shop-one__other-shop ul {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: clamp(8px, 2vw, 16px);
-    width: min(480px, 100%);
     margin: 0 auto;
+  }
+  .shop-one__other-shop li {
+    width: calc(33.3333333333% - clamp(8px, 2vw, 16px) / 1.5);
   }
   .shop-one__other-shop a {
     font-size: min(1.5rem, 3vw);
@@ -598,6 +601,15 @@
   .shop-one__other-shop a::after {
     width: clamp(8px, 3vw, 12px);
     height: clamp(8px, 3vw, 12px);
+  }
+}
+@media screen and (max-width: 450px) {
+  .shop-one__other-shop ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .shop-one__other-shop li {
+    width: 100%;
   }
 }
 .shop-one__pref-list {

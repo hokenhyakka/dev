@@ -57,8 +57,6 @@ if (stickyHeader) {
     });
 }
 
-
-
 /* header responsive */
 function moveExts() {
     const exts = document.querySelector('.header__exts');
@@ -103,10 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', updateText);
 });
 
-
-
-
-/* header btn */
+/* header menu btn */
 const headerBtn = document.getElementById("header__btn");
 const header = document.getElementById("header");
 const headerNav = document.getElementById("header__nav");
