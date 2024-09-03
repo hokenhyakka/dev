@@ -62,6 +62,7 @@
 @media screen and (max-width: 768px) {
   .shop-one__main {
     margin-top: clamp(16px, 6vw, 32px);
+    margin-bottom: clamp(48px, 12.44vw, 88px);
   }
   .shop-one__main .row-wide {
     display: flex;
