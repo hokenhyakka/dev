@@ -1,0 +1,70 @@
+.title {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+.title hgroup {
+  align-items: start;
+}
+
+.guarantee-one .row p:first-child {
+  margin-bottom: 0;
+}
+.guarantee-one .row > .att {
+  font-size: 1.3rem;
+  margin-top: 14px;
+}
+
+.guarantee-one__list {
+  margin-top: 96px;
+}
+.guarantee-one__list h2 {
+  font-size: 3.4rem;
+}
+.guarantee-one__list ul {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px 24px;
+}
+.guarantee-one__list ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.guarantee-one__list ul li a {
+  height: 35px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
+}
+.guarantee-one__list ul li a img {
+  height: min(13px, 100%);
+}
+.guarantee-one__list ul li a::after {
+  display: none;
+}
+.guarantee-one__list ul li > img {
+  background-color: #fff;
+}
+.guarantee-one__list ul p {
+  font-size: 1.2rem;
+  line-height: 120%;
+}
+.guarantee-one__list > .btn {
+  margin-top: 96px;
+}
+
+.sumitomo-1-up .btns {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.sumitomo-1-up .btns a:first-of-type {
+  background-color: #c50018;
+}
+.sumitomo-1-up .btns a:nth-of-type(2) {
+  border: 1px solid #c50018;
+  background-color: #fff;
+}/*# sourceMappingURL=children.css.map */

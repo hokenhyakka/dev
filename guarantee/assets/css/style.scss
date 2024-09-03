@@ -1,0 +1,124 @@
+:root{
+    --green--very-light: #E5EFD9;
+    --blue--ver-light: #E3EFF6;
+}
+
+.guarantee{
+    .row-wide{
+
+        > .att{
+            color: var(--pink--primary);
+        }
+        > p{
+            
+            &:first-child{
+                margin-bottom: 0;
+            }
+
+            & + p{
+                margin-top: 16px;
+            }
+        }
+    }
+}
+
+.guarantee-type__one{
+    margin-top: 80px;
+    padding-bottom: 72px;
+    border-radius: 4px;
+
+    h2{
+        font-size: 3.2rem;
+        line-height: 100%;
+        color: #fff;
+        height: 70px;
+        width: 220px;
+        margin: 0 auto ;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: -24px;
+        padding-top: 6px;
+    }
+
+    ul{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0 56px;
+        gap: 24px 32px;
+        margin-top: 16px;
+    }
+
+    a{
+        display: grid;
+        grid-template-rows: 120px 48px;
+        border-radius: 4px;
+        overflow: hidden;
+        background-color: #fff;
+
+        @media (hover: hover){
+            &:hover{
+                opacity: 1;
+
+                .name{
+                    &::after{
+                        transform: translateX(6px);
+                    }
+                }
+            }
+        }
+
+        picture{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img{
+            height: min(90px, 100%);
+        }
+        
+    }
+
+    .name{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        background-color: var(--black);
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: 0 12px 0 14px;
+
+        &::after{
+            content: '';
+            width: 12px;
+            height: 12px;
+            background-image: url(../../../assets/img/common/icon/arrow--fff.svg);
+            background-size: cover;
+            transition: .3s;
+        }
+    }
+}
+
+[data-type="life"]{
+    background-color: var(--green--very-light);
+
+    h2{
+        background-color: var(--green--middle);
+    }
+}
+
+[data-type="damage"]{
+    background-color: var(--blue--ver-light);
+
+    h2{
+        background-color: var(--blue--middle);
+    }
+
+}

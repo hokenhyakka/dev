@@ -1,0 +1,96 @@
+.after h2 {
+  margin-bottom: 72px;
+}
+
+.after__one h3 {
+  font-size: 2.6rem;
+}
+.after__one ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 48px;
+  margin-bottom: 56px;
+}
+.after__one li {
+  background-color: var(--gray--very-light);
+  padding: 26px 32px 32px;
+  border-radius: 16px;
+}
+.after__one li p {
+  font-size: 1.5rem;
+  line-height: 200%;
+  margin-top: 16px;
+}
+.after__one h4 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--pink--primary);
+}
+.after__one h4:has(span) {
+  display: grid;
+  grid-template-columns: 112px auto;
+  gap: 10px;
+  align-items: center;
+}
+.after__one h4 span {
+  background-color: var(--pink--primary);
+  color: #fff;
+  font-weight: inherit;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 26px;
+}
+.after__one > p:first-of-type {
+  margin-top: 48px;
+}
+.after__one table {
+  width: 100%;
+  margin-top: 24px;
+}
+.after__one table tbody {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+}
+.after__one table tr {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.after__one table tr:first-of-type th {
+  background-color: var(--pink--primary);
+}
+.after__one table tr:last-of-type th {
+  background-color: var(--pink--dark);
+}
+.after__one table th, .after__one table td {
+  display: flex;
+  align-items: center;
+}
+.after__one table th {
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.8rem;
+  height: 64px;
+  justify-content: center;
+}
+.after__one table td {
+  text-align: left;
+  font-size: 1.6rem;
+  height: 56px;
+  justify-content: start;
+  padding: 0 32px;
+}
+.after__one table td:nth-of-type(odd) {
+  background-color: var(--pink--very-light);
+}
+
+@media screen and (max-width: 768px) {
+  .after__one h3 {
+    font-size: clamp(1.8rem, 4.75vw, 2.2rem);
+  }
+}/*# sourceMappingURL=style.css.map */

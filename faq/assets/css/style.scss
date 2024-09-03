@@ -1,0 +1,34 @@
+.faq__category-list {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    h2 {
+        
+        &::before {
+            display: none;
+        }
+    }
+}
+@media screen and (min-width: 769px){
+    .faq__category-list{
+        h2{
+            font-size: 2.6rem;
+
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .faq__category-list{
+        margin-top: clamp(40px, 10vw, 80px);
+        gap: clamp(40px, 10vw, 80px);
+    }
+}
+.faq__list {
+    margin-top: 32px;
+
+    details {
+        background-color: var(--gray--very-light);
+    }
+}

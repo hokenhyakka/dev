@@ -1,0 +1,43 @@
+.worry__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 48px 34px;
+
+    a {
+        display: grid;
+        grid-template-rows: 170px 65px;
+        border-radius: 6px;
+        overflow: hidden;
+
+        picture,
+        img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+        }
+    }
+
+    .name {
+        background-color: var(--black);
+        padding: 9px 16px 9px 18px;
+
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 10px;
+
+        &::after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background-image: url(../../../assets/img/common/icon/arrow--fff.svg);
+        }
+
+        p {
+            color: #fff;
+            font-size: 1.7rem;
+            line-height: 140%;
+            font-weight: 700;
+        }
+    }
+}
