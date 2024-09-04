@@ -689,6 +689,14 @@ h3.flowers::after {
     gap: 4px;
   }
 }
+@media screen and (max-width: 450px) {
+  .header .container {
+    padding: 0 8px 0 14px;
+  }
+  .header__inner {
+    padding-left: 0;
+  }
+}
 /* footer */
 footer {
   background-color: var(--black--dark);
@@ -1122,62 +1130,6 @@ footer > span {
     padding: 32px 0;
   }
 }
-main + .cmn__search-shop {
-  margin-top: 160px;
-}
-
-.cmn__search-shop {
-  padding-top: 40px;
-  padding-bottom: 48px;
-}
-.cmn__search-shop .row-nar {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-}
-.cmn__search-shop h2 {
-  font-size: 2.9rem !important;
-  line-height: 140%;
-  color: var(--black);
-}
-.cmn__search-shop h2 span {
-  font-weight: inherit;
-  color: var(--pink--primary);
-  background: linear-gradient(to bottom, transparent 60%, #ffefa3 60%);
-}
-
-.cmn__search-shop__btn {
-  position: relative;
-}
-.cmn__search-shop__btn .btn {
-  width: 640px;
-}
-.cmn__search-shop__btn .btn a {
-  height: 102px;
-  font-size: 3rem;
-  padding-top: 22px;
-}
-.cmn__search-shop__btn span {
-  position: absolute;
-  left: 0;
-  right: 0;
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.7rem;
-  text-align: center;
-  top: 20px;
-  line-height: 100%;
-  z-index: 2;
-}
-.cmn__search-shop__btn > img {
-  position: absolute;
-  left: -60px;
-  top: -72px;
-  width: 124px;
-}
-
 #backToTop {
   background-color: var(--black);
   position: fixed;

@@ -51,6 +51,10 @@
     padding-top: clamp(32px, 8.89vw, 48px);
     padding-bottom: clamp(32px, 7.56vw, 42px);
   }
+  .title.gchild {
+    padding-top: clamp(32px, 8.89vw, 48px);
+    padding-bottom: clamp(32px, 8.89vw, 48px);
+  }
   .title hgroup {
     gap: clamp(8px, 1.78vw, 10px);
   }
@@ -125,7 +129,7 @@
 }
 @media screen and (max-width: 768px) {
   .breadcrumb ul {
-    gap: clamp(12px, 3vw, 16px);
+    gap: clamp(6px, 2.22vw, 16px);
   }
   .breadcrumb li {
     font-size: clamp(1.2rem, 3vw, 1.4rem);
@@ -186,5 +190,102 @@
   .p-child .row-wide > p:first-child {
     margin-top: clamp(32px, 8vw, 56px);
     margin-bottom: clamp(56px, 14vw, 96px);
+  }
+}
+.cmn__search-shop .row-nar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cmn__search-shop h2 {
+  line-height: 140%;
+  color: var(--black);
+}
+.cmn__search-shop h2 span {
+  font-weight: inherit;
+  color: var(--pink--primary);
+  background: linear-gradient(to bottom, transparent 60%, #ffefa3 60%);
+}
+
+.cmn__search-shop__btn {
+  position: relative;
+  width: min(640px, 100%);
+}
+.cmn__search-shop__btn .btn {
+  width: 100%;
+}
+.cmn__search-shop__btn span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  line-height: 100%;
+  z-index: 2;
+}
+.cmn__search-shop__btn > img {
+  position: absolute;
+}
+
+@media screen and (min-width: 769px) {
+  main + .cmn__search-shop {
+    margin-top: 160px;
+  }
+  .cmn__search-shop {
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+  .cmn__search-shop .row-nar {
+    gap: 24px;
+  }
+  .cmn__search-shop h2 {
+    font-size: 2.9rem;
+  }
+  .cmn__search-shop__btn .btn a {
+    height: 102px;
+    font-size: 3rem;
+    padding-top: 22px;
+  }
+  .cmn__search-shop__btn span {
+    font-size: 1.7rem;
+    top: 20px;
+  }
+  .cmn__search-shop__btn > img {
+    left: -60px;
+    top: -72px;
+    width: 124px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main + .cmn__search-shop {
+    margin-top: clamp(72px, 16.89vw, 120px);
+  }
+  .cmn__search-shop {
+    padding-top: clamp(24px, 8.13vw, 40px);
+    padding-bottom: clamp(32px, 9.38vw, 48px);
+  }
+  .cmn__search-shop .row-nar {
+    gap: clamp(3.75vw, 3.56vw, 24px);
+  }
+  .cmn__search-shop h2 {
+    font-size: clamp(1.7rem, 5.31vw, 2.9rem);
+  }
+  .cmn__search-shop__btn .btn a {
+    padding-top: clamp(12px, 3.33vw, 20px);
+  }
+  .cmn__search-shop__btn span {
+    font-size: clamp(1rem, 2.44vw, 1.3rem);
+    top: clamp(12px, 3.56vw, 18px);
+  }
+  .cmn__search-shop__btn > img {
+    top: calc(-1 * clamp(20px, 3.33vw, 30px));
+    left: -24px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .cmn__search-shop__btn > img {
+    display: none;
   }
 }/*# sourceMappingURL=children.css.map */

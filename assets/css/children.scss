@@ -58,6 +58,11 @@
         padding-top: clamp(32px, 8.89vw, 48px);
         padding-bottom: clamp(32px, 7.56vw, 42px);
 
+        &.gchild{
+            padding-top: clamp(32px, 8.89vw, 48px);
+            padding-bottom: clamp(32px, 8.89vw, 48px);
+        }
+
         hgroup {
             gap: clamp(8px, 1.78vw, 10px);
 
@@ -84,14 +89,13 @@
         height: 40px;
         display: flex;
         align-items: center;
-        
+
         overflow-x: scroll;
     }
     li {
-        
         white-space: pre;
 
-        &:has(img){
+        &:has(img) {
             white-space: unset;
         }
 
@@ -121,7 +125,7 @@
         &::before {
             content: "";
             display: block;
-            
+
             background-size: contain;
             background-image: url(../img/common/icon/home--prm.svg);
         }
@@ -134,18 +138,17 @@
     }
 }
 
-@media screen and (min-width: 769px){
-    .breadcrumb{
-        ul{
+@media screen and (min-width: 769px) {
+    .breadcrumb {
+        ul {
             gap: 16px;
-            
         }
-        li{
+        li {
             font-size: 1.4rem;
 
-            &:first-of-type{
+            &:first-of-type {
                 width: 18px;
-            height: 18px;
+                height: 18px;
             }
         }
     }
@@ -154,7 +157,7 @@
 @media screen and (max-width: 768px) {
     .breadcrumb {
         ul {
-            gap: clamp(12px, 3vw, 16px);
+            gap: clamp(6px, 2.22vw, 16px);
         }
         li {
             font-size: clamp(1.2rem, 3vw, 1.4rem);
@@ -236,6 +239,141 @@
                     margin-bottom: clamp(56px, 14vw, 96px);
                 }
             }
+        }
+    }
+}
+
+.cmn__search-shop {
+    .row-nar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h2 {
+        line-height: 140%;
+        color: var(--black);
+
+        span {
+            font-weight: inherit;
+            color: var(--pink--primary);
+            background: linear-gradient(to bottom, transparent 60%, #ffefa3 60%);
+        }
+    }
+}
+
+.cmn__search-shop__btn {
+    position: relative;
+    width: min(640px, 100%);
+
+    .btn {
+        width: 100%;
+    }
+
+    span {
+        position: absolute;
+        left: 0;
+        right: 0;
+        color: #fff;
+        font-weight: 700;
+        text-align: center;
+        line-height: 100%;
+        z-index: 2;
+    }
+
+    > img {
+        position: absolute;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    main {
+        & + .cmn__search-shop {
+            margin-top: 160px;
+        }
+    }
+
+    .cmn__search-shop {
+        padding-top: 40px;
+        padding-bottom: 48px;
+
+        .row-nar {
+            gap: 24px;
+        }
+
+        h2 {
+            font-size: 2.9rem;
+        }
+    }
+
+    .cmn__search-shop__btn {
+        .btn {
+            a {
+                height: 102px;
+                font-size: 3rem;
+                padding-top: 22px;
+            }
+        }
+
+        span {
+            font-size: 1.7rem;
+            top: 20px;
+        }
+
+        > img {
+            left: -60px;
+            top: -72px;
+            width: 124px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        & + .cmn__search-shop {
+            margin-top: clamp(72px, 16.89vw, 120px);
+        }
+    }
+    .cmn__search-shop {
+        padding-top: clamp(24px, 8.13vw, 40px);
+        padding-bottom: clamp(32px, 9.38vw,48px);
+
+        .row-nar{
+            gap: clamp(3.75vw, 3.56vw,24px);
+        }
+
+        h2 {
+            font-size: clamp(1.7rem, 5.31vw, 2.9rem);
+        }
+    }
+
+    .cmn__search-shop__btn{
+        
+
+        .btn{
+            a{
+                padding-top: clamp(12px, 3.33vw, 20px);
+            }
+        }
+
+        span{
+            font-size: clamp(1rem, 2.44vw,1.3rem);
+            top: clamp(12px, 3.56vw,18px);
+        }
+
+        > img{
+            top: calc(-1 * clamp(20px, 3.33vw, 30px));
+            left: -24px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    .cmn__search-shop__btn{
+        > img{
+            display: none;
         }
     }
 }

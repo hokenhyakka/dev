@@ -13,13 +13,9 @@
 }
 
 .guarantee-one__list {
-    margin-top: 96px;
 
     ul {
-        margin-top: 48px;
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 32px 24px;
 
         li {
             display: flex;
@@ -34,29 +30,28 @@
                 align-items: center;
                 background-color: var(--black);
 
-                img{
+                img {
                     height: min(13px, 100%);
                 }
 
-                &::after{
+                &::after {
                     display: none;
                 }
             }
 
             > img {
                 background-color: #fff;
+                width: 100%;
             }
         }
 
         p {
-            font-size: 1.2rem;
+            
             line-height: 120%;
         }
     }
 
-    > .btn {
-        margin-top: 96px;
-    }
+    
 }
 
 .sumitomo-1-up {
@@ -73,6 +68,88 @@
                 border: 1px solid #c50018;
                 background-color: #fff;
             }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .guarantee-one__list {
+        margin-top: 96px;
+
+        ul {
+            margin-top: 48px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 32px 24px;
+
+            p{
+                font-size: 1.2rem;
+            }
+        }
+
+        > .btn {
+        margin-top: 96px;
+    }
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 451px){
+    .guarantee-one__list{
+        margin-top: clamp(48px, 10.67vw, 56px);
+        
+        ul{
+            margin-top: clamp(18px, 4vw,24px);
+            grid-template-columns: repeat(3,1fr);
+            row-gap: clamp(24px,5.33vw,32px);
+            column-gap: clamp(16px, 3.56vw, 22px);
+
+            p{
+                font-size: clamp(1rem, 2.22vw, 1.2rem);
+            }
+        }
+
+        
+    }
+}
+
+@media screen and (max-width: 768px){
+    .guarantee-one{
+        .row{
+            > .att{
+                font-size: clamp(1.1rem, 2.44vw,1.2rem);
+            }
+        }
+    }
+
+    .guarantee-one__list{
+        ul{
+            li{
+                a{
+                    &:has(img){
+                        padding: 0 8px;
+
+                        img{
+                            height: auto;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        > .btn{
+            margin-top: clamp(40px, 8.89vw,56px);
+        }
+    }
+}
+
+@media screen and (max-width: 450px){
+    .guarantee-one__list{
+        margin-top: clamp(32px, 8.89vw, 40px);
+        ul{
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: clamp(16px, 4.44vw, 20px);
+            column-gap: clamp(12px, 3.56vw,16px);
+            row-gap: clamp(20px, 5.33vw, 24px);
         }
     }
 }
