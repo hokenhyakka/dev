@@ -55,7 +55,7 @@
   font-weight: 700;
   line-height: 100%;
 }
-.news .container div {
+.news .container a {
   display: grid;
   grid-template-columns: 172px auto;
   gap: 22px;
@@ -77,7 +77,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .news .container div {
+  .news .container a {
     display: flex;
     gap: clamp(10px, 2.5vw, 20px);
   }
@@ -381,6 +381,11 @@
   }
   .shop__map {
     width: min(400px, 64.5vw);
+  }
+}
+@media screen and (max-width: 450px) {
+  .shop__inner {
+    padding-left: 4px;
   }
 }
 .recommend {

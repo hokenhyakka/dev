@@ -255,7 +255,7 @@ h3 {
 
         &.flowers{
             gap: 12px;
-            
+
             &::before,&::after{
                 width: 18px;
             height: 18px;
@@ -874,7 +874,7 @@ footer {
     display: flex;
 
     align-items: start;
-    margin-top: 56px;
+    
     margin-bottom: 40px;
 
     > span {
@@ -967,6 +967,8 @@ footer {
     }
     .footer__map {
         justify-content: space-between;
+        margin-top: 56px;
+
         > ul {
             display: grid;
             grid-auto-flow: column;
@@ -989,6 +991,7 @@ footer {
         flex-direction: column;
         gap: clamp(32px, 8vw, 40px);
         max-width: 660px;
+        margin-top: 32px;
 
         a {
             font-size: clamp(1.1rem, 3.25vw, 1.4rem);
@@ -1025,7 +1028,7 @@ footer {
 
     .footer__company {
         a {
-            height: clamp(28px, 7vw, 48px);
+            height: clamp(30px, 7.56vw, 48px);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -1298,9 +1301,14 @@ footer {
         gap: clamp(10px, 3vw, 16px);
 
         details {
-            padding: clamp(8px, 2.25vw, 16px) clamp(16px, 4.5vw, 32px) clamp(16px, 4.5vw, 32px);
+            padding: clamp(8px, 2.25vw, 16px) clamp(16px, 4.5vw, 32px);
+
             div {
                 font-size: clamp(1.2rem, 3vw, 1.5rem);
+            }
+
+            &[open]{
+                padding-bottom: clamp(16px, 4.5vw, 32px);
             }
         }
 
@@ -1310,15 +1318,16 @@ footer {
             padding-bottom: clamp(8px, 2.25vw, 16px);
 
             &::before {
-                width: clamp(13px, 3.5vw, 16px);
-                top: calc(clamp(8px, 2.25vw, 16px) + calc(clamp(1.3rem, 3.25vw, 1.6rem) / 2));
-                margin-top: 3px;
+                width: clamp(12px, 2.67vw, 16px);
+                top: calc(clamp(8px, 2.25vw, 16px) + calc(clamp(12px, 2.67vw, 16px) / 2) + 2px);
+                margin-top: 0;
             }
 
             &::after {
-                height: clamp(13px, 3.5vw, 16px);
-                top: clamp(8px, 2.25vw, 16px);
-                right: calc(clamp(13px, 3.5vw, 16px) / 2 - 1px);
+                height: clamp(12px, 2.67vw, 16px);
+                top: calc(clamp(8px, 2.25vw, 16px)  + 3px);
+                right: calc(clamp(12px, 2.67vw, 16px) / 2 - 1px);
+                margin-top: 0;
             }
         }
     }
