@@ -161,9 +161,7 @@ table {
 
 @media screen and (max-width: 768px) {
     .container,
-    .row-wide {
-        padding: 0 clamp(10px, 2.22vw, 20px);
-    }
+    .row-wide,
     .row,
     .row-nar {
         padding: 0 20px;
@@ -801,7 +799,7 @@ h3 {
 footer {
     background-color: var(--black--dark);
     background-color: #f1f0f0;
-    background-color: #f8f8f8;
+    // background-color: #f8f8f8;
     padding-bottom: 24px;
 
     .row {
@@ -1165,7 +1163,7 @@ footer {
         margin-top: clamp(22px, 5.5vw, 40px);
 
         img {
-            max-width: 660px;
+            max-width: 500px;
             margin: 0 auto;
         }
 
@@ -1444,25 +1442,44 @@ main {
         background-image: radial-gradient(#f7e8ef 30%, transparent 30%);
     }
 }
-.swiper-pagination {
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
     position: relative;
     bottom: 0;
-    top: unset;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: start;
-    gap: 8px;
+    
 
     .swiper-pagination-bullet {
-        margin: unset !important;
-        width: 10px;
-        height: 10px;
+        margin: unset;
         border: 1px solid var(--pink--primary);
         background-color: transparent;
         opacity: 1;
 
         &[aria-current] {
             background-color: var(--pink--primary);
+        }
+    }
+}
+@media screen and (min-width: 769px){
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        gap: 8px;
+
+        .swiper-pagination-bullet{
+            width: 10px;
+        height: 10px;
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        gap: clamp(6px, 1.33vw, 8px);
+
+        .swiper-pagination-bullet{
+            width: clamp(7px, 1.78vw, 10px);
+            height: clamp(7px, 1.78vw, 10px);
         }
     }
 }
