@@ -30,3 +30,18 @@ document.addEventListener('DOMContentLoaded', function() {
         firstH2.insertAdjacentText('afterbegin', h1Text);
     }
 });
+
+const eventList = document.querySelector('.shop-one__event-list');
+
+if (eventList) {
+    eventList.querySelectorAll('.category').forEach(function(category) {
+        if (category.classList.contains('info')) {
+            category.textContent = 'インフォメーション';
+        } else if (category.classList.contains('campaign')) {
+            category.textContent = 'キャンペーン';
+        } else if (category.classList.contains('event')) {
+            category.textContent = 'イベント';
+        }
+    });
+}
+
