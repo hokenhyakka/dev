@@ -195,15 +195,12 @@ h3 {
     &.dot-line {
         display: flex;
         align-items: center;
-        gap: 16px;
-
+        
         &::before,
         &::after {
             content: "";
-            height: 8px;
             width: auto;
             width: 100%;
-            background-size: 8px;
             background-image: radial-gradient(#e5afc7 30%, transparent 30%);
         }
     }
@@ -211,12 +208,11 @@ h3 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 8px;
+        
 
         &::before {
             content: "";
-            width: 20px;
-            height: 20px;
+            
             background-image: url(../img/common/icon/flower--ylw.svg);
             background-size: cover;
         }
@@ -226,15 +222,44 @@ h3 {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 12px;
+        
 
         &::before,
         &::after {
             content: "";
-            width: 18px;
-            height: 18px;
+            
             background-image: url(../img/common/icon/flower--ylw.svg);
             background-size: cover;
+        }
+    }
+}
+
+@media screen and (min-width: 769px){
+    h2, h3{
+        &.dot-line{
+            gap: 16px;
+
+            &::before, &::after{
+                height: 8px;
+                background-size: 8px;
+            }
+        }
+        &.flower{
+            gap: 8px;
+
+            &::before{
+                width: 20px;
+            height: 20px;
+            }
+        }
+
+        &.flowers{
+            gap: 12px;
+            
+            &::before,&::after{
+                width: 18px;
+            height: 18px;
+            }
         }
     }
 }
@@ -244,6 +269,11 @@ h3 {
     h3 {
         &.dot-line {
             gap: clamp(8px, 2.5vw, 12px);
+
+            &::before, &::after{
+                height: clamp(7px, 1.56vw, 8px);
+                background-size: clamp(7px, 1.56vw, 8px);
+            }
         }
         &.flower {
             gap: clamp(6px, 1.5vw, 8px);
@@ -1494,6 +1524,11 @@ main {
 }
 @media screen and (max-width: 768px) {
     .show_pc {
+        display: none;
+    }
+}
+@media screen and (min-width: 451px){
+    .show_sp-nar{
         display: none;
     }
 }

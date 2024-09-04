@@ -48,11 +48,11 @@
 
 @media screen and (max-width: 768px) {
   .title {
-    padding-top: clamp(40px, 12vw, 80px);
-    padding-bottom: clamp(40px, 12vw, 80px);
+    padding-top: clamp(32px, 8.89vw, 48px);
+    padding-bottom: clamp(32px, 7.56vw, 42px);
   }
   .title hgroup {
-    gap: clamp(12px, 4vw, 16px);
+    gap: clamp(8px, 1.78vw, 10px);
   }
   .title hgroup span {
     font-size: clamp(1.4rem, 3.5vw, 1.8rem);
@@ -73,10 +73,13 @@
   height: 40px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  overflow-x: scroll;
 }
 .breadcrumb li {
-  font-size: min(1.4rem, 14px);
+  white-space: pre;
+}
+.breadcrumb li:has(img) {
+  white-space: unset;
 }
 .breadcrumb li img {
   height: 10px;
@@ -100,8 +103,6 @@
 .breadcrumb li:first-of-type::before {
   content: "";
   display: block;
-  width: 18px;
-  height: 18px;
   background-size: contain;
   background-image: url(../img/common/icon/home--prm.svg);
 }
@@ -110,6 +111,18 @@
   color: var(--pink--primary);
 }
 
+@media screen and (min-width: 769px) {
+  .breadcrumb ul {
+    gap: 16px;
+  }
+  .breadcrumb li {
+    font-size: 1.4rem;
+  }
+  .breadcrumb li:first-of-type {
+    width: 18px;
+    height: 18px;
+  }
+}
 @media screen and (max-width: 768px) {
   .breadcrumb ul {
     gap: clamp(12px, 3vw, 16px);
@@ -119,6 +132,7 @@
   }
   .breadcrumb li:first-of-type::before {
     width: clamp(16px, 4vw, 18px);
+    height: clamp(16px, 4vw, 18px);
   }
 }
 @media screen and (min-width: 769px) {
@@ -130,7 +144,7 @@
 @media screen and (max-width: 768px) {
   h2.flower,
   h3.flower {
-    font-size: clamp(2.2rem, 5.75vw, 3rem);
+    font-size: clamp(2.1rem, 5.75vw, 3rem);
   }
   h2.dot-line,
   h3.dot-line {

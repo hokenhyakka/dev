@@ -2,9 +2,6 @@
   padding-bottom: 0 !important;
 }
 
-.shop__tab-list {
-  margin-top: 72px;
-}
 .shop__tab-list ul {
   display: grid;
   gap: 8px;
@@ -17,7 +14,6 @@
 }
 .shop__tab-list .pref-tab {
   width: 100%;
-  height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,8 +27,14 @@
 }
 
 @media screen and (min-width: 769px) {
+  .shop__tab-list {
+    margin-top: 72px;
+  }
   .shop__tab-list ul {
     grid-template-columns: repeat(11, 1fr);
+  }
+  .shop__tab-list .pref-tab {
+    height: 48px;
   }
 }
 @media screen and (max-width: 768px) and (min-width: 451px) {
@@ -52,17 +54,29 @@
   .shop__tab-list ul {
     grid-template-columns: repeat(3, 1fr);
   }
+  .shop__tab-list .pref-tab {
+    height: clamp(44px, 10.22vw, 48px);
+  }
 }
 .shop__shop-list {
-  background-color: #fff;
-  padding-top: 56px;
-  padding-bottom: 144px;
   overflow-y: hidden;
 }
 .shop__shop-list .row-wide {
   position: relative;
 }
 
+@media screen and (min-width: 769px) {
+  .shop__shop-list {
+    background-color: #fff;
+    padding-top: 56px;
+    padding-bottom: 144px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .shop__shop-list {
+    padding-top: clamp(40px, 8.89vw, 48px);
+  }
+}
 .shop__pref-one {
   position: absolute;
   top: 0;
@@ -91,6 +105,11 @@
     opacity: 1;
   }
 }
+@media screen and (max-width: 768px) {
+  .shop__pref-one ul {
+    gap: clamp(40px, 8.89vw, 48px);
+  }
+}
 .shop-tags {
   display: grid;
 }
@@ -104,7 +123,6 @@
   border-style: solid;
   border-radius: 4px;
   height: 32px;
-  font-size: 1.4rem;
   line-height: 100%;
   font-weight: 700;
   letter-spacing: 0;
@@ -144,6 +162,19 @@
   margin-top: 2px;
 }
 
+@media screen and (min-width: 769px) {
+  .shop-tags .tag {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .shop-tags .tag {
+    font-size: clamp(11px, 2.67vw, 1.4rem);
+  }
+  .shop-tags .tag img {
+    height: clamp(12px, 2.67vw, 1.4rem);
+  }
+}
 .shop__one .name {
   font-weight: bold;
 }
@@ -160,12 +191,7 @@
 }
 .shop__one .btns a {
   border-radius: 4px;
-  font-size: 1.6rem;
-  height: 50px;
   box-shadow: none;
-}
-.shop__one .access p {
-  font-size: 1.4rem;
 }
 .shop__one .learn-more {
   background-color: var(--pink--dusty-light);
@@ -173,4 +199,39 @@
 }
 .shop__one .learn-more::after {
   background-image: url(../../../assets/img/common/icon/arrow--prm.svg);
+}
+
+@media screen and (min-width: 769px) {
+  .shop__one .access p {
+    font-size: 1.4rem;
+  }
+  .shop__one .btns {
+    font-size: 1.6rem;
+  }
+  .shop__one .btns a {
+    height: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .shop__one .name {
+    font-size: clamp(1.7rem, 4vw, 2rem);
+  }
+  .shop__one .shop-tags {
+    margin-top: clamp(10px, 2.22vw, 12px);
+  }
+  .shop__one .access {
+    margin-top: 10px;
+  }
+  .shop__one .access p {
+    line-height: 175%;
+    font-size: clamp(1.1rem, 2.67vw, 1.4rem);
+  }
+  .shop__one .btns {
+    margin-top: clamp(14px, 3.11vw, 16px);
+    width: 100%;
+  }
+  .shop__one .btns a {
+    font-size: clamp(1.4rem, 3.56vw, 1.6rem);
+    height: clamp(48px, 10.67vw, 50px);
+  }
 }/*# sourceMappingURL=style.css.map */

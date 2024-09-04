@@ -188,16 +188,13 @@ h2.dot-line,
 h3.dot-line {
   display: flex;
   align-items: center;
-  gap: 16px;
 }
 h2.dot-line::before, h2.dot-line::after,
 h3.dot-line::before,
 h3.dot-line::after {
   content: "";
-  height: 8px;
   width: auto;
   width: 100%;
-  background-size: 8px;
   background-image: radial-gradient(#e5afc7 30%, transparent 30%);
 }
 h2.flower,
@@ -205,13 +202,10 @@ h3.flower {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
 }
 h2.flower::before,
 h3.flower::before {
   content: "";
-  width: 20px;
-  height: 20px;
   background-image: url(../img/common/icon/flower--ylw.svg);
   background-size: cover;
 }
@@ -220,22 +214,48 @@ h3.flowers {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
 }
 h2.flowers::before, h2.flowers::after,
 h3.flowers::before,
 h3.flowers::after {
   content: "";
-  width: 18px;
-  height: 18px;
   background-image: url(../img/common/icon/flower--ylw.svg);
   background-size: cover;
 }
 
+@media screen and (min-width: 769px) {
+  h2.dot-line, h3.dot-line {
+    gap: 16px;
+  }
+  h2.dot-line::before, h2.dot-line::after, h3.dot-line::before, h3.dot-line::after {
+    height: 8px;
+    background-size: 8px;
+  }
+  h2.flower, h3.flower {
+    gap: 8px;
+  }
+  h2.flower::before, h3.flower::before {
+    width: 20px;
+    height: 20px;
+  }
+  h2.flowers, h3.flowers {
+    gap: 12px;
+  }
+  h2.flowers::before, h2.flowers::after, h3.flowers::before, h3.flowers::after {
+    width: 18px;
+    height: 18px;
+  }
+}
 @media screen and (max-width: 768px) {
   h2.dot-line,
   h3.dot-line {
     gap: clamp(8px, 2.5vw, 12px);
+  }
+  h2.dot-line::before, h2.dot-line::after,
+  h3.dot-line::before,
+  h3.dot-line::after {
+    height: clamp(7px, 1.56vw, 8px);
+    background-size: clamp(7px, 1.56vw, 8px);
   }
   h2.flower,
   h3.flower {
@@ -1252,6 +1272,11 @@ main + .cmn__search-shop {
 }
 @media screen and (max-width: 768px) {
   .show_pc {
+    display: none;
+  }
+}
+@media screen and (min-width: 451px) {
+  .show_sp-nar {
     display: none;
   }
 }/*# sourceMappingURL=common.css.map */

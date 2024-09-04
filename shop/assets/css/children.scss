@@ -93,25 +93,16 @@
     height: auto;
 
     .swiper-pagination {
-        position: relative;
-        bottom: unset;
-        top: unset;
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        gap: 8px;
+        align-items: start;
+    }
+}
 
-        .swiper-pagination-bullet {
-            margin: unset;
-            width: 10px;
-            height: 10px;
-            border: 1px solid var(--pink--primary);
-            background-color: transparent;
-            opacity: 1;
-
-            &[aria-current] {
-                background-color: var(--pink--primary);
-            }
+@media screen and (min-width: 769px) {
+    .shop-one__slider {
+        display: grid;
+        grid-template-rows: 310px 1fr;
+        .swiper-slide {
+            height: 310px;
         }
     }
 }
@@ -122,8 +113,8 @@
         margin: 0 auto;
         order: 1;
 
-        .swiper-slide{
-            img{
+        .swiper-slide {
+            img {
                 object-fit: contain;
                 width: 100%;
                 height: auto;
@@ -198,13 +189,12 @@
             background-color: var(--pink--primary);
             color: #fff;
             font-weight: 700;
-            font-size: 1.5rem;
+
             line-height: 100%;
             letter-spacing: 0.02em;
             padding: 5px 8px 4px;
         }
         .att {
-            font-size: 1.4rem;
             margin-top: 10px;
         }
         a {
@@ -221,16 +211,10 @@
             }
         }
     }
-
     tr,
     th,
     td {
         text-align: left;
-
-        p,
-        a {
-            font-size: 1.6rem;
-        }
     }
 }
 
@@ -244,6 +228,24 @@
         td {
             padding: 16px 22px 24px;
             background-color: #fff;
+
+            .weekdays,
+            .weekend {
+                font-size: 1.5rem;
+            }
+
+            .att {
+                font-size: 1.4rem;
+            }
+        }
+
+        tr,
+        th,
+        td {
+            p,
+            a {
+                font-size: 1.6rem;
+            }
         }
     }
 }
@@ -275,6 +277,15 @@
                 + p {
                     margin-top: clamp(8px, 2.5vw, 12px);
                 }
+            }
+
+            .weekdays,
+            .weekend {
+                font-size: clamp(1.1rem, 2.44vw, 1.2rem);
+            }
+
+            .att{
+                font-size: clamp(1.2rem, 2.67vw, 1.4rem);
             }
         }
 
@@ -310,10 +321,6 @@
     }
 }
 
-.shop-one__access {
-    margin-top: 88px;
-}
-
 .shop-one__access-inner {
     margin-top: 48px;
 
@@ -329,14 +336,20 @@
 }
 
 @media screen and (min-width: 769px) {
+    .shop-one__access {
+        margin-top: 88px;
+    }
     .shop-one__access-inner {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 32px;
     }
 }
-@media screen and (max-width: 768px){
-    .shop-one__access-inner{
+@media screen and (max-width: 768px) {
+    .shop-one__access {
+        margin-top: clamp(50px, 16vw, 80px);
+    }
+    .shop-one__access-inner {
         width: min(480px, 100%);
         margin: clamp(16px, 4vw, 40px) auto 0;
         display: flex;
@@ -345,12 +358,7 @@
     }
 }
 
-.shop-one__event {
-    margin-top: 88px;
-}
-
 .shop-one__event-list {
-    margin-top: 40px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -399,8 +407,6 @@
         text-align: left;
     }
     .outline {
-        
-
         p {
             font-size: 1.6rem;
             line-height: 175%;
@@ -461,7 +467,12 @@
 }
 
 @media screen and (min-width: 769px) {
+    .shop-one__event {
+        margin-top: 88px;
+    }
+
     .shop-one__event-list {
+        margin-top: 40px;
         .name {
             display: grid;
             grid-template-columns: 180px auto;
@@ -476,9 +487,13 @@
     }
 }
 
-@media screen and (max-width: 768px){
-    .shop-one__event-list{
-        li{
+@media screen and (max-width: 768px) {
+    .shop-one__event {
+        margin-top: clamp(56px, 14.22vw, 72px);
+    }
+    .shop-one__event-list {
+        margin-top: clamp(16px, 4vw, 40px);
+        li {
             display: flex;
             flex-direction: column;
             gap: clamp(16px, 4.5vw, 24px);
@@ -487,40 +502,40 @@
             padding-left: clamp(16px, 4vw, 32px);
             padding-bottom: clamp(26px, 7.5vw, 38px);
         }
-        .category{
+        .category {
             display: inline-flex;
             font-size: clamp(1.2rem, 3.25vw, 1.5rem);
             height: clamp(28px, 7.5vw, 34px);
             padding: 0 clamp(16px, 4vw, 20px);
         }
-        h3{
+        h3 {
             font-size: clamp(1.7rem, 4.75vw, 2.2rem);
         }
 
-        .outline{
+        .outline {
             display: flex;
             flex-direction: column;
             gap: 20px;
 
-            p{
-                font-size: clamp(1.3rem,3.25vw,1.5rem);
+            p {
+                font-size: clamp(1.2rem, 2.89vw, 1.5rem);
 
-                & + .att{
+                & + .att {
                     margin-top: clamp(12px, 3.5vw, 16px);
                 }
             }
-            .att{
+            .att {
                 font-size: clamp(1.2rem, 3vw, 1.4rem);
             }
 
-            .details{
+            .details {
                 display: flex;
                 flex-direction: column;
                 align-items: start;
                 gap: clamp(10px, 3vw, 16px);
             }
 
-            .label{
+            .label {
                 width: clamp(48px, 22.5vw, 110px);
                 font-size: clamp(1.2rem, 3vw, 1.4rem);
                 height: clamp(28px, 7vw, 30px);
@@ -530,8 +545,6 @@
 }
 
 .shop-one__insurance-type {
-    margin-top: 80px;
-
     ul {
         margin-top: 32px;
         display: grid;
@@ -551,15 +564,23 @@
     }
 }
 
-@media screen and (max-width: 768px){
-    .shop-one__insurance-type{
-        ul{
+@media screen and (min-width: 769px) {
+    .shop-one__insurance-type {
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .shop-one__insurance-type {
+        margin-top: clamp(56px, 14.22vw, 72px);
+
+        ul {
             grid-template-columns: repeat(3, 1fr);
             width: min(480px, 100%);
-            margin: clamp(20px, 6vw, 32px) auto 0;
+            margin: clamp(16px, 4vw, 40px) auto 0;
             gap: 6px;
         }
-        li{
+        li {
             font-size: clamp(1.1rem, 3vw, 1.4rem);
             height: clamp(38px, 10vw, 52px);
         }
@@ -567,58 +588,77 @@
 }
 
 .shop-one__message {
-    margin-top: 80px;
-    margin-bottom: 80px;
-
     .row-nar {
         div {
             background-color: var(--pink--very-light);
-            padding-top: 48px;
-            padding-right: 40px;
-            padding-bottom: 40px;
-            padding-left: 40px;
-            border-radius: 16px;
         }
     }
 
-    h2 {
-        font-size: 3rem;
-    }
-
     p {
-        font-size: 1.6rem;
         line-height: 175%;
-        margin-top: 24px;
     }
 }
 
-@media screen and (max-width: 768px){
-    .shop-one__message{
-        .row-nar{
-            div{
+@media screen and (min-width: 769px) {
+    .shop-one__message {
+        margin-top: 80px;
+        margin-bottom: 80px;
+
+        .row-nar {
+            div {
+                padding-top: 48px;
+                padding-right: 40px;
+                padding-bottom: 40px;
+                padding-left: 40px;
+                border-radius: 16px;
+            }
+        }
+
+        h2 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+            margin-top: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .shop-one__message {
+        margin-top: clamp(40px, 10.67vw, 56px);
+        margin-bottom: clamp(28px, 8vw, 56px);
+
+        .row-nar {
+            div {
                 padding-top: clamp(24px, 6vw, 40px);
                 padding-right: clamp(14px, 5vw, 24px);
                 padding-left: clamp(14px, 5vw, 24px);
                 padding-bottom: clamp(24px, 6vw, 40px);
+                border-radius: 8px;
             }
         }
-        h2{
-            font-size: clamp(2rem, 5vw, 3rem);
-            &::before, &::after{
+        h2 {
+            text-align: left;
+            font-size: clamp(1.6rem, 4.44vw, 2.2rem);
+            justify-content: start;
+            white-space: unset;
+
+            &::before,
+            &::after {
                 display: none;
             }
         }
-        p{
-            font-size: clamp(1.3rem,3.25vw,1.5rem);
+        p {
+            font-size: clamp(1.2rem, 2.89vw, 1.5rem);
+            margin-top: clamp(10px, 2.67vw, 12px);
         }
     }
 }
 
 .shop-one__shop-list {
     background-color: var(--gray--very-light);
-    padding-top: 112px;
-    padding-bottom: 128px;
-    margin-top: 110px;
 
     .current {
         display: none;
@@ -639,12 +679,23 @@
     }
 }
 
-@media screen and (min-width: 769px){
-    .shop-one__shop-list{
+@media screen and (min-width: 769px) {
+    .shop-one__shop-list {
+        padding-top: 112px;
+        padding-bottom: 128px;
+        margin-top: 110px;
+
         h2 {
-        font-size: 34px;
+            font-size: 34px;
+        }
     }
-    
+}
+
+@media screen and (max-width: 768px) {
+    .shop-one__shop-list {
+        padding-top: clamp(32px, 7.11vw, 72px);
+        padding-bottom: clamp(32px, 8.89vw, 48px);
+        margin-top: clamp(40px, 12.44vw, 80px);
     }
 }
 
@@ -696,27 +747,26 @@
     }
 }
 
-@media screen and (max-width: 768px){
-    .shop-one__other-shop{
-        
+@media screen and (max-width: 768px) {
+    .shop-one__other-shop {
         margin-top: clamp(24px, 6vw, 40px);
 
-        ul{
+        ul {
             display: flex;
             flex-wrap: wrap;
             gap: clamp(8px, 2vw, 16px);
             margin: 0 auto;
         }
-        li{
+        li {
             width: calc(100% / 3 - calc(clamp(8px, 2vw, 16px) / 1.5));
         }
-        a{
+        a {
             font-size: min(1.5rem, 3vw);
             height: clamp(52px, 13vw, 62px);
             padding-right: 10px;
             padding-left: 12px;
 
-            &::after{
+            &::after {
                 width: clamp(8px, 3vw, 12px);
                 height: clamp(8px, 3vw, 12px);
             }
@@ -724,25 +774,21 @@
     }
 }
 
-@media screen and (max-width: 450px){
-    .shop-one__other-shop{
-        ul{
+@media screen and (max-width: 450px) {
+    .shop-one__other-shop {
+        ul {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
         }
-        li{
+        li {
             width: 100%;
         }
     }
 }
 
 .shop-one__pref-list {
-    margin-top: 48px;
-
     ul {
         display: grid;
-
-        gap: 12px 8px;
     }
     [data-region="kanto"] {
         a {
@@ -797,23 +843,26 @@
 
 @media screen and (min-width: 769px) {
     .shop-one__pref-list {
+        margin-top: 48px;
         ul {
             grid-template-columns: repeat(7, 1fr);
+            gap: 12px 8px;
         }
     }
 }
 
-@media screen and (max-width: 768px){
-    .shop-one__pref-list{
-        ul{
+@media screen and (max-width: 768px) {
+    .shop-one__pref-list {
+        margin-top: clamp(26px, 8.89vw, 42px);
+        ul {
             gap: 10px 8px;
         }
-        a{
-            font-size: min(2.5vw,1.5rem);
+        a {
+            font-size: min(2.5vw, 1.5rem);
             padding: 0 clamp(16px, 3.56vw, 24px);
             height: clamp(36px, 9vw, 46px);
 
-            &::after{
+            &::after {
                 width: clamp(8px, 3vw, 12px);
                 height: clamp(8px, 3vw, 12px);
             }
@@ -821,19 +870,19 @@
     }
 }
 
-@media screen and (max-width: 768px) and (min-width: 451px){
-    .shop-one__pref-list{
-        ul{
+@media screen and (max-width: 768px) and (min-width: 451px) {
+    .shop-one__pref-list {
+        ul {
             grid-template-columns: repeat(4, 1fr);
         }
     }
 }
-@media screen and (max-width: 450px){
-    .shop-one__pref-list{
-        ul{
+@media screen and (max-width: 450px) {
+    .shop-one__pref-list {
+        ul {
             grid-template-columns: repeat(3, 1fr);
         }
-        a{
+        a {
             font-size: clamp(1.2rem, 3.11vw, 1.4rem);
             padding: 0 clamp(12px, 3.11vw, 14px);
         }
