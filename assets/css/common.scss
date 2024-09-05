@@ -432,7 +432,6 @@ h3 {
     justify-content: end;
 
     a {
-        
         font-weight: 500;
 
         @media (hover: hover) {
@@ -488,7 +487,7 @@ h3 {
     a {
         background-color: var(--pink--primary);
         color: #fff;
-        
+
         border-radius: 10vw;
         display: flex;
         align-items: center;
@@ -536,7 +535,7 @@ h3 {
         .header__shop {
             order: 3;
 
-            a{
+            a {
                 font-size: clamp(1.4rem, 1.08vw, 1.5rem);
                 padding: 0 clamp(22px, 1.69vw, 32px);
                 height: clamp(50px, 3.85vw, 54px);
@@ -547,7 +546,7 @@ h3 {
         column-gap: clamp(22px, 2.15vw, 36px);
         row-gap: clamp(10px, 0.98vw, 18px);
 
-        a{
+        a {
             font-size: clamp(1.3rem, 1.08vw, 1.5rem);
         }
     }
@@ -569,7 +568,7 @@ h3 {
     .header__shop {
         order: 2;
 
-        a{
+        a {
             padding: 0 clamp(24px, 2.34vw, 32px);
             height: clamp(48px, 4.69vw, 56px);
         }
@@ -790,8 +789,8 @@ h3 {
         }
     }
 
-    .header__shop{
-        a{
+    .header__shop {
+        a {
             height: 52px;
             padding: 0 24px;
         }
@@ -835,10 +834,10 @@ h3 {
         top: -100vh;
         height: calc(100vh - clamp(66px, 16.5vw, 80px));
 
-        &::before{
+        &::before {
             height: calc(100vh - clamp(66px, 16.5vw, 80px) + 1px);
         }
-        
+
         > ul {
             > li {
                 a {
@@ -944,33 +943,22 @@ footer {
     }
 }
 
-.footer__quality{
+.footer__quality {
     width: min(474px, 100%);
-    margin: 40px auto;
     background-color: var(--gray--very-light);
-    padding: 0 24px;
-    height: 104px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 4px;
-    
-    img{
-        width: 72px;
-    }
 
-    div{
-        p{
-            font-size: 1.4rem;
+    div {
+        p {
             line-height: 156%;
         }
-        span{
+        span {
             display: inline-block;
             width: 100%;
-            font-size: 1.2rem;
             line-height: 100%;
             text-align: right;
-            margin-top: 8px;
         }
     }
 }
@@ -998,25 +986,18 @@ footer {
 }
 
 .footer__exts {
-    margin-top: 48px;
-    margin-bottom: 32px;
     ul {
         display: flex;
         align-items: center;
-        gap: 32px;
     }
-    a {
-        font-size: min(1.4rem, 14px);
-    }
+
     .ext {
         display: flex;
         align-items: center;
-        gap: 4px;
 
         &::after {
             background-image: url(../img/common/icon/ext.svg);
-            height: 14px;
-            width: 14px;
+            background-size: cover;
         }
     }
 }
@@ -1047,6 +1028,51 @@ footer {
             display: grid;
             grid-auto-flow: column;
             row-gap: 24px;
+        }
+    }
+
+    .footer__quality {
+        width: min(474px, 100%);
+        margin: 40px auto;
+        padding: 0 24px;
+        height: 104px;
+        border-radius: 4px;
+        gap: 10px;
+
+        img {
+            width: 72px;
+        }
+
+        div {
+            p {
+                font-size: 1.4rem;
+            }
+            span {
+                font-size: 1.2rem;
+                text-align: right;
+                margin-top: 8px;
+            }
+        }
+    }
+    .footer__exts {
+        margin-top: 48px;
+        margin-bottom: 32px;
+
+        ul {
+            gap: 24px;
+        }
+
+        a {
+            font-size: 1.3rem;
+        }
+
+        .ext {
+            gap: 3px;
+
+            &::after {
+                height: 14px;
+                width: 14px;
+            }
         }
     }
 }
@@ -1100,6 +1126,30 @@ footer {
         }
     }
 
+    .footer__quality{
+        margin-top: clamp(32px, 8.89vw, 48px);
+        margin-bottom: clamp(32px, 8.89vw, 48px);
+        padding-top: 16px;
+        padding-bottom: 18px;
+        padding-right: clamp(14px, 4.89vw, 24px);
+        padding-left: clamp(14px, 4.89vw, 24px);
+        gap: clamp(10px, 2.33vw, 16px);
+        justify-content: center;
+
+        img{
+            width: clamp(48px, 12.44vw, 72px);
+        }
+
+        div{
+            p{
+                font-size: min(1.3rem, 2.5vw);
+            }
+            span{
+                font-size: calc(min(1.3rem, 2.5vw) * 0.8);
+            }
+        }
+    }
+
     .footer__company {
         a {
             height: clamp(30px, 7.56vw, 48px);
@@ -1118,8 +1168,9 @@ footer {
     .footer__exts {
         margin-top: clamp(32px, 8vw, 48px);
         margin-bottom: clamp(20px, 6vw, 32px);
+
         ul {
-            gap: 14px clamp(20px, 6vw, 30px);
+            gap: 8px clamp(18px, 4vw, 24px);
             flex-wrap: wrap;
         }
         a {
@@ -1132,6 +1183,20 @@ footer {
         }
         .ext {
             gap: 3px;
+        }
+    }
+}
+
+@media screen and (max-width: 450px){
+    .footer__quality{
+        justify-content: space-between;
+        div{
+            p{
+                font-size: min(1.2rem, 2.4vw);
+            }
+            span{
+                font-size: calc(min(1.2rem, 2.4vw) * 0.85);
+            }
         }
     }
 }
@@ -1185,10 +1250,10 @@ footer {
     }
 }
 
-@media screen and (min-width: 769px){
-    .about__features{
-        li{
-            .name{
+@media screen and (min-width: 769px) {
+    .about__features {
+        li {
+            .name {
                 font-weight: 700;
             }
         }
@@ -1575,16 +1640,16 @@ footer {
 
 @media screen and (min-width: 769px) {
     .show_sp {
-        display: none!important;
+        display: none !important;
     }
 }
 @media screen and (max-width: 768px) {
     .show_pc {
-        display: none!important;
+        display: none !important;
     }
 }
 @media screen and (min-width: 451px) {
     .show_sp-nar {
-        display: none!important;
+        display: none !important;
     }
 }

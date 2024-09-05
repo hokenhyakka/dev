@@ -9,6 +9,10 @@
 
         hgroup {
             align-items: start;
+            
+            h1{
+                text-align: left;
+            }
         }
     }
 
@@ -239,7 +243,7 @@
     .p-child {
         .row,
         .row-nar,
-        .row-wide {
+        .row-wide, section {
             > p {
                 font-size: clamp(1.3rem, 3.25vw, 1.5rem);
 

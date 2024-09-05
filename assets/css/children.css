@@ -11,6 +11,9 @@
 .title.gchild hgroup {
   align-items: start;
 }
+.title.gchild hgroup h1 {
+  text-align: left;
+}
 .title hgroup {
   display: flex;
   flex-direction: column;
@@ -188,12 +191,12 @@
 @media screen and (max-width: 768px) {
   .p-child .row > p,
   .p-child .row-nar > p,
-  .p-child .row-wide > p {
+  .p-child .row-wide > p, .p-child section > p {
     font-size: clamp(1.3rem, 3.25vw, 1.5rem);
   }
   .p-child .row > p:first-child,
   .p-child .row-nar > p:first-child,
-  .p-child .row-wide > p:first-child {
+  .p-child .row-wide > p:first-child, .p-child section > p:first-child {
     margin-top: clamp(32px, 8vw, 56px);
     margin-bottom: clamp(56px, 14vw, 96px);
   }
