@@ -936,11 +936,14 @@ footer > span {
     padding-bottom: 18px;
     padding-right: clamp(14px, 4.89vw, 24px);
     padding-left: clamp(14px, 4.89vw, 24px);
-    gap: clamp(10px, 2.33vw, 16px);
-    justify-content: center;
+    justify-content: start;
+    gap: 16px;
   }
   .footer__quality img {
     width: clamp(48px, 12.44vw, 72px);
+  }
+  .footer__quality div {
+    width: 100%;
   }
   .footer__quality div p {
     font-size: min(1.3rem, 2.5vw);
@@ -961,7 +964,7 @@ footer > span {
     font-size: min(2.45vw, 1.4rem);
   }
   .footer__exts {
-    margin-top: clamp(32px, 8vw, 48px);
+    margin-top: clamp(24px, 4vw, 24px);
     margin-bottom: clamp(20px, 6vw, 32px);
   }
   .footer__exts ul {
@@ -981,10 +984,10 @@ footer > span {
 }
 @media screen and (max-width: 450px) {
   .footer__quality {
-    justify-content: space-between;
+    gap: 8px;
   }
   .footer__quality div p {
-    font-size: min(1.2rem, 2.4vw);
+    font-size: min(1.2rem, 2.45vw);
   }
   .footer__quality div span {
     font-size: calc(min(1.2rem, 2.4vw) * 0.85);
@@ -1300,6 +1303,34 @@ footer > span {
     height: auto;
   }
 }
+.cmn__search-shop--stick {
+  position: fixed;
+  z-index: 9999;
+  right: 0;
+  top: 200px;
+  background-color: #0081ca;
+  writing-mode: vertical-lr;
+  display: flex;
+  flex-direction: row;
+  width: 80px;
+  align-items: center;
+  padding: 24px 0 32px;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  gap: 8px;
+  padding-left: 8px;
+}
+.cmn__search-shop--stick img {
+  width: 24px;
+}
+.cmn__search-shop--stick span {
+  writing-mode: inherit;
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #fff;
+  margin-left: -8px;
+}
+
 .dots {
   background-size: 12px 12px;
 }
