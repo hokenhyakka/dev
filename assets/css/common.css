@@ -224,24 +224,32 @@ h3.flowers::after {
 }
 
 @media screen and (min-width: 769px) {
-  h2.dot-line, h3.dot-line {
+  h2.dot-line,
+  h3.dot-line {
     gap: 16px;
   }
-  h2.dot-line::before, h2.dot-line::after, h3.dot-line::before, h3.dot-line::after {
+  h2.dot-line::before, h2.dot-line::after,
+  h3.dot-line::before,
+  h3.dot-line::after {
     height: 8px;
     background-size: 8px;
   }
-  h2.flower, h3.flower {
+  h2.flower,
+  h3.flower {
     gap: 8px;
   }
-  h2.flower::before, h3.flower::before {
+  h2.flower::before,
+  h3.flower::before {
     width: 20px;
     height: 20px;
   }
-  h2.flowers, h3.flowers {
+  h2.flowers,
+  h3.flowers {
     gap: 12px;
   }
-  h2.flowers::before, h2.flowers::after, h3.flowers::before, h3.flowers::after {
+  h2.flowers::before, h2.flowers::after,
+  h3.flowers::before,
+  h3.flowers::after {
     width: 18px;
     height: 18px;
   }
@@ -1036,14 +1044,11 @@ footer > span {
 .faq__list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
 }
 .faq__list details {
   border-radius: 12px;
-  padding: 16px 32px;
 }
 .faq__list details div {
-  font-size: 1.5rem;
   line-height: 173%;
   overflow: hidden;
   max-height: 0;
@@ -1054,12 +1059,9 @@ footer > span {
 .faq__list summary {
   font-weight: 700;
   color: var(--pink--primary);
-  padding-top: 16px;
-  padding-bottom: 16px;
   font-size: 1.6rem;
   letter-spacing: 0.04em;
   position: relative;
-  padding-right: 28px;
 }
 .faq__list summary:before, .faq__list summary::after {
   content: "";
@@ -1082,6 +1084,25 @@ footer > span {
   margin-top: 4px;
 }
 
+@media screen and (min-width: 769px) {
+  .faq__list {
+    gap: 16px;
+  }
+  .faq__list details {
+    padding: 16px 32px;
+  }
+  .faq__list details[open] {
+    padding-bottom: 32px;
+  }
+  .faq__list details div {
+    font-size: 1.5rem;
+  }
+  .faq__list details summary {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 28px;
+  }
+}
 @media screen and (max-width: 768px) {
   .faq__list {
     gap: clamp(10px, 3vw, 16px);
@@ -1187,7 +1208,10 @@ footer > span {
   background-image: radial-gradient(#f7e8ef 30%, transparent 30%);
 }
 
-.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
   position: relative;
   bottom: 0;
   top: 0;
@@ -1195,30 +1219,48 @@ footer > span {
   align-items: center;
   justify-content: start;
 }
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet, .swiper-pagination-custom .swiper-pagination-bullet, .swiper-pagination-fraction .swiper-pagination-bullet {
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet,
+.swiper-pagination-custom .swiper-pagination-bullet,
+.swiper-pagination-fraction .swiper-pagination-bullet {
   margin: unset;
   border: 1px solid var(--pink--primary);
   background-color: transparent;
   opacity: 1;
 }
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet[aria-current], .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet[aria-current], .swiper-pagination-custom .swiper-pagination-bullet[aria-current], .swiper-pagination-fraction .swiper-pagination-bullet[aria-current] {
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet[aria-current],
+.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet[aria-current],
+.swiper-pagination-custom .swiper-pagination-bullet[aria-current],
+.swiper-pagination-fraction .swiper-pagination-bullet[aria-current] {
   background-color: var(--pink--primary);
 }
 
 @media screen and (min-width: 769px) {
-  .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
     gap: 8px;
   }
-  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet, .swiper-pagination-custom .swiper-pagination-bullet, .swiper-pagination-fraction .swiper-pagination-bullet {
+  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet,
+  .swiper-pagination-custom .swiper-pagination-bullet,
+  .swiper-pagination-fraction .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
   }
 }
 @media screen and (max-width: 768px) {
-  .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
     gap: clamp(6px, 1.33vw, 8px);
   }
-  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet, .swiper-pagination-custom .swiper-pagination-bullet, .swiper-pagination-fraction .swiper-pagination-bullet {
+  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet,
+  .swiper-pagination-custom .swiper-pagination-bullet,
+  .swiper-pagination-fraction .swiper-pagination-bullet {
     width: clamp(7px, 1.78vw, 10px);
     height: clamp(7px, 1.78vw, 10px);
   }

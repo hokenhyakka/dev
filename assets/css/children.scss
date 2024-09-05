@@ -58,7 +58,7 @@
         padding-top: clamp(32px, 8.89vw, 48px);
         padding-bottom: clamp(32px, 7.56vw, 42px);
 
-        &.gchild{
+        &.gchild {
             padding-top: clamp(32px, 8.89vw, 48px);
             padding-bottom: clamp(32px, 8.89vw, 48px);
         }
@@ -76,7 +76,7 @@
             }
 
             h1 {
-                font-size: clamp(2.5rem, 4.69vw, 3.6rem);
+                font-size: clamp(2.2rem, 5.33vw, 3.6rem);
                 line-height: 130%;
             }
         }
@@ -85,12 +85,19 @@
 
 .breadcrumb {
     background-color: #f8e8ee;
+    
     ul {
         height: 40px;
         display: flex;
         align-items: center;
-
         overflow-x: scroll;
+        overflow-y: hidden;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
     li {
         white-space: pre;
@@ -147,8 +154,10 @@
             font-size: 1.4rem;
 
             &:first-of-type {
-                width: 18px;
-                height: 18px;
+                &::before {
+                    width: 18px;
+                    height: 18px;
+                }
             }
         }
     }
@@ -337,10 +346,10 @@
     }
     .cmn__search-shop {
         padding-top: clamp(24px, 8.13vw, 40px);
-        padding-bottom: clamp(32px, 9.38vw,48px);
+        padding-bottom: clamp(32px, 9.38vw, 48px);
 
-        .row-nar{
-            gap: clamp(3.75vw, 3.56vw,24px);
+        .row-nar {
+            gap: clamp(3.75vw, 3.56vw, 24px);
         }
 
         h2 {
@@ -348,31 +357,28 @@
         }
     }
 
-    .cmn__search-shop__btn{
-        
-
-        .btn{
-            a{
+    .cmn__search-shop__btn {
+        .btn {
+            a {
                 padding-top: clamp(12px, 3.33vw, 20px);
             }
         }
 
-        span{
-            font-size: clamp(1rem, 2.44vw,1.3rem);
-            top: clamp(12px, 3.56vw,18px);
+        span {
+            font-size: clamp(1rem, 2.44vw, 1.3rem);
+            top: clamp(12px, 3.56vw, 18px);
         }
 
-        > img{
+        > img {
             top: calc(-1 * clamp(20px, 3.33vw, 30px));
             left: -24px;
         }
     }
 }
 
-
-@media screen and (max-width: 600px){
-    .cmn__search-shop__btn{
-        > img{
+@media screen and (max-width: 600px) {
+    .cmn__search-shop__btn {
+        > img {
             display: none;
         }
     }

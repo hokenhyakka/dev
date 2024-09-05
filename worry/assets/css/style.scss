@@ -1,12 +1,9 @@
 .worry__list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-    gap: 48px 34px;
-
     a {
-        display: grid;
-        grid-template-rows: 170px 65px;
-        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
         overflow: hidden;
 
         picture,
@@ -19,25 +16,109 @@
 
     .name {
         background-color: var(--black);
-        padding: 9px 16px 9px 18px;
-
         display: flex;
-        justify-content: start;
+        justify-content: space-between;
         align-items: center;
         gap: 10px;
+        height: 100%;
 
         &::after {
             content: "";
-            width: 12px;
-            height: 12px;
             background-image: url(../../../assets/img/common/icon/arrow--fff.svg);
+            background-size: cover;
         }
 
         p {
             color: #fff;
-            font-size: 1.7rem;
+
             line-height: 140%;
             font-weight: 700;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .worry__list {
+        gap: 48px 34px;
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+
+        a {
+            border-radius: 6px;
+        }
+
+        .name {
+            padding: 9px 16px 9px 18px;
+            min-height: 65px;
+
+            &::after {
+                width: 12px;
+                height: 12px;
+            }
+
+            p {
+                font-size: 1.7rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 451px) {
+    .worry__list {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        row-gap: clamp(32px, 7.11vw, 48px);
+        column-gap: clamp(10px, 2.22vw, 18px);
+
+        .name {
+            padding: 10px 14px 10px 16px;
+            min-height: clamp(50px, 11.11vw, 65px);
+
+            p {
+                font-size: min(2.8vw, 1.6rem);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 451px) {
+    .worry__list {
+        display: grid;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .worry__list {
+        a {
+            border-radius: 4px;
+
+            picture,
+            img {
+                height: auto;
+            }
+        }
+
+        .name {
+            &::after {
+                width: clamp(10px, 2.22vw, 12px);
+                height: clamp(10px, 2.22vw, 12px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .worry__list {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(24px, 7.5vw, 32px);
+
+        .name {
+            min-height: clamp(44px, 13.75vw, 48px);
+            padding-right: 12px;
+            padding-left: 14px;
+
+            p{
+                font-size: clamp(1.2rem, 3.75vw, 1.4rem);
+            }
         }
     }
 }

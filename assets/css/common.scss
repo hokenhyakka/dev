@@ -195,7 +195,7 @@ h3 {
     &.dot-line {
         display: flex;
         align-items: center;
-        
+
         &::before,
         &::after {
             content: "";
@@ -208,11 +208,10 @@ h3 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        
 
         &::before {
             content: "";
-            
+
             background-image: url(../img/common/icon/flower--ylw.svg);
             background-size: cover;
         }
@@ -222,43 +221,45 @@ h3 {
         display: flex;
         justify-content: center;
         align-items: center;
-        
 
         &::before,
         &::after {
             content: "";
-            
+
             background-image: url(../img/common/icon/flower--ylw.svg);
             background-size: cover;
         }
     }
 }
 
-@media screen and (min-width: 769px){
-    h2, h3{
-        &.dot-line{
+@media screen and (min-width: 769px) {
+    h2,
+    h3 {
+        &.dot-line {
             gap: 16px;
 
-            &::before, &::after{
+            &::before,
+            &::after {
                 height: 8px;
                 background-size: 8px;
             }
         }
-        &.flower{
+        &.flower {
             gap: 8px;
 
-            &::before{
+            &::before {
                 width: 20px;
-            height: 20px;
+                height: 20px;
             }
         }
 
-        &.flowers{
+        &.flowers {
             gap: 12px;
 
-            &::before,&::after{
+            &::before,
+            &::after {
                 width: 18px;
-            height: 18px;
+                height: 18px;
             }
         }
     }
@@ -270,7 +271,8 @@ h3 {
         &.dot-line {
             gap: clamp(8px, 2.5vw, 12px);
 
-            &::before, &::after{
+            &::before,
+            &::after {
                 height: clamp(7px, 1.56vw, 8px);
                 background-size: clamp(7px, 1.56vw, 8px);
             }
@@ -520,7 +522,7 @@ h3 {
             flex-wrap: nowrap;
             align-items: center;
 
-            a{
+            a {
                 font-weight: 500;
             }
         }
@@ -809,7 +811,7 @@ h3 {
     }
 
     .header__nav {
-        top: -100vh;    
+        top: -100vh;
         height: calc(100vh - clamp(66px, 16.5vw, 80px));
         > ul {
             > li {
@@ -830,13 +832,13 @@ h3 {
     }
 }
 
-@media screen and (max-width: 450px){
-    .header{
-        .container{
+@media screen and (max-width: 450px) {
+    .header {
+        .container {
             padding: 0 8px 0 14px;
         }
     }
-    .header__inner{
+    .header__inner {
         padding-left: 0;
     }
 }
@@ -891,7 +893,7 @@ footer {
     display: flex;
 
     align-items: start;
-    
+
     margin-bottom: 40px;
 
     > span {
@@ -1257,14 +1259,11 @@ footer {
 .faq__list {
     display: flex;
     flex-direction: column;
-    gap: 16px;
 
     details {
         border-radius: 12px;
-        padding: 16px 32px;
 
         div {
-            font-size: 1.5rem;
             line-height: 173%;
             overflow: hidden;
             max-height: 0;
@@ -1282,12 +1281,9 @@ footer {
     summary {
         font-weight: 700;
         color: var(--pink--primary);
-        padding-top: 16px;
-        padding-bottom: 16px;
         font-size: 1.6rem;
         letter-spacing: 0.04em;
         position: relative;
-        padding-right: 28px;
 
         &:before,
         &::after {
@@ -1313,6 +1309,30 @@ footer {
     }
 }
 
+@media screen and (min-width: 769px) {
+    .faq__list {
+        gap: 16px;
+
+        details {
+            padding: 16px 32px;
+
+            &[open] {
+                padding-bottom: 32px;
+            }
+
+            div {
+                font-size: 1.5rem;
+            }
+
+            summary {
+                padding-top: 16px;
+                padding-bottom: 16px;
+                padding-right: 28px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     .faq__list {
         gap: clamp(10px, 3vw, 16px);
@@ -1324,7 +1344,7 @@ footer {
                 font-size: clamp(1.2rem, 3vw, 1.5rem);
             }
 
-            &[open]{
+            &[open] {
                 padding-bottom: clamp(16px, 4.5vw, 32px);
             }
         }
@@ -1342,7 +1362,7 @@ footer {
 
             &::after {
                 height: clamp(12px, 2.67vw, 16px);
-                top: calc(clamp(8px, 2.25vw, 16px)  + 3px);
+                top: calc(clamp(8px, 2.25vw, 16px) + 3px);
                 right: calc(clamp(12px, 2.67vw, 16px) / 2 - 1px);
                 margin-top: 0;
             }
@@ -1434,14 +1454,16 @@ footer {
     }
 }
 
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
     position: relative;
     bottom: 0;
     top: 0;
     display: flex;
     align-items: center;
     justify-content: start;
-    
 
     .swiper-pagination-bullet {
         margin: unset;
@@ -1454,21 +1476,27 @@ footer {
         }
     }
 }
-@media screen and (min-width: 769px){
-    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+@media screen and (min-width: 769px) {
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
         gap: 8px;
 
-        .swiper-pagination-bullet{
+        .swiper-pagination-bullet {
             width: 10px;
-        height: 10px;
+            height: 10px;
         }
     }
 }
-@media screen and (max-width: 768px){
-    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+@media screen and (max-width: 768px) {
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
         gap: clamp(6px, 1.33vw, 8px);
 
-        .swiper-pagination-bullet{
+        .swiper-pagination-bullet {
             width: clamp(7px, 1.78vw, 10px);
             height: clamp(7px, 1.78vw, 10px);
         }
@@ -1488,8 +1516,8 @@ footer {
         display: none;
     }
 }
-@media screen and (min-width: 451px){
-    .show_sp-nar{
+@media screen and (min-width: 451px) {
+    .show_sp-nar {
         display: none;
     }
 }
