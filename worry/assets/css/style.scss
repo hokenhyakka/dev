@@ -112,12 +112,12 @@
         gap: clamp(24px, 7.5vw, 32px);
 
         .name {
-            min-height: clamp(44px, 13.75vw, 48px);
+            min-height: 68px;
             padding-right: 12px;
-            padding-left: 14px;
+            padding-left: 16px;
 
             p{
-                font-size: clamp(1.2rem, 3.75vw, 1.4rem);
+                font-size: 1.5rem;
             }
         }
     }

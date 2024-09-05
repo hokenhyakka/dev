@@ -12,7 +12,7 @@ window.onload = function() {
 
 /* header dup */
 const handleResize = () => {
-    if (window.matchMedia("(min-width: 1361px)").matches) {
+    if (window.matchMedia("(min-width: 1301px)").matches) {
         const headerContainer = document.querySelector("#header .container");
         if (headerContainer) {
             let stickyHeader = document.querySelector(".header--stick");
@@ -62,9 +62,9 @@ function moveExts() {
     const navUl = document.querySelector('.header__nav ul');
     const headerInner = document.querySelector('.header__inner');
 
-    if (window.innerWidth <= 1360 && exts && navUl) {
+    if (window.innerWidth <= 1300 && exts && navUl) {
         navUl.appendChild(exts);
-    } else if (window.innerWidth > 1360 && exts && !headerInner.contains(exts)) {
+    } else if (window.innerWidth > 1300 && exts && !headerInner.contains(exts)) {
         headerInner.appendChild(exts);
     }
 }

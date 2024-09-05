@@ -1,4 +1,8 @@
 .thumb {
+    picture, img{
+        width: 100%;
+    }
+
     & + .worry-one__details {
         margin-top: 96px;
     }

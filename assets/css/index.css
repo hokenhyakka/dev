@@ -269,6 +269,10 @@
   .search-shop__text .btn {
     order: 4;
   }
+  .search-shop__text .btn a {
+    font-size: clamp(1.7rem, 4.44vw, 2.5rem);
+    height: clamp(64px, 16vw, 88px);
+  }
 }
 .shop__inner {
   width: min(684px, 100%);

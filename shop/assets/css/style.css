@@ -75,7 +75,7 @@
 @media screen and (min-width: 769px) {
   .shop__shop-list {
     background-color: #fff;
-    padding-top: 56px;
+    padding-top: 88px;
     padding-bottom: 144px;
   }
 }
@@ -179,7 +179,7 @@
 
 @media screen and (min-width: 769px) {
   .shop-tags .tag {
-    font-size: 1.4rem;
+    font-size: clamp(1.1rem, 1.07vw, 1.4rem);
   }
 }
 @media screen and (max-width: 768px) {
@@ -209,6 +209,12 @@
 .shop__one .name {
   font-weight: bold;
 }
+.shop__one .name::after {
+  content: "";
+  display: inline-block;
+  background-image: url(../../../assets/img/common/icon/arrow.svg);
+  background-size: cover;
+}
 .shop__one .shop-tags {
   width: min(362px, 100%);
   gap: 4px;
@@ -225,11 +231,11 @@
   border-radius: 4px;
   box-shadow: none;
 }
-.shop__one .learn-more {
+.shop__one .learn-more, .shop__one .phone-call {
   background-color: var(--pink--dusty-light);
   color: var(--pink--primary);
 }
-.shop__one .learn-more::after {
+.shop__one .learn-more::after, .shop__one .phone-call::after {
   background-image: url(../../../assets/img/common/icon/arrow--prm.svg);
 }
 
@@ -242,6 +248,11 @@
   .shop__one .name {
     font-size: 2rem;
   }
+  .shop__one .name::after {
+    width: 12px;
+    height: 12px;
+    margin-left: 6px;
+  }
   .shop__one .shop-tags {
     margin-top: 6px;
   }
@@ -252,11 +263,16 @@
     font-size: 1.4rem;
   }
   .shop__one .btns a {
-    font-size: 1.6rem;
+    font-size: clamp(1.3rem, 1.27vw, 1.6rem);
     height: 50px;
+    gap: clamp(4px, 0.39vw, 6px);
   }
 }
 @media screen and (max-width: 768px) {
+  .shop__one .city {
+    font-size: clamp(1.2rem, 2.67vw, 1.3rem);
+    padding: 4px 16px;
+  }
   .shop__one .name {
     font-size: clamp(1.7rem, 4vw, 2rem);
   }

@@ -323,6 +323,11 @@
 
         .btn {
             order: 4;
+
+            a{
+                font-size: clamp(1.7rem, 4.44vw, 2.5rem);
+                height: clamp(64px, 16vw, 88px);
+            }
         }
     }
 }
