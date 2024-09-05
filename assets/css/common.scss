@@ -894,8 +894,6 @@ footer {
 
     align-items: start;
 
-    margin-bottom: 40px;
-
     > span {
         display: block;
         width: 1px;
@@ -916,6 +914,37 @@ footer {
             height: 10px;
             background-size: contain;
             background-image: url(../img/common/icon/arrow.svg);
+        }
+    }
+}
+
+.footer__quality{
+    width: min(474px, 100%);
+    margin: 40px auto;
+    background-color: var(--gray--very-light);
+    padding: 0 24px;
+    height: 104px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    
+    img{
+        width: 72px;
+    }
+
+    div{
+        p{
+            font-size: 1.4rem;
+            line-height: 156%;
+        }
+        span{
+            display: inline-block;
+            width: 100%;
+            font-size: 1.2rem;
+            line-height: 100%;
+            text-align: right;
+            margin-top: 8px;
         }
     }
 }
@@ -1262,6 +1291,7 @@ footer {
 
     details {
         border-radius: 12px;
+        background-color: var(--gray--very-light);
 
         div {
             line-height: 173%;
@@ -1353,6 +1383,7 @@ footer {
             font-size: clamp(1.3rem, 3.25vw, 1.6rem);
             padding-top: clamp(8px, 2.25vw, 16px);
             padding-bottom: clamp(8px, 2.25vw, 16px);
+            padding-right: calc(clamp(12px, 2.67vw, 16px) + 6px);
 
             &::before {
                 width: clamp(12px, 2.67vw, 16px);

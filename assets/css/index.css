@@ -819,10 +819,6 @@
     font-size: clamp(2rem, 5.25vw, 2.8rem);
   }
 }
-.faq__list details {
-  background-color: var(--pink--very-light);
-}
-
 @media screen and (min-width: 769px) {
   .faq {
     margin-top: 120px;

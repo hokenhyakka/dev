@@ -11,9 +11,11 @@ window.onload = function() {
 };
 
 
-/* header dup */
-const handleResize = () => {
-    if (window.matchMedia("(min-width: 1361px)").matches) {
+// 常に画面幅を監視して、resize時にすぐに反映
+
+// header dup
+const handleResize = (e) => {
+    if (e.matches) {
         const headerContainer = document.querySelector("#header .container");
         if (headerContainer) {
             let stickyHeader = document.querySelector(".header--stick");
@@ -36,13 +38,12 @@ const handleResize = () => {
         }
     }
 };
-handleResize();
-window.addEventListener("resize", handleResize);
-handleResize();
-window.addEventListener("resize", handleResize);
 
+const mediaQuery = window.matchMedia("(min-width: 1361px)");
+handleResize(mediaQuery); // 初回実行
+mediaQuery.addEventListener('change', handleResize);
 
-/* header stick */
+// header stick
 const stickyHeader = document.querySelector(".header--stick");
 
 if (stickyHeader) {
@@ -57,49 +58,49 @@ if (stickyHeader) {
     });
 }
 
-/* header responsive */
-function moveExts() {
+// header responsive
+function moveExts(e) {
     const exts = document.querySelector('.header__exts');
     const navUl = document.querySelector('.header__nav ul');
     const headerInner = document.querySelector('.header__inner');
 
-    if (window.innerWidth <= 1360 && exts && navUl) {
-        navUl.appendChild(exts);
-    } else if (window.innerWidth > 1360 && exts && !headerInner.contains(exts)) {
+    if (e.matches && exts && !headerInner.contains(exts)) {
         headerInner.appendChild(exts);
+    } else if (!e.matches && exts && navUl) {
+        navUl.appendChild(exts);
     }
 }
-window.addEventListener('resize', moveExts);
-window.addEventListener('DOMContentLoaded', moveExts);
 
-/* header shop */
-document.addEventListener('DOMContentLoaded', function() {
-    function updateText() {
-        const shopLink = document.querySelector('.header__shop a');
-        const originalText = 'お近くの店舗を探す';
-        const updatedText = '店舗を探す';
+const mediaQueryResponsive = window.matchMedia("(min-width: 1361px)");
+moveExts(mediaQueryResponsive); // 初回実行
+mediaQueryResponsive.addEventListener('change', moveExts);
 
-        if (shopLink) {
-            const imgElement = shopLink.querySelector('img');
-            let currentText = shopLink.textContent.trim();
+// header shop
+function updateText() {
+    const shopLink = document.querySelector('.header__shop a');
+    const originalText = 'お近くの店舗を探す';
+    const updatedText = '店舗を探す';
 
-            if (window.innerWidth <= 450 && currentText === originalText) {
-                shopLink.textContent = updatedText;
-                if (imgElement) {
-                    shopLink.appendChild(imgElement);
-                }
-            } else if (window.innerWidth > 450 && currentText === updatedText) {
-                shopLink.textContent = originalText;
-                if (imgElement) {
-                    shopLink.appendChild(imgElement);
-                }
+    if (shopLink) {
+        const imgElement = shopLink.querySelector('img');
+        let currentText = shopLink.textContent.trim();
+
+        if (window.innerWidth <= 450 && currentText === originalText) {
+            shopLink.textContent = updatedText;
+            if (imgElement) {
+                shopLink.appendChild(imgElement);
+            }
+        } else if (window.innerWidth > 450 && currentText === updatedText) {
+            shopLink.textContent = originalText;
+            if (imgElement) {
+                shopLink.appendChild(imgElement);
             }
         }
     }
+}
+updateText();
+window.addEventListener('resize', updateText);
 
-    updateText();
-    window.addEventListener('resize', updateText);
-});
 
 /* header menu btn */
 const headerBtn = document.getElementById("header__btn");
