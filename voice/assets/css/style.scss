@@ -1,98 +1,143 @@
-.voice__satisfaction{
-    margin-bottom: 96px;
-}
-
-.voice__comment{
-    margin-top: 112px;
-
-    
-}
-
-.voice__comment-list{
+.voice__comment-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 34px 32px;
-    margin-top: 48px;
 
-    li{
-        font-size: 1.5rem;
+    li {
         letter-spacing: 0.03em;
         line-height: 186%;
         background-color: #fff;
-        border-radius: 16px;
         box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.04);
-        padding: 34px 40px 40px;
         position: relative;
-        
-        &::before{
-            content: '';
-            width: 40px;
-            height: 30px;
+
+        &::before {
+            content: "";
             background-image: url(../img/dq.svg);
             position: absolute;
             background-size: cover;
         }
 
-        &:nth-of-type(odd){
-            &::before{
+        &:nth-of-type(odd) {
+            &::before {
                 left: 0;
-                top: -18px;
             }
         }
 
-        &:nth-of-type(even){
-            &::before{
+        &:nth-of-type(even) {
+            &::before {
                 right: 0;
-                bottom: -16px;
                 transform: rotate(180deg);
             }
         }
     }
+}
 
-    [data-comment-li="1"]{
-        width: 610px;
+@media screen and (min-width: 769px) {
+    .voice__satisfaction {
+        margin-bottom: 96px;
     }
-    [data-comment-li="2"]{
-        width: 358px;
+
+    .voice__comment {
+        margin-top: 112px;
     }
-    [data-comment-li="3"]{
-        width: 400px;
-        margin-left: -10px;
-    }
-    [data-comment-li="4"]{
-        width: 588px;
-        margin-right: -10px;
-    }
-    [data-comment-li="5"]{
-        width: 538px;
-    }
-    [data-comment-li="6"]{
-        width: 430px;
+
+    .voice__comment-list {
+        gap: 34px 32px;
+        margin-top: 48px;
+
+        li {
+            font-size: 1.5rem;
+            border-radius: 16px;
+            padding: 34px 40px 40px;
+
+            &::before {
+                width: 40px;
+                height: 30px;
+            }
+
+            &:nth-of-type(odd) {
+                &::before {
+                    top: -18px;
+                }
+            }
+            &:nth-of-type(even) {
+                &::before {
+                    bottom: -16px;
+                }
+            }
+        }
+
+        [data-comment-li="1"] {
+            width: 610px;
+        }
+        [data-comment-li="2"] {
+            width: 358px;
+        }
+        [data-comment-li="3"] {
+            width: 400px;
+            margin-left: -10px;
+        }
+        [data-comment-li="4"] {
+            width: 588px;
+            margin-right: -10px;
+        }
+        [data-comment-li="5"] {
+            width: 538px;
+        }
+        [data-comment-li="6"] {
+            width: 430px;
+        }
     }
 }
 
-@media screen and (max-width: 768px){
-    .voice__comment-list{
+@media screen and (max-width: 768px) {
+    .voice__satisfaction {
+        margin-bottom: clamp(56px, 14.22vw, 88px);
+    }
+
+    .voice__comment {
+        margin-top: clamp(48px, 10.67vw, 80px);
+    }
+
+    .voice__comment-list {
         gap: clamp(14px, 4vw, 24px);
-        li{
+        margin-top: clamp(22px, 5.5vw, 40px);
+
+        li {
             font-size: clamp(1.2rem, 3vw, 1.5rem);
             padding: clamp(20px, 6vw, 40px);
-            padding-top: clamp(18px,5vw,34px);
+            padding-top: clamp(18px, 5vw, 34px);
             border-radius: 12px;
 
-            &:nth-of-type(odd){
-                min-width: 64%;
+            &::before {
+                width: 30px;
+                height: 22px;
             }
-            &:nth-of-type(even){
+
+            &:nth-of-type(odd) {
+                min-width: 64%;
+
+                &::before{
+                    top: -10px;
+                }
+            }
+            &:nth-of-type(even) {
                 min-width: 78%;
                 margin-left: auto;
 
-                &::before{
+                &::before {
                     bottom: unset;
                     transform: scale(-1, -1);
                     top: -10px;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .voice__comment-list {
+        li {
+            width: 90%;
         }
     }
 }
