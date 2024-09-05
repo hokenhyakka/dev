@@ -9,16 +9,6 @@
     padding-bottom: clamp(32px, 10vw, 64px);
   }
 }
-.site-map {
-  margin-top: 40px;
-}
-
-.site-map__main {
-  padding: 64px 56px;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.06);
-}
 .site-map__main > ul {
   display: flex;
   flex-direction: column;
@@ -55,10 +45,17 @@
 }
 
 @media screen and (min-width: 769px) {
+  .site-map {
+    margin-top: 40px;
+  }
   .site-map__main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 48px;
+    padding: 64px 56px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.06);
   }
 }
 @media screen and (max-width: 768px) {
@@ -66,7 +63,8 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding: clamp(40px, 10vw, 64px) clamp(24px, 8vw, 48px);
+    padding-top: clamp(40px, 10vw, 64px);
+    padding-bottom: clamp(64px, 21.33vw, 96px);
   }
   .site-map__main a {
     font-size: clamp(1.2rem, 3.25vw, 1.4rem);

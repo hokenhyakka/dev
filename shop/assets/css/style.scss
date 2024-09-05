@@ -235,7 +235,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    gap: 10px;
+    
 
     .city{
         background-color: var(--black);
@@ -287,6 +287,8 @@
 
 @media screen and (min-width: 769px) {
     .shop__one {
+        gap: 10px;
+        
         .city{
             height: 30px;
             padding: 0 18px;

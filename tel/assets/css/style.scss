@@ -1,0 +1,55 @@
+.tel {
+    padding-top: clamp(24px, 5.78vw, 40px);
+    padding-bottom: clamp(88px, 19.56vw, 96px);
+
+    ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row-nar {
+        > ul {
+            gap: clamp(12px, 2.67vw, 16px);
+
+            ul{
+                padding: 14px;
+                gap: clamp(8px, 1.78vw, 10px);
+            }
+        }
+    }
+
+    summary {
+        font-weight: 700;
+        font-size: clamp(1.5rem, 3.33vw, 1.8rem);
+        background-color: var(--pink--very-light);
+        padding: 12px 14px;
+        border-radius: 4px;
+        color: var(--pink--primary);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &::after{
+            content: '';
+            width: 12px;
+            height: 12px;
+            background-image: url(../../../assets/img/common/icon/arrow--prm.svg);
+            background-size: cover;
+            transition: .3s;
+        }
+        
+    }
+
+    details[open]{
+        summary{
+            &::after{
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    a {
+        font-size: clamp(1.3rem, 2.89vw, 1.5rem);
+        text-decoration: underline;
+    }
+}
