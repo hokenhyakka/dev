@@ -288,7 +288,7 @@
 @media screen and (min-width: 769px) {
     .shop__one {
         gap: 10px;
-        
+
         .city{
             height: 30px;
             padding: 0 18px;
@@ -353,6 +353,23 @@
                 font-size: clamp(1.4rem, 3.56vw, 1.6rem);
                 height: clamp(48px, 10.67vw, 50px);
             }
+        }
+    }
+}
+
+.shop-one__inbody{
+    width: 100%;
+
+    &.inactive{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px){
+    .shop-one__main{
+        & + .shop-one__inbody{
+            margin-top: -64px;
+            margin-bottom: 32px;
         }
     }
 }

@@ -296,4 +296,17 @@
     font-size: clamp(1.4rem, 3.56vw, 1.6rem);
     height: clamp(48px, 10.67vw, 50px);
   }
+}
+.shop-one__inbody {
+  width: 100%;
+}
+.shop-one__inbody.inactive {
+  display: none;
+}
+
+@media screen and (min-width: 769px) {
+  .shop-one__main + .shop-one__inbody {
+    margin-top: -64px;
+    margin-bottom: 32px;
+  }
 }/*# sourceMappingURL=style.css.map */
