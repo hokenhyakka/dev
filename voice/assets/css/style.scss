@@ -107,6 +107,7 @@
             padding: clamp(20px, 6vw, 40px);
             padding-top: clamp(18px, 5vw, 34px);
             border-radius: 12px;
+            width: 90%;
 
             &::before {
                 width: 30px;
@@ -130,14 +131,6 @@
                     top: -10px;
                 }
             }
-        }
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .voice__comment-list {
-        li {
-            width: 90%;
         }
     }
 }

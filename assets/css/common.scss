@@ -1126,7 +1126,7 @@ footer {
         }
     }
 
-    .footer__quality{
+    .footer__quality {
         margin-top: clamp(32px, 8.89vw, 48px);
         margin-bottom: clamp(32px, 8.89vw, 48px);
         padding-top: 16px;
@@ -1136,15 +1136,15 @@ footer {
         gap: clamp(10px, 2.33vw, 16px);
         justify-content: center;
 
-        img{
+        img {
             width: clamp(48px, 12.44vw, 72px);
         }
 
-        div{
-            p{
+        div {
+            p {
                 font-size: min(1.3rem, 2.5vw);
             }
-            span{
+            span {
                 font-size: calc(min(1.3rem, 2.5vw) * 0.8);
             }
         }
@@ -1187,14 +1187,14 @@ footer {
     }
 }
 
-@media screen and (max-width: 450px){
-    .footer__quality{
+@media screen and (max-width: 450px) {
+    .footer__quality {
         justify-content: space-between;
-        div{
-            p{
+        div {
+            p {
                 font-size: min(1.2rem, 2.4vw);
             }
-            span{
+            span {
                 font-size: calc(min(1.2rem, 2.4vw) * 0.85);
             }
         }
@@ -1502,23 +1502,54 @@ footer {
     }
 }
 
-.btm-btn-list {
-    margin-top: 128px;
-    ul {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 32px;
-        padding: 24px 0;
+@media screen and (min-width: 769px) {
+    .btm-btn-list {
+        margin-top: 128px;
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            padding: 24px 0;
+        }
     }
 }
 
 @media screen and (max-width: 768px) {
     .btm-btn-list {
+        margin-top: clamp(64px, 17.78vw, 80px);
+
         ul {
             display: flex;
-            flex-direction: column;
-            gap: clamp(12px, 4vw, 24px);
+            padding: 22px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 451px) {
+    .btm-btn-list {
+        ul {
+            flex-wrap: wrap;
             padding: 32px 0;
+            gap: clamp(12px, 4vw, 24px);
+
+            .btn {
+                width: calc(50% - calc(clamp(12px, 4vw, 24px) / 2));
+
+                a {
+                    height: clamp(60px, 13.33vw, 72px);
+                    font-size: clamp(1.5rem, 3.33vw, 2.2rem);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .btm-btn-list {
+        ul {
+            flex-direction: column;
+            gap: 12px;
         }
     }
 }

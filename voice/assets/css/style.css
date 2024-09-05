@@ -86,6 +86,7 @@
     padding: clamp(20px, 6vw, 40px);
     padding-top: clamp(18px, 5vw, 34px);
     border-radius: 12px;
+    width: 90%;
   }
   .voice__comment-list li::before {
     width: 30px;
@@ -105,10 +106,5 @@
     bottom: unset;
     transform: scale(-1, -1);
     top: -10px;
-  }
-}
-@media screen and (max-width: 450px) {
-  .voice__comment-list li {
-    width: 90%;
   }
 }/*# sourceMappingURL=style.css.map */
