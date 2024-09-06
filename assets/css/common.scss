@@ -763,6 +763,10 @@ h3 {
     .header__inner {
         justify-content: end;
         gap: 16px;
+
+        a{
+            font-size: 14px;
+        }
     }
     .header__logo {
         height: 56px;

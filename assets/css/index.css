@@ -194,12 +194,16 @@
     justify-content: start;
   }
   .search-shop__features {
-    width: 534px;
-    gap: 34px 0;
+    width: clamp(420px, 41.02vw, 534px);
+    gap: clamp(24px, 2.83vw, 34px) 0;
     justify-content: space-between;
+  }
+  .search-shop__features li img {
+    width: min(250px, 100%);
   }
   .search-shop__features li:nth-of-type(n + 2) {
     margin-top: -56px;
+    width: 50%;
   }
   .search-shop__text {
     align-items: end;
@@ -209,6 +213,7 @@
   }
   .search-shop__text h2 {
     text-align: right;
+    font-size: clamp(3.7rem, 3.61vw, 4rem);
   }
   .search-shop__text .attention {
     gap: 6px;

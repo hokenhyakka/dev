@@ -654,6 +654,9 @@ h3.flowers::after {
     justify-content: end;
     gap: 16px;
   }
+  .header__inner a {
+    font-size: 14px;
+  }
   .header__logo {
     height: 56px;
   }
