@@ -1,12 +1,5 @@
-.ins-type__one {
-  margin-top: 96px;
-  margin-bottom: 80px;
-}
 .ins-type__one ul {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 24px;
-  margin-top: 48px;
 }
 .ins-type__one li img {
   background-color: #fff;
@@ -32,31 +25,54 @@
 .ins-type__one .note {
   border-radius: 8px;
   background-color: var(--gray--very-light);
-  padding: 28px 24px 26px;
-  margin-top: 64px;
 }
 .ins-type__one .note h3 {
   color: var(--pink--primary);
-  font-size: 1.6rem;
   letter-spacing: 0;
   font-weight: 700;
   text-align: left;
 }
 .ins-type__one .note p {
-  font-size: 1.5rem;
   line-height: 173%;
-  margin-top: 16px;
 }
 
-@media screen and (max-width: 768px) and (min-width: 450px) {
+@media screen and (min-width: 769px) {
+  .ins-type__one {
+    margin-top: 96px;
+    margin-bottom: 80px;
+  }
   .ins-type__one ul {
-    grid-template-columns: repeat(4, 1fr);
-    gap: clamp(8px, 1.78vw, 16px);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .ins-type__one .note {
+    padding: 28px 24px 26px;
+    margin-top: 64px;
+  }
+  .ins-type__one .note h3 {
+    font-size: 1.6rem;
+  }
+  .ins-type__one .note p {
+    font-size: 1.5rem;
+    margin-top: 16px;
   }
 }
 @media screen and (max-width: 768px) {
   .ins-type__one {
     margin-top: clamp(40px, 12vw, 72px);
+    margin-bottom: clamp(48px, 11.11vw, 56px);
+  }
+  .ins-type__one ul {
+    margin-top: clamp(16px, 5.33vw, 30px);
+    gap: clamp(8px, 1.78vw, 16px);
+  }
+  .ins-type__one .note {
+    padding-top: clamp(20px, 4.89vw, 28px);
+    padding-bottom: clamp(18px, 4.44vw, 26px);
+    padding-right: clamp(16px, 4vw, 24px);
+    padding-left: clamp(16px, 4vw, 24px);
+    margin-top: clamp(22px, 5.33vw, 40px);
   }
   .ins-type__one .note h3 {
     font-size: clamp(1.3rem, 3.25vw, 1.5rem);
@@ -66,8 +82,13 @@
     margin-top: 10px;
   }
 }
+@media screen and (max-width: 768px) and (min-width: 451px) {
+  .ins-type__one ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 @media screen and (max-width: 450px) {
   .ins-type__one ul {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }/*# sourceMappingURL=style.css.map */

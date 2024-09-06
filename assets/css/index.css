@@ -604,7 +604,7 @@
   text-align: center;
 }
 .about .row > p:first-of-type {
-  font-size: 1.8rem;
+  font-size: clamp(1.6rem, 1.56vw, 1.8rem);
   line-height: 200%;
   letter-spacing: 0.08em;
 }

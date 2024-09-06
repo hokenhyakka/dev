@@ -112,7 +112,7 @@
         ul {
             grid-template-columns: repeat(4, 1fr);
             padding: 0 56px;
-            gap: 24px 32px;
+            gap: 24px clamp(24px, 2.34vw, 32px);
             margin-top: 16px;
         }
 
@@ -126,7 +126,7 @@
         }
 
         .name {
-            font-size: 1.5rem;
+            font-size: clamp(1.4rem, 1.37vw, 1.5rem);
             line-height: 120%;
             padding: 0 12px 0 14px;
 

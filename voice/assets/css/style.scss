@@ -45,7 +45,7 @@
         margin-top: 48px;
 
         li {
-            font-size: 1.5rem;
+            font-size: clamp(1.3rem, 1.27vw, 1.5rem);
             border-radius: 16px;
             padding: 34px 40px 40px;
 
@@ -68,23 +68,29 @@
 
         [data-comment-li="1"] {
             width: 610px;
+            width: calc(61% - 16px);
         }
         [data-comment-li="2"] {
             width: 358px;
+            width: calc(35.8% - 16px);
         }
         [data-comment-li="3"] {
             width: 400px;
+            width: calc(40% - 16px);
             margin-left: -10px;
         }
         [data-comment-li="4"] {
             width: 588px;
+            width: calc(58.8% - 16px);
             margin-right: -10px;
         }
         [data-comment-li="5"] {
             width: 538px;
+            width: calc(53.8% - 16px);
         }
         [data-comment-li="6"] {
             width: 430px;
+            width: calc(43% - 16px);
         }
     }
 }

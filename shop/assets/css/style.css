@@ -274,9 +274,15 @@
   .shop__one .city {
     font-size: clamp(1.2rem, 2.67vw, 1.3rem);
     padding: 4px 16px;
+    margin-bottom: 4px;
   }
   .shop__one .name {
     font-size: clamp(1.7rem, 4vw, 2rem);
+  }
+  .shop__one .name::after {
+    width: 10px;
+    height: 10px;
+    margin-left: 6px;
   }
   .shop__one .shop-tags {
     margin-top: clamp(10px, 2.22vw, 12px);
@@ -293,8 +299,8 @@
     width: 100%;
   }
   .shop__one .btns a {
-    font-size: clamp(1.4rem, 3.56vw, 1.6rem);
-    height: clamp(48px, 10.67vw, 50px);
+    font-size: clamp(1.3rem, 3.11vw, 1.6rem);
+    height: clamp(44px, 10.67vw, 50px);
   }
 }
 .shop-one__inbody {

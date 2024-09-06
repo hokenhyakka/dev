@@ -1798,8 +1798,18 @@ footer {
 }
 
 
-.dots {
-    background-size: 12px 12px;
+
+
+@media screen and (min-width: 769px){
+    .dots {
+        background-size: 12px 12px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .dots{
+        background-size: 8px 8px;
+    }
 }
 
 .bg--pale {
