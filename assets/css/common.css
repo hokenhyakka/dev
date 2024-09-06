@@ -1323,7 +1323,7 @@ footer > span {
   }
   .cmn__search-shop--stick a {
     width: 100%;
-    background-color: #303773;
+    background-color: #1c396c;
     writing-mode: vertical-lr;
     flex-direction: row;
     align-items: center;
@@ -1367,8 +1367,8 @@ footer > span {
     position: absolute;
   }
   .cmn__search-shop--stick a:first-of-type {
-    border: 2px solid #303773;
-    color: #303773;
+    border: 2px solid #1c396c;
+    color: #1c396c;
     background-color: #fff;
     background-image: url(../img/common/icon/phone.svg);
     background-repeat: no-repeat;
@@ -1378,7 +1378,7 @@ footer > span {
     background-image: url(../img/common/icon/arrow--gre.svg);
   }
   .cmn__search-shop--stick a:nth-of-type(2) {
-    background-color: #303773;
+    background-color: #1c396c;
     color: #fff;
     padding-top: 1%;
   }

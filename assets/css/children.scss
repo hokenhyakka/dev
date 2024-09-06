@@ -245,7 +245,7 @@
         .row-nar,
         .row-wide, section {
             > p {
-                font-size: clamp(1.3rem, 3.25vw, 1.5rem);
+                font-size: clamp(1.2rem, 3vw, 1.5rem);
 
                 &:first-child {
                     margin-top: clamp(32px, 8vw, 56px);

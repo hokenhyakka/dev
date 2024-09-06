@@ -1,63 +1,103 @@
-.knowledge-one{
-    .row-nar{
-        > p{
-            &:first-child{
+.knowledge-one {
+    .row-nar {
+        > p {
+            &:first-child {
                 margin-bottom: 0;
-            }
-
-            & + p{
-                margin-top: 24px;
             }
         }
     }
+}
 
-    .btn{
+@media screen and (min-width: 769px) {
+    .knowledge-one {
+        .row-nar {
+            > p {
+                & + p {
+                    margin-top: 24px;
+                }
+            }
+        }
+    }
+    .btn {
         margin-top: 72px;
     }
 }
 
-.knowledge-one__content{
-    margin-top: 120px;
-
-    > p{
-        &:first-of-type{
-            margin-top: 48px;
+@media screen and (max-width: 768px) {
+    .knowledge-one {
+        .row-nar {
+            > p {
+                & + p {
+                    margin-top: clamp(16px, 4vw, 24px);
+                }
+            }
         }
+    }
+}
 
-        a{
+.knowledge-one__content {
+    > p {
+        a {
             font-weight: 700;
             color: var(--pink--primary);
             text-decoration: underline;
 
-            &::before{
+            &::before {
                 display: none;
             }
 
-            @media (hover: hover){
-                &:hover{
+            @media (hover: hover) {
+                &:hover {
                     text-decoration: none;
                 }
             }
         }
     }
 
-    > img{
-        margin: 56px auto 0;
-
-        + p{
-            margin-top: 72px;
-        }
+    picture,
+    img {
+        max-width: 100%;
     }
 
-    .text--center{
+    .text--center {
         text-align: center;
     }
 
-    .dots{
-        margin: 24px auto 0;
+    .dots {
+        max-width: 4px;
+    }
+}
 
-        & + p{
-            margin-top: 32px;
+@media screen and (min-width: 769px) {
+    .knowledge-one__content {
+        margin-top: 120px;
+
+        > p {
+            &:first-of-type {
+                margin-top: 48px;
+            }
         }
+
+        > img {
+            margin: 56px auto 0;
+
+            + p {
+                margin-top: 72px;
+            }
+        }
+
+        .dots {
+            margin: 24px auto 0;
+
+            & + p {
+                margin-top: 32px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .knowledge-one__content {
+        // margin-top: clamp();
     }
 }

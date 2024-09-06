@@ -192,7 +192,7 @@
   .p-child .row > p,
   .p-child .row-nar > p,
   .p-child .row-wide > p, .p-child section > p {
-    font-size: clamp(1.3rem, 3.25vw, 1.5rem);
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
   }
   .p-child .row > p:first-child,
   .p-child .row-nar > p:first-child,
