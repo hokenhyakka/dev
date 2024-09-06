@@ -250,7 +250,7 @@
     .search-shop__text {
         align-items: end;
         width: min(540px, 100%);
-        width: calc(490px, 47.85vw, 540px);
+        width: clamp(490px, 47.85vw, 540px);
         position: absolute;
         right: 30px;
 
