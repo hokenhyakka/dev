@@ -360,6 +360,10 @@
 .shop-one__inbody{
     width: 100%;
 
+    picture, img{
+        width: 100%;
+    }
+
     &.inactive{
         display: none;
     }
@@ -370,6 +374,24 @@
         & + .shop-one__inbody{
             margin-top: -64px;
             margin-bottom: 32px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 451px) {
+    .shop-one__main{
+        & + .shop-one__inbody{
+            margin-top: -40px;
+            margin-bottom: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: 450px){
+    .shop-one__main{
+        & + .shop-one__inbody{
+            margin-top: -24px;
+            margin-bottom: clamp(24px, 7.11vw, 32px);
         }
     }
 }

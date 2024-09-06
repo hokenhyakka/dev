@@ -300,6 +300,9 @@
 .shop-one__inbody {
   width: 100%;
 }
+.shop-one__inbody picture, .shop-one__inbody img {
+  width: 100%;
+}
 .shop-one__inbody.inactive {
   display: none;
 }
@@ -308,5 +311,17 @@
   .shop-one__main + .shop-one__inbody {
     margin-top: -64px;
     margin-bottom: 32px;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 451px) {
+  .shop-one__main + .shop-one__inbody {
+    margin-top: -40px;
+    margin-bottom: 24px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .shop-one__main + .shop-one__inbody {
+    margin-top: -24px;
+    margin-bottom: clamp(24px, 7.11vw, 32px);
   }
 }/*# sourceMappingURL=style.css.map */
