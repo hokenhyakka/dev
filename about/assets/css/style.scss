@@ -1,195 +1,384 @@
-.about__main{
-    margin-top: 128px;
-    margin-bottom: 112px;
-
-    *{
-        text-align: center;
-    }
-
-    img{
+.about__main {
+    img {
         margin: 0 auto;
-        height: 46px;
     }
 
-    h2{
-        font-size: 3rem;
+    h2 {
         letter-spacing: 0.08em;
         line-height: 160%;
-        margin-top: 40px;
-        margin-bottom: 40px;
 
-        span{
+        span {
             font-weight: 100;
             color: inherit;
             font-size: inherit;
         }
     }
 
-    p{
-        font-size: 1.8rem;
+    p {
         line-height: 188%;
         letter-spacing: 0.08em;
+    }
+}
 
-        & + p{
-            margin-top: 24px;
+@media screen and (min-width: 769px) {
+    .about__main {
+        margin-top: 128px;
+        margin-bottom: 112px;
+
+        * {
+            text-align: center;
+        }
+
+        img {
+            height: 46px;
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        p {
+            font-size: 1.8rem;
         }
     }
 }
 
-.about__features{
-    background-color: var(--pink--very-light);
-    padding-top: 40px;
-    padding-bottom: 48px;
+@media screen and (max-width: 768px) {
+    .about__main {
+        margin-top: clamp(48px, 12.44vw, 94px);
+        margin-bottom: clamp(48px, 12.44vw, 102px);
 
-    
+        img {
+            height: clamp(20px, 4.89vw, 32px);
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 4vw, 2.6rem);
+            margin-top: clamp(16px, 4.44vw, 34px);
+        }
+
+        p {
+            margin-top: clamp(18px, 3.56vw, 24px);
+        }
+    }
 }
 
-.about__commitment{
-    background-color: #fff;
-    background-image: repeating-linear-gradient(to bottom, var(--gray--very-light), var(--gray--very-light) 1px, transparent 0, transparent 32px), repeating-linear-gradient(to right,var(--gray--very-light), var(--gray--very-light) 1px, transparent 0, transparent 32px);
-    padding-top: 80px;
-    padding-bottom: 72px;
+.about__features {
+    background-color: var(--pink--very-light);
+}
 
-    hgroup{
+@media screen and (min-width: 769px) {
+    .about__features {
+        padding-top: 40px;
+        padding-bottom: 48px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about__features {
+        padding-top: clamp(38px, 10.22vw, 48px);
+        padding-bottom: clamp(32px, 8.89vw, 56px);
+    }
+}
+
+.about__commitment {
+    background-color: #fff;
+    background-image: repeating-linear-gradient(
+            to bottom,
+            var(--gray--very-light),
+            var(--gray--very-light) 1px,
+            transparent 0,
+            transparent 32px
+        ),
+        repeating-linear-gradient(
+            to right,
+            var(--gray--very-light),
+            var(--gray--very-light) 1px,
+            transparent 0,
+            transparent 32px
+        );
+
+    hgroup {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 8px;
 
-        p{
+        p {
             color: var(--pink--primary);
             font-weight: 700;
             letter-spacing: 0;
-            font-size: 1.8rem;
             line-height: 100%;
         }
 
-        h2{
+        h2 {
             gap: 0;
             line-height: 100%;
 
-            &::before{
-                margin-right: 10px;
-            }
-
-            &::after{
-                margin-left: 10px;
-            }
-
-            em, span{
+            em,
+            span {
                 font-style: normal;
                 font-weight: inherit;
                 line-height: inherit;
                 color: inherit;
                 align-self: end;
             }
-
-            em{
-                font-size: 4.2rem;
-                
-            }
-
-            span{
-                font-size: 2.5rem;
-                margin-bottom: -5px;
-            }
         }
     }
 
-    > .row{
-        > p{
-            text-align: center;
-            margin-top: 32px;
-            font-size: 1.5rem;
-            line-height: 186%;
-            margin-bottom: 48px;
-        }
-    }
-
-    ul{
+    ul {
         width: min(882px, 100%);
         margin: 0 auto;
-        
     }
 
-    li{
+    li {
         display: grid;
-        grid-template-columns: 126px auto;
-        gap: 10px;
         align-items: center;
 
-        p{
-            font-size: 1.5rem;
+        img {
+            width: 100%;
+        }
+
+        p {
             font-weight: 700;
             color: var(--pink--primary);
             letter-spacing: 0.07em;
-            line-height: 200%;
             text-decoration-line: underline;
             text-decoration-thickness: 2px;
             text-decoration-color: var(--pink--pale);
             text-decoration-style: dashed;
-            text-underline-offset: 6px;
         }
     }
 }
 
-@media screen and (min-width: 769px){
-    .about__commitment{
-        ul{
+@media screen and (min-width: 769px) {
+    .about__commitment {
+        padding-top: 80px;
+        padding-bottom: 72px;
+
+        hgroup {
+            gap: 8px;
+
+            p {
+                font-size: 1.8rem;
+            }
+            h2 {
+                &::before {
+                    margin-right: 10px;
+                }
+
+                &::after {
+                    margin-left: 10px;
+                }
+
+                em {
+                    font-size: 4.2rem;
+                }
+
+                span {
+                    font-size: 2.5rem;
+                    margin-bottom: -5px;
+                }
+            }
+        }
+
+        > .row {
+            > p {
+                text-align: center;
+                margin-top: 32px;
+                font-size: 1.5rem;
+                line-height: 186%;
+                margin-bottom: 48px;
+            }
+        }
+
+        ul {
             display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, auto);
-        grid-auto-flow: column;
-        row-gap: 16px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, auto);
+            grid-auto-flow: column;
+            row-gap: 16px;
+        }
+
+        li {
+            grid-template-columns: 126px auto;
+            gap: 10px;
+
+            p {
+                font-size: 1.5rem;
+                line-height: 200%;
+                text-underline-offset: 6px;
+            }
         }
     }
 }
 
-.about__flow{
-    margin-top: 72px;
+@media screen and (max-width: 768px) {
+    .about__commitment {
+        padding-top: clamp(48px, 12.44vw, 72px);
+        padding-bottom: clamp(56px, 14.22vw, 80px);
 
-    .row-nar{
-        > p{
-            margin-top: 40px;
+        .row {
+            max-width: 590px;
+        }
+
+        hgroup {
+            gap: clamp(5px, 1.33vw, 7px);
+
+            p {
+                font-size: clamp(1.3rem, 2.89vw, 1.5rem);
+            }
+            h2 {
+                font-size: clamp(1.8rem, 4.44vw, 2.4rem);
+
+                &::before,
+                &::after {
+                    margin-bottom: 4px;
+                }
+
+                &::before {
+                    margin-right: clamp(4px, 1.33vw, 8px);
+                }
+
+                &::after {
+                    margin-left: clamp(4px, 1.33vw, 8px);
+                }
+
+                em {
+                    font-size: clamp(2.4rem, 5.78vw, 3rem);
+                }
+
+                span {
+                    font-size: clamp(1.5rem, 3.56vw, 2.1rem);
+                    margin-bottom: -2px;
+                }
+            }
+        }
+        > .row {
+            > p {
+                margin-top: clamp(14px, 3.11vw, 20px);
+                margin-bottom: clamp(30px, 7.11vw, 48px);
+            }
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(12px, 3.11vw, 24px);
+        }
+        li {
+            grid-template-columns: clamp(64px, 19.56vw, 126px) auto;
+            gap: 10px;
+
+            p {
+                font-size: clamp(1rem, 3.1vw, 1.6rem);
+                line-height: 170%;
+                text-underline-offset: clamp(4px, 1vw, 6px);
+            }
         }
     }
+}
 
-    ul{
-        margin-top: 48px;
+.about__flow {
+    ul {
         display: flex;
         flex-direction: column;
-        gap: 24px;
     }
 
-    li{
+    li {
+        position: relative;
         background-color: #fff;
         box-shadow: 0px 1px 16px 0px rgba(0, 0, 0, 0.04);
-        padding-top: 32px;
-        padding-right: 32px;
-        padding-bottom: 32px;
-        padding-left: 64px;
-        position:relative;
-        border-radius: 12px;
 
-        img{
+        img {
             position: absolute;
-            left: 16px;
-            top: 16px;
-            width: 26px;
-            height: 26px;
         }
-        
     }
 
-    p{
-        font-size: 1.6rem;
+    p {
         line-height: 162%;
     }
 
-    .name{
+    .name {
         color: var(--pink--primary);
         font-weight: 700;
-        font-size: 2rem;
-        margin-bottom: 14px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .about__flow {
+        margin-top: 72px;
+
+        .row-nar {
+            > p {
+                margin-top: 40px;
+            }
+        }
+
+        ul {
+            margin-top: 48px;
+            gap: 24px;
+        }
+
+        li {
+            padding-top: 32px;
+            padding-right: 32px;
+            padding-bottom: 32px;
+            padding-left: 64px;
+            border-radius: 12px;
+
+            img {
+                left: 16px;
+                top: 16px;
+                width: 26px;
+                height: 26px;
+            }
+        }
+
+        p {
+            font-size: 1.6rem;
+        }
+
+        .name {
+            font-size: 2rem;
+            margin-bottom: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .about__flow{
+        margin-top: clamp(34px, 10.22vw, 56px);
+
+        .row-nar {
+            > p {
+                margin-top: clamp(12px, 3.56vw, 20px);
+            }
+        }
+
+        ul {
+            margin-top: clamp(22px, 5.33vw, 30px);
+            gap: clamp(8px, 2.67vw, 14px);
+        }
+
+        li{
+            padding: clamp(14px, 3.78vw, 24px);
+            padding-left: calc(clamp(14px, 3.78vw, 24px) * 2);
+            border-radius: 8px;
+
+            img{
+                left: calc(clamp(14px, 3.78vw, 24px) / 2);
+                top: calc(clamp(14px, 3.78vw, 24px) / 2);
+                width: clamp(16px, 4vw, 26px);
+            }
+        }
+
+        p{
+            font-size: clamp(1rem, 2.67vw, 1.4rem);
+        }
+
+        .name{
+            font-size: clamp(1.2rem, 2.89vw, 1.5rem);
+        }
     }
 }

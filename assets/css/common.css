@@ -1065,6 +1065,7 @@ footer > span {
     width: clamp(17px, 4.5vw, 20px);
     height: clamp(17px, 4.5vw, 20px);
     background-image: url(../img/common/icon/flower--ylw.svg);
+    background-size: cover;
   }
   .about__features li p:not(.name) {
     font-size: clamp(1.3rem, 3.25vw, 1.4rem);
@@ -1274,10 +1275,10 @@ footer > span {
 #backToTop {
   background-color: var(--black);
   position: fixed;
-  right: 40px;
-  bottom: 40px;
-  width: 84px;
-  height: 82px;
+  right: clamp(20px, 1.67vw, 40px);
+  bottom: clamp(20px, 1.67vw, 40px);
+  width: clamp(72px, 5.28vw, 84px);
+  height: clamp(70px, 5.14vw, 80px);
   z-index: 9999;
   border-radius: 6px;
   display: flex;
@@ -1319,11 +1320,11 @@ footer > span {
 @media screen and (min-width: 769px) {
   .cmn__search-shop--stick {
     top: 200px;
-    width: 80px;
+    width: clamp(64px, 5vw, 80px);
   }
   .cmn__search-shop--stick a {
     width: 100%;
-    background-color: #1c396c;
+    background-color: #213a67;
     writing-mode: vertical-lr;
     flex-direction: row;
     align-items: center;
@@ -1338,7 +1339,7 @@ footer > span {
   }
   .cmn__search-shop--stick p {
     writing-mode: inherit;
-    font-size: 2.6rem;
+    font-size: clamp(2.2rem, 1.6vw, 2.6rem);
     font-weight: 900;
     color: #fff;
     margin-left: -8px;
@@ -1367,9 +1368,9 @@ footer > span {
     position: absolute;
   }
   .cmn__search-shop--stick a:first-of-type {
-    border: 2px solid #1c396c;
-    color: #1c396c;
-    background-color: #fff;
+    border: 2px solid #213a67;
+    color: #213a67;
+    background-color: #fafdff;
     background-image: url(../img/common/icon/phone.svg);
     background-repeat: no-repeat;
     background-position: -4px -4px;
@@ -1378,7 +1379,7 @@ footer > span {
     background-image: url(../img/common/icon/arrow--gre.svg);
   }
   .cmn__search-shop--stick a:nth-of-type(2) {
-    background-color: #1c396c;
+    background-color: #213a67;
     color: #fff;
     padding-top: 1%;
   }
