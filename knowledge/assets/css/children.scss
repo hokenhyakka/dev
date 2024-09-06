@@ -17,9 +17,9 @@
                 }
             }
         }
-    }
-    .btn {
-        margin-top: 72px;
+        .btn {
+            margin-top: 72px;
+        }
     }
 }
 
@@ -31,6 +31,9 @@
                     margin-top: clamp(16px, 4vw, 24px);
                 }
             }
+        }
+        .btn{
+            margin-top: clamp(40px, 8.89vw, 56px);
         }
     }
 }
@@ -98,6 +101,20 @@
 
 @media screen and (max-width: 768px) {
     .knowledge-one__content {
-        // margin-top: clamp();
+        margin-top: clamp(32px, 10vw, 48px);
+
+        > p {
+            &:first-of-type {
+                margin-top: clamp(20px, 4.44vw, 24px);
+            }
+        }
+
+        > img {
+            margin: clamp(24px, 6.22vw, 40px) auto 0;
+
+            & + p {
+                margin-top: clamp(28px, 6.22vw, 56px);
+            }
+        }
     }
 }

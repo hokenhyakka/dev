@@ -163,6 +163,10 @@
   h3.dot-line {
     font-size: clamp(2rem, 5vw, 3rem);
   }
+  h2.dot-line:has(br),
+  h3.dot-line:has(br) {
+    line-height: 130%;
+  }
 }
 .p-child .row > p:first-child,
 .p-child .row-nar > p:first-child,

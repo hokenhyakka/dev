@@ -6,13 +6,16 @@
   .knowledge-one .row-nar > p + p {
     margin-top: 24px;
   }
-  .btn {
+  .knowledge-one .btn {
     margin-top: 72px;
   }
 }
 @media screen and (max-width: 768px) {
   .knowledge-one .row-nar > p + p {
     margin-top: clamp(16px, 4vw, 24px);
+  }
+  .knowledge-one .btn {
+    margin-top: clamp(40px, 8.89vw, 56px);
   }
 }
 .knowledge-one__content > p a {
@@ -57,5 +60,19 @@
   }
   .knowledge-one__content .dots + p {
     margin-top: 32px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .knowledge-one__content {
+    margin-top: clamp(32px, 10vw, 48px);
+  }
+  .knowledge-one__content > p:first-of-type {
+    margin-top: clamp(20px, 4.44vw, 24px);
+  }
+  .knowledge-one__content > img {
+    margin: clamp(24px, 6.22vw, 40px) auto 0;
+  }
+  .knowledge-one__content > img + p {
+    margin-top: clamp(28px, 6.22vw, 56px);
   }
 }/*# sourceMappingURL=children.css.map */

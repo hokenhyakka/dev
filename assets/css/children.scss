@@ -200,6 +200,10 @@
         }
         &.dot-line {
             font-size: clamp(2rem, 5vw, 3rem);
+            
+            &:has(br){
+                line-height: 130%;
+            }
         }
     }
 }
