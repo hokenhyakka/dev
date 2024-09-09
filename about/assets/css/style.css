@@ -194,7 +194,7 @@
   }
   .about__commitment hgroup h2 span {
     font-size: clamp(1.5rem, 3.56vw, 2.1rem);
-    margin-bottom: -2px;
+    margin-bottom: -1px;
   }
   .about__commitment > .row > p {
     margin-top: clamp(14px, 3.11vw, 20px);
