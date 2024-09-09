@@ -21,6 +21,8 @@ html {
 body {
   background-color: #fafafa;
   max-width: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 * {
@@ -46,6 +48,7 @@ img {
   display: block;
   width: auto;
   height: auto;
+  max-width: 100%;
 }
 
 iframe {
@@ -1282,7 +1285,7 @@ footer > span {
   bottom: clamp(20px, 1.67vw, 40px);
   width: clamp(72px, 5.28vw, 84px);
   height: clamp(70px, 5.14vw, 80px);
-  z-index: 9999;
+  z-index: 9998;
   border-radius: 6px;
   display: flex;
   justify-content: center;
@@ -1327,7 +1330,7 @@ footer > span {
   }
   .cmn__search-shop--stick a {
     width: 100%;
-    background-color: #213a67;
+    background-color: #0076e5;
     writing-mode: vertical-lr;
     flex-direction: row;
     align-items: center;
@@ -1371,18 +1374,18 @@ footer > span {
     position: absolute;
   }
   .cmn__search-shop--stick a:first-of-type {
-    border: 2px solid #213a67;
-    color: #213a67;
+    border: 2px solid #0071db;
+    color: #0071db;
     background-color: #fafdff;
     background-image: url(../img/common/icon/phone.svg);
     background-repeat: no-repeat;
     background-position: -4px -4px;
   }
   .cmn__search-shop--stick a:first-of-type::after {
-    background-image: url(../img/common/icon/arrow--gre.svg);
+    background-image: url(../img/common/icon/arrow--tel.svg);
   }
   .cmn__search-shop--stick a:nth-of-type(2) {
-    background-color: #213a67;
+    background-color: #0071db;
     color: #fff;
     padding-top: 1%;
   }
