@@ -168,21 +168,11 @@
     line-height: 130%;
   }
 }
-.p-child .row > p:first-child,
-.p-child .row-nar > p:first-child,
-.p-child .row-wide > p:first-child {
-  margin-top: 64px;
-  margin-bottom: 96px;
-}
 .p-child .row > p,
 .p-child .row-nar > p,
 .p-child .row-wide > p,
 .p-child section > p {
-  font-size: 1.6rem;
   line-height: 187%;
-}
-.p-child .att {
-  font-size: 1.3rem;
 }
 .p-child .att::before {
   content: "※";
@@ -192,17 +182,39 @@
   display: inline;
 }
 
+@media screen and (min-width: 769px) {
+  .p-child .row > p:first-child,
+  .p-child .row-nar > p:first-child,
+  .p-child .row-wide > p:first-child {
+    margin-top: 64px;
+    margin-bottom: 96px;
+  }
+  .p-child .row > p,
+  .p-child .row-nar > p,
+  .p-child .row-wide > p,
+  .p-child section > p {
+    font-size: 1.6rem;
+  }
+  .p-child .att {
+    font-size: 1.3rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .p-child .row > p,
   .p-child .row-nar > p,
-  .p-child .row-wide > p, .p-child section > p {
+  .p-child .row-wide > p,
+  .p-child section > p {
     font-size: clamp(1.2rem, 3vw, 1.5rem);
   }
   .p-child .row > p:first-child,
   .p-child .row-nar > p:first-child,
-  .p-child .row-wide > p:first-child, .p-child section > p:first-child {
+  .p-child .row-wide > p:first-child,
+  .p-child section > p:first-child {
     margin-top: clamp(32px, 8vw, 56px);
     margin-bottom: clamp(56px, 14vw, 96px);
+  }
+  .p-child .att {
+    font-size: clamp(1rem, 2.22vw, 1.3rem);
   }
 }
 .cmn__search-shop .row-nar {

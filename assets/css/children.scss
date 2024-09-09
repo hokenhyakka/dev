@@ -9,8 +9,8 @@
 
         hgroup {
             align-items: start;
-            
-            h1{
+
+            h1 {
                 text-align: left;
             }
         }
@@ -82,8 +82,6 @@
             h1 {
                 font-size: clamp(2.2rem, 5.33vw, 3.6rem);
                 line-height: 130%;
-                
-                
             }
         }
     }
@@ -91,7 +89,7 @@
 
 .breadcrumb {
     background-color: #f8e8ee;
-    
+
     ul {
         height: 40px;
         display: flex;
@@ -202,8 +200,8 @@
         }
         &.dot-line {
             font-size: clamp(2rem, 5vw, 3rem);
-            
-            &:has(br){
+
+            &:has(br) {
                 line-height: 130%;
             }
         }
@@ -213,28 +211,13 @@
 .p-child {
     .row,
     .row-nar,
-    .row-wide {
-        > p {
-            &:first-child {
-                margin-top: 64px;
-                margin-bottom: 96px;
-            }
-        }
-    }
-
-    .row,
-    .row-nar,
     .row-wide,
     section {
         > p {
-            font-size: 1.6rem;
             line-height: 187%;
         }
     }
-
     .att {
-        font-size: 1.3rem;
-
         &::before {
             content: "※";
             font-size: inherit;
@@ -245,11 +228,40 @@
     }
 }
 
+@media screen and (min-width: 769px) {
+    .p-child {
+        .row,
+        .row-nar,
+        .row-wide {
+            > p {
+                &:first-child {
+                    margin-top: 64px;
+                    margin-bottom: 96px;
+                }
+            }
+        }
+
+        .row,
+        .row-nar,
+        .row-wide,
+        section {
+            > p {
+                font-size: 1.6rem;
+            }
+        }
+
+        .att {
+            font-size: 1.3rem;
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     .p-child {
         .row,
         .row-nar,
-        .row-wide, section {
+        .row-wide,
+        section {
             > p {
                 font-size: clamp(1.2rem, 3vw, 1.5rem);
 
@@ -258,6 +270,9 @@
                     margin-bottom: clamp(56px, 14vw, 96px);
                 }
             }
+        }
+        .att{
+            font-size: clamp(1rem, 2.22vw, 1.3rem);
         }
     }
 }
@@ -371,7 +386,7 @@
         .btn {
             a {
                 padding-top: clamp(12px, 3.33vw, 20px);
-                font-size: clamp(1.8rem , 4.89vw, 2.6rem);
+                font-size: clamp(1.8rem, 4.89vw, 2.6rem);
                 height: clamp(62px, 16vw, 90px);
             }
         }
@@ -389,8 +404,8 @@
 }
 
 @media screen and (max-width: 600px) {
-    .cmn__search-shop{
-        .row-nar{
+    .cmn__search-shop {
+        .row-nar {
             padding: 0 10px;
         }
     }
