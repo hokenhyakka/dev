@@ -195,6 +195,9 @@
 }
 
 .worry__list {
+    ul{
+        display: grid;
+    }
     li {
         &.is-active {
             display: none;
@@ -208,9 +211,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        
-        
-        box-shadow: 4px 4px 0px 0px #f2d5e1;
 
         &::before {
             display: none;
@@ -222,8 +222,7 @@
         align-items: center;
         color: var(--pink--primary);
         font-weight: 900;
-        font-size: 1.3rem;
-        gap: 6px;
+        
 
         &::before,
         &::after {
@@ -274,7 +273,7 @@
 
         ul {
             grid-template-columns: repeat(2, 1fr);
-            gap: 22px clamp(14px, 3.11vw, 24px);
+            gap: clamp(12px, 2.67vw, 22px) clamp(14px, 3.11vw, 24px);
             margin-top: clamp(16px, 3.56vw, 32px);
             width: min(580px, 100%);
             margin-right: auto;
@@ -305,10 +304,43 @@
     }
 }
 
-@media screen and (min-width: 451px) {
-    .worry__list {
-        ul {
-            display: grid;
+@media screen and (min-width: 451px){
+    .worry__list{
+
+        a{
+            box-shadow: 4px 4px 0px 0px #f2d5e1;
+        }
+        span{
+            font-size: 1.3rem;
+        gap: 6px;
+        }
+    }
+}
+
+@media screen and (max-width: 450px){
+    .worry__list{
+        padding-top: clamp(32px, 7.11vw, 40px);
+        padding-bottom: clamp(40px, 8.89vw, 48px);
+
+        ul{
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: clamp(16px, 4vw, 18px);
+            gap: clamp(12px, 2.67vw, 16px);
+        }
+
+        a{
+            height:clamp(80px, 25vw, 96px);
+            gap: 5px;
+            box-shadow: 3px 3px 0px 0px #f2d5e1;
+        }
+
+        span{
+            font-size: clamp(1rem, 3.13vw, 1.2rem);
+            gap: 5px;
+        }
+
+        .name{
+            font-size: clamp(1.1rem, 3.44vw, 1.4rem);
         }
     }
 }
