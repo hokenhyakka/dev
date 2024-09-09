@@ -1,0 +1,985 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FFFDFA;
+    font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ ProN W3', YuGothic, 'Yu Gothic', sans-serif;
+    color: #53370F;
+}
+
+img {
+    width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #53370F;
+}
+
+/* ------------------------------------------
+ページ共通
+------------------------------------------*/
+.pc {
+    display: block;
+}
+
+.sp {
+    display: none;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.bg {
+    background: #F4ECDD;
+}
+
+.content_area {
+    width: min(100%, 1200px);
+    margin: 0 auto;
+    padding: 100px 16px 110px 16px;
+}
+
+.heading_area {
+    text-align: center;
+}
+
+.heading {
+    margin-bottom: 20px;
+}
+
+.heading h2 {
+    font-size: 1.875rem;
+    position: relative;
+    display: inline-block;
+}
+
+.heading h2::before,
+.heading h2::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #53370F;
+    top: 30%;
+}
+
+.heading h2::before {
+    left: -30px;
+}
+
+.heading h2::after {
+    right: -30px;
+}
+
+.heading p {
+    font-size: 1rem;
+}
+
+.lead {
+    font-size: 1.5625rem;
+}
+
+@media screen and (max-width: 768px) {
+
+    .pc {
+        display: none;
+    }
+
+    .sp {
+        display: block;
+    }
+
+    .content_area {
+        padding: 60px 16px 60px 16px;
+    }
+
+    .heading h2 {
+        font-size: 1.125rem;
+    }
+
+    .heading h2::before,
+    .heading h2::after {
+        width: 15px;
+        height: 15px;
+        top: 25%;
+    }
+
+    .heading h2::before {
+        left: -20px;
+    }
+
+    .heading h2::after {
+        right: -20px;
+    }
+
+    .heading p {
+        font-size: 0.875rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+}
+
+
+/* ------------------------------------------
+ページ共通
+------------------------------------------*/
+
+/* ------------------------------------------
+メニューエリア
+------------------------------------------*/
+.menu_area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #53370F;
+    padding: 14px 60px;
+    width: 100%;
+}
+
+.logo {
+    width: min(100%, 181px);
+    height: auto;
+}
+
+.logo a {
+    display: block;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5%;
+    width: 100%;
+    margin-left: 50px;
+}
+
+.menu li {
+    transition: 0.3s;
+}
+
+.menu li:hover {
+    opacity: 0.7;
+}
+
+.menu li a {
+    font-size: 1.25rem;
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .menu_area {
+        flex-direction: column;
+        padding: 14px 16px;
+    }
+
+    .logo {
+        width: min(30%, 181px);
+        margin-bottom: 14px;
+    }
+
+    .menu {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .menu li a {
+        font-size: 0.7rem;
+    }
+}
+
+/* ------------------------------------------
+メニューエリア
+------------------------------------------*/
+
+/* ------------------------------------------
+ページトップ
+------------------------------------------*/
+.top_area {
+    width: min(100%, 1200px);
+    margin: 120px auto 80px;
+    padding: 0 16px;
+}
+
+.title {
+    text-align: center;
+}
+
+.title img {
+    width: min(100%, 478px);
+    height: auto;
+}
+
+h1 {
+    font-family: "Hiragino Maru Gothic Pro";
+    font-size: 2.8125rem;
+    font-weight: 400;
+}
+
+.title_sub {
+    font-size: 1.2rem;
+    color: #d96c15;
+}
+
+.top_image {
+    width: min(100%, 1200px);
+    height: auto;
+    margin-top: 30px;
+}
+
+.btn_area {
+    width: 100%;
+    position: fixed;
+    bottom: 20px;
+    z-index: 999;
+    padding: 0 16px;
+}
+
+#btn {
+    width: min(100%, 960px);
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 2px solid #FFF;
+    background: #C93A1C;
+    text-align: center;
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+#btn a {
+    display: block;
+    color: #FFF;
+    font-size: 1.875rem;
+    font-weight: 500;
+    padding: 1% 0;
+}
+
+#btn:hover {
+    background: #FFF;
+    border: 2px solid #C93A1C;
+}
+
+#btn:hover#btn a {
+    color: #C93A1C;
+}
+
+#btn.UpMove {
+    animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#btn.DownMove {
+    animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(100px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .top_area {
+        margin: 60px auto 60px;
+    }
+
+    .title img {
+        width: min(90%, 478px);
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .title_sub {
+        font-size: 1rem;
+    }
+
+    .top_image {
+        margin-top: 10px;
+    }
+
+    #btn {
+        margin: 30px auto 0;
+    }
+
+    #btn a {
+        font-size: 1.125rem;
+        padding: 3% 0;
+    }
+}
+
+/* ------------------------------------------
+ページトップ
+------------------------------------------*/
+/* ------------------------------------------
+健康機器無料測定イベント情報
+------------------------------------------*/
+
+.tab_area {
+    margin-top: 100px;
+}
+
+.tab_area .tab {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tab_area .tab li {
+    width: 24%;
+}
+
+.tab_area .tab li a {
+    display: block;
+    border-radius: 20px 20px 0px 0px;
+    padding: 5% 0;
+    width: 100%;
+    background: #53370F;
+    color: #FFFDFA;
+    font-size: 1.875rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.tab_area .tab li.active a {
+    background: #FFFDFA;
+    color: #53370F;
+}
+
+.tab_menu {
+    display: none;
+    opacity: 0;
+    width: 100%;
+    background: #FFFDFA;
+    padding: 45px 5% 50px 5%;
+}
+
+.tab_menu.is-active {
+    display: block;
+    animation: displayAnime 1s forwards;
+}
+
+@keyframes displayAnime {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.tab_menu_inner {
+    border-bottom: 1px solid #53370F;
+    margin-bottom: 45px;
+}
+
+.tab_menu_inner a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.tab_menu_inner a:hover {
+    opacity: 0.7;
+}
+
+.tab_menu_inner a ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.tab_menu_inner a ul .date {
+    font-size: 1.4rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.tab_menu_inner a ul .time {
+    font-size: 1.4rem;
+}
+
+.tab_menu_inner a ul .detail {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.tab_menu_inner a .shop {
+    font-size: 1.375rem;
+    width: 21%;
+    margin-left: 20px;
+    position: relative;
+}
+
+.material-symbols-outlined {
+    padding-left: 3%;
+}
+
+.topics_area {
+    width: min(100%, 870px);
+    margin: 100px auto 0;
+}
+
+.topics_title {
+    text-align: center;
+    font-size: 1.5625rem;
+    font-weight: 600;
+}
+
+.modal_area {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.modal_area .list_item {
+    width: calc((100% - 94px) /3);
+    text-align: center;
+    position: relative;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal_area .list_item .list_item_name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    flex-grow: 1;
+    margin: 5px;
+}
+
+.modal_area .list_item .list_item_name span {
+    font-size: 1rem;
+}
+
+.topics_img {
+    margin-top: auto;
+}
+
+.topics_img img {
+    width: 100%;
+    height: auto;
+}
+
+.modal_btn {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+}
+
+.modal_btn a {
+    width: 50px;
+    height: 50px;
+    background: #53370F;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+    display: block;
+}
+
+.modal_btn a::before,
+.modal_btn a:after {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 1px;
+    background-color: #F4ECDD;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal_btn a::before {
+    left: 12px;
+    transform: rotate(90deg);
+}
+
+.modal_btn a:hover {
+    transform: scale(1.2);
+}
+
+.modal_inner {
+    padding: 90px 5%;
+    background: #FFFDFA;
+    border-radius: 30px;
+    position: relative;
+}
+
+.modal_inner .modal_item_name {
+    font-size: 1.875rem;
+    font-weight: 600;
+    border-bottom: 1px solid #53370F;
+    width: min(100%, 350px);
+    margin: 0 auto 30px;
+}
+
+.modal_inner img {
+    width: min(100%, 350px);
+    height: auto;
+}
+
+.modal_inner .modal_text {
+    width: min(100%, 526px);
+    margin: 30px auto 0;
+    font-size: 1.25rem;
+    line-height: 2.1875rem;
+    text-align: left;
+}
+
+.modal_btn_cancel {
+    width: 50px;
+    height: 50px;
+    background: #53370F;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 45px;
+    right: 45px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal_btn_cancel::before,
+.modal_btn_cancel::after {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 1px;
+    background-color: #F4ECDD;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal_btn_cancel::before {
+    left: 11px;
+    transform: rotate(45deg);
+}
+
+.modal_btn_cancel::after {
+    left: 11px;
+    transform: rotate(-45deg);
+}
+
+.modal_btn_cancel:hover {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 768px) {
+    .tab_area {
+        margin-top: 50px;
+    }
+
+    .tab_area .tab li {
+        width: calc((100% - 10px) /2);
+    }
+
+    .tab_area .tab li a {
+        font-size: 1.25rem;
+    }
+
+    .tab_menu {
+        padding: 34px 5% 10px 5%;
+    }
+
+    .tab_menu_inner {
+        margin-bottom: 34px;
+    }
+
+    .tab_menu_inner a {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tab_menu_inner a ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .tab_menu_inner a ul .date {
+        font-size: 1.125rem;
+    }
+
+    .tab_menu_inner a ul .time {
+        font-size: 1.125rem;
+    }
+
+    .tab_menu_inner a ul .detail {
+        font-size: 1.125rem;
+    }
+
+    .tab_menu_inner a .shop {
+        font-size: 1rem;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .topics_area {
+        margin: 40px auto 0;
+    }
+
+    .topics_title {
+        font-size: 1.125rem;
+    }
+
+    .modal_area {
+        margin-top: 20px;
+        gap: 5%;
+    }
+
+    .modal_area .list_item {
+        width: calc((100% - 5%) /2);
+        margin-bottom: 10%;
+    }
+
+    .modal_area .list_item .list_item_name {
+        font-size: 1.125rem;
+    }
+
+    .modal_area .list_item .list_item_name span {
+        font-size: 0.875rem;
+    }
+
+    .modal_btn {
+        position: absolute;
+        bottom: -5px;
+        right: -5px;
+    }
+
+    .modal_btn a {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .modal_btn a::before,
+    .modal_btn a:after {
+        width: 70%;
+    }
+
+    .modal_btn a::before {
+        left: 17%;
+    }
+
+    .modal_inner {
+        padding: 40px 5%;
+    }
+
+    .modal_inner .modal_item_name {
+        font-size: 1.125rem;
+    }
+
+    .modal_inner .modal_text {
+        font-size: 1rem;
+        line-height: 1.75rem;
+    }
+
+    .modal_btn_cancel {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .modal_btn_cancel::before,
+    .modal_btn_cancel::after {
+        width: 70%;
+        left: 17%;
+    }
+}
+
+/* ------------------------------------------
+健康機器無料測定イベント情報
+------------------------------------------*/
+/* ------------------------------------------
+健康関連情報リンク集・健康関係セルフチェック集
+------------------------------------------*/
+#section03 {
+    padding-bottom: 100px;
+}
+
+.link_area {
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1%;
+}
+
+.link_area li {
+    width: calc((100% - 3%)/4);
+    background: #F4ECDD;
+    border-radius: 20px;
+}
+
+.link_area_border a {
+    height: calc(100% - 26px);
+    /* height: 100%; */
+    display: block;
+    border: 2px solid #fff;
+    background: #F4ECDD;
+    border-radius: 20px;
+}
+
+.link_area li a {
+    display: block;
+    transition: 0.3s;
+}
+
+.link_area li a:hover {
+    opacity: 0.8;
+}
+
+
+.link_area li a .link_img {
+    width: 100%;
+    height: 150px;
+    background: #FFF;
+    border-radius: 16px 16px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link_area li a .link_img img {
+    width: min(100%, 210px);
+    height: auto;
+    padding: 3%;
+}
+
+.link_area li a .link_title_area {
+    width: 100%;
+    position: relative;
+    padding: 3% 2% 4% 3%;
+}
+
+.link_area li a .link_title_area::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #53370F;
+    border-bottom: 2px solid #53370F;
+    transform: rotate(-135deg);
+    top: 50%;
+    right: 15px;
+}
+
+.link_title_area_inner {
+    width: 80%;
+}
+
+.category {
+    font-size: 0.75rem;
+    display: inline-block;
+    padding: 0.8%;
+    margin-bottom: 1%;
+}
+
+.category_red {
+    color: #C93A1C;
+    border: 1px solid #C93A1C;
+}
+
+.category_green {
+    color: #6D8930;
+    border: 1px solid #6D8930;
+}
+
+.category_blue {
+    color: #3F5E8B;
+    border: 1px solid #3F5E8B;
+}
+
+.category_orange {
+    color: #C57023;
+    border: 1px solid #C57023;
+}
+
+.link_name {
+    font-size: 0.9375rem;
+    font-weight: 600;
+}
+
+.link_text {
+    font-size: 0.875rem;
+}
+
+/* 20240716更新 */
+.vitality__btn {
+    margin-top: 10px;
+    padding: 3px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #C50018;
+    border-radius: 4px;
+    position: relative;
+    transition: all .3s;
+}
+
+.vitality__btn a {
+    display: block;
+    background: transparent;
+    color: #C50018;
+    border: none;
+    font-size: clamp(0.6rem, 0.659rem + 0.45vw, 1rem);
+    padding: 0 10px;
+}
+
+.vitality__btn::before {
+    position: absolute;
+    content: "";
+    background-color: #C50018;
+    width: 14px;
+    height: 10px;
+    clip-path: polygon(8px 50%, 0% 0%, 0% 10px);
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1%;
+}
+
+.vitality__btn:hover {
+    background-color: #C50018;
+    opacity: inherit;
+}
+
+.vitality__btn:hover.vitality__btn a {
+    color: #fff;
+    opacity: 1;
+}
+
+.vitality__btn:hover.vitality__btn::before {
+    background-color: #fff;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .link_area {
+        margin-top: 30px;
+        gap: 3%;
+    }
+
+    .link_area li {
+        width: calc((100% - 3%) / 2);
+        margin-bottom: 6%;
+    }
+
+    .link_area_border {
+        margin-bottom: 14% !important;
+    }
+
+    .link_area_border a {
+        height: 100%;
+    }
+
+    .link_area li a .link_img img {
+        padding: 6%;
+    }
+
+    .link_area li a .link_title_area {
+        padding: 5%;
+    }
+
+    .link_name {
+        font-size: 0.875rem;
+    }
+
+    .link_text {
+        font-size: 0.75rem;
+        margin-top: 5%;
+    }
+
+    /* 20240716更新 */
+    .vitality__btn {
+        margin-top: 10px;
+        padding: 3px;
+        text-align: center;
+        background-color: #fff;
+        border: 1px solid #C50018;
+        border-radius: 4px;
+        position: relative;
+        transition: all .3s;
+    }
+
+    .vitality__btn a {
+        display: block;
+        background: transparent;
+        color: #C50018;
+        border: none;
+        font-size: clamp(0.6rem, 0.659rem + 0.45vw, 1rem);
+        padding: 0 10px;
+    }
+
+    .vitality__btn::before {
+        position: absolute;
+        content: "";
+        background-color: #C50018;
+        width: 12px;
+        height: 8px;
+        clip-path: polygon(6px 50%, 0% 0%, 0% 8px);
+        transform: translateY(-50%);
+        right: -1%;
+    }
+
+    .vitality__btn:hover {
+        background-color: #C50018;
+        opacity: inherit;
+    }
+
+    .vitality__btn:hover.vitality__btn a {
+        color: #fff;
+        opacity: 1;
+    }
+
+    .vitality__btn:hover.vitality__btn::before {
+        background-color: #fff;
+        opacity: 1;
+    }
+}
+
+
+/* ------------------------------------------
+健康関連情報リンク集・健康関係セルフチェック集
+------------------------------------------*/
