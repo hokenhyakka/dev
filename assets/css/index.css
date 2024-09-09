@@ -723,6 +723,7 @@
 .connection__slider img {
   background-color: #fff;
   height: 100%;
+  max-width: unset;
 }
 .connection__slider.life ul {
   animation: connectionSlide 40s linear infinite;

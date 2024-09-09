@@ -93,9 +93,6 @@
 
     &::before {
         content: "";
-        background-image: url(../img/attention.svg);
-        background-size: cover;
-        position: absolute;
     }
 
     ul {
@@ -129,10 +126,13 @@
         margin: 48px auto 0;
 
         &::before {
+            position: absolute;
             width: 96px;
             height: 96px;
             top: -22px;
             left: -34px;
+            background-image: url(../img/attention.svg);
+            background-size: cover;
         }
 
         li {
@@ -152,17 +152,33 @@
 @media screen and (max-width: 768px) {
     .worry-one__attention {
         width: 100%;
-        padding-left: clamp(68px, 16.89vw, 86px);
+        padding-left: 20px;
         padding-top: clamp(20px, 4.44vw, 24px);
         padding-bottom: clamp(28px, 6.22vw, 32px);
-        padding-right: clamp(13px, 3.25vw, 15px);
+        padding-right: 20px;
         margin-top: clamp(30px, 7.56vw, 38px);
+        margin-right: auto;
+        margin-left: auto;
+
+        h3 {
+            font-size: clamp(1.5rem, 3.33vw, 2rem);
+            background-color: var(--pink--very-light);
+            margin-bottom: 14px;
+            border-radius: 4px;
+            padding: 4px 0;
+
+            &::after {
+                content: "";
+                width: clamp(15px, 3.33vw, 20px);
+                height: clamp(15px, 3.33vw, 20px);
+                background-image: url(../../../assets/img/common/icon/search--prm.svg);
+                background-size: cover;
+                display: inline-block;
+            }
+        }
 
         &::before {
-            width: clamp(72px, 17.78vw, 88px);
-            height: clamp(72px, 17.78vw, 88px);
-            left: -16px;
-            top: -20px;
+            display: none;
         }
 
         li {
@@ -173,7 +189,7 @@
         }
 
         a {
-            font-size: clamp(1.3rem, 3.25vw, 1.5rem);
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
         }
     }
 }
@@ -192,8 +208,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 10px;
-        height: 132px;
+        
+        
         box-shadow: 4px 4px 0px 0px #f2d5e1;
 
         &::before {
@@ -220,7 +236,6 @@
     }
 
     .name {
-        font-size: 2rem;
         line-height: 140%;
         font-weight: 900;
         text-align: center;
@@ -241,16 +256,38 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 22px 24px;
         }
+
+        a{
+            height: 132px;
+            gap: 10px;
+        }
+
+        .name {
+            font-size: 2rem;
+        }
     }
 }
 
 @media screen and (max-width: 768px) and (min-width: 451px) {
     .worry__list {
-        padding-top: clamp(36px, 8vw,48px);
+        padding-top: clamp(36px, 8vw, 48px);
 
         ul {
             grid-template-columns: repeat(2, 1fr);
             gap: 22px clamp(14px, 3.11vw, 24px);
+            margin-top: clamp(16px, 3.56vw, 32px);
+            width: min(580px, 100%);
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        a{
+            height: clamp(114px, 25.33vw, 132px);
+            gap: clamp(6px, 1.33vw, 8px);
+        }
+
+        .name{
+            font-size: clamp(1.6rem, 3.56vw, 2rem);
         }
     }
 }
