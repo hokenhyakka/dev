@@ -154,4 +154,30 @@
   .after__one table {
     margin-top: 20px;
   }
+  .after__one table tbody {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: clamp(48px, 12vw, 56px) repeat(5, auto);
+  }
+  .after__one table tr {
+    height: 100%;
+    display: contents;
+  }
+  .after__one table th, .after__one table td {
+    align-items: start;
+  }
+  .after__one table th {
+    font-size: clamp(1.3rem, 3.11vw, 1.5rem);
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .after__one table td {
+    font-size: clamp(1.2rem, 2.89vw, 1.4rem);
+    padding-left: clamp(12px, 3.11vw, 14px);
+    padding-right: clamp(12px, 3.11vw, 14px);
+    padding-top: clamp(10px, 2.67vw, 16px);
+    padding-bottom: clamp(10px, 2.67vw, 16px);
+  }
 }/*# sourceMappingURL=style.css.map */
