@@ -25,6 +25,7 @@
   align-items: baseline;
   justify-content: center;
   text-align: center;
+  gap: 6px;
 }
 .title hgroup span::before, .title hgroup span::after {
   content: "";
@@ -51,7 +52,6 @@
   }
   .title hgroup span {
     font-size: 1.8rem;
-    gap: 6px;
   }
   .title hgroup span::before, .title hgroup span::after {
     width: 20px;
