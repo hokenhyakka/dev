@@ -122,7 +122,7 @@
     width: clamp(230px, 64.44vw, 340px);
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 640px) {
   .shop-reference__map {
     display: none;
   }
