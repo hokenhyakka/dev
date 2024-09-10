@@ -34,9 +34,15 @@
 }
 
 .worry-one__details {
+    span,
     a {
         color: var(--pink--primary);
         font-weight: 700;
+    }
+    span{
+        background: linear-gradient(to bottom, transparent 60%, #ffefa3 60%);
+    }
+    a {
         text-decoration: underline;
 
         &::before {
@@ -195,7 +201,7 @@
 }
 
 .worry__list {
-    ul{
+    ul {
         display: grid;
     }
     li {
@@ -222,7 +228,6 @@
         align-items: center;
         color: var(--pink--primary);
         font-weight: 900;
-        
 
         &::before,
         &::after {
@@ -256,7 +261,7 @@
             gap: 22px 24px;
         }
 
-        a{
+        a {
             height: 132px;
             gap: 10px;
         }
@@ -280,12 +285,12 @@
             margin-left: auto;
         }
 
-        a{
+        a {
             height: clamp(114px, 25.33vw, 132px);
             gap: clamp(6px, 1.33vw, 8px);
         }
 
-        .name{
+        .name {
             font-size: clamp(1.6rem, 3.56vw, 2rem);
         }
     }
@@ -304,42 +309,41 @@
     }
 }
 
-@media screen and (min-width: 451px){
-    .worry__list{
-
-        a{
+@media screen and (min-width: 451px) {
+    .worry__list {
+        a {
             box-shadow: 4px 4px 0px 0px #f2d5e1;
         }
-        span{
+        span {
             font-size: 1.3rem;
-        gap: 6px;
+            gap: 6px;
         }
     }
 }
 
-@media screen and (max-width: 450px){
-    .worry__list{
+@media screen and (max-width: 450px) {
+    .worry__list {
         padding-top: clamp(32px, 7.11vw, 40px);
         padding-bottom: clamp(40px, 8.89vw, 48px);
 
-        ul{
+        ul {
             grid-template-columns: repeat(2, 1fr);
             margin-top: clamp(16px, 4vw, 18px);
             gap: clamp(12px, 2.67vw, 16px);
         }
 
-        a{
-            height:clamp(80px, 25vw, 96px);
+        a {
+            height: clamp(80px, 25vw, 96px);
             gap: 5px;
             box-shadow: 3px 3px 0px 0px #f2d5e1;
         }
 
-        span{
+        span {
             font-size: clamp(1rem, 3.13vw, 1.2rem);
             gap: 5px;
         }
 
-        .name{
+        .name {
             font-size: clamp(1.1rem, 3.44vw, 1.4rem);
         }
     }

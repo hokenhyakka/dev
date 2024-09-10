@@ -20,9 +20,15 @@
     margin-top: clamp(50px, 12.44vw, 72px);
   }
 }
+.worry-one__details span,
 .worry-one__details a {
   color: var(--pink--primary);
   font-weight: 700;
+}
+.worry-one__details span {
+  background: linear-gradient(to bottom, transparent 60%, #ffefa3 60%);
+}
+.worry-one__details a {
   text-decoration: underline;
 }
 .worry-one__details a::before {
