@@ -1,5 +1,10 @@
+.online-list{
+    min-height: 70vh;
+}
+
 .online-list__tab-list {
     ul {
+        display: grid;
         gap: 8px;
     }
     li {
@@ -22,7 +27,6 @@
         margin-top: 72px;
 
         ul {
-            display: grid;
             grid-template-columns: repeat(5, 1fr);
         }
         li {
@@ -40,11 +44,60 @@
     }
 }
 
+@media screen and (max-width: 768px) and (min-width: 451px) {
+    .online-list__tab-list {
+        ul {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 450px){
+    .online-list__tab-list{
+        ul{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .online-list__tab-list {
+        margin-top: clamp(16px, 4vw, 24px);
+        li {
+            border-radius: 4px;
+        }
+        .region-tab {
+            font-size: clamp(1.2rem, 3.25vw, 1.5rem);
+            height: clamp(44px, 10.22vw, 48px);
+
+            &[aria-selected="true"] {
+                background-color: var(--black);
+                color: #fff;
+            }
+        }
+    }
+}
+
 .online-list__shop-list {
     overflow-y: hidden;
-    
+
     .row-nar {
         position: relative;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .online-list__shop-list {
+        background-color: #fff;
+        padding-top: 64px;
+        padding-bottom: 160px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .online-list__shop-list {
+        padding-top: clamp(32px, 10.67vw, 48px);
+        padding-bottom: 120px;
     }
 }
 
@@ -62,6 +115,14 @@
         width: 100%;
         z-index: 1;
         animation: shop-region 0.2s forwards;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .online-list__region-one {
+        h2 {
+            font-size: clamp(2.2rem, 5.33vw, 3.4rem);
+        }
     }
 }
 
@@ -89,8 +150,7 @@
     .shop {
         a {
             font-weight: 500;
-            display: flex;
-            align-items: center;
+            display: inline-block;
 
             &::after {
                 content: "";
@@ -113,11 +173,6 @@
 }
 
 @media screen and (min-width: 769px) {
-    .online-list__shop-list {
-        background-color: #fff;
-        padding-top: 64px;
-        padding-bottom: 160px;
-    }
     .online-list__pref-one {
         margin-top: 32px;
         h3 {
@@ -137,19 +192,56 @@
         }
         .shop {
             padding-left: 18px;
-        }
-        a {
-            padding-top: 14px;
-            padding-bottom: 14px;
+            a {
+                padding-top: 14px;
+                padding-bottom: 14px;
 
-            &::after {
-                width: 12px;
-                height: 12px;
+                &::after {
+                    width: 12px;
+                    height: 12px;
+                }
             }
         }
 
         & + .online-list__pref-one {
             margin-top: 48px;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .online-list__pref-one {
+        margin-top: clamp(16px, 3.56vw, 30px);
+        h2 {
+            font-size: clamp(1.8rem, 4.44vw, 2.6rem);
+        }
+        table{
+            margin-top: clamp(22px, 5.33vw, 40px);
+        }
+        tr {
+            grid-template-columns: clamp(88px, 23.56vw, 160px) auto;
+        }
+        td {
+            font-size: clamp(1.2rem, 2.89vw, 1.5rem);
+        }
+        .area {
+            padding-top: clamp(10px, 2.22vw, 14px);
+            padding-bottom: clamp(10px, 2.22vw, 14px);
+            padding-left: clamp(10px, 2.67vw, 16px);
+        }
+        .shop {
+            padding-left: clamp(10px, 2.67vw, 16px);
+            a {
+                padding-top: clamp(10px, 2.22vw, 14px);
+                padding-bottom: clamp(10px, 2.22vw, 14px);
+
+                &::after{
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+        & + .online-list__pref-one {
+            margin-top: clamp(48px, 10.67vw, 56px);
         }
     }
 }
