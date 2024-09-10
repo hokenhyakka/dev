@@ -1,14 +1,38 @@
-window.onload = function() {
-    const regions = ['tokyo', 'saitama', 'kanagawa', 'chiba', 'ibaraki', 'hokkaido', 'miyagi', 'aichi', 'osaka', 'kyoto', 'hyogo'];
+window.onload = function () {
+    const regions = [
+        "tokyo",
+        "saitama",
+        "kanagawa",
+        "chiba",
+        "ibaraki",
+        "hokkaido",
+        "miyagi",
+        "aichi",
+        "osaka",
+        "kyoto",
+        "hyogo",
+    ];
     const currentUrl = window.location.href;
 
-    regions.forEach(region => {
+    regions.forEach((region) => {
         if (currentUrl.endsWith(`shop/${region}/`)) {
             const newUrl = `../../shop/?pref=${region}`;
             window.location.href = newUrl;
         }
     });
 };
+
+/* target=_blank */
+document.querySelectorAll("a").forEach(function (link) {
+    const url = link.getAttribute("href");
+    if (
+        url &&
+        url.startsWith("https") &&
+        !url.includes(window.location.hostname)
+    ) {
+        link.setAttribute("target", "_blank");
+    }
+});
 
 /* header dup */
 const handleResize = () => {
@@ -40,7 +64,6 @@ window.addEventListener("resize", handleResize);
 handleResize();
 window.addEventListener("resize", handleResize);
 
-
 /* header stick */
 const stickyHeader = document.querySelector(".header--stick");
 
@@ -58,28 +81,32 @@ if (stickyHeader) {
 
 /* header responsive */
 function moveExts() {
-    const exts = document.querySelector('.header__exts');
-    const navUl = document.querySelector('.header__nav ul');
-    const headerInner = document.querySelector('.header__inner');
+    const exts = document.querySelector(".header__exts");
+    const navUl = document.querySelector(".header__nav ul");
+    const headerInner = document.querySelector(".header__inner");
 
     if (window.innerWidth <= 1300 && exts && navUl) {
         navUl.appendChild(exts);
-    } else if (window.innerWidth > 1300 && exts && !headerInner.contains(exts)) {
+    } else if (
+        window.innerWidth > 1300 &&
+        exts &&
+        !headerInner.contains(exts)
+    ) {
         headerInner.appendChild(exts);
     }
 }
-window.addEventListener('resize', moveExts);
-window.addEventListener('DOMContentLoaded', moveExts);
+window.addEventListener("resize", moveExts);
+window.addEventListener("DOMContentLoaded", moveExts);
 
 /* header shop */
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
     function updateText() {
-        const shopLink = document.querySelector('.header__shop a');
-        const originalText = 'お近くの店舗を探す';
-        const updatedText = '店舗を探す';
+        const shopLink = document.querySelector(".header__shop a");
+        const originalText = "お近くの店舗を探す";
+        const updatedText = "店舗を探す";
 
         if (shopLink) {
-            const imgElement = shopLink.querySelector('img');
+            const imgElement = shopLink.querySelector("img");
             let currentText = shopLink.textContent.trim();
 
             if (window.innerWidth <= 450 && currentText === originalText) {
@@ -97,9 +124,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     updateText();
-    window.addEventListener('resize', updateText);
+    window.addEventListener("resize", updateText);
 });
-
 
 /* header menu btn */
 const headerBtn = document.getElementById("header__btn");
@@ -134,23 +160,14 @@ headerMenuItems.forEach(function (headerMenuItem) {
     });
 });
 
-
 /* back to top */
-document.getElementById('backToTop').addEventListener('click', function(e) {
+document.getElementById("backToTop").addEventListener("click", function (e) {
     e.preventDefault();
     window.scrollTo({
-        top: document.getElementById('body').offsetTop,
-        behavior: 'smooth'
+        top: document.getElementById("body").offsetTop,
+        behavior: "smooth",
     });
-    history.replaceState(null, null, ' ');
-});
-
-/* target=_blank */
-document.querySelectorAll('a').forEach(function(link) {
-    const url = link.getAttribute('href');
-    if (url && url.startsWith('https') && !url.includes(window.location.hostname)) {
-        link.setAttribute('target', '_blank');
-    }
+    history.replaceState(null, null, " ");
 });
 
 /* voice__list */
@@ -189,31 +206,31 @@ window.addEventListener("resize", updateVoiceListClass);
 window.addEventListener("DOMContentLoaded", updateVoiceListClass);
 
 /* faq__list */
-const faqLists = document.querySelectorAll('.faq__list');
+const faqLists = document.querySelectorAll(".faq__list");
 
-faqLists.forEach(faqList => {
-    faqList.querySelectorAll('details').forEach(details => {
-        const content = details.querySelector('div');
+faqLists.forEach((faqList) => {
+    faqList.querySelectorAll("details").forEach((details) => {
+        const content = details.querySelector("div");
 
-        details.addEventListener('toggle', function () {
+        details.addEventListener("toggle", function () {
             if (details.open) {
                 let maxHeight = 0;
                 const animateOpen = setInterval(() => {
                     maxHeight += 10;
-                    content.style.maxHeight = maxHeight + 'px';
+                    content.style.maxHeight = maxHeight + "px";
                     if (maxHeight >= content.scrollHeight) {
                         clearInterval(animateOpen);
-                        content.style.maxHeight = content.scrollHeight + 'px';
+                        content.style.maxHeight = content.scrollHeight + "px";
                     }
                 }, 20);
             } else {
                 let maxHeight = content.scrollHeight;
                 const animateClose = setInterval(() => {
                     maxHeight -= 10;
-                    content.style.maxHeight = maxHeight + 'px';
+                    content.style.maxHeight = maxHeight + "px";
                     if (maxHeight <= 0) {
                         clearInterval(animateClose);
-                        content.style.maxHeight = '0';
+                        content.style.maxHeight = "0";
                     }
                 }, 20);
             }
@@ -221,11 +238,10 @@ faqLists.forEach(faqList => {
     });
 });
 
-
 /* footer #backToTop */
-document.addEventListener('DOMContentLoaded', function() {
-    const backToTop = document.querySelector('#backToTop');
-    const footer = document.querySelector('footer');
+document.addEventListener("DOMContentLoaded", function () {
+    const backToTop = document.querySelector("#backToTop");
+    const footer = document.querySelector("footer");
 
     function toggleBackToTop() {
         if (window.innerWidth <= 768) {
@@ -233,16 +249,16 @@ document.addEventListener('DOMContentLoaded', function() {
             const windowHeight = window.innerHeight;
 
             if (footerRect.top <= windowHeight && footerRect.bottom >= 0) {
-                backToTop.classList.add('is-hidden');
+                backToTop.classList.add("is-hidden");
             } else {
-                backToTop.classList.remove('is-hidden');
+                backToTop.classList.remove("is-hidden");
             }
         } else {
-            backToTop.classList.remove('is-hidden');
+            backToTop.classList.remove("is-hidden");
         }
     }
 
-    window.addEventListener('scroll', toggleBackToTop);
-    window.addEventListener('resize', toggleBackToTop);
+    window.addEventListener("scroll", toggleBackToTop);
+    window.addEventListener("resize", toggleBackToTop);
     toggleBackToTop();
 });
