@@ -7,9 +7,8 @@ on:
       - '[0-9]+.[0-9]+.[0-9]*'
 
 jobs:
-  test:
+  deploy:
     name: Deploy to server
-
     runs-on: ubuntu-latest
 
     steps:
