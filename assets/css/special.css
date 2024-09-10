@@ -1,0 +1,19 @@
+.header__logo {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+.title.special {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+footer {
+  background-color: var(--black);
+  padding-top: 24px;
+}
+footer span {
+  color: #fff;
+}/*# sourceMappingURL=special.css.map */

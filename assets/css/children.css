@@ -1,12 +1,6 @@
 @charset "UTF-8";
 .title {
   background-color: var(--pink--very-light);
-  padding-top: 112px;
-  padding-bottom: 112px;
-}
-.title.gchild {
-  padding-top: 96px;
-  padding-bottom: 96px;
 }
 .title.gchild hgroup {
   align-items: start;
@@ -17,7 +11,6 @@
 .title hgroup {
   display: flex;
   flex-direction: column;
-  gap: 24px;
   align-items: center;
   color: var(--pink--primary);
 }
@@ -25,7 +18,6 @@
   color: inherit;
 }
 .title hgroup span {
-  font-size: min(1.8rem, 18px);
   line-height: 100%;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -33,22 +25,42 @@
   align-items: baseline;
   justify-content: center;
   text-align: center;
-  gap: 6px;
 }
 .title hgroup span::before, .title hgroup span::after {
   content: "";
-  width: 20px;
-  height: 20px;
   background-image: url(../img/common/icon/flower--ylw.svg);
   background-size: cover;
 }
 .title hgroup h1 {
-  font-size: min(4.3rem, 43px);
   font-weight: 900;
   letter-spacing: 0.1em;
   text-align: center;
 }
 
+@media screen and (min-width: 769px) {
+  .title {
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+  .title.gchild {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  .title hgroup {
+    gap: 24px;
+  }
+  .title hgroup span {
+    font-size: 1.8rem;
+    gap: 6px;
+  }
+  .title hgroup span::before, .title hgroup span::after {
+    width: 20px;
+    height: 20px;
+  }
+  .title h1 {
+    font-size: 4.3rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .title {
     padding-top: clamp(32px, 8.89vw, 48px);
