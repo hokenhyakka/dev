@@ -180,29 +180,36 @@
     [data-tag="station"] {
         border-color: var(--green--middle);
         color: var(--green--middle);
+        background-color: #fbfff6;
     }
     [data-tag="parking"] {
         border-color: #e57512;
         color: #e57512;
+        background-color: #fff8f1;
     }
     [data-tag="openAtNight"] {
         border-color: #6c81d6;
         color: #6c81d6;
+        background-color: #f3f6ff;
     }
     [data-tag="openOnWeekends"] {
         border-color: var(--blue--middle);
         color: var(--blue--middle);
+        background-color: #ebf8ff;
     }
     [data-tag="kids"] {
         border-color: var(--yellow--dark);
         color: var(--yellow--dark);
+        background-color: #fffbf3;
     }
     [data-tag="femaleStaff"] {
         border-color: #cc62a5;
         color: #cc62a5;
+        background-color: #fff5fb;
     }
     [data-tag="inbody"] {
         border-color: #8b0025;
+        background-color: #fffafb;
 
         img {
             height: 14px;
@@ -223,6 +230,7 @@
     .shop-tags {
         .tag {
             font-size: clamp(11px, 2.67vw, 1.4rem);
+            padding-top: 1px;
 
             img {
                 height: clamp(12px, 2.67vw, 1.4rem);
@@ -360,6 +368,14 @@
                 font-size: clamp(1.3rem, 3.11vw, 1.6rem);
                 height: clamp(44px, 10.67vw, 50px);
             }
+        }
+    }
+}
+
+@media screen and (max-width: 450px){
+    .shop__one{
+        .shop-tags{
+            width: 100%;
         }
     }
 }
