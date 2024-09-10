@@ -96,4 +96,8 @@
   .news__list .content {
     font-size: clamp(1.2rem, 2.67vw, 1.4rem);
   }
+  .news__list .ext::after {
+    width: 10px;
+    height: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */
