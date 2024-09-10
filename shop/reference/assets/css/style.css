@@ -169,7 +169,7 @@
   background-image: url(../../../../assets/img/common/icon/ext--prm.svg);
 }
 .shop-reference__pref-one .btn a:nth-of-type(2)::after {
-  background-image: url(../../../../assets/img/common/icon/ext--fff.svg);
+  background-image: url(../../../../assets/img/common/icon/arrow--fff.svg);
 }
 
 @media screen and (min-width: 769px) {

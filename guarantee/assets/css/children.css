@@ -23,7 +23,7 @@
   background-color: var(--black);
 }
 .guarantee-one__list ul li a img {
-  height: min(13px, 100%);
+  width: 90%;
 }
 .guarantee-one__list ul li a::after {
   display: none;

@@ -5,6 +5,15 @@
   pointer-events: none;
 }
 
+.title.special h1 span {
+  font-size: inherit;
+  display: inline;
+  font-weight: 300;
+}
+.title.special h1 span::before, .title.special h1 span::after {
+  display: none;
+}
+
 @media screen and (min-width: 769px) {
   .title.special {
     padding-top: 80px;

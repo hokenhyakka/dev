@@ -3,7 +3,19 @@
     pointer-events: none;
 }
 
+.title.special{
+    h1{
+        span{
+            font-size: inherit;
+            display: inline;
+            font-weight: 300;
 
+            &::before, &::after{
+                display: none;
+            }
+        }
+    }
+}
 
 @media screen and (min-width: 769px){
     .title.special{
