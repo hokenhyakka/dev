@@ -117,6 +117,7 @@
   .shop__pref-one ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
     gap: 120px 72px;
   }
 }
@@ -201,7 +202,7 @@
 .shop__one {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  grid-row: span 1;
 }
 .shop__one .city {
   background-color: var(--black);
