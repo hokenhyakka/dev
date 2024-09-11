@@ -36,6 +36,7 @@
             background-image: url(../../../assets/img/common/icon/arrow--prm.svg);
             background-size: cover;
             transition: .3s;
+            transform: rotate(90deg);
         }
         
     }
@@ -43,7 +44,7 @@
     details[open]{
         summary{
             &::after{
-                transform: rotate(90deg);
+                transform: rotate(270deg);
             }
         }
     }
@@ -51,5 +52,9 @@
     a {
         font-size: clamp(1.3rem, 2.89vw, 1.5rem);
         text-decoration: underline;
+
+        &::before{
+            display: none;
+        }
     }
 }

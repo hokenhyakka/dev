@@ -306,6 +306,10 @@
         .name {
             font-size: 2rem;
 
+            &::before{
+                display: none;
+            }
+
             &::after{
                 width: 12px;
                 height: 12px;

@@ -259,6 +259,9 @@
   .shop__one .name {
     font-size: 2rem;
   }
+  .shop__one .name::before {
+    display: none;
+  }
   .shop__one .name::after {
     width: 12px;
     height: 12px;
