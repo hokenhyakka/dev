@@ -339,8 +339,13 @@
         }
 
         span {
-            font-size: clamp(1rem, 3.13vw, 1.2rem);
+            font-size: clamp(0.7rem, 2.22vw, 1rem);
             gap: 5px;
+
+            &::before, &::after{
+                width: clamp(6px, 1.78vw, 8px);
+                height: clamp(6px, 1.78vw, 8px);
+            }
         }
 
         .name {

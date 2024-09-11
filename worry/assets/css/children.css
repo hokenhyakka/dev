@@ -262,8 +262,12 @@
     box-shadow: 3px 3px 0px 0px #f2d5e1;
   }
   .worry__list span {
-    font-size: clamp(1rem, 3.13vw, 1.2rem);
+    font-size: clamp(0.7rem, 2.22vw, 1rem);
     gap: 5px;
+  }
+  .worry__list span::before, .worry__list span::after {
+    width: clamp(6px, 1.78vw, 8px);
+    height: clamp(6px, 1.78vw, 8px);
   }
   .worry__list .name {
     font-size: clamp(1.1rem, 3.44vw, 1.4rem);

@@ -1,3 +1,6 @@
+.knowledge__list {
+  display: grid;
+}
 .knowledge__list a {
   display: flex;
   flex-direction: column;
@@ -26,7 +29,7 @@
     font-size: 1.4rem;
   }
 }
-@media screen and (max-width: 768px) and (min-width: 451px) {
+@media screen and (max-width: 768px) {
   .knowledge__list {
     grid-template-columns: repeat(2, 1fr);
     row-gap: clamp(32px, 7.11vw, 56px);
@@ -34,12 +37,8 @@
          column-gap: clamp(16px, 3.56vw, 32px);
   }
   .knowledge__list img {
-    box-shadow: 5px 4px 0px 0px var(--pink--primary);
-  }
-}
-@media screen and (max-width: 768px) {
-  .knowledge__list img {
     border: 3px solid var(--pink--primary);
+    box-shadow: 5px 4px 0px 0px var(--pink--primary);
     border-radius: 6px;
   }
   .knowledge__list p {
@@ -47,19 +46,13 @@
     margin-top: 8px;
   }
 }
-@media screen and (min-width: 451px) {
-  .knowledge__list {
-    display: grid;
-  }
-}
 @media screen and (max-width: 450px) {
   .knowledge__list {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(20px, 6.25vw, 30px);
+    -moz-column-gap: clamp(10px, 3.13vw, 16px);
+         column-gap: clamp(10px, 3.13vw, 16px);
   }
   .knowledge__list img {
     border: 3px solid var(--pink--primary);
-    box-shadow: 4px 3px 0px 0px var(--pink--primary);
+    box-shadow: 3px 2px 0px 0px var(--pink--primary);
   }
 }/*# sourceMappingURL=style.css.map */
