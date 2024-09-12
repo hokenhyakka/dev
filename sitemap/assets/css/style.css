@@ -15,7 +15,7 @@
   gap: 24px;
 }
 .site-map__main > ul > li:has(ul) > a {
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 .site-map__main li > ul {
   display: flex;
