@@ -1,6 +1,7 @@
 .thumb {
     border-radius: 4px;
     overflow: hidden;
+    
 
     picture,
     img {
@@ -10,9 +11,17 @@
 
 @media screen and (min-width: 769px) {
     .thumb {
+        margin-top: 96px;
+
         & + .worry-one__details {
             margin-top: 96px;
         }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .thumb{
+        margin-top: clamp(24px, 5.33vw, 40px);
     }
 }
 

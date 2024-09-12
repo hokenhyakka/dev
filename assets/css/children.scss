@@ -64,7 +64,6 @@
 
             span {
                 font-size: 1.8rem;
-                
 
                 &::before,
                 &::after {
@@ -293,6 +292,10 @@
                     margin-top: clamp(32px, 8vw, 56px);
                     margin-bottom: clamp(56px, 14vw, 96px);
                 }
+            }
+
+            > .att {
+                font-size: clamp(1rem, 2.22vw, 1.3rem);
             }
         }
         .att {

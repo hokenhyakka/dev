@@ -90,11 +90,11 @@
     gap: clamp(24px, 7.5vw, 32px);
   }
   .worry__list .name {
-    min-height: 68px;
+    min-height: 54px;
     padding-right: 12px;
-    padding-left: 16px;
+    padding-left: 12px;
   }
   .worry__list .name p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }/*# sourceMappingURL=style.css.map */
