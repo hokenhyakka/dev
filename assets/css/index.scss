@@ -126,12 +126,6 @@
 
 .swiper-slide {
     transition: 0.4s;
-
-    @media (hover: hover) {
-        &:hover {
-            opacity: 0.8;
-        }
-    }
 }
 
 .search-shop {

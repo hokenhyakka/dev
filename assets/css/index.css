@@ -107,11 +107,6 @@
 .swiper-slide {
   transition: 0.4s;
 }
-@media (hover: hover) {
-  .swiper-slide:hover {
-    opacity: 0.8;
-  }
-}
 
 .search-shop .row-wide {
   display: flex;
