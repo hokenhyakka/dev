@@ -280,6 +280,7 @@
     font-size: clamp(1.3rem, 1.27vw, 1.6rem);
     height: 50px;
     gap: clamp(4px, 0.39vw, 6px);
+    padding-left: 4px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -313,6 +314,7 @@
   .shop__one .btns a {
     font-size: clamp(1.3rem, 3.11vw, 1.6rem);
     height: clamp(44px, 10.67vw, 50px);
+    padding-left: 4px;
   }
 }
 @media screen and (max-width: 450px) {
