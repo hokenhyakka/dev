@@ -315,12 +315,12 @@ h3 {
         position: relative;
         font-weight: 700;
         border-radius: 50vw;
+        transition: 0.3s;
 
         &::after {
             content: "";
-
             background-image: url(../img/common/icon/arrow--fff.svg);
-            transition: 0.3s;
+            transition: inherit;
             background-size: cover;
         }
 
@@ -345,11 +345,18 @@ h3 {
             font-size: 2rem;
             height: 80px;
             gap: 6px;
-            box-shadow: 5px 5px 0 #f2f2f2;
+            box-shadow: 5px 5px 0 #e9e9e9;
 
             &::after {
                 width: 12px;
                 height: 12px;
+            }
+
+            @media (hover: hover){
+                &:hover{
+                    transform: translate(5px, 5px);
+                    box-shadow: 0 0 0 #e9e9e9;
+                }
             }
         }
     }
@@ -362,40 +369,111 @@ h3 {
         a {
             height: clamp(56px, 15vw, 80px);
             font-size: clamp(1.5rem, 4vw, 2.2rem);
-            box-shadow: 4px 4px 0 #f2f2f2;
+            box-shadow: 4px 4px 0 #e9e9e9;
 
             &::after {
                 width: 10px;
                 height: 10px;
             }
-        }
-    }
-}
 
-/* bg patterns */
-
-.bg--pale {
-    .btn {
-        a {
-            box-shadow: 5px 5px 0 #efd0dd;
-        }
-    }
-    &.dots {
-        .btn {
-            a {
-                box-shadow: 5px 5px 0 #ecc4d4;
+            @media (hover: hover){
+                &:hover{
+                    transform: translate(4px, 4px);
+                    box-shadow: 0 0 0 #e9e9e9;
+                }
             }
         }
     }
 }
 
-.bg--light {
-    .btn {
-        a {
-            box-shadow: 5px 5px 0 #efd0dd;
+/* bg and btn */
+
+@media screen and (min-width: 769px){
+    .bg--pale {
+        .btn {
+            a {
+                box-shadow: 5px 5px 0 #efd0dd;
+
+                @media (hover: hover){
+                    &:hover{
+                        box-shadow: 0 0 0 #efd0dd;
+                    }
+                }
+            }
+        }
+        &.dots {
+            .btn {
+                a {
+                    box-shadow: 5px 5px 0 #ecc4d4;
+
+                    @media (hover: hover){
+                        &:hover{
+                            box-shadow: 0 0 0 #ecc4d4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bg--light {
+        .btn {
+            a {
+                box-shadow: 5px 5px 0 #efd0dd;
+
+                @media (hover: hover){
+                    &:hover{
+                        box-shadow: 0 0 0 #efd0dd;
+                    }
+                }
+            }
         }
     }
 }
+
+@media screen and (max-width: 768px){
+    .bg--pale{
+        .btn {
+            a {
+                box-shadow: 4px 4px 0 #efd0dd;
+
+                @media (hover: hover){
+                    &:hover{
+                        box-shadow: 0 0 0 #efd0dd;
+                    }
+                }
+            }
+        }
+        &.dots {
+            .btn {
+                a {
+                    box-shadow: 4px 4px 0 #ecc4d4;
+
+                    @media (hover: hover){
+                        &:hover{
+                            box-shadow: 0 0 0 #ecc4d4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bg--light {
+        .btn {
+            a {
+                box-shadow: 4px 4px 0 #efd0dd;
+
+                @media (hover: hover){
+                    &:hover{
+                        box-shadow: 0 0 0 #efd0dd;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 
 /* header */
 

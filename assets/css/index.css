@@ -418,6 +418,11 @@
   z-index: 1;
   width: 454px;
 }
+@media (hover: hover) {
+  .recommend__slider a:hover {
+    opacity: 1;
+  }
+}
 .recommend__slider a picture {
   background-color: #fffcfd;
   border-radius: 10px;
@@ -435,8 +440,7 @@
   width: calc(100% - clamp(16px, 1.56vw, 44px));
   height: 100%;
   border-radius: 14px;
-  right: 4px;
-  bottom: -6px;
+  transition: inherit;
 }
 .recommend__slider a > div {
   position: absolute;
@@ -492,6 +496,34 @@
   margin-top: 2%;
 }
 
+@media screen and (min-width: 769px) {
+  .recommend__slider a::after {
+    right: calc(clamp(16px, 1.56vw, 44px) / 4);
+    bottom: -6px;
+  }
+}
+@media screen and (min-width: 769px) and (hover: hover) {
+  .recommend__slider a:hover {
+    transform: translateX(calc(clamp(16px, 1.56vw, 44px) / 4)) translateY(6px);
+  }
+  .recommend__slider a:hover::after {
+    transform: translateX(calc(-1 * clamp(16px, 1.56vw, 44px) / 4)) translateY(-6px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .recommend__slider a::after {
+    right: calc(clamp(16px, 1.56vw, 44px) / 4);
+    bottom: -5px;
+  }
+}
+@media screen and (max-width: 768px) and (hover: hover) {
+  .recommend__slider a:hover {
+    transform: translateX(calc(clamp(16px, 1.56vw, 44px) / 4)) translateY(5px);
+  }
+  .recommend__slider a:hover::after {
+    transform: translateX(calc(-1 * clamp(16px, 1.56vw, 44px) / 4)) translateY(-5px);
+  }
+}
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
