@@ -1,3 +1,4 @@
+/* for previous site */
 window.onload = function () {
     const regions = [
         "tokyo",
@@ -160,19 +161,11 @@ headerMenuItems.forEach(function (headerMenuItem) {
     });
 });
 
-/* back to top */
-document.getElementById("backToTop").addEventListener("click", function (e) {
-    e.preventDefault();
-    window.scrollTo({
-        top: document.getElementById("body").offsetTop,
-        behavior: "smooth",
-    });
-    history.replaceState(null, null, " ");
-});
+
 
 /* voice__list */
 let voiceSwiper;
-function updateVoiceListClass() {
+function slideVoiceList() {
     const voiceList = document.querySelector(".voice__list");
 
     if (!voiceList) return;
@@ -202,43 +195,55 @@ function updateVoiceListClass() {
         }
     }
 }
-window.addEventListener("resize", updateVoiceListClass);
-window.addEventListener("DOMContentLoaded", updateVoiceListClass);
+window.addEventListener("resize", slideVoiceList);
+window.addEventListener("DOMContentLoaded", slideVoiceList);
 
 /* faq__list */
-const faqLists = document.querySelectorAll(".faq__list");
+const faqList = document.querySelectorAll(".faq__list");
 
-faqLists.forEach((faqList) => {
-    faqList.querySelectorAll("details").forEach((details) => {
-        const content = details.querySelector("div");
+if (faqList.length === 0) {
+} else {
+    faqList.forEach((faqListItem) => {
+        faqListItem.querySelectorAll("details").forEach((details) => {
+            const content = details.querySelector("div");
 
-        details.addEventListener("toggle", function () {
-            if (details.open) {
-                let maxHeight = 0;
-                const animateOpen = setInterval(() => {
-                    maxHeight += 10;
-                    content.style.maxHeight = maxHeight + "px";
-                    if (maxHeight >= content.scrollHeight) {
-                        clearInterval(animateOpen);
-                        content.style.maxHeight = content.scrollHeight + "px";
-                    }
-                }, 20);
-            } else {
-                let maxHeight = content.scrollHeight;
-                const animateClose = setInterval(() => {
-                    maxHeight -= 10;
-                    content.style.maxHeight = maxHeight + "px";
-                    if (maxHeight <= 0) {
-                        clearInterval(animateClose);
-                        content.style.maxHeight = "0";
-                    }
-                }, 20);
-            }
+            details.addEventListener("toggle", function () {
+                if (details.open) {
+                    let maxHeight = 0;
+                    const animateOpen = setInterval(() => {
+                        maxHeight += 10;
+                        content.style.maxHeight = maxHeight + "px";
+                        if (maxHeight >= content.scrollHeight) {
+                            clearInterval(animateOpen);
+                            content.style.maxHeight = content.scrollHeight + "px";
+                        }
+                    }, 20);
+                } else {
+                    let maxHeight = content.scrollHeight;
+                    const animateClose = setInterval(() => {
+                        maxHeight -= 10;
+                        content.style.maxHeight = maxHeight + "px";
+                        if (maxHeight <= 0) {
+                            clearInterval(animateClose);
+                            content.style.maxHeight = "0";
+                        }
+                    }, 20);
+                }
+            });
         });
     });
+}
+
+/* back to top */
+document.getElementById("backToTop").addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({
+        top: document.getElementById("body").offsetTop,
+        behavior: "smooth",
+    });
+    history.replaceState(null, null, " ");
 });
 
-/* footer #backToTop */
 document.addEventListener("DOMContentLoaded", function () {
     const backToTop = document.querySelector("#backToTop");
     const footer = document.querySelector("footer");

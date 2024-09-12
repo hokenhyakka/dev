@@ -69,18 +69,13 @@
 
     .container {
         a {
-            display: grid;
-            grid-template-columns: 172px auto;
-            gap: 22px;
             align-items: center;
             padding: 12px 0;
         }
     }
 
     span {
-        font-size: 1.5rem;
         background-color: #fff;
-        height: 36px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -89,7 +84,26 @@
 
     p {
         color: #fff;
-        font-size: 1.8rem;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .news {
+        .container {
+            a {
+                display: grid;
+                grid-template-columns: 172px auto;
+                gap: 22px;
+            }
+        }
+        span {
+            font-size: 1.5rem;
+            height: 36px;
+        }
+
+        p {
+            font-size: 1.8rem;
+        }
     }
 }
 
@@ -245,7 +259,6 @@
     }
     .search-shop__text {
         align-items: end;
-        width: min(540px, 100%);
         width: clamp(490px, 47.85vw, 540px);
         position: absolute;
         right: 30px;
@@ -342,9 +355,7 @@
 
     h3 {
         letter-spacing: 0.04em;
-        font-size: 2.3rem;
         font-weight: 700;
-        width: 176px;
         border-bottom-width: 2px;
         border-bottom-style: solid;
         text-align: left;
@@ -385,20 +396,16 @@
 }
 .shop__region {
     display: grid;
-    grid-template-columns: repeat(2, 176px);
     grid-template-rows: repeat(3, auto);
     grid-auto-flow: column;
-    gap: 40px;
 }
 .shop__pref {
     margin-top: 16px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
 
     a {
         position: relative;
-        font-size: 1.9rem;
         line-height: 100%;
         display: inline-flex;
         align-items: center;
@@ -406,9 +413,8 @@
 
         &::after {
             content: "";
-            width: 12px;
-            height: 12px;
             background-image: url(../img/common/icon/arrow.svg);
+            background-size: cover;
         }
     }
 }
@@ -416,7 +422,6 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 414px;
 
     img {
         width: 100%;
@@ -430,6 +435,33 @@
     }
     .shop__inner {
         margin: 64px auto 0;
+
+        h3 {
+            font-size: 2.3rem;
+            width: 176px;
+        }
+    }
+
+    .shop__region {
+        grid-template-columns: repeat(2, 176px);
+        gap: 40px;
+    }
+
+    .shop__pref {
+        gap: 16px;
+
+        a {
+            font-size: 1.9rem;
+
+            &::after {
+                width: 12px;
+                height: 12px;
+            }
+        }
+    }
+
+    .shop__map {
+        width: 414px;
     }
 }
 
@@ -455,8 +487,14 @@
 
     .shop__pref {
         gap: clamp(12px, 3.5vw, 16px);
+
         a {
             font-size: clamp(1.3rem, 3.5vw, 1.7rem);
+
+            &::after {
+                width: 10px;
+                height: 10px;
+            }
         }
     }
 
@@ -473,9 +511,9 @@
 
 .recommend {
     background-color: var(--pink--dusty-light);
-
     overflow-x: hidden;
 }
+
 .recommend__slider {
     display: flex;
     flex-direction: column;
@@ -747,12 +785,7 @@
         align-items: center;
         justify-content: center;
         letter-spacing: 0.1em;
-        font-size: 3.6rem;
         gap: 4px;
-
-        img {
-            height: 47px;
-        }
     }
 
     h3 {
@@ -767,12 +800,6 @@
     }
     .row {
         text-align: center;
-
-        > p:first-of-type {
-            font-size: clamp(1.6rem, 1.56vw, 1.8rem);
-            line-height: 200%;
-            letter-spacing: 0.08em;
-        }
 
         > a {
             display: inline-flex;
@@ -790,18 +817,18 @@
                 background-color: var(--pink--primary);
             }
         }
+
+        > p {
+            line-height: 200%;
+            letter-spacing: 0.08em;
+        }
     }
 
     .btns {
         display: flex;
         flex-wrap: wrap;
-        gap: 32px 20px;
         justify-content: center;
-        margin-top: 56px;
-
-        a {
-            width: calc(50% - 10px);
-        }
+        width: 100%;
     }
 }
 
@@ -810,6 +837,14 @@
         padding-top: 120px;
         padding-bottom: 80px;
 
+        h2 {
+            font-size: 3.6rem;
+
+            img {
+                height: 47px;
+            }
+        }
+
         h3 {
             margin-top: 56px;
             font-size: 2.8rem;
@@ -817,10 +852,18 @@
         }
 
         .btns {
-            width: 100%;
+            gap: 32px 20px;
+            margin-top: 56px;
+
+            a {
+                width: calc(50% - 10px);
+            }
         }
 
         > .row {
+            > p {
+                font-size: clamp(1.6rem, 1.56vw, 1.8rem);
+            }
             > a {
                 font-size: 1.7rem;
                 gap: 6px;
@@ -842,14 +885,13 @@
     .about {
         padding-top: clamp(52px, 13.33vw, 88px);
         padding-bottom: clamp(24px, 9.33vw, 52px);
+
         .row {
             max-width: 660px;
 
             > p {
-                &:first-of-type {
-                    text-align: left;
-                    font-size: clamp(1.2rem, 3.25vw, 1.7rem);
-                }
+                text-align: left;
+                font-size: clamp(1.2rem, 3.25vw, 1.7rem);
             }
 
             > a {
@@ -881,6 +923,7 @@
             flex-wrap: nowrap;
             flex-direction: column;
             gap: clamp(12px, 4vw, 20px);
+            margin-top: clamp(40px, 10.67vw, 56px);
 
             a {
                 width: 100%;
@@ -905,11 +948,8 @@
 
     ul {
         display: flex;
-        gap: clamp(8px, 0.78vw, 24px);
     }
-    li {
-        height: clamp(64px, 6.25vw, 84px);
-    }
+
     img {
         background-color: #fff;
         height: 100%;
@@ -961,6 +1001,13 @@
     .connection__slider {
         margin-top: 24px;
         gap: 24px;
+
+        ul {
+            gap: clamp(8px, 0.78vw, 24px);
+        }
+        li {
+            height: clamp(64px, 6.25vw, 84px);
+        }
     }
 }
 
@@ -1005,14 +1052,6 @@
     }
 }
 
-.voice__satisfaction {
-    margin-top: 56px;
-
-    h3 {
-        font-size: 3rem;
-    }
-}
-
 @media screen and (min-width: 769px) {
     .voice {
         padding-top: 102px;
@@ -1025,6 +1064,13 @@
 
         .btn {
             margin-top: 80px;
+        }
+    }
+    .voice__satisfaction {
+        margin-top: 56px;
+
+        h3 {
+            font-size: 3rem;
         }
     }
 }
