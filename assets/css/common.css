@@ -1417,6 +1417,7 @@ footer > span {
   }
   .cmn__search-shop--stick img {
     width: 24px;
+    height: 24px;
   }
   .cmn__search-shop--stick p {
     writing-mode: inherit;
