@@ -1,30 +1,34 @@
 @charset "UTF-8";
-.index {
-  padding-bottom: 144px;
+@media screen and (min-width: 769px) {
+  .index {
+    padding-bottom: 144px;
+  }
+  .index h2 {
+    font-size: 4rem;
+  }
+  .index .row > p,
+  .index .row-nar > p,
+  .index .row-wide > p {
+    text-align: center;
+  }
+  .index .row > p:first-of-type,
+  .index .row-nar > p:first-of-type,
+  .index .row-wide > p:first-of-type {
+    margin-top: 32px;
+    font-size: 2rem;
+  }
+  .index .btn {
+    width: min(488px, 100%);
+  }
+  .index .btn a {
+    font-size: 2.6rem;
+    height: 96px;
+  }
 }
-.index h2 {
-  font-size: 4rem;
-}
-.index .row > p,
-.index .row-nar > p,
-.index .row-wide > p {
-  text-align: center;
-}
-.index .row > p:first-of-type,
-.index .row-nar > p:first-of-type,
-.index .row-wide > p:first-of-type {
-  margin-top: 32px;
-  font-size: 2rem;
-}
-.index .btn {
-  width: min(488px, 100%);
-}
-.index .btn a {
-  font-size: 2.6rem;
-  height: 96px;
-}
-
 @media screen and (max-width: 768px) {
+  .index {
+    padding-bottom: clamp(80px, 15.17vw, 120px);
+  }
   .index h2 {
     font-size: clamp(2.3rem, 6.75vw, 3.4rem);
   }

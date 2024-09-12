@@ -1,35 +1,38 @@
-.index {
-    padding-bottom: 144px;
+@media screen and (min-width: 769px) {
+    .index {
+        padding-bottom: 144px;
 
-    h2 {
-        font-size: 4rem;
-    }
+        h2 {
+            font-size: 4rem;
+        }
 
-    .row,
-    .row-nar,
-    .row-wide {
-        > p {
-            text-align: center;
+        .row,
+        .row-nar,
+        .row-wide {
+            > p {
+                text-align: center;
 
-            &:first-of-type {
-                margin-top: 32px;
-                font-size: 2rem;
+                &:first-of-type {
+                    margin-top: 32px;
+                    font-size: 2rem;
+                }
             }
         }
-    }
 
-    .btn {
-        width: min(488px, 100%);
+        .btn {
+            width: min(488px, 100%);
 
-        a {
-            font-size: 2.6rem;
-            height: 96px;
+            a {
+                font-size: 2.6rem;
+                height: 96px;
+            }
         }
     }
 }
 
 @media screen and (max-width: 768px) {
     .index {
+        padding-bottom: clamp(80px, 15.17vw, 120px);
         h2 {
             font-size: clamp(2.3rem, 6.75vw, 3.4rem);
         }
@@ -231,7 +234,6 @@
         justify-content: space-between;
 
         li {
-
             img {
                 width: min(250px, 100%);
             }
@@ -489,8 +491,8 @@
         z-index: 1;
         width: 454px;
 
-        @media (hover: hover){
-            &:hover{
+        @media (hover: hover) {
+            &:hover {
                 opacity: 1;
             }
         }
@@ -586,19 +588,19 @@
     }
 }
 
-@media screen and (min-width: 769px){
-    .recommend__slider{
-        a{
-            &::after{
+@media screen and (min-width: 769px) {
+    .recommend__slider {
+        a {
+            &::after {
                 right: calc(clamp(16px, 1.56vw, 44px) / 4);
                 bottom: -6px;
             }
 
-            @media (hover: hover){
-                &:hover{
+            @media (hover: hover) {
+                &:hover {
                     transform: translateX(calc(clamp(16px, 1.56vw, 44px) / 4)) translateY(6px);
 
-                    &::after{
+                    &::after {
                         transform: translateX(calc(-1 * clamp(16px, 1.56vw, 44px) / 4)) translateY(-6px);
                     }
                 }
@@ -607,19 +609,19 @@
     }
 }
 
-@media screen and (max-width: 768px){
-    .recommend__slider{
-        a{
-            &::after{
+@media screen and (max-width: 768px) {
+    .recommend__slider {
+        a {
+            &::after {
                 right: calc(clamp(16px, 1.56vw, 44px) / 4);
                 bottom: -5px;
             }
 
-            @media (hover: hover){
-                &:hover{
+            @media (hover: hover) {
+                &:hover {
                     transform: translateX(calc(clamp(16px, 1.56vw, 44px) / 4)) translateY(5px);
 
-                    &::after{
+                    &::after {
                         transform: translateX(calc(-1 * clamp(16px, 1.56vw, 44px) / 4)) translateY(-5px);
                     }
                 }

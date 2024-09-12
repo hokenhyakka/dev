@@ -79,6 +79,10 @@
             &:first-of-type {
                 margin-top: 48px;
             }
+
+            & + p{
+                margin-top: 24px;
+            }
         }
 
         > img {
@@ -106,6 +110,10 @@
         > p {
             &:first-of-type {
                 margin-top: clamp(20px, 4.44vw, 24px);
+            }
+
+            & + p{
+                margin-top: 16px;
             }
         }
 
