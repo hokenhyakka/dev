@@ -45,3 +45,23 @@ if (eventList) {
     });
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    var emailLink = document.querySelector('[data-shop="email"] a');
+    
+    if (emailLink) {
+        var pageURL = window.location.pathname;
+        var pathSegments = pageURL.split("/").filter(function(segment) { return segment.length > 0; }); 
+        var directoryName = pathSegments.length > 0 ? pathSegments[pathSegments.length - 1] : "default"; 
+        var domain = "@izumi-ld.co.jp";
+
+        var email = directoryName + domain;
+        emailLink.textContent = email;
+
+        emailLink.addEventListener("click", function(event) {
+            event.preventDefault();
+
+            var mailtoLink = 'mailto:' + encodeURIComponent(email);
+            window.location.href = mailtoLink;
+        });
+    }
+});

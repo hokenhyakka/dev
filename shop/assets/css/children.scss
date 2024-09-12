@@ -9,8 +9,8 @@
     hgroup {
         align-items: start;
         gap: 16px;
-        
-        h1{
+
+        h1 {
             text-align: left;
         }
 
@@ -98,7 +98,7 @@
     gap: 12px;
     height: auto;
 
-    img{
+    img {
         width: 100%;
     }
 
@@ -115,7 +115,7 @@
         .swiper-slide {
             height: auto;
         }
-        .swiper-pagination{
+        .swiper-pagination {
             height: 8px;
         }
     }
@@ -188,7 +188,17 @@
     }
 
     td {
-        &:has(.weekdays) {
+        &[data-shop="access"] {
+            a {
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    background-image: url(../../assets/img/icon/location.svg);
+                    background-size: cover;
+                }
+            }
+        }
+        &[data-shop="businessHours"] {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
@@ -196,6 +206,12 @@
 
             p {
                 margin-left: 4px;
+            }
+        }
+
+        &[data-shop="fax"]{
+            a{
+                text-decoration: none;
             }
         }
 
@@ -213,9 +229,6 @@
             margin-top: 10px;
         }
         a {
-            &:has(img) {
-                text-decoration: underline;
-            }
             img {
                 display: inline-block;
                 vertical-align: bottom;
@@ -226,8 +239,8 @@
             }
         }
 
-        p{
-            & + p{
+        p {
+            & + p {
                 margin-top: 10px;
             }
         }
@@ -249,6 +262,16 @@
         td {
             padding: 16px 22px 24px;
             background-color: #fff;
+
+            &[data-shop="access"] {
+                a {
+                    &::after {
+                        width: 14px;
+                        height: 14px;
+                        margin-left: 4px;
+                    }
+                }
+            }
 
             .weekdays,
             .weekend {
@@ -332,18 +355,17 @@
 .shop-one__tags {
     grid-template-columns: repeat(4, 1fr);
     gap: 4px 6px;
-
 }
 
-@media screen and (min-width: 769px){
-    .shop-one__tags{
+@media screen and (min-width: 769px) {
+    .shop-one__tags {
         grid-template-rows: repeat(2, 32px);
 
-        .tag{
+        .tag {
             font-size: clamp(1.1rem, 0.86vw, 1.4rem);
-            &:not(:has(img)){
-            padding-top: 3px;
-        }
+            &:not(:has(img)) {
+                padding-top: 3px;
+            }
         }
     }
 }
@@ -362,7 +384,6 @@
     iframe {
         width: 100%;
         height: 100%;
-        
     }
 
     > img {
@@ -370,11 +391,11 @@
     }
 }
 
-@media screen and (max-width: 450px){
-    .shop-one__tags{
+@media screen and (max-width: 450px) {
+    .shop-one__tags {
         grid-template-columns: repeat(3, 1fr);
 
-        .tag{
+        .tag {
             padding-top: 1px;
         }
     }
@@ -401,7 +422,7 @@
         flex-direction: column;
         gap: clamp(12px, 4vw, 16px);
 
-        iframe{
+        iframe {
             aspect-ratio: 8 / 7;
         }
     }
@@ -589,7 +610,6 @@
             }
 
             .label {
-                
                 font-size: clamp(1.2rem, 3vw, 1.4rem);
                 min-height: clamp(28px, 7vw, 30px);
             }
@@ -772,7 +792,7 @@
         padding-left: 14px;
         color: var(--pink--primary);
         font-weight: 700;
-        
+
         line-height: 125%;
         background-color: #fff;
         border-radius: 4px;
@@ -797,7 +817,7 @@
         ul {
             grid-template-columns: repeat(4, 1fr);
         }
-        a{
+        a {
             font-size: clamp(1.5rem, 1.36vw, 1.6rem);
         }
     }

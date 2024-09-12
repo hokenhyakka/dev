@@ -154,14 +154,23 @@
   color: var(--pink--primary);
   font-weight: 700;
 }
-.shop-one__table td:has(.weekdays) {
+.shop-one__table td[data-shop=access] a::after {
+  content: "";
+  display: inline-block;
+  background-image: url(../../assets/img/icon/location.svg);
+  background-size: cover;
+}
+.shop-one__table td[data-shop=businessHours] {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 4px;
 }
-.shop-one__table td:has(.weekdays) p {
+.shop-one__table td[data-shop=businessHours] p {
   margin-left: 4px;
+}
+.shop-one__table td[data-shop=fax] a {
+  text-decoration: none;
 }
 .shop-one__table td .weekdays,
 .shop-one__table td .weekend {
@@ -174,9 +183,6 @@
 }
 .shop-one__table td .att {
   margin-top: 10px;
-}
-.shop-one__table td a:has(img) {
-  text-decoration: underline;
 }
 .shop-one__table td a img {
   display: inline-block;
@@ -203,6 +209,11 @@
   .shop-one__table td {
     padding: 16px 22px 24px;
     background-color: #fff;
+  }
+  .shop-one__table td[data-shop=access] a::after {
+    width: 14px;
+    height: 14px;
+    margin-left: 4px;
   }
   .shop-one__table td .weekdays,
   .shop-one__table td .weekend {
