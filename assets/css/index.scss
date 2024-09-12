@@ -51,7 +51,7 @@
         .btn {
             width: min(460px, 100%);
             a {
-                height: clamp(56px, 15vw, 80px);
+                height: clamp(62px, 16vw, 80px);
                 font-size: clamp(1.5rem, 4vw, 2.2rem);
             }
         }
@@ -801,23 +801,6 @@
     .row {
         text-align: center;
 
-        > a {
-            display: inline-flex;
-            color: var(--pink--primary);
-            align-items: center;
-            justify-content: center;
-
-            &::after {
-                content: "";
-                background-image: url(../img/common/icon/arrow--prm.svg);
-                background-size: cover;
-            }
-
-            &::before {
-                background-color: var(--pink--primary);
-            }
-        }
-
         > p {
             line-height: 200%;
             letter-spacing: 0.08em;
@@ -829,6 +812,20 @@
         flex-wrap: wrap;
         justify-content: center;
         width: 100%;
+
+        a{
+            &:has(span){
+                position: relative;
+            }
+
+            span{
+                position: absolute;
+                left: 0;
+                right: 0;
+                width: 100%;
+                color: inherit;
+            }
+        }
     }
 }
 
@@ -857,22 +854,21 @@
 
             a {
                 width: calc(50% - 10px);
+
+                &:has(span){
+                    padding-bottom: 22px;
+                }
+
+                span{
+                    font-size: 1.4rem;
+                    bottom: 16px;
+                }
             }
         }
 
         > .row {
             > p {
                 font-size: clamp(1.6rem, 1.56vw, 1.8rem);
-            }
-            > a {
-                font-size: 1.7rem;
-                gap: 6px;
-                margin-top: 24px;
-
-                &::after {
-                    width: 12px;
-                    height: 12px;
-                }
             }
         }
     }
@@ -892,17 +888,6 @@
             > p {
                 text-align: left;
                 font-size: clamp(1.2rem, 3.25vw, 1.7rem);
-            }
-
-            > a {
-                font-size: clamp(1.2rem, 3.11vw, 1.6rem);
-                margin-top: clamp(18px, 4.44vw, 24px);
-                gap: clamp(3px, 0.89vw, 6px);
-
-                &::after {
-                    width: clamp(8px, 2vw, 12px);
-                    height: clamp(8px, 2vw, 12px);
-                }
             }
         }
         h2 {
@@ -927,6 +912,15 @@
 
             a {
                 width: 100%;
+
+                &:has(span){
+                    padding-bottom: clamp(14px, 3.56vw, 22px);
+                }
+
+                span{
+                    font-size: clamp(1.1rem, 2.67vw, 1.4rem);
+                    bottom: clamp(12px, 2.67vw, 16px);
+                }
             }
         }
     }
