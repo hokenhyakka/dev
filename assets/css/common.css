@@ -291,27 +291,20 @@ h3.flowers::after {
 }
 /* btn */
 .btn {
-  width: min(400px, 100%);
   margin: 0 auto;
 }
 .btn a {
   background-color: var(--pink--primary);
   color: #fff;
-  font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   font-weight: 700;
-  height: 80px;
   border-radius: 50vw;
-  gap: 6px;
-  box-shadow: 5px 5px 0 #f2f2f2;
 }
 .btn a::after {
   content: "";
-  width: 12px;
-  height: 12px;
   background-image: url(../img/common/icon/arrow--fff.svg);
   transition: 0.3s;
   background-size: cover;
@@ -325,6 +318,21 @@ h3.flowers::after {
   }
 }
 
+@media screen and (min-width: 769px) {
+  .btn {
+    width: min(400px, 100%);
+  }
+  .btn a {
+    font-size: 2rem;
+    height: 80px;
+    gap: 6px;
+    box-shadow: 5px 5px 0 #f2f2f2;
+  }
+  .btn a::after {
+    width: 12px;
+    height: 12px;
+  }
+}
 @media screen and (max-width: 768px) {
   .btn {
     width: min(460px, 100%);
@@ -332,6 +340,11 @@ h3.flowers::after {
   .btn a {
     height: clamp(56px, 15vw, 80px);
     font-size: clamp(1.5rem, 4vw, 2.2rem);
+    box-shadow: 4px 4px 0 #f2f2f2;
+  }
+  .btn a::after {
+    width: 10px;
+    height: 10px;
   }
 }
 /* bg patterns */
@@ -1399,7 +1412,8 @@ footer > span {
   .cmn__search-shop--stick a p span {
     font-weight: 700;
   }
-  .cmn__search-shop--stick a p, .cmn__search-shop--stick a span {
+  .cmn__search-shop--stick a p,
+  .cmn__search-shop--stick a span {
     color: inherit;
     line-height: 110%;
   }
@@ -1444,7 +1458,8 @@ footer > span {
   .cmn__search-shop--stick a p span {
     font-size: clamp(0.9rem, 2.81vw, 1.4rem);
   }
-  .cmn__search-shop--stick a p, .cmn__search-shop--stick a span {
+  .cmn__search-shop--stick a p,
+  .cmn__search-shop--stick a span {
     line-height: 130%;
   }
 }
