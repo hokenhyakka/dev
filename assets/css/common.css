@@ -364,6 +364,7 @@ h3.flowers::after {
     height: 80px;
     gap: 6px;
     box-shadow: 5px 5px 0 #e9e9e9;
+    padding-left: 12px;
   }
   .btn a::after {
     width: 12px;
@@ -385,6 +386,7 @@ h3.flowers::after {
     font-size: clamp(1.5rem, 4vw, 2.2rem);
     box-shadow: 4px 4px 0 #e9e9e9;
     gap: 4px;
+    padding-left: 10px;
   }
   .btn a::after {
     width: 10px;
@@ -1348,46 +1350,6 @@ footer > span {
     top: calc(clamp(8px, 2.25vw, 16px) + 3px);
     right: calc(clamp(12px, 2.67vw, 16px) / 2 - 1px);
     margin-top: 0;
-  }
-}
-@media screen and (min-width: 769px) {
-  .btm-btn-list {
-    margin-top: 128px;
-  }
-  .btm-btn-list ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    padding: 24px 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  .btm-btn-list {
-    margin-top: clamp(64px, 17.78vw, 80px);
-  }
-  .btm-btn-list ul {
-    display: flex;
-    padding: 22px 0;
-  }
-}
-@media screen and (max-width: 768px) and (min-width: 451px) {
-  .btm-btn-list ul {
-    flex-wrap: wrap;
-    padding: 32px 0;
-    gap: clamp(12px, 4vw, 24px);
-  }
-  .btm-btn-list ul .btn {
-    width: calc(50% - clamp(12px, 4vw, 24px) / 2);
-  }
-  .btm-btn-list ul .btn a {
-    height: clamp(60px, 13.33vw, 72px);
-    font-size: clamp(1.5rem, 3.33vw, 2.2rem);
-  }
-}
-@media screen and (max-width: 450px) {
-  .btm-btn-list ul {
-    flex-direction: column;
-    gap: 12px;
   }
 }
 #backToTop {

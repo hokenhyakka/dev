@@ -359,4 +359,50 @@
   .cmn__search-shop .row-nar {
     padding: 0 10px;
   }
+}
+@media screen and (min-width: 769px) {
+  .btm-btn-list {
+    margin-top: 128px;
+  }
+  .btm-btn-list ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    padding: 24px 0;
+  }
+  .btm-btn-list .btn a {
+    padding-left: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .btm-btn-list {
+    margin-top: clamp(64px, 17.78vw, 80px);
+  }
+  .btm-btn-list ul {
+    display: flex;
+    padding: 22px 0;
+  }
+  .btm-btn-list .btn a {
+    padding-left: 10px;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 451px) {
+  .btm-btn-list ul {
+    flex-wrap: wrap;
+    padding: 32px 0;
+    gap: clamp(12px, 4vw, 24px);
+  }
+  .btm-btn-list ul .btn {
+    width: calc(50% - clamp(12px, 4vw, 24px) / 2);
+  }
+  .btm-btn-list ul .btn a {
+    height: clamp(60px, 13.33vw, 72px);
+    font-size: clamp(1.5rem, 3.33vw, 2.2rem);
+  }
+}
+@media screen and (max-width: 450px) {
+  .btm-btn-list ul {
+    flex-direction: column;
+    gap: 12px;
+  }
 }/*# sourceMappingURL=children.css.map */

@@ -208,9 +208,8 @@
     .btn {
         a {
             &:first-of-type{
-                background-color: var(--pink--very-light);
+                background-color: var(--pink--dusty-light);
                 color: var(--pink--primary);
-                border: 2px solid var(--pink--primary);
 
                 &::after{
                     background-image: url(../../../../assets/img/common/icon/ext--prm.svg);

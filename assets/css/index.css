@@ -23,6 +23,7 @@
   .index .btn a {
     font-size: 2.6rem;
     height: 96px;
+    padding-left: 12px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -49,6 +50,7 @@
   .index .btn a {
     height: clamp(62px, 16vw, 80px);
     font-size: clamp(1.5rem, 4vw, 2.2rem);
+    padding-left: 10px;
   }
 }
 .news {

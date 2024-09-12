@@ -21,10 +21,12 @@
 
         .btn {
             width: min(488px, 100%);
+            
 
             a {
                 font-size: 2.6rem;
                 height: 96px;
+                padding-left: 12px;
             }
         }
     }
@@ -53,6 +55,7 @@
             a {
                 height: clamp(62px, 16vw, 80px);
                 font-size: clamp(1.5rem, 4vw, 2.2rem);
+                padding-left: 10px;
             }
         }
     }
