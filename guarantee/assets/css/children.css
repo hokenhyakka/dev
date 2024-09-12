@@ -9,12 +9,12 @@
 .guarantee-one__list ul {
   display: grid;
 }
-.guarantee-one__list ul li {
+.guarantee-one__list li {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-.guarantee-one__list ul li a {
+.guarantee-one__list li a {
   height: 35px;
   border-radius: 2px;
   display: flex;
@@ -24,17 +24,17 @@
   box-shadow: none;
   padding-left: 0;
 }
-.guarantee-one__list ul li a img {
+.guarantee-one__list li a img {
   width: 90%;
 }
-.guarantee-one__list ul li a::after {
+.guarantee-one__list li a::after {
   display: none;
 }
-.guarantee-one__list ul li > img {
+.guarantee-one__list li > img {
   background-color: #fff;
   width: 100%;
 }
-.guarantee-one__list ul p {
+.guarantee-one__list li p {
   line-height: 120%;
 }
 
@@ -60,8 +60,11 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 32px 24px;
   }
-  .guarantee-one__list ul p {
+  .guarantee-one__list li p {
     font-size: 1.2rem;
+  }
+  .guarantee-one__list li p span {
+    font-size: 1rem;
   }
   .guarantee-one__list > .btn {
     margin-top: 96px;
@@ -78,20 +81,23 @@
     -moz-column-gap: clamp(16px, 3.56vw, 22px);
          column-gap: clamp(16px, 3.56vw, 22px);
   }
-  .guarantee-one__list ul p {
-    font-size: clamp(1rem, 2.22vw, 1.2rem);
-  }
 }
 @media screen and (max-width: 768px) {
   .guarantee-one .row > .att {
     font-size: clamp(1.1rem, 2.44vw, 1.2rem);
   }
-  .guarantee-one__list ul li a:has(img) {
+  .guarantee-one__list li a:has(img) {
     padding: 0 8px;
   }
-  .guarantee-one__list ul li a:has(img) img {
+  .guarantee-one__list li a:has(img) img {
     height: auto;
     width: 100%;
+  }
+  .guarantee-one__list li p {
+    font-size: clamp(1rem, 2.22vw, 1.2rem);
+  }
+  .guarantee-one__list li p span {
+    font-size: 84%;
   }
   .guarantee-one__list > .btn {
     margin-top: clamp(40px, 8.89vw, 56px);

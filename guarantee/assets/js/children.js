@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
         targetElements.forEach(function(targetElement) {
             var pElement = targetElement.querySelector("p");
             if (pElement) {
-                pElement.textContent = connections[key] + " " + pElement.textContent;
+                pElement.insertAdjacentText('afterbegin', connections[key] + " ");
             }
         });
     }
