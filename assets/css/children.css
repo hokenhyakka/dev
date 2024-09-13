@@ -207,7 +207,10 @@
   .p-child section > p {
     font-size: 1.6rem;
   }
-  .p-child .att {
+  .p-child .row .att,
+  .p-child .row-nar .att,
+  .p-child .row-wide .att,
+  .p-child section .att {
     font-size: 1.3rem;
   }
 }
@@ -254,6 +257,10 @@
 .cmn__search-shop__btn {
   position: relative;
   width: min(640px, 100%);
+  cursor: pointer;
+}
+.cmn__search-shop__btn * {
+  cursor: inherit;
 }
 .cmn__search-shop__btn .btn {
   width: 100%;

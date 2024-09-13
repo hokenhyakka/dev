@@ -164,6 +164,48 @@
     }
 }
 
+.shop-one__notice{
+    background-color: var(--pink--very-light);
+    width: 100%;
+
+    p{
+        em{
+            color: var(--pink--primary);
+            font-weight: 700;
+            font-style: normal;
+        }
+    }
+}
+
+@media screen and (min-width: 769px){
+    .shop-one__notice{
+        padding-top: 24px;
+        padding-bottom: 26px;
+        padding-left: 24px;
+        padding-right: 24px;
+        border-start-end-radius: 8px;
+        margin-bottom: 24px;
+
+        p{
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .shop-one__notice{
+        padding-top: clamp(16px, 3.56vw, 24px);
+        padding-left: clamp(16px, 3.56vw, 24px);
+        padding-right: clamp(16px, 3.56vw, 24px);
+        padding-bottom: clamp(20px, 4.44vw, 24px);
+        margin-bottom: 40px;
+
+        p{
+            font-size: clamp(1.2rem, 2.67vw, 1.4rem);
+        }
+    }
+}
+
 .shop-one__table {
     width: 100%;
 
@@ -236,8 +278,7 @@
             margin-top: 10px;
         }
         a {
-
-            &::before{
+            &::before {
                 display: none;
             }
             img {
@@ -431,9 +472,16 @@
         margin-top: 88px;
     }
     .shop-one__access-inner {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 32px;
+        &:has(img) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+        &:not(:has(img)){
+            iframe{
+                height: 420px;
+            }
+        }
     }
 }
 @media screen and (max-width: 768px) {
@@ -450,6 +498,12 @@
         iframe {
             aspect-ratio: 8 / 7;
         }
+    }
+}
+
+.shop-one__event{
+    &:has(li:empty){
+        display: none;
     }
 }
 
@@ -1004,12 +1058,11 @@
     }
 }
 
-.cmn__search-shop--stick{
-    a{
-        &:nth-of-type(2){
+.cmn__search-shop--stick {
+    a {
+        &:nth-of-type(2) {
             justify-content: center;
             padding-left: 0;
-            
         }
     }
 }
