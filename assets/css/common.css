@@ -1252,7 +1252,7 @@ footer > span {
     border-radius: 50vw;
   }
   .voice__list .swiper-button img {
-    width: 50%;
+    width: 32%;
   }
   .voice__list .swiper-button::after {
     display: none;
