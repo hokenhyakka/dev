@@ -236,6 +236,10 @@
             margin-top: 10px;
         }
         a {
+
+            &::before{
+                display: none;
+            }
             img {
                 display: inline-block;
                 vertical-align: bottom;

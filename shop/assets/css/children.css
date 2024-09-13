@@ -187,6 +187,9 @@
 .shop-one__table td .att {
   margin-top: 10px;
 }
+.shop-one__table td a::before {
+  display: none;
+}
 .shop-one__table td a img {
   display: inline-block;
   vertical-align: bottom;

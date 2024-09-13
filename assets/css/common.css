@@ -133,7 +133,10 @@ table {
   background-image: url(../img/common/icon/ext--fff.svg);
 }
 
-.container, .row-wide, .row, .row-nar {
+.container,
+.row-wide,
+.row,
+.row-nar {
   margin: 0 auto;
 }
 
@@ -154,7 +157,9 @@ table {
 }
 
 @media screen and (min-width: 769px) {
-  .container, .row-wide, .row {
+  .container,
+  .row-wide,
+  .row {
     padding: 0 30px;
   }
   .row-nar {
@@ -352,6 +357,11 @@ h3.flowers::after {
 @media (hover: hover) {
   .btn a:hover::after {
     transform: translateX(6px);
+  }
+}
+@media (hover: hover) {
+  .btn.btns a:hover {
+    transform: none;
   }
 }
 
