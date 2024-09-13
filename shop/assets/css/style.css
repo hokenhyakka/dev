@@ -360,4 +360,9 @@
     margin-top: -24px;
     margin-bottom: clamp(24px, 7.11vw, 32px);
   }
+}
+@media (hover: hover) {
+  .btn.btns a:hover {
+    transform: none;
+  }
 }/*# sourceMappingURL=style.css.map */

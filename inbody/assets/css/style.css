@@ -225,4 +225,9 @@
   .inbody .inbody__wrap .wrap__inner .inner__shop-detail .shop-detail__wrap .shop-detail__text-area .text-area__shop-detail {
     font-size: 12px;
   }
+}
+@media (hover: hover) {
+  .btn.btns a:hover {
+    transform: none;
+  }
 }/*# sourceMappingURL=style.css.map */

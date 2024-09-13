@@ -238,3 +238,15 @@
         }
     }
 }
+
+.btn{
+    &.btns {
+        a {
+            @media (hover: hover) {
+                &:hover {
+                    transform: none;
+                }
+            }
+        }
+    }
+}
