@@ -1723,6 +1723,13 @@ footer {
             border-bottom-left-radius: 24px;
             gap: 8px;
             padding-left: 8px;
+
+            @media (hover: hover){
+                &:hover{
+                    opacity: 1;
+                    background-color: #0056d8;
+                }
+            }
         }
 
         img {

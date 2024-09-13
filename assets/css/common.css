@@ -1420,6 +1420,14 @@ footer > span {
     gap: 8px;
     padding-left: 8px;
   }
+}
+@media screen and (min-width: 769px) and (hover: hover) {
+  .cmn__search-shop--stick a:hover {
+    opacity: 1;
+    background-color: #0056d8;
+  }
+}
+@media screen and (min-width: 769px) {
   .cmn__search-shop--stick img {
     width: 24px;
     height: 24px;
