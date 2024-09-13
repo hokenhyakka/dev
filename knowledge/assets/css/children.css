@@ -64,6 +64,9 @@
   .knowledge-one__content .dots + p {
     margin-top: 32px;
   }
+  .knowledge-one__content > .att + .att {
+    margin-top: 10px;
+  }
 }
 @media screen and (max-width: 768px) {
   .knowledge-one__content {

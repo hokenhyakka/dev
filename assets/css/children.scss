@@ -248,6 +248,22 @@
             display: inline;
         }
     }
+    .att-list {
+        display: flex;
+        flex-direction: column;
+
+        li {
+            counter-increment: childAttention;
+
+            &::before {
+                content: "※" counter(childAttention);
+                font-weight: inherit;
+                color: inherit;
+                display: inline;
+                
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 769px) {
@@ -275,6 +291,21 @@
                 font-size: 1.3rem;
             }
         }
+
+        .att-list{
+            gap: 16px;
+            margin-top: 24px;
+            margin-bottom: 24px;
+
+            li{
+                font-size: 1.3rem;
+                line-height: 160%;
+
+                &::before{
+                    margin-right: 6px;
+                }
+            }
+        }
     }
 }
 
@@ -299,6 +330,19 @@
         }
         .att {
             font-size: clamp(1rem, 2.22vw, 1.3rem);
+        }
+        .att-list{
+            gap: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+            li{
+                font-size: clamp(1rem, 2.22vw, 1.3rem);
+
+                &::before{
+                    margin-right: 6px;
+                }
+            }
         }
     }
 }

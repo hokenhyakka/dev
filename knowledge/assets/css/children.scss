@@ -100,6 +100,12 @@
                 margin-top: 32px;
             }
         }
+
+        > .att{
+            & + .att{
+                margin-top: 10px;
+            }
+        }
     }
 }
 

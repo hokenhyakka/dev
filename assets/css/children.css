@@ -193,6 +193,19 @@
   color: inherit;
   display: inline;
 }
+.p-child .att-list {
+  display: flex;
+  flex-direction: column;
+}
+.p-child .att-list li {
+  counter-increment: childAttention;
+}
+.p-child .att-list li::before {
+  content: "※" counter(childAttention);
+  font-weight: inherit;
+  color: inherit;
+  display: inline;
+}
 
 @media screen and (min-width: 769px) {
   .p-child .row > p:first-child,
@@ -212,6 +225,18 @@
   .p-child .row-wide .att,
   .p-child section .att {
     font-size: 1.3rem;
+  }
+  .p-child .att-list {
+    gap: 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .p-child .att-list li {
+    font-size: 1.3rem;
+    line-height: 160%;
+  }
+  .p-child .att-list li::before {
+    margin-right: 6px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -236,6 +261,17 @@
   }
   .p-child .att {
     font-size: clamp(1rem, 2.22vw, 1.3rem);
+  }
+  .p-child .att-list {
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .p-child .att-list li {
+    font-size: clamp(1rem, 2.22vw, 1.3rem);
+  }
+  .p-child .att-list li::before {
+    margin-right: 6px;
   }
 }
 .cmn__search-shop .row-nar {

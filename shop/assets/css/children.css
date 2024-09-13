@@ -850,4 +850,10 @@
 .cmn__search-shop--stick a:nth-of-type(2) {
   justify-content: center;
   padding-left: 0;
+}
+
+@media screen and (max-width: 450px) {
+  .cmn__search-shop--stick a:nth-of-type(2) {
+    font-size: clamp(1.3rem, 3.78vw, 1.7rem);
+  }
 }/*# sourceMappingURL=children.css.map */
