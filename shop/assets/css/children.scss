@@ -999,3 +999,13 @@
         }
     }
 }
+
+.cmn__search-shop--stick{
+    a{
+        &:nth-of-type(2){
+            justify-content: center;
+            padding-left: 0;
+            
+        }
+    }
+}

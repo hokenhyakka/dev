@@ -801,4 +801,8 @@
     font-size: clamp(1.2rem, 3.11vw, 1.4rem);
     padding: 0 clamp(12px, 3.11vw, 14px);
   }
+}
+.cmn__search-shop--stick a:nth-of-type(2) {
+  justify-content: center;
+  padding-left: 0;
 }/*# sourceMappingURL=children.css.map */
