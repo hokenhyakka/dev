@@ -209,9 +209,16 @@
             }
         }
 
-        &[data-shop="fax"]{
-            a{
+        &[data-shop="fax"] {
+            a {
                 text-decoration: none;
+            }
+        }
+
+        &[data-shop="access"],
+        &[data-shop="email"] {
+            a {
+                text-decoration: underline;
             }
         }
 
@@ -273,23 +280,25 @@
                 }
             }
 
+            &[data-shop="telNum"] {
+                a {
+                    text-decoration: none;
+                }
+            }
+
             .weekdays,
             .weekend {
                 font-size: 1.5rem;
             }
 
             .att {
-                font-size: 1.4rem;
+                font-size: 1.2rem;
             }
         }
 
-        tr,
-        th,
-        td {
-            p,
-            a {
-                font-size: 1.5rem;
-            }
+        p,
+        a {
+            font-size: 1.5rem;
         }
     }
 }
@@ -323,6 +332,22 @@
                 }
             }
 
+            &[data-shop="access"] {
+                a {
+                    &::after {
+                        width: 10px;
+                        height: 10px;
+                        margin-left: 4px;
+                    }
+                }
+            }
+
+            &[data-shop="telNum"] {
+                a {
+                    text-decoration: underline;
+                }
+            }
+
             .weekdays,
             .weekend {
                 font-size: clamp(1.1rem, 2.44vw, 1.2rem);
@@ -333,13 +358,9 @@
             }
         }
 
-        tr,
-        th,
-        td {
-            p,
-            a {
-                font-size: clamp(1.3rem, 3.25vw, 1.5rem);
-            }
+        p,
+        a {
+            font-size: clamp(1.3rem, 3.25vw, 1.5rem);
         }
     }
 }

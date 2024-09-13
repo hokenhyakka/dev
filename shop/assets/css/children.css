@@ -172,6 +172,9 @@
 .shop-one__table td[data-shop=fax] a {
   text-decoration: none;
 }
+.shop-one__table td[data-shop=access] a, .shop-one__table td[data-shop=email] a {
+  text-decoration: underline;
+}
 .shop-one__table td .weekdays,
 .shop-one__table td .weekend {
   background-color: var(--pink--primary);
@@ -215,19 +218,18 @@
     height: 14px;
     margin-left: 4px;
   }
+  .shop-one__table td[data-shop=telNum] a {
+    text-decoration: none;
+  }
   .shop-one__table td .weekdays,
   .shop-one__table td .weekend {
     font-size: 1.5rem;
   }
   .shop-one__table td .att {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
-  .shop-one__table tr p,
-  .shop-one__table tr a,
-  .shop-one__table th p,
-  .shop-one__table th a,
-  .shop-one__table td p,
-  .shop-one__table td a {
+  .shop-one__table p,
+  .shop-one__table a {
     font-size: 1.5rem;
   }
 }
@@ -253,6 +255,14 @@
   .shop-one__table td a + p {
     margin-top: clamp(8px, 2.5vw, 12px);
   }
+  .shop-one__table td[data-shop=access] a::after {
+    width: 10px;
+    height: 10px;
+    margin-left: 4px;
+  }
+  .shop-one__table td[data-shop=telNum] a {
+    text-decoration: underline;
+  }
   .shop-one__table td .weekdays,
   .shop-one__table td .weekend {
     font-size: clamp(1.1rem, 2.44vw, 1.2rem);
@@ -260,12 +270,8 @@
   .shop-one__table td .att {
     font-size: clamp(1.2rem, 2.67vw, 1.4rem);
   }
-  .shop-one__table tr p,
-  .shop-one__table tr a,
-  .shop-one__table th p,
-  .shop-one__table th a,
-  .shop-one__table td p,
-  .shop-one__table td a {
+  .shop-one__table p,
+  .shop-one__table a {
     font-size: clamp(1.3rem, 3.25vw, 1.5rem);
   }
 }
