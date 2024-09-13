@@ -146,4 +146,9 @@
   .online .online__wrap .wrap__attention-area ul li::before {
     width: 16px;
   }
+}
+@media (hover: hover) {
+  .btn.btns a:hover {
+    transform: none;
+  }
 }/*# sourceMappingURL=style.css.map */
