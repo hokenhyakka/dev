@@ -1376,8 +1376,8 @@ footer > span {
   align-items: center;
 }
 #backToTop img {
-  width: 34px;
-  height: 34px;
+  width: 20px;
+  height: 20px;
   margin-bottom: 6px;
 }
 #backToTop.is-hidden {
@@ -1394,8 +1394,9 @@ footer > span {
     border-radius: 4px;
   }
   #backToTop img {
-    width: 38%;
+    width: 30%;
     height: auto;
+    margin-bottom: 5%;
   }
 }
 .cmn__search-shop--stick {

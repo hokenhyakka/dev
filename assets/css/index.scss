@@ -917,12 +917,12 @@
                 width: 100%;
 
                 &:has(span){
-                    padding-bottom: clamp(14px, 3.56vw, 22px);
+                    padding-bottom: clamp(14px, 4vw, 22px);
                 }
 
                 span{
                     font-size: clamp(1.1rem, 2.67vw, 1.4rem);
-                    bottom: clamp(12px, 2.67vw, 16px);
+                    bottom: clamp(12px, 2.89vw, 16px);
                 }
             }
         }
