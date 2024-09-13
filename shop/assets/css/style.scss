@@ -230,7 +230,6 @@
 @media screen and (max-width: 768px) {
     .shop-tags {
         .tag {
-            font-size: clamp(11px, 2.67vw, 1.4rem);
             padding-top: 1px;
 
             img {
@@ -240,13 +239,28 @@
     }
 }
 
+@media screen and (max-width: 768px) and (min-width: 451px) {
+    .shop-tags {
+        .tag {
+            font-size: clamp(12px, 2.4vw, 1.3rem);
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .shop-tags {
+        .tag {
+            font-size: clamp(1.1rem, 3.14vw, 1.2rem);
+        }
+    }
+}
+
 .shop__one {
     display: flex;
     flex-direction: column;
     grid-row: span 1;
 
-
-    .city{
+    .city {
         background-color: var(--black);
         font-weight: 700;
         color: #fff;
@@ -260,8 +274,8 @@
     .name {
         font-weight: bold;
 
-        &::after{
-            content: '';
+        &::after {
+            content: "";
             display: inline-block;
             background-image: url(../../../assets/img/common/icon/arrow.svg);
             background-size: cover;
@@ -282,11 +296,10 @@
         a {
             border-radius: 4px;
             box-shadow: none;
-            
-            
         }
     }
-    .learn-more, .phone-call {
+    .learn-more,
+    .phone-call {
         background-color: var(--pink--dusty-light);
         color: var(--pink--primary);
 
@@ -300,7 +313,7 @@
     .shop__one {
         gap: 10px;
 
-        .city{
+        .city {
             height: 30px;
             padding: 0 18px;
             font-size: 1.3rem;
@@ -308,17 +321,17 @@
         .name {
             font-size: 2rem;
 
-            &::before{
+            &::before {
                 display: none;
             }
 
-            &::after{
+            &::after {
                 width: 12px;
                 height: 12px;
                 margin-left: 6px;
             }
         }
-        .shop-tags{
+        .shop-tags {
             margin-top: 6px;
         }
         .access {
@@ -342,7 +355,7 @@
 
 @media screen and (max-width: 768px) {
     .shop__one {
-        .city{
+        .city {
             font-size: clamp(1.2rem, 2.67vw, 1.3rem);
             padding: 4px 16px;
             margin-bottom: 4px;
@@ -350,7 +363,7 @@
         .name {
             font-size: clamp(1.7rem, 4vw, 2rem);
 
-            &::after{
+            &::after {
                 width: 10px;
                 height: 10px;
                 margin-left: 6px;
@@ -381,44 +394,45 @@
     }
 }
 
-@media screen and (max-width: 768px) and (min-width: 451px){
-    .shop__one{
-        .shop-tags{
+@media screen and (max-width: 768px) and (min-width: 451px) {
+    .shop__one {
+        .shop-tags {
             display: flex;
             flex-wrap: wrap;
             width: 100%;
             gap: 6px;
 
-            .tag{
+            .tag {
                 width: calc(calc(100% / 3) - 4px);
             }
         }
     }
 }
 
-@media screen and (max-width: 450px){
-    .shop__one{
-        .shop-tags{
+@media screen and (max-width: 450px) {
+    .shop__one {
+        .shop-tags {
             width: 100%;
         }
     }
 }
 
-.shop-one__inbody{
+.shop-one__inbody {
     width: 100%;
 
-    picture, img{
+    picture,
+    img {
         width: 100%;
     }
 
-    &.inactive{
+    &.inactive {
         display: none;
     }
 }
 
-@media screen and (min-width: 769px){
-    .shop-one__main{
-        & + .shop-one__inbody{
+@media screen and (min-width: 769px) {
+    .shop-one__main {
+        & + .shop-one__inbody {
             margin-top: -64px;
             margin-bottom: 32px;
         }
@@ -426,24 +440,24 @@
 }
 
 @media screen and (max-width: 768px) and (min-width: 451px) {
-    .shop-one__main{
-        & + .shop-one__inbody{
+    .shop-one__main {
+        & + .shop-one__inbody {
             margin-top: -40px;
             margin-bottom: 24px;
         }
     }
 }
 
-@media screen and (max-width: 450px){
-    .shop-one__main{
-        & + .shop-one__inbody{
+@media screen and (max-width: 450px) {
+    .shop-one__main {
+        & + .shop-one__inbody {
             margin-top: -24px;
             margin-bottom: clamp(24px, 7.11vw, 32px);
         }
     }
 }
 
-.btn{
+.btn {
     &.btns {
         a {
             @media (hover: hover) {

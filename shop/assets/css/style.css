@@ -192,11 +192,20 @@
 }
 @media screen and (max-width: 768px) {
   .shop-tags .tag {
-    font-size: clamp(11px, 2.67vw, 1.4rem);
     padding-top: 1px;
   }
   .shop-tags .tag img {
     height: clamp(12px, 2.67vw, 1.4rem);
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 451px) {
+  .shop-tags .tag {
+    font-size: clamp(12px, 2.4vw, 1.3rem);
+  }
+}
+@media screen and (max-width: 450px) {
+  .shop-tags .tag {
+    font-size: clamp(1.1rem, 3.14vw, 1.2rem);
   }
 }
 .shop__one {
@@ -239,11 +248,13 @@
   border-radius: 4px;
   box-shadow: none;
 }
-.shop__one .learn-more, .shop__one .phone-call {
+.shop__one .learn-more,
+.shop__one .phone-call {
   background-color: var(--pink--dusty-light);
   color: var(--pink--primary);
 }
-.shop__one .learn-more::after, .shop__one .phone-call::after {
+.shop__one .learn-more::after,
+.shop__one .phone-call::after {
   background-image: url(../../../assets/img/common/icon/arrow--prm.svg);
 }
 
@@ -336,7 +347,8 @@
 .shop-one__inbody {
   width: 100%;
 }
-.shop-one__inbody picture, .shop-one__inbody img {
+.shop-one__inbody picture,
+.shop-one__inbody img {
   width: 100%;
 }
 .shop-one__inbody.inactive {
