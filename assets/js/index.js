@@ -1,8 +1,8 @@
 const swiper = new Swiper(".slider", {
     loop: true,
-    speed: 600,
+    speed: 1300,
     autoplay: {
-        delay: 4000,
+        delay: 3000,
     },
 
     pagination: {
@@ -12,9 +12,8 @@ const swiper = new Swiper(".slider", {
 
 const recommendSwiper = new Swiper(".recommend__slider", {
     loop: true,
-    speed: 600,
+    speed: 1000,
     centeredSlides: true,
-    // slidesPerView: 4,
     slidesPerView: 'auto',
     autoplay: {
         delay: 4000,
@@ -25,6 +24,7 @@ const recommendSwiper = new Swiper(".recommend__slider", {
     },
 });
 
+/* for connection slides */
 document.querySelectorAll(".connection__slider").forEach((slider) => {
     const ulElement = slider.querySelector("ul");
     if (ulElement) {
