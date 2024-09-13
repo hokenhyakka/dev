@@ -430,7 +430,7 @@
         .tag {
             font-size: clamp(1.1rem, 0.86vw, 1.4rem);
             &:not(:has(img)) {
-                padding-top: 3px;
+                padding-top: 2px;
             }
         }
     }
