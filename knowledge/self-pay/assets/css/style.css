@@ -29,7 +29,7 @@
 
 @media screen and (min-width: 769px) {
   .content__self-pay-area {
-    margin-top: 50px 0;
+    margin: 50px 0;
   }
   .content__self-pay-area > p {
     font-size: 2.4rem;
