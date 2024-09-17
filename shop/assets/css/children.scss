@@ -60,41 +60,40 @@
     }
 }
 
-@media screen and (max-width: 768px) and (min-width: 451px){
-    .title{
+@media screen and (max-width: 768px) and (min-width: 451px) {
+    .title {
         padding-top: clamp(32px, 10vw, 64px);
         padding-bottom: clamp(32px, 10vw, 64px);
     }
 }
 
-@media screen and (max-width: 450px){
-    .title{
+@media screen and (max-width: 450px) {
+    .title {
         padding-top: clamp(24px, 6.22vw, 28px);
-        padding-bottom: clamp(22px, 6.22vw,28px);
+        padding-bottom: clamp(22px, 6.22vw, 28px);
     }
 }
 
-
-@media screen and (max-width: 768px){
-    .shop-one__appointment{
+@media screen and (max-width: 768px) {
+    .shop-one__appointment {
         padding-top: clamp(20px, 5.33vw, 32px);
         padding-bottom: clamp(22px, 5.33vw, 40px);
 
-        h2{
+        h2 {
             font-size: clamp(1.8rem, 4.89vw, 2.8rem);
         }
 
-        .btns{
+        .btns {
             display: flex;
             flex-direction: column;
             gap: clamp(8px, 2.22vw, 14px);
             margin-top: clamp(14px, 4.89vw, 24px);
-            
-            a{
+
+            a {
                 position: relative;
                 padding-bottom: clamp(14px, 4.44vw, 22px);
 
-                &::before{
+                &::before {
                     display: block;
                     position: absolute;
                     bottom: clamp(8px, 2.44vw, 12px);
@@ -103,16 +102,16 @@
                     font-weight: 500;
                 }
 
-                &:first-of-type{
+                &:first-of-type {
                     font-size: clamp(1.6rem, 4.2vw, 2.2rem);
-                    &::before{
-                        content: 'ここをタップすると電話がかかります';
+                    &::before {
+                        content: "ここをタップすると電話がかかります";
                     }
                 }
 
-                &:nth-of-type(2){
-                    &::before{
-                        content: '当日30分前まで予約可能!';
+                &:nth-of-type(2) {
+                    &::before {
+                        content: "当日30分前まで予約可能!";
                     }
                 }
             }
@@ -222,12 +221,12 @@
     }
 }
 
-.shop-one__notice{
+.shop-one__notice {
     background-color: var(--pink--very-light);
     width: 100%;
 
-    p{
-        em{
+    p {
+        em {
             color: var(--pink--primary);
             font-weight: 700;
             font-style: normal;
@@ -235,8 +234,8 @@
     }
 }
 
-@media screen and (min-width: 769px){
-    .shop-one__notice{
+@media screen and (min-width: 769px) {
+    .shop-one__notice {
         padding-top: 24px;
         padding-bottom: 26px;
         padding-left: 24px;
@@ -244,21 +243,21 @@
         border-start-end-radius: 8px;
         margin-bottom: 24px;
 
-        p{
+        p {
             font-size: 1.4rem;
         }
     }
 }
 
-@media screen and (max-width: 768px){
-    .shop-one__notice{
+@media screen and (max-width: 768px) {
+    .shop-one__notice {
         padding-top: clamp(16px, 3.56vw, 24px);
         padding-left: clamp(16px, 3.56vw, 24px);
         padding-right: clamp(16px, 3.56vw, 24px);
         padding-bottom: clamp(20px, 4.44vw, 24px);
         margin-bottom: 40px;
 
-        p{
+        p {
             font-size: clamp(1.2rem, 2.67vw, 1.4rem);
         }
     }
@@ -290,11 +289,32 @@
     td {
         &[data-shop="access"] {
             a {
-                &::after {
-                    content: "";
-                    display: inline-block;
-                    background-image: url(../../assets/img/icon/location.svg);
-                    background-size: cover;
+                &:not(.file) {
+                    &::after {
+                        content: "";
+                        display: inline-block;
+                        background-image: url(../../../assets/img/common/icon/ext.svg);
+                        background-size: cover;
+                    }
+                }
+
+                &.file{
+                    background-color: var(--black);
+                    color: #fff;
+                    font-weight: 700;
+                    display: inline-flex;
+                        align-items: center;
+
+                        &::after{
+                            content: '';
+                            background-image: url(../../../assets/img/common/icon/arrow--fff.svg);
+                            background-size: cover;
+                        }
+
+                    span{
+                        font-weight: inherit;
+                        background-color: #fff;
+                    }
                 }
             }
         }
@@ -318,7 +338,9 @@
         &[data-shop="access"],
         &[data-shop="email"] {
             a {
-                text-decoration: underline;
+                &:not(.file) {
+                    text-decoration: underline;
+                }
             }
         }
 
@@ -330,7 +352,7 @@
 
             line-height: 100%;
             letter-spacing: 0.02em;
-            padding: 5px 8px 4px;
+            padding: 6px 8px 4px;
         }
         .att {
             margin-top: 10px;
@@ -375,10 +397,39 @@
 
             &[data-shop="access"] {
                 a {
-                    &::after {
+                    &:not(.file){
+                        &::after {
                         width: 14px;
                         height: 14px;
                         margin-left: 4px;
+                    }
+                    }
+                    
+                    &.file{
+                        height: 40px;
+                        padding: 0 24px;
+                        
+                        border-radius: 4px;
+                        margin-top: 16px;
+                        gap: 8px;
+
+                        &::after{
+                            width: 12px;
+                            height: 12px;
+                            transition: .3s;
+                        }
+
+                        span{
+                            padding: 0 6px;
+                        }
+
+                        @media (hover: hover){
+                            &:hover{
+                                &::after{
+                                    transform: translateX(4px);
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -441,6 +492,17 @@
                         width: 10px;
                         height: 10px;
                         margin-left: 4px;
+                    }
+
+                    &.file{
+                        padding: 6px 10px 6px 12px;
+                        margin-top: 10px;
+                        border-radius: 4px;
+                        gap: 6px;
+
+                        span{
+                            padding: 0 4px;
+                        }
                     }
                 }
             }
@@ -535,8 +597,8 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 32px;
         }
-        &:not(:has(img)){
-            iframe{
+        &:not(:has(img)) {
+            iframe {
                 height: 420px;
             }
         }
@@ -559,8 +621,8 @@
     }
 }
 
-.shop-one__event{
-    &:has(li:empty){
+.shop-one__event {
+    &:has(li:empty) {
         display: none;
     }
 }
