@@ -85,6 +85,9 @@
     font-size: clamp(1.1rem, 2.89vw, 1.6rem);
     font-weight: 500;
   }
+  .shop-one__appointment .btns a:first-of-type {
+    font-size: clamp(1.6rem, 4.2vw, 2.2rem);
+  }
   .shop-one__appointment .btns a:first-of-type::before {
     content: "ここをタップすると電話がかかります";
   }

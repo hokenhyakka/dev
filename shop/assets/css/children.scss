@@ -45,8 +45,6 @@
 
 @media screen and (max-width: 768px) {
     .title {
-        
-
         hgroup {
             div {
                 gap: 8px;
@@ -106,9 +104,9 @@
                 }
 
                 &:first-of-type{
+                    font-size: clamp(1.6rem, 4.2vw, 2.2rem);
                     &::before{
                         content: 'ここをタップすると電話がかかります';
-                        
                     }
                 }
 
