@@ -1,3 +1,4 @@
+/* shop list tab */
 document.addEventListener('DOMContentLoaded', function () {
     const tabs = document.getElementsByClassName('pref-tab');
     const panels = document.getElementsByClassName('pref-panel');
@@ -36,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+/* set shop tel number */
 
 const phoneNumbers = {
     yaesu: "0120-561-966",
@@ -149,6 +151,107 @@ shopElements.forEach(shopEl => {
                     telNumElement.textContent = phoneNumber;
                 }
             }
+        });
+    }
+});
+
+/* set shop appointment link param */
+
+const appointmentParam = {
+    yaesu: "shopcd=043",
+    akabane: "shopcd=035",
+    shinkoiwa: "shopcd=073",
+    sunamo: "shopcd=098",
+    shinagawa: "shopcd=003", 
+    osaki: "shopcd=075",
+    shinjuku: "shopcd=133",
+    gakugeidai: "shopcd=055",
+    kyodo: "shopcd=054",
+    tamagawa: "shopcd=039",
+    hikarigaoka: "shopcd=033",
+    kichijoji: "shopcd=065",
+    fucyu: "shopcd=126",
+    kokubunji: "shopcd=134", 
+    kodaira: "shopcd=122",
+    lalaporttachihi: "shopcd=088",
+    takahata: "shopcd=025", 
+    tamadaira: "shopcd=096",
+    machida: "shopcd=024",
+    hibarigaoka: "shopcd=019",
+    tamasenta: "shopcd=030",
+    cocoon: "shopcd=085",
+    omiya: "shopcd=001",
+    musashiurawa: "shopcd=141",
+    kawaguchi: "shopcd=131",
+    misato: "shopcd=123",
+    koshigaya: "shopcd=022",
+    kawagoe: "shopcd=082",
+    wakaba: "shopcd=027",
+    asaka: "shopcd=119",
+    lalaportfujimi: "shopcd=084",
+    tokorozawa: "shopcd=120",
+    kumagaya: "shopcd=116",
+    atrekawasaki: "shopcd=068",
+    musashikosugi: "shopcd=061",
+    mizonokuchi: "shopcd=036",
+    saginuma: "shopcd=031",
+    shinyokohama: "shopcd=072",
+    hiyoshi: "shopcd=013",
+    kohoku: "shopcd=012",
+    nakayama: "shopcd=118",
+    tsurumi: "shopcd=047",
+    honmoku: "shopcd=117",
+    kamioka: "shopcd=045",
+    noukendai: "shopcd=034",
+    tennocho: "shopcd=138",
+    yamato: "shopcd=108",
+    lalaportebina: "shopcd=086",
+    hashimoto: "shopcd=032",
+    sagamiono: "shopcd=060",
+    chiba: "shopcd=093",
+    abiko: "shopcd=041",
+    myoden: "shopcd=057",
+    kamagaya: "shopcd=127",
+    ariokashiwa: "shopcd=089",
+    kashiwa: "shopcd=038",
+    moriya: "shopcd=107",
+    tsukuba: "shopcd=130",
+    "sapporo-sakaemachi": "shopcd=136",
+    "sapporo-tokyu": "shopcd=129",
+    natori: "shopcd=105",
+    nagamachi: "shopcd=106",
+    tagajo: "shopcd=124",
+    sunroad: "shopcd=135",
+    chikusa: "shopcd=132",
+    obu: "shopcd=081",
+    dotica: "shopcd=110",
+    abeno: "shopcd=071",
+    esaka: "shopcd=070",
+    yamada: "shopcd=125",
+    lalaportexpocity: "shopcd=087",
+    kadoma: "shopcd=140",
+    kuzuha: "shopcd=077",
+    higashiosaka: "shopcd=028",
+    lalaportsakai: "shopcd=139",
+    senboku: "shopcd=020",
+    lalaportizumi: "shopcd=083",
+    izumifuchu: "shopcd=137",
+    kyoto: "shopcd=026", 
+    sannomiya: "shopcd=040",
+    nishinomiya: "shopcd=044",
+    itamikounoike: "shopcd=121",
+};
+
+
+shopElements.forEach(shopEl => {
+    const shopType = shopEl.getAttribute('data-shop'); 
+    const appointmentLinks = shopEl.querySelectorAll('[data-shop="appointment"]');
+
+    if (appointmentParam[shopType] && appointmentLinks.length > 0) {
+        appointmentLinks.forEach(appointmentLink => {
+            const baseUrl = appointmentLink.href;
+            const newUrl = `${baseUrl}?${appointmentParam[shopType]}`;
+            appointmentLink.href = newUrl;
         });
     }
 });
