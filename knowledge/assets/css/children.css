@@ -1,6 +1,9 @@
 .knowledge-one .row-nar > p:first-child {
   margin-bottom: 0;
 }
+.knowledge-one sup {
+  font-size: 70%;
+}
 
 @media screen and (min-width: 769px) {
   .knowledge-one .row-nar > p + p {
@@ -44,7 +47,10 @@
 
 @media screen and (min-width: 769px) {
   .knowledge-one__content {
-    margin-top: 120px;
+    margin-top: 100px;
+  }
+  .knowledge-one__content:not(:has(p)) {
+    margin-top: 64px;
   }
   .knowledge-one__content > p:first-of-type {
     margin-top: 48px;

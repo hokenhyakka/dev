@@ -6,6 +6,9 @@
             }
         }
     }
+    sup{
+        font-size: 70%;
+    }
 }
 
 @media screen and (min-width: 769px) {
@@ -73,7 +76,11 @@
 
 @media screen and (min-width: 769px) {
     .knowledge-one__content {
-        margin-top: 120px;
+        margin-top: 100px;
+
+        &:not(:has(p)){
+            margin-top: 64px;
+        }
 
         > p {
             &:first-of-type {
