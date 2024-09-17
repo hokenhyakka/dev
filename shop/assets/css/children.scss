@@ -19,6 +19,7 @@
             grid-template-columns: 1fr auto;
             gap: 10px;
             align-items: center;
+            display: none;
         }
 
         .pref {
@@ -57,6 +58,52 @@
             }
             .area {
                 font-size: clamp(1.4rem, 3.5vw, 1.6rem);
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .shop-one__appointment{
+        padding-top: clamp(20px, 5.33vw, 32px);
+        padding-bottom: clamp(22px, 5.33vw, 40px);
+
+        h2{
+            font-size: clamp(1.8rem, 4.89vw, 2.8rem);
+        }
+
+        .btns{
+            display: flex;
+            flex-direction: column;
+            gap: clamp(8px, 2.22vw, 14px);
+            margin-top: clamp(14px, 4.89vw, 24px);
+            
+            a{
+                position: relative;
+                padding-bottom: clamp(14px, 4.44vw, 22px);
+
+                &::before{
+                    display: block;
+                    position: absolute;
+                    bottom: clamp(8px, 2.44vw, 12px);
+                    color: inherit;
+                    font-size: clamp(1.1rem, 2.89vw, 1.6rem);
+                    font-weight: 500;
+                }
+
+                &:first-of-type{
+                    &::before{
+                        content: 'ここをタップすると電話がかかります';
+                        
+                    }
+                }
+
+                &:nth-of-type(2){
+                    &::before{
+                        content: '当日30分前まで予約可能!';
+                    }
+                }
             }
         }
     }
@@ -1054,24 +1101,6 @@
         a {
             font-size: clamp(1.2rem, 3.11vw, 1.4rem);
             padding: 0 clamp(12px, 3.11vw, 14px);
-        }
-    }
-}
-
-.cmn__search-shop--stick {
-    a {
-        &:nth-of-type(2) {
-            justify-content: center;
-            padding-left: 0;
-        }
-    }
-}
-@media screen and (max-width: 450px){
-    .cmn__search-shop--stick{
-        a{
-            &:nth-of-type(2){
-                font-size: clamp(1.3rem, 3.78vw, 1.7rem);
-            }
         }
     }
 }
