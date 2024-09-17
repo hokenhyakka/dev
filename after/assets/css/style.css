@@ -13,7 +13,7 @@
   flex-direction: column;
 }
 .after__one li {
-  background-color: var(--gray--very-light);
+  background-color: #fff;
 }
 .after__one h4 {
   font-weight: 700;
