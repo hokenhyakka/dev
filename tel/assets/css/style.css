@@ -39,6 +39,7 @@
 .tel a {
   font-size: clamp(1.3rem, 2.89vw, 1.5rem);
   text-decoration: underline;
+  text-underline-offset: 2px;
 }
 .tel a::before {
   display: none;
