@@ -11,7 +11,7 @@ const mySwiper = new Swiper(".shop-one__slider", {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const mainElement = document.querySelector("main[data-pref][data-shop]");
+    const mainElement = document.querySelector("body[data-pref][data-shop]");
     const prefValue = mainElement.getAttribute("data-pref");
     const shopValue = mainElement.getAttribute("data-shop");
 
@@ -47,7 +47,7 @@ if (eventList) {
 
 document.addEventListener("DOMContentLoaded", function() {
     var emailLink = document.querySelector('[data-shop="email"] a');
-    var mainTag = document.querySelector('main');
+    var mainTag = document.querySelector('body');
     
     if (emailLink && mainTag) {
         var shopName = mainTag.getAttribute('data-shop') || "default";

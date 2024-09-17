@@ -126,28 +126,29 @@ const shopElements = document.querySelectorAll('[data-shop]');
 
 shopElements.forEach(shopEl => {
     const shopType = shopEl.getAttribute('data-shop');
-    const telNumElement = shopEl.querySelector('[data-shop="telNum"]');
-    
-    if (phoneNumbers[shopType] && telNumElement) {
+    const telNumElements = shopEl.querySelectorAll('[data-shop="telNum"]');
+
+    if (phoneNumbers[shopType] && telNumElements.length > 0) {
         const phoneNumber = phoneNumbers[shopType];
         const phoneNumberForHref = phoneNumber.replace(/-/g, '');
 
-        if (telNumElement.tagName.toLowerCase() === 'a') {
-            
-            telNumElement.href = `tel:${phoneNumberForHref}`;
-            if (!telNumElement.textContent.trim()) {
-                telNumElement.textContent = phoneNumber;
-            }
-        } else {
-            const anchorElement = telNumElement.querySelector('a');
-            if (anchorElement) {
-                anchorElement.href = `tel:${phoneNumberForHref}`;
-                if (!anchorElement.textContent.trim()) {
-                    anchorElement.textContent = phoneNumber;
+        telNumElements.forEach(telNumElement => {
+            if (telNumElement.tagName.toLowerCase() === 'a') {
+                telNumElement.href = `tel:${phoneNumberForHref}`;
+                if (!telNumElement.textContent.trim()) {
+                    telNumElement.textContent = phoneNumber;
                 }
             } else {
-                telNumElement.textContent = phoneNumber;
+                const anchorElement = telNumElement.querySelector('a');
+                if (anchorElement) {
+                    anchorElement.href = `tel:${phoneNumberForHref}`;
+                    if (!anchorElement.textContent.trim()) {
+                        anchorElement.textContent = phoneNumber;
+                    }
+                } else {
+                    telNumElement.textContent = phoneNumber;
+                }
             }
-        }
+        });
     }
-});s
+});
