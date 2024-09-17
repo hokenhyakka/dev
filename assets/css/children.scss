@@ -207,6 +207,12 @@
     }
 }
 
+@media screen and (max-width: 450px){
+    .breadcrumb{
+        display: none;
+    }
+}
+
 @media screen and (min-width: 769px) {
     h2,
     h3 {

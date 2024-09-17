@@ -112,16 +112,33 @@
   max-width: 100%;
   width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 .slider picture,
 .slider img {
   max-width: 100%;
+}
+.slider .swiper-pagination {
+  position: absolute;
+  top: unset;
 }
 
 .swiper-slide {
   transition: 0.4s;
 }
 
+@media screen and (min-width: 769px) {
+  .slider .swiper-pagination {
+    height: 10px;
+    bottom: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .slider .swiper-pagination {
+    height: clamp(7px, 1.78vw, 10px);
+    bottom: clamp(7px, 1.78vw, 10px);
+  }
+}
 .search-shop .row-wide {
   display: flex;
   position: relative;
