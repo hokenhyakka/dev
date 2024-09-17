@@ -172,6 +172,9 @@
     padding-top: 14px;
     padding-bottom: 12px;
   }
+  .guarantee-type__one a img {
+    width: 65%;
+  }
   .guarantee-type__one .name {
     font-size: clamp(1.2rem, 3.11vw, 1.4rem);
     padding-left: clamp(10px, 3.13vw, 14px);

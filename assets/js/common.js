@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (shopLink) {
             const imgElement = shopLink.querySelector("img");
-            let currentText = shopLink.textContent.trim();
+            let currentText = shopLink.textContent.trim().replace(imgElement?.outerHTML || '', '').trim();
 
             if (window.innerWidth <= 450 && currentText === originalText) {
                 shopLink.textContent = updatedText;
@@ -123,10 +123,10 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     }
-
-    updateText();
+    setTimeout(updateText, 10);
     window.addEventListener("resize", updateText);
 });
+
 
 /* header menu btn */
 const headerBtn = document.getElementById("header__btn");
