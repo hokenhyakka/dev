@@ -176,6 +176,11 @@
   color: #cc62a5;
   background-color: #fff5fb;
 }
+.shop-tags [data-tag=onlineApp] {
+  border-color: #005eb6;
+  color: #005eb6;
+  background-color: #eef6ff;
+}
 .shop-tags [data-tag=inbody] {
   border-color: #8b0025;
   background-color: #fffafb;

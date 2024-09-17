@@ -13,6 +13,7 @@ const tagTextMap = {
     openOnWeekends: "土日祝営業",
     kids: "キッズスペース",
     femaleStaff: "女性スタッフ",
+    onlineApp: "オンライン相談",
 };
 
 const elements = document.querySelectorAll("[data-tag]");
