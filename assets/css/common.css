@@ -323,6 +323,11 @@ h3.flowers::after {
   background-image: radial-gradient(#f1dbe3 30%, transparent 30%);
 }
 
+@media screen and (max-width: 768px) {
+  .bg--dusty.dots {
+    background-image: radial-gradient(#f6e1e9 30%, transparent 30%);
+  }
+}
 .bg--light {
   background-color: var(--pink--very-light);
 }
