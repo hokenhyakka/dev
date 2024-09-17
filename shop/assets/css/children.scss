@@ -340,6 +340,7 @@
             a {
                 &:not(.file) {
                     text-decoration: underline;
+                    text-underline-offset: 2px;
                 }
             }
         }
@@ -367,7 +368,7 @@
             }
 
             + p {
-                margin-top: 16px;
+                margin-top: 18px;
             }
         }
 
@@ -432,6 +433,10 @@
                         }
                     }
                 }
+
+                p{
+                    font-size: 1.3rem;
+                }
             }
 
             &[data-shop="telNum"] {
@@ -480,10 +485,6 @@
                     vertical-align: text-top;
                     margin-left: 2px;
                 }
-
-                + p {
-                    margin-top: clamp(8px, 2.5vw, 12px);
-                }
             }
 
             &[data-shop="access"] {
@@ -505,6 +506,10 @@
                         }
                     }
                 }
+
+                p{
+                    font-size: clamp(1.1rem, 2.89vw, 1.3rem);
+                }
             }
 
             &[data-shop="telNum"] {
@@ -519,7 +524,7 @@
             }
 
             .att {
-                font-size: clamp(1.2rem, 2.67vw, 1.4rem);
+                font-size: clamp(1.1rem, 2.89vw, 1.3rem);
             }
         }
 
@@ -548,7 +553,8 @@
         grid-template-rows: repeat(2, 32px);
 
         .tag {
-            font-size: clamp(1.1rem, 0.86vw, 1.4rem);
+            font-size: clamp(1.2rem, 0.86vw, 1.4rem);
+            
             &:not(:has(img)) {
                 padding-top: 2px;
             }
