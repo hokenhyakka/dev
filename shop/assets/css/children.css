@@ -78,12 +78,18 @@
     padding-bottom: clamp(14px, 4.44vw, 22px);
   }
   .shop-one__appointment .btns a::before {
+    all: unset;
     display: block;
     position: absolute;
     bottom: clamp(8px, 2.44vw, 12px);
+    left: 0;
+    right: 0;
     color: inherit;
     font-size: clamp(1.1rem, 2.89vw, 1.6rem);
     font-weight: 500;
+    height: auto;
+    background-color: transparent;
+    text-align: center;
   }
   .shop-one__appointment .btns a:first-of-type {
     font-size: clamp(1.6rem, 4.2vw, 2.2rem);
