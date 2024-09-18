@@ -32,6 +32,12 @@
             box-shadow: none;
             padding-left: 0;
 
+            @media (hover: hover){
+                &:hover{
+                    transform: none;
+                }
+            }
+
             img {
                 width: 90%;
             }

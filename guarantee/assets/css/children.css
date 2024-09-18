@@ -24,6 +24,11 @@
   box-shadow: none;
   padding-left: 0;
 }
+@media (hover: hover) {
+  .guarantee-one__list li a:hover {
+    transform: none;
+  }
+}
 .guarantee-one__list li a img {
   width: 90%;
 }
