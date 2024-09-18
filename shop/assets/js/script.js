@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /* set shop tel number */
-
 const phoneNumbers = {
     yaesu: "0120-561-966",
     akabane: "0120-561-990",
@@ -156,7 +155,6 @@ shopElements.forEach(shopEl => {
 });
 
 /* set shop appointment link param */
-
 const appointmentParam = {
     yaesu: "shopcd=043",
     akabane: "shopcd=035",

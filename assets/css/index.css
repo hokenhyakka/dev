@@ -786,6 +786,7 @@
 }
 .connection__slider ul {
   display: flex;
+  width: 100%;
 }
 .connection__slider img {
   background-color: #fff;
