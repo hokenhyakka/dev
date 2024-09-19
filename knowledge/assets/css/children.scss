@@ -139,3 +139,17 @@
         }
     }
 }
+
+@media screen and (max-width: 450px){
+    .knowledge-one__content{
+        h2{
+            text-align: left;
+            flex-direction: column;
+            align-items: start;
+
+            &::before{
+                display: none;
+            }
+        }
+    }
+}

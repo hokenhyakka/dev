@@ -90,4 +90,14 @@
   .knowledge-one__content > img + p {
     margin-top: clamp(28px, 6.22vw, 56px);
   }
+}
+@media screen and (max-width: 450px) {
+  .knowledge-one__content h2 {
+    text-align: left;
+    flex-direction: column;
+    align-items: start;
+  }
+  .knowledge-one__content h2::before {
+    display: none;
+  }
 }/*# sourceMappingURL=children.css.map */
