@@ -1,39 +1,41 @@
 /* shop list tab */
-document.addEventListener('DOMContentLoaded', function () {
-    const tabs = document.getElementsByClassName('pref-tab');
-    const panels = document.getElementsByClassName('pref-panel');
+document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.getElementsByClassName("pref-tab");
+    const panels = document.getElementsByClassName("pref-panel");
 
     const urlParams = new URLSearchParams(window.location.search);
-    const activeTabParam = urlParams.get('pref');
-    
+    const activeTabParam = urlParams.get("pref");
+
     if (activeTabParam) {
-        const targetTab = document.querySelector(`.pref-tab[data-tab='${activeTabParam}']`);
+        const targetTab = document.querySelector(
+            `.pref-tab[data-tab='${activeTabParam}']`
+        );
         if (targetTab) {
             activateTab(targetTab);
         }
     }
 
     for (let i = 0; i < tabs.length; i++) {
-        tabs[i].addEventListener('click', tabSwitch);
+        tabs[i].addEventListener("click", tabSwitch);
     }
 
     function tabSwitch() {
         activateTab(this);
 
-        const tabParam = this.getAttribute('data-tab');
+        const tabParam = this.getAttribute("data-tab");
         const newUrl = `${window.location.pathname}?pref=${tabParam}`;
         window.history.replaceState(null, null, newUrl);
     }
 
     function activateTab(tab) {
         for (let i = 0; i < tabs.length; i++) {
-            tabs[i].setAttribute('aria-selected', 'false');
-            panels[i].setAttribute('aria-hidden', 'true');
+            tabs[i].setAttribute("aria-selected", "false");
+            panels[i].setAttribute("aria-hidden", "true");
         }
 
-        tab.setAttribute('aria-selected', 'true');
+        tab.setAttribute("aria-selected", "true");
         const index = Array.prototype.indexOf.call(tabs, tab);
-        panels[index].setAttribute('aria-hidden', 'false');
+        panels[index].setAttribute("aria-hidden", "false");
     }
 });
 
@@ -43,7 +45,7 @@ const phoneNumbers = {
     akabane: "0120-561-990",
     shinkoiwa: "0120-561-866",
     sunamo: "0120-561-149",
-    shinagawa: "0120-561-370", 
+    shinagawa: "0120-561-370",
     osaki: "0120-561-366",
     shinjuku: "0120-251-390",
     gakugeidai: "0120-561-320",
@@ -52,10 +54,10 @@ const phoneNumbers = {
     hikarigaoka: "0120-561-891",
     kichijoji: "0120-561-262",
     fucyu: "0120-377-077",
-    kokubunji: "0120-341-975", 
+    kokubunji: "0120-341-975",
     kodaira: "0120-515-304",
     lalaporttachihi: "0120-561-265",
-    takahata: "0120-561-727", 
+    takahata: "0120-561-727",
     tamadaira: "0120-561-002",
     machida: "0120-561-922",
     hibarigaoka: "0120-561-477",
@@ -117,30 +119,30 @@ const phoneNumbers = {
     senboku: "0120-561-550",
     lalaportizumi: "0120-561-664",
     izumifuchu: "0120-628-131",
-    kyoto: "0120-561-858", 
+    kyoto: "0120-561-858",
     sannomiya: "0120-561-787",
     nishinomiya: "0120-386-276",
-    itamikounoike: "0120-628-228"
+    itamikounoike: "0120-628-228",
 };
 
-const shopElements = document.querySelectorAll('[data-shop]');
+const shopElements = document.querySelectorAll("[data-shop]");
 
-shopElements.forEach(shopEl => {
-    const shopType = shopEl.getAttribute('data-shop');
+shopElements.forEach((shopEl) => {
+    const shopType = shopEl.getAttribute("data-shop");
     const telNumElements = shopEl.querySelectorAll('[data-shop="telNum"]');
 
     if (phoneNumbers[shopType] && telNumElements.length > 0) {
         const phoneNumber = phoneNumbers[shopType];
-        const phoneNumberForHref = phoneNumber.replace(/-/g, '');
+        const phoneNumberForHref = phoneNumber.replace(/-/g, "");
 
-        telNumElements.forEach(telNumElement => {
-            if (telNumElement.tagName.toLowerCase() === 'a') {
+        telNumElements.forEach((telNumElement) => {
+            if (telNumElement.tagName.toLowerCase() === "a") {
                 telNumElement.href = `tel:${phoneNumberForHref}`;
                 if (!telNumElement.textContent.trim()) {
                     telNumElement.textContent = phoneNumber;
                 }
             } else {
-                const anchorElement = telNumElement.querySelector('a');
+                const anchorElement = telNumElement.querySelector("a");
                 if (anchorElement) {
                     anchorElement.href = `tel:${phoneNumberForHref}`;
                     if (!anchorElement.textContent.trim()) {
@@ -160,7 +162,7 @@ const appointmentParam = {
     akabane: "shopcd=035",
     shinkoiwa: "shopcd=073",
     sunamo: "shopcd=098",
-    shinagawa: "shopcd=003", 
+    shinagawa: "shopcd=003",
     osaki: "shopcd=075",
     shinjuku: "shopcd=133",
     gakugeidai: "shopcd=055",
@@ -169,10 +171,10 @@ const appointmentParam = {
     hikarigaoka: "shopcd=033",
     kichijoji: "shopcd=065",
     fucyu: "shopcd=126",
-    kokubunji: "shopcd=134", 
+    kokubunji: "shopcd=134",
     kodaira: "shopcd=122",
     lalaporttachihi: "shopcd=088",
-    takahata: "shopcd=025", 
+    takahata: "shopcd=025",
     tamadaira: "shopcd=096",
     machida: "shopcd=024",
     hibarigaoka: "shopcd=019",
@@ -234,19 +236,20 @@ const appointmentParam = {
     senboku: "shopcd=020",
     lalaportizumi: "shopcd=083",
     izumifuchu: "shopcd=137",
-    kyoto: "shopcd=026", 
+    kyoto: "shopcd=026",
     sannomiya: "shopcd=040",
     nishinomiya: "shopcd=044",
     itamikounoike: "shopcd=121",
 };
 
-
-shopElements.forEach(shopEl => {
-    const shopType = shopEl.getAttribute('data-shop'); 
-    const appointmentLinks = shopEl.querySelectorAll('[data-shop="appointment"]');
+shopElements.forEach((shopEl) => {
+    const shopType = shopEl.getAttribute("data-shop");
+    const appointmentLinks = shopEl.querySelectorAll(
+        '[data-shop="appointment"]'
+    );
 
     if (appointmentParam[shopType] && appointmentLinks.length > 0) {
-        appointmentLinks.forEach(appointmentLink => {
+        appointmentLinks.forEach((appointmentLink) => {
             const baseUrl = appointmentLink.href;
             const newUrl = `${baseUrl}?${appointmentParam[shopType]}`;
             appointmentLink.href = newUrl;
@@ -254,51 +257,40 @@ shopElements.forEach(shopEl => {
     }
 });
 
-
 function equalizeShopTagsHeight() {
-  const shopList = document.querySelector('.shop__shop-list');
-  
-  // .shop__shop-list が存在しない場合は処理を中断
-  if (!shopList) return;
+    const shopList = document.querySelector(".shop__shop-list");
 
-  const itemsPerRow = 3; // 1行に表示されるアイテム数 (repeat(3, 1fr))
-  const shopItems = shopList.querySelectorAll('.shop__one');
-  let rowItems = [];
+    if (!shopList) return;
 
-  shopItems.forEach((item, index) => {
-    const shopTags = item.querySelector('.shop-tags');
-    
-    // 各行の配列に追加
-    rowItems.push(shopTags);
-    
-    // 行の最後のアイテム、または最後のアイテムに到達したとき
-    if ((index + 1) % itemsPerRow === 0 || index === shopItems.length - 1) {
-      // 各行の最大の高さを取得
-      let maxHeight = Math.max(...rowItems.map(tags => tags.offsetHeight));
-      
-      // 行内のすべての要素に最大高さを適用
-      rowItems.forEach(tags => tags.style.height = `${maxHeight}px`);
-      
-      // 行の配列をクリアして次の行へ
-      rowItems = [];
+    const itemsPerRow = 3;
+    const shopItems = shopList.querySelectorAll(".shop__one");
+    let rowItems = [];
+
+    shopItems.forEach((item, index) => {
+        const shopTags = item.querySelector(".shop-tags");
+
+        rowItems.push(shopTags);
+
+        if ((index + 1) % itemsPerRow === 0 || index === shopItems.length - 1) {
+            let maxHeight = Math.max(
+                ...rowItems.map((tags) => tags.offsetHeight)
+            );
+            rowItems.forEach((tags) => (tags.style.height = `${maxHeight}px`));
+            rowItems = [];
+        }
+    });
+}
+
+function resizeHandler() {
+    const mediaQuery = window.matchMedia("(min-width: 769px)");
+
+    if (mediaQuery.matches) {
+        equalizeShopTagsHeight();
+    } else {
+        document
+            .querySelectorAll(".shop-tags")
+            .forEach((tags) => (tags.style.height = ""));
     }
-  });
 }
-
-function resizeHandler() {  // handleResize から resizeHandler に変更
-  const mediaQuery = window.matchMedia('(min-width: 769px)');
-  
-  // 画面幅が769px以上の場合のみ処理を実行
-  if (mediaQuery.matches) {
-    equalizeShopTagsHeight();
-  } else {
-    // 画面幅が769px未満の場合、.shop-tagsの高さをリセット
-    document.querySelectorAll('.shop-tags').forEach(tags => tags.style.height = '');
-  }
-}
-
-// ページがロードされた後に高さを揃える
-window.addEventListener('load', resizeHandler);
-
-// ウィンドウのリサイズ時にも高さを再計算
-window.addEventListener('resize', resizeHandler);
+window.addEventListener("load", resizeHandler);
+window.addEventListener("resize", resizeHandler);
