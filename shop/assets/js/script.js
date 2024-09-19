@@ -253,3 +253,52 @@ shopElements.forEach(shopEl => {
         });
     }
 });
+
+
+function equalizeShopTagsHeight() {
+  const shopList = document.querySelector('.shop__shop-list');
+  
+  // .shop__shop-list が存在しない場合は処理を中断
+  if (!shopList) return;
+
+  const itemsPerRow = 3; // 1行に表示されるアイテム数 (repeat(3, 1fr))
+  const shopItems = shopList.querySelectorAll('.shop__one');
+  let rowItems = [];
+
+  shopItems.forEach((item, index) => {
+    const shopTags = item.querySelector('.shop-tags');
+    
+    // 各行の配列に追加
+    rowItems.push(shopTags);
+    
+    // 行の最後のアイテム、または最後のアイテムに到達したとき
+    if ((index + 1) % itemsPerRow === 0 || index === shopItems.length - 1) {
+      // 各行の最大の高さを取得
+      let maxHeight = Math.max(...rowItems.map(tags => tags.offsetHeight));
+      
+      // 行内のすべての要素に最大高さを適用
+      rowItems.forEach(tags => tags.style.height = `${maxHeight}px`);
+      
+      // 行の配列をクリアして次の行へ
+      rowItems = [];
+    }
+  });
+}
+
+function resizeHandler() {  // handleResize から resizeHandler に変更
+  const mediaQuery = window.matchMedia('(min-width: 769px)');
+  
+  // 画面幅が769px以上の場合のみ処理を実行
+  if (mediaQuery.matches) {
+    equalizeShopTagsHeight();
+  } else {
+    // 画面幅が769px未満の場合、.shop-tagsの高さをリセット
+    document.querySelectorAll('.shop-tags').forEach(tags => tags.style.height = '');
+  }
+}
+
+// ページがロードされた後に高さを揃える
+window.addEventListener('load', resizeHandler);
+
+// ウィンドウのリサイズ時にも高さを再計算
+window.addEventListener('resize', resizeHandler);

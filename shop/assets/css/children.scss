@@ -584,6 +584,7 @@
 .shop-one__tags {
     grid-template-columns: repeat(4, 1fr);
     gap: 4px 6px;
+    display: grid;
 }
 
 @media screen and (min-width: 769px) {

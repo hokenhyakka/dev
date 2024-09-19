@@ -117,17 +117,15 @@
   .shop__pref-one ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    gap: 120px 72px;
+    row-gap: 120px;
+    -moz-column-gap: clamp(32px, 3.33vw, 72px);
+         column-gap: clamp(32px, 3.33vw, 72px);
   }
 }
 @media screen and (max-width: 768px) {
   .shop__pref-one ul {
     gap: clamp(40px, 8.89vw, 48px);
   }
-}
-.shop-tags {
-  display: grid;
 }
 .shop-tags .tag {
   background-color: #fff;
@@ -221,7 +219,6 @@
 .shop__one {
   display: flex;
   flex-direction: column;
-  grid-row: span 1;
 }
 .shop__one .city {
   background-color: var(--black);
@@ -232,6 +229,8 @@
   justify-content: center;
   align-items: center;
   align-self: start;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .shop__one .name {
   font-weight: bold;
@@ -245,10 +244,11 @@
 .shop__one .shop-tags {
   width: min(362px, 100%);
   gap: 4px;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 .shop__one .btns {
-  width: min(362px, 100%);
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 8px;
@@ -271,6 +271,8 @@
 @media screen and (min-width: 769px) {
   .shop__one {
     gap: 10px;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr auto;
   }
   .shop__one .city {
     height: 28px;
@@ -290,6 +292,7 @@
   }
   .shop__one .shop-tags {
     margin-top: 6px;
+    grid-template-rows: repeat(auto-fill, 32px);
   }
   .shop__one .access {
     margin-bottom: 8px;

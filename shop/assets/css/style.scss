@@ -142,8 +142,8 @@
         ul {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: auto;
-            gap: 120px 72px;
+            row-gap: 120px;
+            column-gap: clamp(32px, 3.33vw, 72px);
         }
     }
 }
@@ -157,8 +157,6 @@
 }
 
 .shop-tags {
-    display: grid;
-
     .tag {
         background-color: #fff;
         display: flex;
@@ -209,7 +207,7 @@
         color: #cc62a5;
         background-color: #fff5fb;
     }
-    [data-tag="onlineApp"]{
+    [data-tag="onlineApp"] {
         border-color: #005eb6;
         color: #005eb6;
         background-color: #eef6ff;
@@ -265,7 +263,6 @@
 .shop__one {
     display: flex;
     flex-direction: column;
-    grid-row: span 1;
 
     .city {
         background-color: var(--black);
@@ -276,6 +273,7 @@
         justify-content: center;
         align-items: center;
         align-self: start;
+        width: fit-content;
     }
 
     .name {
@@ -291,10 +289,12 @@
     .shop-tags {
         width: min(362px, 100%);
         gap: 4px;
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
+        
     }
     .btns {
-        width: min(362px, 100%);
+        width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 8px;
@@ -319,6 +319,8 @@
 @media screen and (min-width: 769px) {
     .shop__one {
         gap: 10px;
+        display: grid;
+        grid-template-rows: auto auto auto 1fr auto;
 
         .city {
             height: 28px;
@@ -340,6 +342,7 @@
         }
         .shop-tags {
             margin-top: 6px;
+            grid-template-rows: repeat(auto-fill, 32px);
         }
         .access {
             margin-bottom: 8px;
