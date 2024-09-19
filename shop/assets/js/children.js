@@ -53,6 +53,24 @@ document.addEventListener("DOMContentLoaded", function() {
         var shopName = mainTag.getAttribute('data-shop') || "default";
         var domain = "@izumi-ld.co.jp";
 
+        if (shopName === "gakugeidai") {
+            shopName = "gakudai";
+        } else if (shopName === "takahata") {
+            shopName = "takahatafudou";
+        } else if(shopName == "tamasenta") {
+            shopName = "tama";
+        } else if (shopName == "omiya") {
+            shopName = "oomiya";
+        } else if (shopName == "kohoku") {
+            shopName = "kouhoku";
+        } else if (shopName == "sagamiono") {
+            shopName = "sagamioono";
+        } else if (shopName == "dotica") {
+            shopName = "umeda-dotika";
+        } else if (shopName == "higashiosaka") {
+            shopName = "higashioosaka";
+        } 
+
         var email = shopName + domain;
         emailLink.textContent = email;
 
