@@ -1287,7 +1287,7 @@ footer > span {
 .faq__list summary {
   font-weight: 700;
   font-size: 1.6rem;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.07em;
   position: relative;
 }
 .faq__list summary:before, .faq__list summary::after {
