@@ -21,22 +21,22 @@
     summary {
         font-weight: 700;
         font-size: clamp(1.5rem, 3.33vw, 1.8rem);
-        background-color: var(--pink--very-light);
+        background-color: #fff;
         padding: 12px 14px;
         border-radius: 4px;
-        color: var(--pink--primary);
+        color: var(--black);
         display: flex;
         justify-content: space-between;
         align-items: center;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.04);
 
         &::after{
             content: '';
             width: 12px;
             height: 12px;
-            background-image: url(../../../assets/img/common/icon/arrow--prm.svg);
+            background-image: url(../../../assets/img/common/icon/arrow--vert.svg);
             background-size: cover;
             transition: .3s;
-            transform: rotate(90deg);
         }
         
     }
@@ -44,7 +44,7 @@
     details[open]{
         summary{
             &::after{
-                transform: rotate(270deg);
+                transform: rotate(180deg);
             }
         }
     }
@@ -53,6 +53,7 @@
         font-size: clamp(1.3rem, 2.89vw, 1.5rem);
         text-decoration: underline;
         text-underline-offset: 2px;
+        color: var(--pink--primary);
 
         &::before{
             display: none;
