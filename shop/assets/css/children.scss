@@ -293,6 +293,32 @@
     }
 
     td {
+        a {
+            &.file {
+                background-color: var(--black);
+                color: #fff;
+                font-weight: 700;
+                display: inline-flex;
+                align-items: center;
+
+                &::after {
+                    content: "";
+                    background-image: url(../../../assets/img/common/icon/arrow--fff.svg);
+                    background-size: cover;
+                }
+
+                &.ext-fff{
+                    &::after{
+                        background-image: url(../../../assets/img/common/icon/ext--fff.svg);
+                    }
+                }
+
+                span {
+                    font-weight: inherit;
+                    background-color: #fff;
+                }
+            }
+        }
         &[data-shop="access"] {
             a {
                 &:not(.file) {
@@ -301,25 +327,6 @@
                         display: inline-block;
                         background-image: url(../../../assets/img/common/icon/ext.svg);
                         background-size: cover;
-                    }
-                }
-
-                &.file{
-                    background-color: var(--black);
-                    color: #fff;
-                    font-weight: 700;
-                    display: inline-flex;
-                        align-items: center;
-
-                        &::after{
-                            content: '';
-                            background-image: url(../../../assets/img/common/icon/arrow--fff.svg);
-                            background-size: cover;
-                        }
-
-                    span{
-                        font-weight: inherit;
-                        background-color: #fff;
                     }
                 }
             }
@@ -402,45 +409,56 @@
             padding: 16px 22px 24px;
             background-color: #fff;
 
-            &[data-shop="access"] {
-                a {
-                    &:not(.file){
-                        &::after {
-                        width: 14px;
-                        height: 14px;
-                        margin-left: 4px;
+            a {
+                &.file {
+                    height: 40px;
+                    padding: 0 24px;
+
+                    border-radius: 4px;
+                    margin-top: 16px;
+                    gap: 8px;
+
+                    &::after {
+                        width: 12px;
+                        height: 12px;
+                        transition: 0.3s;
                     }
-                    }
-                    
-                    &.file{
-                        height: 40px;
-                        padding: 0 24px;
-                        
-                        border-radius: 4px;
-                        margin-top: 16px;
-                        gap: 8px;
+
+                    &.ext-fff{
+                        gap: 4px;
 
                         &::after{
-                            width: 12px;
-                            height: 12px;
-                            transition: .3s;
+                            width: 14px;
+                            height: 14px;
                         }
+                    }
 
-                        span{
-                            padding: 0 6px;
-                        }
+                    span {
+                        padding: 0 6px;
+                    }
 
-                        @media (hover: hover){
-                            &:hover{
-                                &::after{
-                                    transform: translateX(4px);
-                                }
+                    @media (hover: hover) {
+                        &:hover {
+                            &::after {
+                                transform: translateX(4px);
                             }
                         }
                     }
                 }
+            }
 
-                p{
+            &[data-shop="access"] {
+                a {
+                    &:not(.file) {
+                        &::after {
+                            width: 14px;
+                            height: 14px;
+                            margin-left: 4px;
+                        }
+                    }
+                }
+
+                p {
                     font-size: 1.3rem;
                 }
             }
@@ -491,6 +509,31 @@
                     vertical-align: text-top;
                     margin-left: 2px;
                 }
+
+                &.file {
+                    padding: 6px 10px 6px 12px;
+                    margin-top: 10px;
+                    border-radius: 4px;
+                    gap: 6px;
+
+                    &::after{
+                        width: 10px;
+                        height: 10px;
+
+                    }
+
+                    &.ext-fff{
+                        gap: 2px;
+                        &::after{
+                            width: 12px;
+                            height: 12px;
+                        }
+                    }
+
+                    span {
+                        padding: 0 4px;
+                    }
+                }
             }
 
             &[data-shop="access"] {
@@ -500,20 +543,9 @@
                         height: 10px;
                         margin-left: 4px;
                     }
-
-                    &.file{
-                        padding: 6px 10px 6px 12px;
-                        margin-top: 10px;
-                        border-radius: 4px;
-                        gap: 6px;
-
-                        span{
-                            padding: 0 4px;
-                        }
-                    }
                 }
 
-                p{
+                p {
                     font-size: clamp(1.1rem, 2.89vw, 1.3rem);
                 }
             }
@@ -560,7 +592,7 @@
 
         .tag {
             font-size: clamp(1.2rem, 0.86vw, 1.4rem);
-            
+
             &:not(:has(img)) {
                 padding-top: 2px;
             }
@@ -697,7 +729,6 @@
                 color: var(--pink--primary);
                 font-style: normal;
             }
-            
 
             & + .att {
                 margin-top: 16px;
@@ -907,7 +938,7 @@
             font-size: 1.6rem;
             margin-top: 24px;
 
-            & + p{
+            & + p {
                 margin-top: 10px;
             }
         }

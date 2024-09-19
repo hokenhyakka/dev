@@ -240,27 +240,30 @@
   color: var(--pink--primary);
   font-weight: 700;
 }
-.shop-one__table td[data-shop=access] a:not(.file)::after {
-  content: "";
-  display: inline-block;
-  background-image: url(../../../assets/img/common/icon/ext.svg);
-  background-size: cover;
-}
-.shop-one__table td[data-shop=access] a.file {
+.shop-one__table td a.file {
   background-color: var(--black);
   color: #fff;
   font-weight: 700;
   display: inline-flex;
   align-items: center;
 }
-.shop-one__table td[data-shop=access] a.file::after {
+.shop-one__table td a.file::after {
   content: "";
   background-image: url(../../../assets/img/common/icon/arrow--fff.svg);
   background-size: cover;
 }
-.shop-one__table td[data-shop=access] a.file span {
+.shop-one__table td a.file.ext-fff::after {
+  background-image: url(../../../assets/img/common/icon/ext--fff.svg);
+}
+.shop-one__table td a.file span {
   font-weight: inherit;
   background-color: #fff;
+}
+.shop-one__table td[data-shop=access] a:not(.file)::after {
+  content: "";
+  display: inline-block;
+  background-image: url(../../../assets/img/common/icon/ext.svg);
+  background-size: cover;
 }
 .shop-one__table td[data-shop=businessHours] {
   display: flex;
@@ -319,33 +322,40 @@
     padding: 16px 22px 24px;
     background-color: #fff;
   }
-  .shop-one__table td[data-shop=access] a:not(.file)::after {
-    width: 14px;
-    height: 14px;
-    margin-left: 4px;
-  }
-  .shop-one__table td[data-shop=access] a.file {
+  .shop-one__table td a.file {
     height: 40px;
     padding: 0 24px;
     border-radius: 4px;
     margin-top: 16px;
     gap: 8px;
   }
-  .shop-one__table td[data-shop=access] a.file::after {
+  .shop-one__table td a.file::after {
     width: 12px;
     height: 12px;
     transition: 0.3s;
   }
-  .shop-one__table td[data-shop=access] a.file span {
+  .shop-one__table td a.file.ext-fff {
+    gap: 4px;
+  }
+  .shop-one__table td a.file.ext-fff::after {
+    width: 14px;
+    height: 14px;
+  }
+  .shop-one__table td a.file span {
     padding: 0 6px;
   }
 }
 @media screen and (min-width: 769px) and (hover: hover) {
-  .shop-one__table td[data-shop=access] a.file:hover::after {
+  .shop-one__table td a.file:hover::after {
     transform: translateX(4px);
   }
 }
 @media screen and (min-width: 769px) {
+  .shop-one__table td[data-shop=access] a:not(.file)::after {
+    width: 14px;
+    height: 14px;
+    margin-left: 4px;
+  }
   .shop-one__table td[data-shop=access] p {
     font-size: 1.3rem;
   }
@@ -383,19 +393,30 @@
     vertical-align: text-top;
     margin-left: 2px;
   }
-  .shop-one__table td[data-shop=access] a::after {
-    width: 10px;
-    height: 10px;
-    margin-left: 4px;
-  }
-  .shop-one__table td[data-shop=access] a.file {
+  .shop-one__table td a.file {
     padding: 6px 10px 6px 12px;
     margin-top: 10px;
     border-radius: 4px;
     gap: 6px;
   }
-  .shop-one__table td[data-shop=access] a.file span {
+  .shop-one__table td a.file::after {
+    width: 10px;
+    height: 10px;
+  }
+  .shop-one__table td a.file.ext-fff {
+    gap: 2px;
+  }
+  .shop-one__table td a.file.ext-fff::after {
+    width: 12px;
+    height: 12px;
+  }
+  .shop-one__table td a.file span {
     padding: 0 4px;
+  }
+  .shop-one__table td[data-shop=access] a::after {
+    width: 10px;
+    height: 10px;
+    margin-left: 4px;
   }
   .shop-one__table td[data-shop=access] p {
     font-size: clamp(1.1rem, 2.89vw, 1.3rem);
