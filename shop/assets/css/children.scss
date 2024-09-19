@@ -697,6 +697,7 @@
                 color: var(--pink--primary);
                 font-style: normal;
             }
+            
 
             & + .att {
                 margin-top: 16px;
@@ -905,6 +906,10 @@
         p {
             font-size: 1.6rem;
             margin-top: 24px;
+
+            & + p{
+                margin-top: 10px;
+            }
         }
     }
 }

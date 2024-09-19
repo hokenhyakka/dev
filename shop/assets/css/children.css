@@ -724,6 +724,9 @@
     font-size: 1.6rem;
     margin-top: 24px;
   }
+  .shop-one__message p + p {
+    margin-top: 10px;
+  }
 }
 @media screen and (max-width: 768px) {
   .shop-one__message {
