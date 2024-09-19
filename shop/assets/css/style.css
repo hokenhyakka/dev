@@ -197,6 +197,7 @@
 @media screen and (min-width: 769px) {
   .shop-tags .tag {
     font-size: clamp(1.1rem, 1.07vw, 1.4rem);
+    padding-top: 2px;
   }
 }
 @media screen and (max-width: 768px) {
