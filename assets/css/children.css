@@ -13,6 +13,7 @@
   flex-direction: column;
   align-items: center;
   color: var(--pink--primary);
+  animation: childrenTitle 600ms ease-in forwards;
 }
 .title hgroup * {
   color: inherit;
@@ -38,6 +39,14 @@
   text-align: center;
 }
 
+@keyframes childrenTitle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media screen and (min-width: 769px) {
   .title {
     padding-top: 112px;

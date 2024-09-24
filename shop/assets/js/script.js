@@ -257,40 +257,4 @@ shopElements.forEach((shopEl) => {
     }
 });
 
-function equalizeShopTagsHeight() {
-    const shopList = document.querySelector(".shop__shop-list");
-
-    if (!shopList) return;
-
-    const itemsPerRow = 3;
-    const shopItems = shopList.querySelectorAll(".shop__one");
-    let rowItems = [];
-
-    shopItems.forEach((item, index) => {
-        const shopTags = item.querySelector(".shop-tags");
-
-        rowItems.push(shopTags);
-
-        if ((index + 1) % itemsPerRow === 0 || index === shopItems.length - 1) {
-            let maxHeight = Math.max(
-                ...rowItems.map((tags) => tags.offsetHeight)
-            );
-            rowItems.forEach((tags) => (tags.style.height = `${maxHeight}px`));
-            rowItems = [];
-        }
-    });
-}
-
-function resizeHandler() {
-    const mediaQuery = window.matchMedia("(min-width: 769px)");
-
-    if (mediaQuery.matches) {
-        equalizeShopTagsHeight();
-    } else {
-        document
-            .querySelectorAll(".shop-tags")
-            .forEach((tags) => (tags.style.height = ""));
-    }
-}
-window.addEventListener("load", resizeHandler);
-window.addEventListener("resize", resizeHandler);
+ 

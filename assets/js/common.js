@@ -267,3 +267,15 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("resize", toggleBackToTop);
     toggleBackToTop();
 });
+
+/* scroll animation */
+document.addEventListener('scroll', function() {
+const scrollAnimationItems = document.querySelectorAll('.scrollAnimationItems');
+
+for (const scrollAnimationItem of scrollAnimationItems) {
+    const isVisible = scrollAnimationItem.getBoundingClientRect().top < window.innerHeight;
+        if (isVisible) {
+            scrollAnimationItem.classList.add('is-done');
+        }
+    }
+});

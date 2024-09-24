@@ -16,6 +16,7 @@
         flex-direction: column;
         align-items: center;
         color: var(--pink--primary);
+        animation: childrenTitle 600ms ease-in forwards;
 
         * {
             color: inherit;
@@ -34,7 +35,6 @@
             &::before,
             &::after {
                 content: "";
-
                 background-image: url(../img/common/icon/flower--ylw.svg);
                 background-size: cover;
             }
@@ -45,6 +45,15 @@
             letter-spacing: 0.1em;
             text-align: center;
         }
+    }
+}
+
+@keyframes childrenTitle{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
 
