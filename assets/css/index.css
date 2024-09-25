@@ -788,8 +788,11 @@
   display: flex;
   width: 100%;
 }
-.connection__slider img {
+.connection__slider picture {
   background-color: #fff;
+  height: 100%;
+}
+.connection__slider img {
   height: 100%;
 }
 .connection__slider.life ul {
