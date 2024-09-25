@@ -790,6 +790,9 @@
   display: flex;
   width: 100%;
 }
+.connection__slider li {
+  height: 100%;
+}
 .connection__slider picture {
   background-color: #fff;
   height: 100%;
