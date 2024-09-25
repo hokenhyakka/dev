@@ -783,6 +783,8 @@
 .connection__slider {
   display: flex;
   overflow-x: hidden;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .connection__slider ul {
   display: flex;

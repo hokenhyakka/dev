@@ -967,6 +967,7 @@
 .connection__slider {
     display: flex;
     overflow-x: hidden;
+    width: fit-content;
 
     ul {
         display: flex;
