@@ -957,6 +957,10 @@
     }
 }
 
+.connection{
+    overflow-x: hidden;
+}
+
 .connection__list {
     h3 {
         width: min(400px, 100%);

@@ -775,6 +775,10 @@
     margin-top: clamp(42px, 10.22vw, 56px);
   }
 }
+.connection {
+  overflow-x: hidden;
+}
+
 .connection__list h3 {
   width: min(400px, 100%);
   margin: 0 auto;
