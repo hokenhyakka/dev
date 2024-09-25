@@ -1039,6 +1039,8 @@
         li {
             height: clamp(64px, 6.25vw, 84px);
         }
+
+        
     }
 }
 
@@ -1068,9 +1070,17 @@
         ul {
             gap: 10px;
         }
-        // li {
-        //     height: clamp(46px, 12vw, 64px);
-        // }
+        li {
+            height: clamp(46px, 12vw, 64px);
+        }
+
+        &.life{
+            animation-duration: 80s;
+        }
+
+        &.damage{
+            animation-duration: 40s;
+        }
     }
 }
 

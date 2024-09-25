@@ -867,6 +867,15 @@
   .connection__slider ul {
     gap: 10px;
   }
+  .connection__slider li {
+    height: clamp(46px, 12vw, 64px);
+  }
+  .connection__slider.life {
+    animation-duration: 80s;
+  }
+  .connection__slider.damage {
+    animation-duration: 40s;
+  }
 }
 .voice .att::before {
   content: "※";
