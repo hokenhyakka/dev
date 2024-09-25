@@ -9,6 +9,11 @@
   .knowledge-one .row-nar > p + p {
     margin-top: 24px;
   }
+  .knowledge-one .row-nar > .sml {
+    font-size: 1.4rem;
+    line-height: 150%;
+    margin-top: 64px;
+  }
   .knowledge-one .btn {
     margin-top: 72px;
   }
@@ -16,6 +21,11 @@
 @media screen and (max-width: 768px) {
   .knowledge-one .row-nar > p + p {
     margin-top: clamp(16px, 4vw, 24px);
+  }
+  .knowledge-one .row-nar > .sml {
+    font-size: clamp(1.1rem, 2.44vw, 1.3rem);
+    line-height: 160%;
+    margin-top: 40px;
   }
   .knowledge-one .btn {
     margin-top: clamp(40px, 8.89vw, 56px);
