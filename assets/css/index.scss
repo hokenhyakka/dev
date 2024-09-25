@@ -1075,11 +1075,17 @@
         }
 
         &.life{
-            animation-duration: 80s;
+            ul{
+                animation-duration: 80s;
+            }
+            
         }
 
         &.damage{
-            animation-duration: 40s;
+            ul{
+                animation-duration: 40s;
+            }
+            
         }
     }
 }

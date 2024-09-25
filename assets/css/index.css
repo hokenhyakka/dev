@@ -870,10 +870,10 @@
   .connection__slider li {
     height: clamp(46px, 12vw, 64px);
   }
-  .connection__slider.life {
+  .connection__slider.life ul {
     animation-duration: 80s;
   }
-  .connection__slider.damage {
+  .connection__slider.damage ul {
     animation-duration: 40s;
   }
 }
