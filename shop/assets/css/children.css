@@ -255,6 +255,14 @@
 .shop-one__table td a.file.ext-fff::after {
   background-image: url(../../../assets/img/common/icon/ext--fff.svg);
 }
+@media (hover: hover) {
+  .shop-one__table td a.file.ext-fff:hover {
+    transform: none;
+  }
+  .shop-one__table td a.file.ext-fff:hover::after {
+    transform: none;
+  }
+}
 .shop-one__table td a.file span {
   font-weight: inherit;
   background-color: #fff;
@@ -325,11 +333,13 @@
     padding: 16px 22px 24px;
     background-color: #fff;
   }
+  .shop-one__table td p + a.file {
+    margin-top: 16px;
+  }
   .shop-one__table td a.file {
     height: 40px;
     padding: 0 24px;
     border-radius: 4px;
-    margin-top: 16px;
     gap: 8px;
   }
   .shop-one__table td a.file::after {
@@ -390,6 +400,9 @@
     padding: clamp(12px, 3vw, 16px);
     min-height: 0;
   }
+  .shop-one__table td p + a.file {
+    margin-top: 10px;
+  }
   .shop-one__table td a img {
     width: clamp(13px, 3.25vw, 15px);
     height: clamp(13px, 3.25vw, 15px);
@@ -398,7 +411,6 @@
   }
   .shop-one__table td a.file {
     padding: 6px 10px 6px 12px;
-    margin-top: 10px;
     border-radius: 4px;
     gap: 6px;
   }

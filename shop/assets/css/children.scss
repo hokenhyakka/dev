@@ -311,6 +311,16 @@
                     &::after{
                         background-image: url(../../../assets/img/common/icon/ext--fff.svg);
                     }
+
+                    @media (hover: hover){
+                        &:hover{
+                            transform: none;
+
+                            &::after{
+                                transform: none;
+                            }
+                        }
+                    }
                 }
 
                 span {
@@ -415,13 +425,17 @@
             padding: 16px 22px 24px;
             background-color: #fff;
 
+            p{
+                & + a.file{
+                    margin-top: 16px;
+                }
+            }
+
             a {
                 &.file {
                     height: 40px;
                     padding: 0 24px;
-
                     border-radius: 4px;
-                    margin-top: 16px;
                     gap: 8px;
 
                     &::after {
@@ -508,6 +522,12 @@
         }
 
         td {
+
+            p{
+                & + a.file{
+                    margin-top: 10px;
+                }
+            }
             a {
                 img {
                     width: clamp(13px, 3.25vw, 15px);
@@ -518,7 +538,7 @@
 
                 &.file {
                     padding: 6px 10px 6px 12px;
-                    margin-top: 10px;
+                    
                     border-radius: 4px;
                     gap: 6px;
 
