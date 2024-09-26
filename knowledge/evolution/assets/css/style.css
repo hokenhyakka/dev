@@ -1,15 +1,15 @@
 .content__evolution-area > dl {
   width: 100%;
 }
-.content__evolution-area > dl dt, .content__evolution-area > dl dd {
-  box-sizing: border-box;
-}
 .content__evolution-area > dl dt {
   padding: 10px;
   margin-bottom: 10px;
   font-weight: 700;
   color: var(--pink--primary);
   background-color: var(--pink--very-light);
+}
+.content__evolution-area > dl dd {
+  line-height: 170%;
 }
 .content__evolution-area > dl dd span {
   color: var(--pink--primary);
@@ -23,7 +23,7 @@
     font-size: 1.7rem;
   }
   .content__evolution-area > dl dd {
-    padding-left: 20px;
+    padding-left: 10px;
     font-size: 1.6rem;
   }
 }
@@ -38,7 +38,6 @@
     margin-bottom: 14px;
   }
   .content__evolution-area > dl dd {
-    padding-left: 10px;
     font-size: clamp(1.2rem, 3vw, 1.5rem);
   }
 }/*# sourceMappingURL=style.css.map */

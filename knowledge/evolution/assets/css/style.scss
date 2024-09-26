@@ -1,9 +1,6 @@
 .content__evolution-area {
     > dl {
         width: 100%;
-        dt,dd {
-            box-sizing: border-box;
-        }
         dt {
             padding: 10px;
             margin-bottom: 10px;
@@ -12,6 +9,7 @@
             background-color: var(--pink--very-light);
         }
         dd {
+            line-height: 170%;
             span {
                 color: var(--pink--primary);
             }
@@ -28,7 +26,7 @@
                 font-size: 1.7rem;
             }
             dd {
-                padding-left: 20px;
+                padding-left: 10px;
                 font-size: 1.6rem;
             }
         }
@@ -47,7 +45,6 @@
                 }
             }
             dd {
-                padding-left: 10px;
                 font-size: clamp(1.2rem, 3vw, 1.5rem);
             }
         }
