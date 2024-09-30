@@ -993,13 +993,13 @@
 
     &.life {
         ul {
-            animation: connectionSlide 40s linear infinite;
+            animation: connectionSlide 80s linear infinite;
         }
     }
 
     &.damage {
         ul {
-            animation: connectionSlide 20s linear infinite;
+            animation: connectionSlide 40s linear infinite;
         }
     }
 }
