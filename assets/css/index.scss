@@ -958,10 +958,11 @@
 }
 
 .connection{
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 
 .connection__list {
+    overflow-x: hidden;
     h3 {
         width: min(400px, 100%);
         margin: 0 auto;
