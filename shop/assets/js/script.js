@@ -121,7 +121,7 @@ const phoneNumbers = {
     izumifuchu: "0120-628-131",
     kyoto: "0120-561-858",
     sannomiya: "0120-561-787",
-    nishinomiya: "0120-386-276",
+    nishinomiya: "0120-561-988",
     itamikounoike: "0120-628-228",
 };
 
