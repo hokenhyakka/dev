@@ -86,7 +86,7 @@ const phoneNumbers = {
     honmoku: "0120-706-202",
     kamioka: "0120-561-989",
     noukendai: "0120-561-344",
-    tennocho: "0120-561-344",
+    tennocho: "0120-512-230",
     yamato: "0120-561-386",
     lalaportebina: "0120-561-992",
     hashimoto: "0120-561-331",
