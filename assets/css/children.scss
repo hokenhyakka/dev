@@ -320,6 +320,10 @@
                     margin-right: 6px;
                 }
             }
+
+            & +.att{
+                margin-top: 16px;
+            }
         }
     }
 }
