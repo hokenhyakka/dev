@@ -6,7 +6,7 @@
 }
 
 .inbody__popular-area {
-    width: min(100%,840px);
+    width: min(100%, 840px);
     margin: 0 auto;
     .popular-area__wrap {
         margin-top: 48px;
@@ -15,7 +15,7 @@
         align-items: center;
         gap: 22px;
         .popular-area__img {
-            width: min(100%,217px);
+            width: min(100%, 217px);
         }
         ul {
             li {
@@ -45,7 +45,7 @@
 }
 
 .inbody {
-    width: min(100%,900px);
+    width: min(100%, 900px);
     margin: 0 auto;
     padding: 0 30px;
     .inbody__wrap {
@@ -57,7 +57,7 @@
                 align-items: center;
                 gap: 20px;
                 .detail__img-area {
-                    width: min(100%,384px);
+                    width: min(100%, 384px);
                     display: flex;
                     background-color: var(--gray--very-light);
                     border-radius: 16px;
@@ -73,6 +73,7 @@
                 }
                 .detail__text-area {
                     font-size: 16px;
+                    line-height: 180%;
                 }
             }
             .inner__shop-detail {
@@ -85,9 +86,9 @@
                     display: flex;
                     flex-direction: column;
                     margin-bottom: 88px;
-                    &:nth-last-child(-n+2) {
+                    &:nth-last-child(-n + 2) {
                         margin-bottom: 0;
-                      }
+                    }
                     .shop-detail__img-area {
                         position: relative;
                         width: 100%;
@@ -123,7 +124,7 @@
                         }
                     }
                     .btns {
-                        width: min(362px, 100%);
+                        width: 100%;
                         display: grid;
                         grid-template-columns: repeat(2, 1fr);
                         gap: 8px;
@@ -134,12 +135,18 @@
                             font-size: clamp(1.3rem, 1.27vw, 1.6rem);
                             height: 50px;
                             gap: clamp(4px, 0.39vw, 6px);
+
+                            @media (hover: hover){
+                                &:hover{
+                                    transform: translate(0);
+                                }
+                            }
                         }
                     }
-                    .learn-more{
+                    .learn-more {
                         background-color: var(--pink--dusty-light);
                         color: var(--pink--primary);
-                    
+
                         &::after {
                             background-image: url(../../../assets/img/common/icon/arrow--prm.svg);
                         }
@@ -157,20 +164,23 @@
             margin-top: 15px;
             flex-direction: column;
             .popular-area__img {
-                width: min(100%,217px);
+                width: min(100%, 217px);
                 img {
                     width: 100%;
                 }
             }
             ul {
+                margin-top: -30px;
+
                 li {
                     display: flex;
                     margin-bottom: 8px;
                     img {
-                        margin-top: 3px;
+                        margin-top: 2px;
                     }
                     p {
                         font-size: 12px;
+                        line-height: 190%;
                     }
                     span {
                         font-size: 14px;
@@ -182,7 +192,7 @@
             margin-top: 14px;
         }
     }
-    
+
     .inbody {
         padding: 0 20px;
         .inbody__wrap {
@@ -195,6 +205,7 @@
                     .detail__img-area {
                         padding: 16px 10px;
                         div {
+                            width: 50%;
                             p {
                                 font-size: 11px;
                             }
@@ -210,9 +221,9 @@
                     .shop-detail__wrap {
                         width: 100%;
                         margin-bottom: 38px;
-                        &:nth-last-child(-n+2) {
+                        &:nth-last-child(-n + 2) {
                             margin-bottom: 38px;
-                          }
+                        }
                         &:last-child {
                             margin-bottom: 0;
                         }
