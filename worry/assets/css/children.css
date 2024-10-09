@@ -67,6 +67,7 @@
 @media screen and (max-width: 768px) {
   .worry-one__details h2 {
     margin-bottom: clamp(24px, 4.89vw, 32px);
+    white-space: normal;
   }
   .worry-one__details p + p {
     margin-top: clamp(10px, 2.22vw, 12px);
