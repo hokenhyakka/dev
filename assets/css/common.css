@@ -841,6 +841,7 @@ h3.flowers::after {
   }
   .header__nav::before {
     height: calc(100vh - clamp(66px, 16.5vw, 80px) + 1px);
+    height: calc(100svh - clamp(66px, 16.5vw, 80px) + 1px);
   }
   .header__nav > ul > li a {
     padding: 24px 0;
