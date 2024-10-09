@@ -182,11 +182,11 @@
         }
 
         .name{
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             height: 100%;
-            min-height: 44px;
-            padding-top: 8px;
-            padding-bottom: 8px;
+            min-height: 38px;
+            padding-top: 10px;
+            padding-bottom: 10px;
             padding-left: 14px;
             padding-right: 12px;
 
@@ -201,11 +201,19 @@
 
 @media screen and (max-width: 450px){
     .guarantee-type__one{
+        width: 100vw;
+        margin-left: -15px;
+        overflow-x: clip;
+
+        & + .guarantee-type__one{
+            margin-top: 0;
+        }
+
         ul{
-            padding-right: 12px;
-            padding-left: 12px;
+            padding-right: 15px;
+            padding-left: 15px;
             padding-top: 14px;
-            padding-bottom: 16px;
+            padding-bottom: 52px;
             grid-template-columns: repeat(2, 1fr);
             gap: clamp(10px, 3.13vw,14px);
         }
@@ -226,5 +234,8 @@
             padding-left: clamp(10px, 3.13vw, 14px);
             padding-right: clamp(8px, 2.5vw, 12px);
         }
+    }
+    main + .cmn__search-shop{
+        margin-top: 0;
     }
 }
