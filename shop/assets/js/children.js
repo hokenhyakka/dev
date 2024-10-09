@@ -77,7 +77,10 @@ document.addEventListener("DOMContentLoaded", function() {
         emailLink.addEventListener("click", function(event) {
             event.preventDefault();
 
-            var mailtoLink = 'mailto:' + encodeURIComponent(email);
+            var subject = encodeURIComponent("サイトからのお問い合わせ");
+            var body = encodeURIComponent("お名前（フルネーム）：");
+
+            var mailtoLink = 'mailto:' + encodeURIComponent(email) + '?subject=' + subject + '&body=' + body;
             window.location.href = mailtoLink;
         });
     }
