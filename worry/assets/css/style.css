@@ -95,6 +95,6 @@
     padding-left: 12px;
   }
   .worry__list .name p {
-    font-size: 1.2rem;
+    font-size: var(--fs-sp--min12px);
   }
 }/*# sourceMappingURL=style.css.map */
