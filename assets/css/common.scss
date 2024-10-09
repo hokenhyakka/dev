@@ -10,10 +10,10 @@
     --green--middle: #65b005;
     --blue--middle: #1492d9;
     --yellow--dark: #c3850b;
-    --fs-sp--min10px: clamp(1rem, 2.22vw, 1.2rem);
-    --fs-sp--min11px: clamp(1.1rem, 2.85vw, 1.3rem);
-    --fs-sp--min12px: clamp(1.2rem, 3.25vw, 1.4rem);
-    --fs-sp--min13px: clamp(1.3rem, 3.5vw, 1.5rem);
+    --fs-sp--min10px: clamp(1rem, 3vw, 1.2rem);
+    --fs-sp--min11px: clamp(1.1rem, 3.25vw, 1.3rem);
+    --fs-sp--min12px: clamp(1.2rem, 3.5vw, 1.4rem);
+    --fs-sp--min13px: clamp(1.3rem, 3.75vw, 1.5rem);
 }
 html {
     scroll-behavior: smooth;
