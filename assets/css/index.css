@@ -876,10 +876,10 @@
     height: clamp(46px, 12vw, 64px);
   }
   .connection__slider.life ul {
-    animation-duration: 30s;
+    animation-duration: 40s;
   }
   .connection__slider.damage ul {
-    animation-duration: 20s;
+    animation-duration: 25s;
   }
 }
 .voice .att::before {
