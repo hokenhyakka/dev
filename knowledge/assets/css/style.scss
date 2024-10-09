@@ -47,7 +47,7 @@
             border-radius: 6px;
         }
         p {
-            font-size: clamp(1rem, 2.22vw, 1.3rem);
+            font-size: var(--fsSp--10px);
             margin-top: 8px;
         }
     }

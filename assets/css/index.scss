@@ -121,7 +121,7 @@
         }
         span {
             white-space: pre;
-            font-size: clamp(1.1rem, 2.75vw, 1.4rem);
+            font-size: var(--fsSp--11px);;
             height: clamp(24px, 6vw, 34px);
             padding: 0 clamp(16px, 4vw, 18px);
         }
@@ -947,7 +947,7 @@
                 }
 
                 span{
-                    font-size: clamp(1.1rem, 2.67vw, 1.4rem);
+                    font-size: var(--fsSp--11px);;
                     bottom: clamp(12px, 2.89vw, 16px);
                 }
             }
@@ -956,10 +956,6 @@
     .about__features {
         margin-top: clamp(42px, 10.22vw, 56px);
     }
-}
-
-.connection{
-    // overflow-x: hidden;
 }
 
 .connection__list {

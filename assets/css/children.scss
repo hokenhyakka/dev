@@ -344,11 +344,11 @@
             }
 
             > .att {
-                font-size: clamp(1rem, 2.22vw, 1.3rem);
+                font-size: var(--fsSp--10px);
             }
         }
         .att {
-            font-size: clamp(1rem, 2.22vw, 1.3rem);
+            font-size: var(--fsSp--10px);
         }
         .att-list{
             gap: 10px;
@@ -356,7 +356,7 @@
             margin-bottom: 20px;
 
             li{
-                font-size: clamp(1rem, 2.22vw, 1.3rem);
+                font-size: var(--fsSp--10px);
 
                 &::before{
                     margin-right: 6px;

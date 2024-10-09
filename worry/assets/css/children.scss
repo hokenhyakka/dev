@@ -379,7 +379,7 @@
         }
 
         .name {
-            font-size: clamp(1.1rem, 3.44vw, 1.4rem);
+            font-size: var(--fsSp--11px);;
         }
     }
 }

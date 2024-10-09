@@ -295,7 +295,7 @@
     width: clamp(16px, 4vw, 26px);
   }
   .about__flow p {
-    font-size: clamp(1.1rem, 2.67vw, 1.4rem);
+    font-size: var(--fsSp--11px);
     margin-top: 6px;
   }
   .about__flow .name {

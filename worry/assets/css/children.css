@@ -293,6 +293,6 @@
     height: clamp(6px, 1.78vw, 8px);
   }
   .worry__list .name {
-    font-size: clamp(1.1rem, 3.44vw, 1.4rem);
+    font-size: var(--fsSp--11px);
   }
 }/*# sourceMappingURL=children.css.map */

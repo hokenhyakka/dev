@@ -274,10 +274,10 @@
   .p-child .row-nar > .att,
   .p-child .row-wide > .att,
   .p-child section > .att {
-    font-size: clamp(1rem, 2.22vw, 1.3rem);
+    font-size: var(--fsSp--10px);
   }
   .p-child .att {
-    font-size: clamp(1rem, 2.22vw, 1.3rem);
+    font-size: var(--fsSp--10px);
   }
   .p-child .att-list {
     gap: 10px;
@@ -285,7 +285,7 @@
     margin-bottom: 20px;
   }
   .p-child .att-list li {
-    font-size: clamp(1rem, 2.22vw, 1.3rem);
+    font-size: var(--fsSp--10px);
   }
   .p-child .att-list li::before {
     margin-right: 6px;

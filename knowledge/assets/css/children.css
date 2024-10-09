@@ -23,7 +23,7 @@
     margin-top: clamp(16px, 4vw, 24px);
   }
   .knowledge-one .row-nar > .sml {
-    font-size: clamp(1rem, 2.22vw, 1.3rem);
+    font-size: var(--fsSp--10px);
     line-height: 160%;
     margin-top: 40px;
   }
