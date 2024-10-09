@@ -45,7 +45,6 @@
 .inbody {
   width: min(100%, 900px);
   margin: 0 auto;
-  padding: 0 30px;
 }
 .inbody .inbody__wrap .wrap__inner {
   margin-top: 144px;
@@ -184,9 +183,6 @@
   }
   .inbody__popular-area .btn {
     margin-top: 14px;
-  }
-  .inbody {
-    padding: 0 20px;
   }
   .inbody .inbody__wrap .wrap__inner {
     margin-top: 50px;

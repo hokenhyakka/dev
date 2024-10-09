@@ -6,9 +6,9 @@
 }
 
 .online {
-    width: min(100%,1260px);
-    margin: 0 auto;
-    padding: 0 30px;
+    // width: min(100%,1260px);
+    // margin: 0 auto;
+    // padding: 0 30px;
     .online__wrap {
         .wrap__step-area {
             width: 100%;
@@ -112,7 +112,7 @@
 }
 @media screen and (max-width: 768px) {
     .online {
-        padding: 0 20px;
+        // padding: 0 20px;
         .online__wrap {
             .wrap__step-area {
                 margin: 23px 0 66px;

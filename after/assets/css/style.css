@@ -149,7 +149,7 @@
   .after__one li p {
     font-size: var(--fsSp--min12px);
     margin-top: clamp(10px, 2.22vw, 14px);
-    line-height: 165%;
+    line-height: 180%;
   }
   .after__one table {
     margin-top: 20px;
