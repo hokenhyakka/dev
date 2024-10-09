@@ -295,11 +295,11 @@
     width: clamp(16px, 4vw, 26px);
   }
   .about__flow p {
-    font-size: var(--fsSp--min11px);
+    font-size: var(--fsSp--11px);
     margin-top: 6px;
   }
   .about__flow .name {
-    font-size: clamp(1.3rem, 2.89vw, 1.5rem);
     margin: 0;
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
   }
 }/*# sourceMappingURL=style.css.map */
