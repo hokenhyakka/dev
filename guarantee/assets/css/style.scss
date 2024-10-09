@@ -200,8 +200,8 @@
         margin-left: -15px;
         overflow-x: clip;
 
-        & + .guarantee-type__one {
-            margin-top: 0;
+        h2{
+            border-radius: 0;
         }
 
         ul {
@@ -230,8 +230,10 @@
             padding-right: clamp(8px, 2.5vw, 12px);
         }
 
-        & + .cmn__search-shop {
+        
+    }
+
+    .guarantee + .cmn__search-shop {
             margin-top: 0;
         }
-    }
 }

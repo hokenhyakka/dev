@@ -165,8 +165,8 @@
     margin-left: -15px;
     overflow-x: clip;
   }
-  .guarantee-type__one + .guarantee-type__one {
-    margin-top: 0;
+  .guarantee-type__one h2 {
+    border-radius: 0;
   }
   .guarantee-type__one ul {
     padding-right: 15px;
@@ -188,7 +188,7 @@
     padding-left: clamp(10px, 3.13vw, 14px);
     padding-right: clamp(8px, 2.5vw, 12px);
   }
-  .guarantee-type__one + .cmn__search-shop {
+  .guarantee + .cmn__search-shop {
     margin-top: 0;
   }
 }/*# sourceMappingURL=style.css.map */
