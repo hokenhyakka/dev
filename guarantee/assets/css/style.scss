@@ -34,13 +34,11 @@
         position: relative;
     }
 
-    ul{
-            display: grid;
-        }
+    ul {
+        display: grid;
+    }
 
     a {
-        
-
         border-radius: 4px;
         overflow: hidden;
         background-color: #fff;
@@ -153,11 +151,9 @@
             padding-right: 8px;
             padding-left: 8px;
         }
-        
 
-        a{
-
-            picture{
+        a {
+            picture {
                 padding-top: 16px;
                 padding-bottom: 14px;
                 max-height: 110px;
@@ -175,13 +171,13 @@
             padding-bottom: clamp(8px, 2.22vw, 14px);
         }
 
-        a{
+        a {
             height: 100%;
             display: flex;
             flex-direction: column;
         }
 
-        .name{
+        .name {
             font-size: 1.4rem;
             height: 100%;
             min-height: 38px;
@@ -198,44 +194,44 @@
     }
 }
 
-
-@media screen and (max-width: 450px){
-    .guarantee-type__one{
+@media screen and (max-width: 450px) {
+    .guarantee-type__one {
         width: 100vw;
         margin-left: -15px;
         overflow-x: clip;
 
-        & + .guarantee-type__one{
+        & + .guarantee-type__one {
             margin-top: 0;
         }
 
-        ul{
+        ul {
             padding-right: 15px;
             padding-left: 15px;
             padding-top: 14px;
             padding-bottom: 52px;
             grid-template-columns: repeat(2, 1fr);
-            gap: clamp(10px, 3.13vw,14px);
+            gap: clamp(10px, 3.13vw, 14px);
         }
 
-        a{
-            picture{
+        a {
+            picture {
                 padding-top: 14px;
                 padding-bottom: 12px;
             }
 
-            img{
+            img {
                 width: 65%;
             }
         }
 
-        .name{
+        .name {
             font-size: var(--fs-sp--min12px);
             padding-left: clamp(10px, 3.13vw, 14px);
             padding-right: clamp(8px, 2.5vw, 12px);
         }
-    }
-    main + .cmn__search-shop{
-        margin-top: 0;
+
+        & + .cmn__search-shop {
+            margin-top: 0;
+        }
     }
 }

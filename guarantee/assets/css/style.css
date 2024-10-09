@@ -188,7 +188,7 @@
     padding-left: clamp(10px, 3.13vw, 14px);
     padding-right: clamp(8px, 2.5vw, 12px);
   }
-  main + .cmn__search-shop {
+  .guarantee-type__one + .cmn__search-shop {
     margin-top: 0;
   }
 }/*# sourceMappingURL=style.css.map */
