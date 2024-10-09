@@ -10,8 +10,9 @@
   --green--middle: #65b005;
   --blue--middle: #1492d9;
   --yellow--dark: #c3850b;
-  --fsSp--10px: clamp(1rem, 2.22vw, 1.3rem);
-  --fsSp--11px: clamp(1.1rem, 3.25vw, 1.4rem);
+  --fsSp--min10px: clamp(1rem, 2.22vw, 1.2rem);
+  --fsSp--min11px: clamp(1.1rem, 2.85vw, 1.3rem);
+  --fsSp--min12px: clamp(1.2rem, 3.25vw, 1.4rem);
 }
 
 html {
@@ -1044,7 +1045,7 @@ footer > span {
     margin-top: 32px;
   }
   .footer__map a {
-    font-size: var(--fsSp--11px);
+    font-size: var(--fsSp--min11px);
   }
   .footer__map > span {
     width: 100%;
@@ -1110,11 +1111,11 @@ footer > span {
     flex-wrap: wrap;
   }
   .footer__exts a {
-    font-size: var(--fsSp--11px);
+    font-size: var(--fsSp--min11px);
   }
   .footer__exts a::after {
-    height: var(--fsSp--11px);
-    width: var(--fsSp--11px);
+    height: var(--fsSp--min11px);
+    width: var(--fsSp--min11px);
   }
   .footer__exts .ext {
     gap: 3px;
@@ -1347,7 +1348,7 @@ footer > span {
     padding: clamp(8px, 2.25vw, 16px) clamp(16px, 4.5vw, 32px);
   }
   .faq__list details div {
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-size: var(--fsSp--min12px);
   }
   .faq__list details[open] {
     padding-bottom: clamp(16px, 4.5vw, 32px);

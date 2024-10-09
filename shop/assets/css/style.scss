@@ -366,7 +366,7 @@
 @media screen and (max-width: 768px) {
     .shop__one {
         .city {
-            font-size: clamp(1.2rem, 2.67vw, 1.3rem);
+            font-size: clamp(1.2rem, 3.25vw, 1.3rem);
             padding: 4px 16px;
             margin-bottom: 4px;
         }
@@ -387,7 +387,7 @@
 
             p {
                 line-height: 175%;
-                font-size: clamp(1.2rem, 2.67vw, 1.4rem);
+                font-size: var(--fsSp--min12px);
             }
         }
 

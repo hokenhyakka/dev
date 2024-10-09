@@ -204,7 +204,7 @@
             gap: clamp(6px, 2.22vw, 16px);
         }
         li {
-            font-size: clamp(1.2rem, 3vw, 1.4rem);
+            font-size: var(--fsSp--min12px);
 
             &:first-of-type {
                 &::before {
@@ -335,7 +335,7 @@
         .row-wide,
         section {
             > p {
-                font-size: clamp(1.2rem, 3vw, 1.5rem);
+                font-size: var(--fsSp--min12px);
 
                 &:first-child {
                     margin-top: clamp(32px, 8vw, 56px);
@@ -344,11 +344,11 @@
             }
 
             > .att {
-                font-size: var(--fsSp--10px);
+                font-size: var(--fsSp--min10px);
             }
         }
         .att {
-            font-size: var(--fsSp--10px);
+            font-size: var(--fsSp--min10px);
         }
         .att-list{
             gap: 10px;
@@ -356,7 +356,7 @@
             margin-bottom: 20px;
 
             li{
-                font-size: var(--fsSp--10px);
+                font-size: var(--fsSp--min10px);
 
                 &::before{
                     margin-right: 6px;

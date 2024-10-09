@@ -162,7 +162,7 @@
     gap: clamp(6px, 2.22vw, 16px);
   }
   .breadcrumb li {
-    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    font-size: var(--fsSp--min12px);
   }
   .breadcrumb li:first-of-type::before {
     width: clamp(16px, 4vw, 18px);
@@ -261,7 +261,7 @@
   .p-child .row-nar > p,
   .p-child .row-wide > p,
   .p-child section > p {
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-size: var(--fsSp--min12px);
   }
   .p-child .row > p:first-child,
   .p-child .row-nar > p:first-child,
@@ -274,10 +274,10 @@
   .p-child .row-nar > .att,
   .p-child .row-wide > .att,
   .p-child section > .att {
-    font-size: var(--fsSp--10px);
+    font-size: var(--fsSp--min10px);
   }
   .p-child .att {
-    font-size: var(--fsSp--10px);
+    font-size: var(--fsSp--min10px);
   }
   .p-child .att-list {
     gap: 10px;
@@ -285,7 +285,7 @@
     margin-bottom: 20px;
   }
   .p-child .att-list li {
-    font-size: var(--fsSp--10px);
+    font-size: var(--fsSp--min10px);
   }
   .p-child .att-list li::before {
     margin-right: 6px;

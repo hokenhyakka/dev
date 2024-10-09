@@ -67,7 +67,7 @@
             border-radius: 4px;
         }
         .region-tab {
-            font-size: clamp(1.2rem, 3.25vw, 1.5rem);
+            font-size: var(--fsSp--min12px);
             height: clamp(44px, 10.22vw, 48px);
 
             &[aria-selected="true"] {
@@ -226,7 +226,7 @@
             grid-template-columns: clamp(88px, 23.56vw, 160px) auto;
         }
         td {
-            font-size: clamp(1.2rem, 2.89vw, 1.5rem);
+            font-size: var(--fsSp--min12px);
         }
         .area {
             padding-top: clamp(10px, 2.22vw, 14px);

@@ -88,7 +88,7 @@
     margin-top: clamp(22px, 5.5vw, 40px);
   }
   .voice__comment-list li {
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-size: var(--fsSp--min12px);
     padding: clamp(20px, 6vw, 40px);
     padding-top: clamp(18px, 5vw, 34px);
     border-radius: 12px;

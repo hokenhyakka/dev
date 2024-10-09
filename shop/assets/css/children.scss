@@ -579,7 +579,7 @@
                 }
 
                 p {
-                    font-size: clamp(1.2rem, 2.89vw, 1.3rem);
+                    font-size: var(--fsSp--min12px);
                 }
             }
 
@@ -855,7 +855,7 @@
         }
         .category {
             display: inline-flex;
-            font-size: clamp(1.2rem, 3.25vw, 1.5rem);
+            font-size: var(--fsSp--min12px);
             height: clamp(28px, 7.5vw, 34px);
             padding: 0 clamp(16px, 4vw, 20px);
         }
@@ -869,14 +869,14 @@
             gap: 20px;
 
             p {
-                font-size: clamp(1.2rem, 2.89vw, 1.5rem);
+                font-size: var(--fsSp--min12px);
 
                 & + .att {
                     margin-top: clamp(12px, 3.5vw, 16px);
                 }
             }
             .att {
-                font-size: clamp(1.2rem, 3vw, 1.4rem);
+                font-size: var(--fsSp--min10px);
             }
 
             .details {
@@ -887,7 +887,7 @@
             }
 
             .label {
-                font-size: clamp(1.2rem, 3vw, 1.4rem);
+                font-size: var(--fsSp--min12px);
                 min-height: clamp(28px, 7vw, 30px);
             }
         }
@@ -931,7 +931,7 @@
             gap: 6px;
         }
         li {
-            font-size: var(--fsSp--11px);;
+            font-size: var(--fsSp--min11px);;
             height: clamp(38px, 10vw, 52px);
         }
     }
@@ -1005,7 +1005,7 @@
             }
         }
         p {
-            font-size: clamp(1.2rem, 2.89vw, 1.5rem);
+            font-size: var(--fsSp--min12px);
             margin-top: clamp(10px, 2.67vw, 12px);
         }
     }
@@ -1255,8 +1255,8 @@
             grid-template-columns: repeat(3, 1fr);
         }
         a {
-            font-size: clamp(1.2rem, 3.11vw, 1.4rem);
-            padding: 0 clamp(12px, 3.11vw, 14px);
+            font-size: var(--fsSp--min12px);
+            padding: 0 clamp(12px, 3.25vw, 14px);
         }
     }
 }

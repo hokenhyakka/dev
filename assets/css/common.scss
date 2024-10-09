@@ -10,8 +10,9 @@
     --green--middle: #65b005;
     --blue--middle: #1492d9;
     --yellow--dark: #c3850b;
-    --fsSp--10px: clamp(1rem, 2.22vw, 1.3rem);
-    --fsSp--11px: clamp(1.1rem, 3.25vw, 1.4rem);
+    --fsSp--min10px: clamp(1rem, 2.22vw, 1.2rem);
+    --fsSp--min11px: clamp(1.1rem, 2.85vw, 1.3rem);
+    --fsSp--min12px: clamp(1.2rem, 3.25vw, 1.4rem);
 }
 html {
     scroll-behavior: smooth;
@@ -1258,7 +1259,7 @@ footer {
         margin-top: 32px;
 
         a {
-            font-size: var(--fsSp--11px);;
+            font-size: var(--fsSp--min11px);;
         }
 
         > span {
@@ -1340,11 +1341,11 @@ footer {
             flex-wrap: wrap;
         }
         a {
-            font-size: var(--fsSp--11px);;
+            font-size: var(--fsSp--min11px);;
 
             &::after {
-                height: var(--fsSp--11px);;
-                width: var(--fsSp--11px);;
+                height: var(--fsSp--min11px);;
+                width: var(--fsSp--min11px);;
             }
         }
         .ext {
@@ -1640,7 +1641,7 @@ footer {
             padding: clamp(8px, 2.25vw, 16px) clamp(16px, 4.5vw, 32px);
 
             div {
-                font-size: clamp(1.2rem, 3vw, 1.5rem);
+                font-size: var(--fsSp--min12px);
             }
 
             &[open] {
@@ -1881,16 +1882,9 @@ footer {
             }
 
             &:first-of-type {
-                // font-size: clamp(1.6rem, 5vw, 1.9rem);
                 background-size: calc(clamp(54px, 16.88vw, 72px) + 8px);
                 
             }
-
-            // &:nth-of-type(2) {
-            //     font-size: clamp(1.2rem, 3.75vw, 1.6rem);
-            //     justify-content: space-between;
-            //     padding-left: clamp(12px, 3.11vw, 14px);
-            // }
 
             p {
                 span {

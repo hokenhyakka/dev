@@ -67,7 +67,7 @@
     padding-bottom: clamp(64px, 21.33vw, 96px);
   }
   .site-map__main a {
-    font-size: clamp(1.2rem, 3.25vw, 1.4rem);
+    font-size: var(--fsSp--min12px);
     gap: 6px;
   }
   .site-map__main a:not(.ext)::after {

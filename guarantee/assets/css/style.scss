@@ -222,7 +222,7 @@
         }
 
         .name{
-            font-size: clamp(1.2rem, 3.11vw, 1.4rem);
+            font-size: var(--fsSp--min12px);
             padding-left: clamp(10px, 3.13vw, 14px);
             padding-right: clamp(8px, 2.5vw, 12px);
         }

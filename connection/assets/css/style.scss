@@ -93,7 +93,7 @@
             }
 
             p {
-                font-size: clamp(1.2rem, 3.25vw, 1.5rem);
+                font-size: var(--fsSp--min12px);
                 margin-top: 10px;
             }
         }

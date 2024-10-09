@@ -225,7 +225,7 @@
         }
 
         a {
-            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            font-size: var(--fsSp--min12px);
         }
     }
 }
@@ -379,7 +379,7 @@
         }
 
         .name {
-            font-size: var(--fsSp--11px);;
+            font-size: var(--fsSp--min11px);;
         }
     }
 }

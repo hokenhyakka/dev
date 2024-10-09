@@ -98,7 +98,7 @@
   }
   .news span {
     white-space: pre;
-    font-size: var(--fsSp--11px);
+    font-size: var(--fsSp--min11px);
     height: clamp(24px, 6vw, 34px);
     padding: 0 clamp(16px, 4vw, 18px);
   }
@@ -769,7 +769,7 @@
     padding-bottom: clamp(14px, 4vw, 22px);
   }
   .about .btns a span {
-    font-size: var(--fsSp--11px);
+    font-size: var(--fsSp--min11px);
     bottom: clamp(12px, 2.89vw, 16px);
   }
   .about__features {
