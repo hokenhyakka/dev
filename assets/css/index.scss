@@ -46,7 +46,7 @@
 
                 &:first-of-type {
                     margin-top: clamp(14px, 3.56vw, 24px);
-                    font-size: clamp(1.3rem, 3.25vw, 1.7rem);
+                    font-size: var(--fs-sp--min13px);
                     line-height: 180%;
                 }
             }
@@ -121,15 +121,16 @@
         }
         span {
             white-space: pre;
-            font-size: var(--fsSp--min11px);;
+            font-size: var(--fs-sp--min11px);;
             height: clamp(24px, 6vw, 34px);
             padding: 0 clamp(16px, 4vw, 18px);
         }
         p {
             white-space: nowrap;
-            font-size: clamp(1.3rem, 3.25vw, 1.6rem);
+            font-size: var(--fs-sp--min12px);
             text-overflow: ellipsis;
             overflow-x: hidden;
+            overflow-y: visible;
         }
     }
 }
@@ -518,7 +519,7 @@
         gap: clamp(12px, 3.5vw, 16px);
 
         a {
-            font-size: clamp(1.3rem, 3.5vw, 1.7rem);
+            font-size: var(--fs-sp--min13px);
 
             &::after {
                 width: 10px;
@@ -947,7 +948,7 @@
                 }
 
                 span{
-                    font-size: var(--fsSp--min11px);;
+                    font-size: var(--fs-sp--min11px);;
                     bottom: clamp(12px, 2.89vw, 16px);
                 }
             }

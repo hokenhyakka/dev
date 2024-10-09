@@ -172,7 +172,7 @@
     display: none;
   }
   .worry-one__attention a {
-    font-size: var(--fsSp--min12px);
+    font-size: var(--fs-sp--min12px);
   }
 }
 .worry__list ul {
@@ -293,6 +293,6 @@
     height: clamp(6px, 1.78vw, 8px);
   }
   .worry__list .name {
-    font-size: var(--fsSp--min11px);
+    font-size: var(--fs-sp--min11px);
   }
 }/*# sourceMappingURL=children.css.map */

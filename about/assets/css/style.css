@@ -175,7 +175,7 @@
     gap: clamp(5px, 1.33vw, 7px);
   }
   .about__commitment hgroup p {
-    font-size: clamp(1.3rem, 2.89vw, 1.5rem);
+    font-size: var(--fs-sp--min13px);
   }
   .about__commitment hgroup h2 {
     font-size: clamp(1.8rem, 4.44vw, 2.4rem);
@@ -211,8 +211,9 @@
   }
   .about__commitment li p {
     font-size: clamp(1rem, 3.1vw, 1.6rem);
-    line-height: 170%;
+    line-height: 190%;
     text-underline-offset: clamp(4px, 1vw, 6px);
+    text-decoration-thickness: 1px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -295,11 +296,11 @@
     width: clamp(16px, 4vw, 26px);
   }
   .about__flow p {
-    font-size: var(--fsSp--11px);
+    font-size: var(--fs-sp--min11px);
     margin-top: 6px;
   }
   .about__flow .name {
     margin: 0;
-    font-size: clamp(1.3rem, 3vw, 1.5rem);
+    font-size: var(--fs-sp--min13px);
   }
 }/*# sourceMappingURL=style.css.map */

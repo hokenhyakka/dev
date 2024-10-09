@@ -50,7 +50,7 @@
     }
 
     a {
-        font-size: clamp(1.3rem, 2.89vw, 1.5rem);
+        font-size: var(--fs-sp--min13px);
         text-decoration: underline;
         text-underline-offset: 2px;
         color: var(--pink--primary);

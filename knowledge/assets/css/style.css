@@ -45,7 +45,7 @@
     border-radius: 6px;
   }
   .knowledge__list p {
-    font-size: var(--fsSp--min10px);
+    font-size: var(--fs-sp--min10px);
     margin-top: 8px;
   }
 }

@@ -52,7 +52,7 @@
     border-radius: 4px;
   }
   .shop__tab-list .pref-tab {
-    font-size: clamp(1.3rem, 3.25vw, 1.5rem);
+    font-size: var(--fs-sp--min13px);
     height: clamp(44px, 10.22vw, 48px);
   }
   .shop__tab-list .pref-tab[aria-selected=true] {
@@ -330,14 +330,14 @@
   }
   .shop__one .access p {
     line-height: 175%;
-    font-size: var(--fsSp--min12px);
+    font-size: var(--fs-sp--min12px);
   }
   .shop__one .btns {
     margin-top: clamp(14px, 3.11vw, 16px);
     width: 100%;
   }
   .shop__one .btns a {
-    font-size: clamp(1.3rem, 3.11vw, 1.6rem);
+    font-size: var(--fs-sp--min13px);
     height: clamp(44px, 10.67vw, 50px);
     padding-left: 4px;
   }

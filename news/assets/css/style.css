@@ -94,7 +94,7 @@
     height: clamp(26px, 5.78vw, 28px);
   }
   .news__list .content {
-    font-size: var(--fsSp--min12px);
+    font-size: var(--fs-sp--min12px);
   }
   .news__list .ext::after {
     width: 10px;

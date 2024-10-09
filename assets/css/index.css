@@ -42,7 +42,7 @@
   .index .row-nar > p:first-of-type,
   .index .row-wide > p:first-of-type {
     margin-top: clamp(14px, 3.56vw, 24px);
-    font-size: clamp(1.3rem, 3.25vw, 1.7rem);
+    font-size: var(--fs-sp--min13px);
     line-height: 180%;
   }
   .index .btn {
@@ -98,15 +98,16 @@
   }
   .news span {
     white-space: pre;
-    font-size: var(--fsSp--min11px);
+    font-size: var(--fs-sp--min11px);
     height: clamp(24px, 6vw, 34px);
     padding: 0 clamp(16px, 4vw, 18px);
   }
   .news p {
     white-space: nowrap;
-    font-size: clamp(1.3rem, 3.25vw, 1.6rem);
+    font-size: var(--fs-sp--min12px);
     text-overflow: ellipsis;
     overflow-x: hidden;
+    overflow-y: visible;
   }
 }
 .slider {
@@ -426,7 +427,7 @@
     gap: clamp(12px, 3.5vw, 16px);
   }
   .shop__pref a {
-    font-size: clamp(1.3rem, 3.5vw, 1.7rem);
+    font-size: var(--fs-sp--min13px);
   }
   .shop__pref a::after {
     width: 10px;
@@ -769,7 +770,7 @@
     padding-bottom: clamp(14px, 4vw, 22px);
   }
   .about .btns a span {
-    font-size: var(--fsSp--min11px);
+    font-size: var(--fs-sp--min11px);
     bottom: clamp(12px, 2.89vw, 16px);
   }
   .about__features {

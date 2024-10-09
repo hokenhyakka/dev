@@ -184,7 +184,7 @@
             border-radius: 8px;
 
             p {
-                font-size: var(--fsSp--min12px);
+                font-size: var(--fs-sp--min12px);
                 margin-top: clamp(10px, 2.22vw, 14px);
                 line-height: 180%;
             }
@@ -210,7 +210,7 @@
             }
 
             th{
-                font-size: clamp(1.3rem, 3.11vw, 1.5rem);
+                font-size: var(--fs-sp--min13px);
                 padding-left: 14px;
                 padding-right: 14px;
                 padding-top: 16px;
@@ -218,7 +218,7 @@
             }
 
             td{
-                font-size: var(--fsSp--min12px);
+                font-size: var(--fs-sp--min12px);
                 padding-left: clamp(12px, 3.11vw, 14px);
                 padding-right: clamp(12px, 3.11vw, 14px);
                 padding-top: clamp(10px, 2.67vw, 16px);

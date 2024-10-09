@@ -10,9 +10,10 @@
   --green--middle: #65b005;
   --blue--middle: #1492d9;
   --yellow--dark: #c3850b;
-  --fsSp--min10px: clamp(1rem, 2.22vw, 1.2rem);
-  --fsSp--min11px: clamp(1.1rem, 2.85vw, 1.3rem);
-  --fsSp--min12px: clamp(1.2rem, 3.25vw, 1.4rem);
+  --fs-sp--min10px: clamp(1rem, 2.22vw, 1.2rem);
+  --fs-sp--min11px: clamp(1.1rem, 2.85vw, 1.3rem);
+  --fs-sp--min12px: clamp(1.2rem, 3.25vw, 1.4rem);
+  --fs-sp--min13px: clamp(1.3rem, 3.5vw, 1.5rem);
 }
 
 html {
@@ -827,11 +828,11 @@ h3.flowers::after {
     gap: clamp(6px, 1.5vw, 16px);
   }
   .header__inner a {
-    font-size: clamp(1.3rem, 3.25vw, 1.4rem);
+    font-size: var(--fs-sp--min13px);
   }
   .header__shop a {
     height: clamp(34px, 8.5vw, 48px);
-    font-size: clamp(1.3rem, 3.25vw, 1.4rem);
+    font-size: var(--fs-sp--min12px);
     padding: clamp(16px, 4vw, 24px);
   }
   .header__nav {
@@ -1047,7 +1048,7 @@ footer > span {
     margin-top: 32px;
   }
   .footer__map a {
-    font-size: var(--fsSp--min11px);
+    font-size: var(--fs-sp--min12px);
   }
   .footer__map > span {
     width: 100%;
@@ -1113,11 +1114,11 @@ footer > span {
     flex-wrap: wrap;
   }
   .footer__exts a {
-    font-size: var(--fsSp--min11px);
+    font-size: var(--fs-sp--min11px);
   }
   .footer__exts a::after {
-    height: var(--fsSp--min11px);
-    width: var(--fsSp--min11px);
+    height: var(--fs-sp--min11px);
+    width: var(--fs-sp--min11px);
   }
   .footer__exts .ext {
     gap: 3px;
@@ -1209,7 +1210,7 @@ footer > span {
     background-size: cover;
   }
   .about__features li p:not(.name) {
-    font-size: clamp(1.3rem, 3.25vw, 1.4rem);
+    font-size: var(--fs-sp--min12px);
   }
   .about__features li p:not(.name) br {
     display: none;
@@ -1350,13 +1351,13 @@ footer > span {
     padding: clamp(8px, 2.25vw, 16px) clamp(16px, 4.5vw, 32px);
   }
   .faq__list details div {
-    font-size: var(--fsSp--min12px);
+    font-size: var(--fs-sp--min12px);
   }
   .faq__list details[open] {
     padding-bottom: clamp(16px, 4.5vw, 32px);
   }
   .faq__list summary {
-    font-size: clamp(1.3rem, 3.25vw, 1.6rem);
+    font-size: var(--fs-sp--min13px);
     padding-top: clamp(8px, 2.25vw, 16px);
     padding-bottom: clamp(8px, 2.25vw, 16px);
     padding-right: calc(clamp(12px, 2.67vw, 16px) + 6px);

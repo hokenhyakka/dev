@@ -107,7 +107,7 @@
             height: clamp(26px, 5.78vw, 28px);
         }
         .content {
-            font-size: var(--fsSp--min12px);
+            font-size: var(--fs-sp--min12px);
         }
         .ext{
             &::after{

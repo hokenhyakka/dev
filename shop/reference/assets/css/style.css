@@ -70,7 +70,7 @@
     gap: clamp(6px, 1.78vw, 10px);
   }
   .shop-reference__list a {
-    font-size: clamp(1.3rem, 3.11vw, 1.6rem);
+    font-size: var(--fs-sp--min13px);
     padding-top: 12px;
     padding-bottom: 12px;
     padding-left: 14px;

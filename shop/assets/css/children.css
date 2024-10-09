@@ -40,7 +40,7 @@
     gap: 8px;
   }
   .title hgroup .pref {
-    font-size: clamp(1.3rem, 3.25vw, 1.5rem);
+    font-size: var(--fs-sp--min13px);
     padding: 6px 10px 5px 12px;
   }
   .title hgroup .area {
@@ -445,7 +445,7 @@
     margin-left: 4px;
   }
   .shop-one__table td[data-shop=access] p {
-    font-size: var(--fsSp--min12px);
+    font-size: var(--fs-sp--min12px);
   }
   .shop-one__table td[data-shop=telNum] a {
     text-decoration: underline;
@@ -459,7 +459,8 @@
   }
   .shop-one__table p,
   .shop-one__table a {
-    font-size: clamp(1.3rem, 3.25vw, 1.5rem);
+    font-size: var(--fs-sp--min13px);
+    line-height: 180%;
   }
 }
 @media screen and (max-width: 768px) and (min-width: 501px) {
@@ -682,7 +683,7 @@
   }
   .shop-one__event-list .category {
     display: inline-flex;
-    font-size: var(--fsSp--min12px);
+    font-size: var(--fs-sp--min12px);
     height: clamp(28px, 7.5vw, 34px);
     padding: 0 clamp(16px, 4vw, 20px);
   }
@@ -695,13 +696,14 @@
     gap: 20px;
   }
   .shop-one__event-list .outline p {
-    font-size: var(--fsSp--min12px);
+    font-size: var(--fs-sp--min12px);
+    line-height: 200%;
   }
   .shop-one__event-list .outline p + .att {
     margin-top: clamp(12px, 3.5vw, 16px);
   }
   .shop-one__event-list .outline .att {
-    font-size: var(--fsSp--min10px);
+    font-size: var(--fs-sp--min10px);
   }
   .shop-one__event-list .outline .details {
     display: flex;
@@ -710,7 +712,7 @@
     gap: clamp(10px, 3vw, 16px);
   }
   .shop-one__event-list .outline .label {
-    font-size: var(--fsSp--min12px);
+    font-size: var(--fs-sp--min12px);
     min-height: clamp(28px, 7vw, 30px);
   }
 }
@@ -747,7 +749,7 @@
     gap: 6px;
   }
   .shop-one__insurance-type li {
-    font-size: var(--fsSp--min11px);
+    font-size: var(--fs-sp--min11px);
     height: clamp(38px, 10vw, 52px);
   }
 }
@@ -803,8 +805,9 @@
     display: none;
   }
   .shop-one__message p {
-    font-size: var(--fsSp--min12px);
+    font-size: var(--fs-sp--min12px);
     margin-top: clamp(10px, 2.67vw, 12px);
+    line-height: 190%;
   }
 }
 .shop-one__shop-list {
@@ -1002,7 +1005,7 @@
     grid-template-columns: repeat(3, 1fr);
   }
   .shop-one__pref-list a {
-    font-size: var(--fsSp--min12px);
+    font-size: var(--fs-sp--min12px);
     padding: 0 clamp(12px, 3.25vw, 14px);
   }
 }/*# sourceMappingURL=children.css.map */

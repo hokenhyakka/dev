@@ -57,7 +57,7 @@
     border-radius: 4px;
   }
   .online-list__tab-list .region-tab {
-    font-size: var(--fsSp--min12px);
+    font-size: var(--fs-sp--min12px);
     height: clamp(44px, 10.22vw, 48px);
   }
   .online-list__tab-list .region-tab[aria-selected=true] {
@@ -195,7 +195,7 @@
     grid-template-columns: clamp(88px, 23.56vw, 160px) auto;
   }
   .online-list__pref-one td {
-    font-size: var(--fsSp--min12px);
+    font-size: var(--fs-sp--min12px);
   }
   .online-list__pref-one .area {
     padding-top: clamp(10px, 2.22vw, 14px);

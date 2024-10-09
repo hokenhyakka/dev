@@ -65,7 +65,7 @@
         }
 
         .pref-tab {
-            font-size: clamp(1.3rem, 3.25vw, 1.5rem);
+            font-size: var(--fs-sp--min13px);
             height: clamp(44px, 10.22vw, 48px);
 
             &[aria-selected="true"] {
@@ -388,7 +388,7 @@
 
             p {
                 line-height: 175%;
-                font-size: var(--fsSp--min12px);
+                font-size: var(--fs-sp--min12px);
             }
         }
 
@@ -397,7 +397,7 @@
             width: 100%;
 
             a {
-                font-size: clamp(1.3rem, 3.11vw, 1.6rem);
+                font-size: var(--fs-sp--min13px);
                 height: clamp(44px, 10.67vw, 50px);
                 padding-left: 4px;
             }

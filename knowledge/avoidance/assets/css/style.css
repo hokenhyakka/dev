@@ -67,7 +67,7 @@
     margin-top: 50px;
   }
   .content__avoidance-area > table thead tr th {
-    font-size: clamp(1.3rem, 3.5vw, 1.4rem);
+    font-size: var(--fs-sp--min13px);
   }
   .content__avoidance-area > table tbody tr td:first-child {
     font-size: clamp(1rem, 2.5vw, 1.2rem);
