@@ -434,7 +434,7 @@
     margin-left: 4px;
   }
   .shop-one__table td[data-shop=access] p {
-    font-size: clamp(1.1rem, 2.89vw, 1.3rem);
+    font-size: clamp(1.2rem, 2.89vw, 1.3rem);
   }
   .shop-one__table td[data-shop=telNum] a {
     text-decoration: underline;

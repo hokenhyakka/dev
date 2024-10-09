@@ -224,7 +224,6 @@ h3 {
 
         &::before {
             content: "";
-
             background-image: url(../img/common/icon/flower--ylw.svg);
             background-size: cover;
         }
@@ -238,7 +237,6 @@ h3 {
         &::before,
         &::after {
             content: "";
-
             background-image: url(../img/common/icon/flower--ylw.svg);
             background-size: cover;
         }
@@ -1239,6 +1237,7 @@ footer {
     footer {
         > span {
             font-size: 1rem;
+            padding: 0 10px;
         }
     }
     .footer__site {
@@ -1261,7 +1260,7 @@ footer {
         }
 
         > ul {
-            gap: clamp(20px, 6vw, 26px);
+            gap: clamp(20px, 6vw, 26px) 10px;
         }
     }
 

@@ -1024,6 +1024,7 @@ footer > span {
 @media screen and (max-width: 768px) {
   footer > span {
     font-size: 1rem;
+    padding: 0 10px;
   }
   .footer__site {
     height: clamp(48px, 12vw, 65px);
@@ -1043,7 +1044,7 @@ footer > span {
     height: 1px;
   }
   .footer__map > ul {
-    gap: clamp(20px, 6vw, 26px);
+    gap: clamp(20px, 6vw, 26px) 10px;
   }
   .footer__nav {
     display: flex;

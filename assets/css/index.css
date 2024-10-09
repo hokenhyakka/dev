@@ -43,6 +43,7 @@
   .index .row-wide > p:first-of-type {
     margin-top: clamp(14px, 3.56vw, 24px);
     font-size: clamp(1.3rem, 3.25vw, 1.7rem);
+    line-height: 180%;
   }
   .index .btn {
     width: min(460px, 100%);
