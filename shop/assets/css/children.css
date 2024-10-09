@@ -434,7 +434,8 @@
     height: 12px;
   }
   .shop-one__table td .file span {
-    padding: 0 4px;
+    padding: 4px 6px;
+    line-height: 100%;
   }
   .shop-one__table td .file + .file {
     margin-top: 6px;

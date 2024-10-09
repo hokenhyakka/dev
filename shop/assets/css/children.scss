@@ -538,36 +538,35 @@
                     vertical-align: text-top;
                     margin-left: 2px;
                 }
-
-                
             }
             .file {
-                    padding: 6px 10px 8px 12px;
+                padding: 6px 10px 8px 12px;
 
-                    border-radius: 4px;
-                    gap: 6px;
+                border-radius: 4px;
+                gap: 6px;
 
+                &::after {
+                    width: 10px;
+                    height: 10px;
+                }
+
+                &.ext-fff {
+                    gap: 2px;
                     &::after {
-                        width: 10px;
-                        height: 10px;
-                    }
-
-                    &.ext-fff {
-                        gap: 2px;
-                        &::after {
-                            width: 12px;
-                            height: 12px;
-                        }
-                    }
-
-                    span {
-                        padding: 0 4px;
-                    }
-
-                    & + .file{
-                        margin-top: 6px;
+                        width: 12px;
+                        height: 12px;
                     }
                 }
+
+                span {
+                    padding: 4px 6px;
+                    line-height: 100%;
+                }
+
+                & + .file {
+                    margin-top: 6px;
+                }
+            }
 
             &[data-shop="access"] {
                 a {
@@ -615,10 +614,10 @@
     }
 }
 
-@media screen and (max-width: 768px){
-    .shop-one__table{
-        th{
-            p{
+@media screen and (max-width: 768px) {
+    .shop-one__table {
+        th {
+            p {
                 font-size: clamp(1.4rem, 3.7vw, 1.6rem);
             }
         }
@@ -943,7 +942,7 @@
             gap: 6px;
         }
         li {
-            font-size: var(--fs-sp--min11px);;
+            font-size: var(--fs-sp--min11px);
             height: clamp(38px, 10vw, 52px);
         }
     }
