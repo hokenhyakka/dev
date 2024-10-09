@@ -293,40 +293,43 @@
     }
 
     td {
-        a {
-            &.file {
-                background-color: var(--black);
-                color: #fff;
-                font-weight: 700;
-                display: inline-flex;
-                align-items: center;
+        &:has(.file) {
+            display: flex;
+            flex-direction: column;
+        }
+        .file {
+            background-color: var(--black);
+            color: #fff;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            margin-right: auto;
 
+            &::after {
+                content: "";
+                background-image: url(../../../assets/img/common/icon/arrow--fff.svg);
+                background-size: cover;
+            }
+
+            &.ext-fff {
                 &::after {
-                    content: "";
-                    background-image: url(../../../assets/img/common/icon/arrow--fff.svg);
-                    background-size: cover;
+                    background-image: url(../../../assets/img/common/icon/ext--fff.svg);
                 }
 
-                &.ext-fff{
-                    &::after{
-                        background-image: url(../../../assets/img/common/icon/ext--fff.svg);
-                    }
+                @media (hover: hover) {
+                    &:hover {
+                        transform: none;
 
-                    @media (hover: hover){
-                        &:hover{
+                        &::after {
                             transform: none;
-
-                            &::after{
-                                transform: none;
-                            }
                         }
                     }
                 }
+            }
 
-                span {
-                    font-weight: inherit;
-                    background-color: #fff;
-                }
+            span {
+                font-weight: inherit;
+                background-color: #fff;
             }
         }
         &[data-shop="access"] {
@@ -347,8 +350,8 @@
             align-items: center;
             gap: 4px;
 
-            &:has(p:nth-child(4)){
-                p{
+            &:has(p:nth-child(4)) {
+                p {
                     width: 100%;
                 }
             }
@@ -425,45 +428,47 @@
             padding: 16px 22px 24px;
             background-color: #fff;
 
-            p{
-                & + a.file{
+            p {
+                & + a.file {
                     margin-top: 16px;
                 }
             }
 
-            a {
-                &.file {
-                    height: 40px;
-                    padding: 0 24px;
-                    border-radius: 4px;
-                    gap: 8px;
+            .file {
+                height: 40px;
+                padding: 0 24px;
+                border-radius: 4px;
+                gap: 8px;
+
+                &::after {
+                    width: 12px;
+                    height: 12px;
+                    transition: 0.3s;
+                }
+
+                &.ext-fff {
+                    gap: 4px;
 
                     &::after {
-                        width: 12px;
-                        height: 12px;
-                        transition: 0.3s;
+                        width: 14px;
+                        height: 14px;
                     }
+                }
 
-                    &.ext-fff{
-                        gap: 4px;
+                span {
+                    padding: 0 6px;
+                }
 
-                        &::after{
-                            width: 14px;
-                            height: 14px;
+                @media (hover: hover) {
+                    &:hover {
+                        &::after {
+                            transform: translateX(4px);
                         }
                     }
+                }
 
-                    span {
-                        padding: 0 6px;
-                    }
-
-                    @media (hover: hover) {
-                        &:hover {
-                            &::after {
-                                transform: translateX(4px);
-                            }
-                        }
-                    }
+                & + .file {
+                    margin-top: 8px;
                 }
             }
 
@@ -522,9 +527,8 @@
         }
 
         td {
-
-            p{
-                & + a.file{
+            p {
+                & + a.file {
                     margin-top: 10px;
                 }
             }
@@ -536,21 +540,22 @@
                     margin-left: 2px;
                 }
 
-                &.file {
-                    padding: 6px 10px 6px 12px;
-                    
+                
+            }
+            .file {
+                    padding: 6px 10px 8px 12px;
+
                     border-radius: 4px;
                     gap: 6px;
 
-                    &::after{
+                    &::after {
                         width: 10px;
                         height: 10px;
-
                     }
 
-                    &.ext-fff{
+                    &.ext-fff {
                         gap: 2px;
-                        &::after{
+                        &::after {
                             width: 12px;
                             height: 12px;
                         }
@@ -559,8 +564,11 @@
                     span {
                         padding: 0 4px;
                     }
+
+                    & + .file{
+                        margin-top: 6px;
+                    }
                 }
-            }
 
             &[data-shop="access"] {
                 a {
@@ -1146,6 +1154,7 @@
             font-size: min(3.2vw, 1.4rem);
             padding-left: 10px;
             padding-right: 8px;
+            white-space: pre;
         }
     }
 }

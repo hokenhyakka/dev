@@ -240,30 +240,35 @@
   color: var(--pink--primary);
   font-weight: 700;
 }
-.shop-one__table td a.file {
+.shop-one__table td:has(.file) {
+  display: flex;
+  flex-direction: column;
+}
+.shop-one__table td .file {
   background-color: var(--black);
   color: #fff;
   font-weight: 700;
   display: inline-flex;
   align-items: center;
+  margin-right: auto;
 }
-.shop-one__table td a.file::after {
+.shop-one__table td .file::after {
   content: "";
   background-image: url(../../../assets/img/common/icon/arrow--fff.svg);
   background-size: cover;
 }
-.shop-one__table td a.file.ext-fff::after {
+.shop-one__table td .file.ext-fff::after {
   background-image: url(../../../assets/img/common/icon/ext--fff.svg);
 }
 @media (hover: hover) {
-  .shop-one__table td a.file.ext-fff:hover {
+  .shop-one__table td .file.ext-fff:hover {
     transform: none;
   }
-  .shop-one__table td a.file.ext-fff:hover::after {
+  .shop-one__table td .file.ext-fff:hover::after {
     transform: none;
   }
 }
-.shop-one__table td a.file span {
+.shop-one__table td .file span {
   font-weight: inherit;
   background-color: #fff;
 }
@@ -336,34 +341,37 @@
   .shop-one__table td p + a.file {
     margin-top: 16px;
   }
-  .shop-one__table td a.file {
+  .shop-one__table td .file {
     height: 40px;
     padding: 0 24px;
     border-radius: 4px;
     gap: 8px;
   }
-  .shop-one__table td a.file::after {
+  .shop-one__table td .file::after {
     width: 12px;
     height: 12px;
     transition: 0.3s;
   }
-  .shop-one__table td a.file.ext-fff {
+  .shop-one__table td .file.ext-fff {
     gap: 4px;
   }
-  .shop-one__table td a.file.ext-fff::after {
+  .shop-one__table td .file.ext-fff::after {
     width: 14px;
     height: 14px;
   }
-  .shop-one__table td a.file span {
+  .shop-one__table td .file span {
     padding: 0 6px;
   }
 }
 @media screen and (min-width: 769px) and (hover: hover) {
-  .shop-one__table td a.file:hover::after {
+  .shop-one__table td .file:hover::after {
     transform: translateX(4px);
   }
 }
 @media screen and (min-width: 769px) {
+  .shop-one__table td .file + .file {
+    margin-top: 8px;
+  }
   .shop-one__table td[data-shop=access] a:not(.file)::after {
     width: 14px;
     height: 14px;
@@ -409,24 +417,27 @@
     vertical-align: text-top;
     margin-left: 2px;
   }
-  .shop-one__table td a.file {
-    padding: 6px 10px 6px 12px;
+  .shop-one__table td .file {
+    padding: 6px 10px 8px 12px;
     border-radius: 4px;
     gap: 6px;
   }
-  .shop-one__table td a.file::after {
+  .shop-one__table td .file::after {
     width: 10px;
     height: 10px;
   }
-  .shop-one__table td a.file.ext-fff {
+  .shop-one__table td .file.ext-fff {
     gap: 2px;
   }
-  .shop-one__table td a.file.ext-fff::after {
+  .shop-one__table td .file.ext-fff::after {
     width: 12px;
     height: 12px;
   }
-  .shop-one__table td a.file span {
+  .shop-one__table td .file span {
     padding: 0 4px;
+  }
+  .shop-one__table td .file + .file {
+    margin-top: 6px;
   }
   .shop-one__table td[data-shop=access] a::after {
     width: 10px;
@@ -906,6 +917,7 @@
     font-size: min(3.2vw, 1.4rem);
     padding-left: 10px;
     padding-right: 8px;
+    white-space: pre;
   }
 }
 .shop-one__pref-list ul {
