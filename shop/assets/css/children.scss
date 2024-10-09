@@ -91,13 +91,13 @@
 
             a {
                 position: relative;
-                padding-bottom: clamp(14px, 4.44vw, 22px);
+                padding-bottom: clamp(16px, 4.8vw, 26px);
 
                 &::before {
                     all: unset;
                     display: block;
                     position: absolute;
-                    bottom: clamp(8px, 2.44vw, 12px);
+                    bottom: clamp(9px, 2.44vw, 13px);
                     left: 0;
                     right: 0;
                     color: inherit;
@@ -109,7 +109,7 @@
                 }
 
                 &:first-of-type {
-                    font-size: clamp(1.6rem, 4.2vw, 2.2rem);
+                    font-size: clamp(1.7rem, 4.2vw, 2.2rem);
                     &::before {
                         content: "ここをタップすると電話がかかります";
                     }
@@ -372,7 +372,7 @@
             a {
                 &:not(.file) {
                     text-decoration: underline;
-                    text-underline-offset: 2px;
+                    text-underline-offset: 1px;
                 }
             }
         }

@@ -256,6 +256,7 @@
     .shop-tags {
         .tag {
             font-size: clamp(1.1rem, 3.14vw, 1.2rem);
+            height: clamp(28px, 8.75vw, 32px);
         }
     }
 }
