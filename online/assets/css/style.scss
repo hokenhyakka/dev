@@ -146,8 +146,13 @@
             .wrap__attention-area {
                 background-color: var(--gray--very-light);
                 padding: 34px 10px;
-                .dot-line {
-                    font-size: clamp(0.85rem,5vw,1.6rem);
+
+                h2{
+                    font-size: clamp(1.5rem,3.78vw,1.8rem);
+
+                    &::before{
+                        display: none;
+                    }
                 }
                 ul {
                     margin-top: 16px;
