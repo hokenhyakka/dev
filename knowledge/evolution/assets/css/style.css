@@ -9,7 +9,8 @@
   background-color: var(--pink--very-light);
 }
 .content__evolution-area > dl dd {
-  line-height: 170%;
+  line-height: 190%;
+  letter-spacing: 0.06em;
 }
 .content__evolution-area > dl dd span {
   color: var(--pink--primary);

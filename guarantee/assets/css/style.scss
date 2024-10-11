@@ -21,7 +21,7 @@
 }
 
 .guarantee-type__one {
-    border-radius: 4px;
+    
 
     h2 {
         line-height: 100%;
@@ -142,6 +142,7 @@
 
 @media screen and (max-width: 768px) and (min-width: 451px) {
     .guarantee-type__one {
+        margin-top: clamp(24px, 7.11vw, 56px);
         ul {
             grid-template-columns: repeat(3, 1fr);
             column-gap: clamp(8px, 1.78vw, 24px);
@@ -164,7 +165,7 @@
 
 @media screen and (max-width: 768px) {
     .guarantee-type__one {
-        margin-top: clamp(24px, 7.11vw, 56px);
+        
         h2 {
             font-size: clamp(2rem, 5.33vw, 2.8rem);
             padding-top: clamp(10px, 2.67vw, 16px);
@@ -191,6 +192,12 @@
                 height: clamp(10px, 2.22vw, 12px);
             }
         }
+    }
+}
+
+@media screen and (min-width: 451px){
+    .guarantee-type__one{
+        border-radius: 4px;
     }
 }
 
