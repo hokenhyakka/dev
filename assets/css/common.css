@@ -1520,7 +1520,7 @@ footer > span {
   .cmn__search-shop--stick a {
     border-radius: 6px;
     height: 80px;
-    font-size: clamp(1.7rem, 4vw, 2.2rem);
+    font-size: clamp(1.7rem, 3.78vw, 2.2rem);
     padding: 0 clamp(10px, 2.22vw, 24px);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   }
@@ -1546,14 +1546,17 @@ footer > span {
   .cmn__search-shop--stick a {
     border-radius: 4px;
     height: clamp(54px, 16.88vw, 72px);
-    font-size: clamp(1.2rem, 3.75vw, 1.6rem);
+    font-size: clamp(1.3rem, 3.78vw, 1.7rem);
     padding: 0 clamp(10px, 3.25vw, 14px);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   }
   .cmn__search-shop--stick a::after {
     width: 10px;
+    width: clamp(8px, 2.22vw, 10px);
     height: 10px;
+    height: clamp(8px, 2.22vw, 10px);
     right: 8px;
+    right: clamp(4px, 1.78vw, 8px);
     position: absolute;
   }
   .cmn__search-shop--stick a:first-of-type {
