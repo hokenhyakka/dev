@@ -46,7 +46,7 @@
     line-height: 180%;
   }
   .index .btn {
-    width: min(460px, 100%);
+    width: min(400px, 100%);
   }
   .index .btn a {
     height: clamp(62px, 16vw, 80px);
@@ -683,7 +683,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
 }
 .about .btns a:has(span) {
   position: relative;
@@ -715,6 +714,7 @@
   .about .btns {
     gap: 32px 20px;
     margin-top: 56px;
+    width: 100%;
   }
   .about .btns a {
     width: calc(50% - 10px);

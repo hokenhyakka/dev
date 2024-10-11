@@ -52,7 +52,7 @@
             }
         }
         .btn {
-            width: min(460px, 100%);
+            width: min(400px, 100%);
             a {
                 height: clamp(62px, 16vw, 80px);
                 font-size: clamp(1.5rem, 4vw, 2.2rem);
@@ -841,7 +841,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        width: 100%;
+        
 
         a{
             &:has(span){
@@ -881,6 +881,7 @@
         .btns {
             gap: 32px 20px;
             margin-top: 56px;
+            width: 100%;
 
             a {
                 width: calc(50% - 10px);
