@@ -1103,7 +1103,7 @@ footer > span {
     height: 100%;
   }
   .footer__company p {
-    font-size: min(2.45vw, 1.4rem);
+    font-size: min(2.5vw, 1.4rem);
   }
   .footer__exts {
     margin-top: clamp(24px, 4vw, 24px);
