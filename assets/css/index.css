@@ -681,7 +681,6 @@
 }
 .about .btns {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
 }
 .about .btns a:has(span) {
@@ -715,6 +714,7 @@
     gap: 32px 20px;
     margin-top: 56px;
     width: 100%;
+    flex-wrap: wrap;
   }
   .about .btns a {
     width: calc(50% - 10px);
