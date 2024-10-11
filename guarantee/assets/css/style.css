@@ -167,6 +167,9 @@
     margin-left: -15px;
     overflow-x: clip;
   }
+  .guarantee-type__one[data-type=life] {
+    margin-top: 40px;
+  }
   .guarantee-type__one h2 {
     border-radius: 0;
   }

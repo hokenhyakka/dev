@@ -165,6 +165,8 @@
 
 @media screen and (max-width: 768px) {
     .guarantee-type__one {
+
+        
         
         h2 {
             font-size: clamp(2rem, 5.33vw, 2.8rem);
@@ -206,6 +208,9 @@
         width: 100vw;
         margin-left: -15px;
         overflow-x: clip;
+        &[data-type="life"]{
+            margin-top: 40px;
+        }
 
         h2{
             border-radius: 0;
