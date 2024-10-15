@@ -10,6 +10,16 @@
     }
 }
 
+@media screen and (max-width: 768px){
+    .site-map{
+        background-color: #fff;
+
+        & + .cmn__search-shop{
+            margin-top: 0;
+        }
+    }
+}
+
 .site-map__main {
     > ul {
         display: flex;
@@ -72,7 +82,6 @@
         padding: 64px 56px;
         background-color: #fff;
         border-radius: 12px;
-
         box-shadow: 0 0 24px rgba(0, 0, 0, 0.06);
     }
 }

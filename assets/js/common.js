@@ -244,27 +244,27 @@ document.getElementById("backToTop").addEventListener("click", function (e) {
     history.replaceState(null, null, " ");
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const backToTop = document.querySelector("#backToTop");
-    const footer = document.querySelector("footer");
+// document.addEventListener("DOMContentLoaded", function () {
+//     const backToTop = document.querySelector("#backToTop");
+//     const footer = document.querySelector("footer");
 
-    function toggleBackToTop() {
-        if (window.innerWidth <= 768) {
-            const footerRect = footer.getBoundingClientRect();
-            const windowHeight = window.innerHeight;
+//     function toggleBackToTop() {
+//         if (window.innerWidth <= 768) {
+//             const footerRect = footer.getBoundingClientRect();
+//             const windowHeight = window.innerHeight;
 
-            if (footerRect.top <= windowHeight && footerRect.bottom >= 0) {
-                backToTop.classList.add("is-hidden");
-            } else {
-                backToTop.classList.remove("is-hidden");
-            }
-        } else {
-            backToTop.classList.remove("is-hidden");
-        }
-    }
+//             if (footerRect.top <= windowHeight && footerRect.bottom >= 0) {
+//                 backToTop.classList.add("is-hidden");
+//             } else {
+//                 backToTop.classList.remove("is-hidden");
+//             }
+//         } else {
+//             backToTop.classList.remove("is-hidden");
+//         }
+//     }
 
-    window.addEventListener("scroll", toggleBackToTop);
-    window.addEventListener("resize", toggleBackToTop);
-    toggleBackToTop();
-});
+//     window.addEventListener("scroll", toggleBackToTop);
+//     window.addEventListener("resize", toggleBackToTop);
+//     toggleBackToTop();
+// });
 

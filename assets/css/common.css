@@ -1,6 +1,5 @@
 :root {
   --black: #4a3e42;
-  --black--dark: #272224;
   --gray--very-light: #f5f5f5;
   --pink--primary: #e5005a;
   --pink--pale: #f2d5e1;
@@ -864,7 +863,6 @@ h3.flowers::after {
 }
 /* footer */
 footer {
-  background-color: var(--black--dark);
   background-color: #f1f0f0;
   padding-bottom: 24px;
 }
@@ -1572,7 +1570,7 @@ footer > span {
 }
 @media screen and (max-width: 768px) and (min-width: 451px) {
   body:has(.cmn__search-shop--stick) footer {
-    padding-bottom: calc(80px + clamp(10px, 2.22vw, 20px) + 24px);
+    padding-bottom: calc(80px + clamp(10px, 2.22vw, 20px) + clamp(44px, 14.5vw, 72px) + 36px);
   }
   body:has(.cmn__search-shop--stick) #backToTop {
     bottom: calc(80px + clamp(10px, 2.22vw, 20px) + 18px);
@@ -1581,10 +1579,10 @@ footer > span {
 }
 @media screen and (max-width: 450px) {
   body:has(.cmn__search-shop--stick) footer {
-    padding-bottom: calc(clamp(54px, 16.88vw, 72px) + 10px + 12px);
+    padding-bottom: calc(clamp(40px, 15.56vw, 70px) + clamp(44px, 14.5vw, 72px) + 10px + 24px);
   }
   body:has(.cmn__search-shop--stick) #backToTop {
-    bottom: calc(clamp(54px, 16.88vw, 72px) + 10px + 14px);
+    bottom: clamp(68px, 19.56vw, 88px);
     right: 10px;
   }
 }

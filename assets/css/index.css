@@ -794,16 +794,15 @@
 .connection__slider ul {
   display: flex;
   width: 100%;
-}
-.connection__slider li {
-  height: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .connection__slider picture {
   background-color: #fff;
-  height: 100%;
+  width: 100%;
 }
 .connection__slider img {
-  height: 100%;
+  width: 100%;
 }
 .connection__slider.life ul {
   animation: connectionSlide 80s linear infinite;
@@ -839,13 +838,13 @@
   }
   .connection__slider {
     margin-top: 24px;
-    gap: 24px;
+    gap: clamp(8px, 0.78vw, 24px);
   }
   .connection__slider ul {
     gap: clamp(8px, 0.78vw, 24px);
   }
   .connection__slider li {
-    height: clamp(64px, 6.25vw, 84px);
+    width: clamp(144px, 18.75vw, 180px);
   }
 }
 @media screen and (max-width: 768px) {
@@ -873,7 +872,7 @@
     gap: 10px;
   }
   .connection__slider li {
-    height: clamp(46px, 12vw, 64px);
+    width: clamp(90px, 26.67vw, 140px);
   }
   .connection__slider.life ul {
     animation-duration: 40s;

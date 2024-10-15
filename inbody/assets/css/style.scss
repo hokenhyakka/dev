@@ -160,11 +160,14 @@
 @media screen and (max-width: 768px) {
     .inbody__popular-area {
         padding: 0;
+
         .popular-area__wrap {
             margin-top: 15px;
             flex-direction: column;
+
             .popular-area__img {
                 width: min(100%, 217px);
+
                 img {
                     width: 100%;
                     margin-left: 10%;
@@ -177,6 +180,7 @@
                 li {
                     display: flex;
                     margin-bottom: 8px;
+
                     img {
                         margin-top: 2px;
                     }
@@ -196,7 +200,6 @@
     }
 
     .inbody {
-        // padding: 0 20px;
         .inbody__wrap {
             .wrap__inner {
                 margin-top: 50px;

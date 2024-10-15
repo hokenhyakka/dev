@@ -207,7 +207,6 @@
 
     h2 {
         color: var(--black);
-
         line-height: 160%;
 
         span {
@@ -228,9 +227,11 @@
             background-image: url(../img/index/search-shop/triangle.svg);
             background-size: cover;
         }
+
         &::after {
             transform: scale(-1, 1);
         }
+
         p {
             font-weight: 900;
             color: var(--pink--primary);
@@ -281,6 +282,7 @@
             img {
                 width: min(250px, 100%);
             }
+
             &:nth-of-type(n + 2) {
                 margin-top: -56px;
                 width: 50%;
@@ -308,6 +310,7 @@
                 width: 13px;
                 height: 22px;
             }
+
             p {
                 font-size: 1.9rem;
             }
@@ -319,6 +322,7 @@
     .search-shop {
         padding-top: clamp(34px, 8.89vw, 64px);
         padding-bottom: clamp(28px, 10.67vw, 56px);
+        
         .row-wide {
             flex-direction: column;
         }
@@ -977,18 +981,15 @@
     ul {
         display: flex;
         width: 100%;
-    }
-
-    li{
-        height: 100%;
+        width: fit-content;
     }
 
     picture {
         background-color: #fff;
-        height: 100%;
+        width: 100%;
     }
     img{
-        height: 100%;
+        width: 100%;
     }
 
     &.life {
@@ -1036,13 +1037,13 @@
 
     .connection__slider {
         margin-top: 24px;
-        gap: 24px;
+        gap: clamp(8px, 0.78vw, 24px);
 
         ul {
             gap: clamp(8px, 0.78vw, 24px);
         }
         li {
-            height: clamp(64px, 6.25vw, 84px);
+            width: clamp(144px, 18.75vw,180px);
         }
 
         
@@ -1076,7 +1077,7 @@
             gap: 10px;
         }
         li {
-            height: clamp(46px, 12vw, 64px);
+            width: clamp(90px, 26.67vw,140px);
         }
 
         &.life{
