@@ -57,6 +57,19 @@
             letter-spacing: 0;
         }
     }
+
+    .att {
+        font-size: 1.3rem;
+        display: grid;
+        gap: 2px;
+        &::before {
+            content: "※";
+            font-size: inherit;
+            font-weight: inherit;
+            color: inherit;
+            display: inline;
+        }
+    }
 }
 
 .sumitomo-1-up {
@@ -97,6 +110,12 @@
             }
         }
 
+        .att {
+            font-size: 1.3rem;
+            grid-template-columns: 1.3rem auto;
+            margin-top: 38px;
+        }
+
         > .btn {
             margin-top: 96px;
         }
@@ -112,6 +131,12 @@
             grid-template-columns: repeat(3, 1fr);
             row-gap: clamp(24px, 5.33vw, 32px);
             column-gap: clamp(16px, 3.56vw, 22px);
+        }
+
+        .att {
+            font-size: var(--fs-sp--min10px);
+            grid-template-columns: var(--fs-sp--min10px) auto;
+            margin-top: 12px;
         }
     }
 }
