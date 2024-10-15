@@ -1272,3 +1272,59 @@
         }
     }
 }
+
+
+@media screen and (min-width: 769px){
+    .cmn__search-shop--stick{
+        top: unset;
+        bottom: 16px;
+        left: 0;
+        width: 100%;
+
+        a{
+            background-color: var(--pink--primary);
+            writing-mode: horizontal-tb;
+            text-align: center;
+            justify-content: center;
+            width: min(560px, 100%);
+            margin: 0 auto;
+            border-radius: 50vw;
+            padding-bottom: 22px;
+            position: relative;
+            transition: .3s;
+
+            p{
+                line-height: 120%;
+            }
+
+            span{
+                font-weight: 700;
+                color: inherit;
+                font-size: clamp(1.6rem, 2.08svw, 1.8rem);
+            }
+
+            &::before{
+                display: none;
+            }
+
+            &::after{
+                content: '';
+                width: 10px;
+                height: 10px;
+                background-image: url(../../../assets/img/common/icon/arrow--fff.svg);
+                position: absolute;
+                right: 32px;
+            }
+
+            @media (hover: hover){
+                &:hover{
+                    background-color: #c2004c;
+                }
+            }
+        }
+    }
+    
+    footer{
+        padding-bottom: calc(24px + clamp(124px, 8.61vw, 132px));
+    }
+}

@@ -401,6 +401,14 @@
                 height: clamp(44px, 10.67vw, 50px);
                 padding-left: 4px;
             }
+
+            .phone-call{
+                order: 2;
+            }
+
+            .appointment{
+                order: 1;
+            }
         }
     }
 }

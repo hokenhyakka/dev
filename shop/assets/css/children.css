@@ -1009,4 +1009,53 @@
     font-size: var(--fs-sp--min12px);
     padding: 0 clamp(12px, 3.25vw, 14px);
   }
+}
+@media screen and (min-width: 769px) {
+  .cmn__search-shop--stick {
+    top: unset;
+    bottom: 16px;
+    left: 0;
+    width: 100%;
+  }
+  .cmn__search-shop--stick a {
+    background-color: var(--pink--primary);
+    writing-mode: horizontal-tb;
+    text-align: center;
+    justify-content: center;
+    width: min(560px, 100%);
+    margin: 0 auto;
+    border-radius: 50vw;
+    padding-bottom: 22px;
+    position: relative;
+    transition: 0.3s;
+  }
+  .cmn__search-shop--stick a p {
+    line-height: 120%;
+  }
+  .cmn__search-shop--stick a span {
+    font-weight: 700;
+    color: inherit;
+    font-size: clamp(1.6rem, 2.08svw, 1.8rem);
+  }
+  .cmn__search-shop--stick a::before {
+    display: none;
+  }
+  .cmn__search-shop--stick a::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-image: url(../../../assets/img/common/icon/arrow--fff.svg);
+    position: absolute;
+    right: 32px;
+  }
+}
+@media screen and (min-width: 769px) and (hover: hover) {
+  .cmn__search-shop--stick a:hover {
+    background-color: #c2004c;
+  }
+}
+@media screen and (min-width: 769px) {
+  footer {
+    padding-bottom: calc(24px + clamp(124px, 8.61vw, 132px));
+  }
 }/*# sourceMappingURL=children.css.map */
