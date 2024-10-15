@@ -91,6 +91,12 @@
 }
 
 @media screen and (min-width: 769px) {
+    .pc {
+        display: block;
+    }
+    .sp {
+        display: none;
+    }
     .guarantee-one__list {
         margin-top: 96px;
 
@@ -132,16 +138,16 @@
             row-gap: clamp(24px, 5.33vw, 32px);
             column-gap: clamp(16px, 3.56vw, 22px);
         }
-
-        .att {
-            font-size: var(--fs-sp--min10px);
-            grid-template-columns: var(--fs-sp--min10px) auto;
-            margin-top: 12px;
-        }
     }
 }
 
 @media screen and (max-width: 768px) {
+    .pc {
+        display: none;
+    }
+    .sp {
+        display: block;
+    }
     .guarantee-one {
         .row {
             > .att {
@@ -170,6 +176,12 @@
                     font-size: 84%;
                 }
             }
+        }
+
+        .att {
+            font-size: var(--fs-sp--min10px);
+            grid-template-columns: var(--fs-sp--min10px) auto;
+            margin-top: 12px;
         }
 
         > .btn {
