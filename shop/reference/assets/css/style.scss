@@ -214,6 +214,16 @@
                 &::after{
                     background-image: url(../../../../assets/img/common/icon/ext--prm.svg);
                 }
+
+                @media (hover: hover){
+                    &:hover{
+                        background-color: var(--pink--very-light);
+
+                        &::after{
+                            transform: none;
+                        }
+                    }
+                }
             }
             &:nth-of-type(2) {
                 &::after {
