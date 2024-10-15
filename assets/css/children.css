@@ -239,6 +239,9 @@
   .p-child .row-wide .att,
   .p-child section .att {
     font-size: 1.3rem;
+    display: grid;
+    grid-template-columns: 1.3rem auto;
+    gap: 2px;
   }
   .p-child .att-list {
     gap: 16px;
@@ -248,6 +251,9 @@
   .p-child .att-list li {
     font-size: 1.3rem;
     line-height: 160%;
+    display: grid;
+    grid-template-columns: 2.6rem auto;
+    gap: 2px;
   }
   .p-child .att-list li::before {
     margin-right: 6px;
@@ -275,6 +281,9 @@
   .p-child .row-wide > .att,
   .p-child section > .att {
     font-size: var(--fs-sp--min10px);
+    display: grid;
+    grid-template-columns: var(--fs-sp--min10px) auto;
+    gap: 2px;
   }
   .p-child .att {
     font-size: var(--fs-sp--min10px);
@@ -286,6 +295,9 @@
   }
   .p-child .att-list li {
     font-size: var(--fs-sp--min10px);
+    display: grid;
+    grid-template-columns: calc(var(--fs-sp--min10px) * 2) auto;
+    gap: 2px;
   }
   .p-child .att-list li::before {
     margin-right: 6px;

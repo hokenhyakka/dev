@@ -304,6 +304,9 @@
 
             .att {
                 font-size: 1.3rem;
+                display: grid;
+                grid-template-columns: 1.3rem auto;
+                gap: 2px;
             }
         }
 
@@ -315,6 +318,9 @@
             li{
                 font-size: 1.3rem;
                 line-height: 160%;
+                display: grid;
+                grid-template-columns: calc(1.3rem * 2) auto;
+                gap: 2px;
 
                 &::before{
                     margin-right: 6px;
@@ -345,6 +351,9 @@
 
             > .att {
                 font-size: var(--fs-sp--min10px);
+                display: grid;
+                grid-template-columns: var(--fs-sp--min10px) auto;
+                gap: 2px;
             }
         }
         .att {
@@ -357,6 +366,9 @@
 
             li{
                 font-size: var(--fs-sp--min10px);
+                display: grid;
+                grid-template-columns: calc(var(--fs-sp--min10px) * 2) auto;
+                gap: 2px;
 
                 &::before{
                     margin-right: 6px;
