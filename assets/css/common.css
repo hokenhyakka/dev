@@ -35,11 +35,11 @@ body {
   text-decoration: none;
   box-sizing: border-box;
   letter-spacing: 0.04em;
-  font-weight: normal;
   color: var(--black);
   font-kerning: auto;
   font-family: "Onest", "Noto Sans JP", sans-serif;
   font-feature-settings: "halt";
+  font-weight: normal;
   font-weight: 400;
 }
 *::before, *::after {
