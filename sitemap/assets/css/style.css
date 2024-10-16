@@ -44,6 +44,9 @@
   background-image: url(../../../assets/img/common/icon/arrow.svg);
   background-size: cover;
 }
+.site-map__main a:not(:has(img))::before {
+  background-color: #ccbbc1;
+}
 .site-map__main .ext {
   gap: 4px;
 }

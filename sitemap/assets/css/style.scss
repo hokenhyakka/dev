@@ -59,6 +59,12 @@
                 background-size: cover;
             }
         }
+        
+        &:not(:has(img)){
+            &::before{
+                background-color: #ccbbc1;
+            }
+        }
     }
 
     .ext {
