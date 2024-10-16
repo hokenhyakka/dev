@@ -9,14 +9,6 @@
     padding-bottom: clamp(32px, 10vw, 64px);
   }
 }
-@media screen and (max-width: 768px) {
-  .site-map {
-    background-color: #fff;
-  }
-  .site-map + .cmn__search-shop {
-    margin-top: 0;
-  }
-}
 .site-map__main > ul {
   display: flex;
   flex-direction: column;
@@ -59,6 +51,9 @@
   .site-map {
     margin-top: 40px;
   }
+  .site-map + .cmn__search-shop {
+    margin-top: 72px;
+  }
   .site-map__main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -70,6 +65,12 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .site-map {
+    background-color: #fff;
+  }
+  .site-map + .cmn__search-shop {
+    margin-top: 0;
+  }
   .site-map__main {
     display: flex;
     flex-direction: column;

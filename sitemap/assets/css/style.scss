@@ -10,16 +10,6 @@
     }
 }
 
-@media screen and (max-width: 768px){
-    .site-map{
-        background-color: #fff;
-
-        & + .cmn__search-shop{
-            margin-top: 0;
-        }
-    }
-}
-
 .site-map__main {
     > ul {
         display: flex;
@@ -59,9 +49,9 @@
                 background-size: cover;
             }
         }
-        
-        &:not(:has(img)){
-            &::before{
+
+        &:not(:has(img)) {
+            &::before {
                 background-color: #ccbbc1;
             }
         }
@@ -80,6 +70,10 @@
 @media screen and (min-width: 769px) {
     .site-map {
         margin-top: 40px;
+
+        & + .cmn__search-shop {
+            margin-top: 72px;
+        }
     }
     .site-map__main {
         display: grid;
@@ -92,6 +86,13 @@
     }
 }
 @media screen and (max-width: 768px) {
+    .site-map {
+        background-color: #fff;
+
+        & + .cmn__search-shop {
+            margin-top: 0;
+        }
+    }
     .site-map__main {
         display: flex;
         flex-direction: column;
