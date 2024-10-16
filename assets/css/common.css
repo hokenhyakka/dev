@@ -879,6 +879,7 @@ footer > span {
 @media (hover: hover) {
   footer a:not(:has(img))::before {
     background-color: var(--black);
+    background-color: #b5adb0;
   }
 }
 

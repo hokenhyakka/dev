@@ -1060,6 +1060,7 @@ footer {
             &:not(:has(img)) {
                 &::before {
                     background-color: var(--black);
+                    background-color: #b5adb0;
                 }
             }
         }

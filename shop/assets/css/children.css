@@ -296,6 +296,12 @@
 .shop-one__table td[data-shop=access] a:not(.file), .shop-one__table td[data-shop=email] a:not(.file) {
   text-decoration: underline;
   text-underline-offset: 1px;
+  text-decoration-color: #ccbbc1;
+}
+@media (hover: hover) {
+  .shop-one__table td[data-shop=access] a:not(.file):hover, .shop-one__table td[data-shop=email] a:not(.file):hover {
+    text-decoration: none;
+  }
 }
 .shop-one__table td .weekdays,
 .shop-one__table td .weekend {

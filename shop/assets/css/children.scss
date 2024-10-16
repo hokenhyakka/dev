@@ -373,6 +373,13 @@
                 &:not(.file) {
                     text-decoration: underline;
                     text-underline-offset: 1px;
+                    text-decoration-color: #ccbbc1;
+
+                    @media (hover: hover){
+                        &:hover{
+                            text-decoration: none;
+                        }
+                    }
                 }
             }
         }
