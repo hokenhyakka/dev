@@ -392,6 +392,7 @@
             line-height: 100%;
             letter-spacing: 0.02em;
             padding: 6px 8px 4px;
+            padding: 5px 8px;
         }
         .att {
             margin-top: 10px;
@@ -438,6 +439,10 @@
                 & + a.file {
                     margin-top: 16px;
                 }
+
+                br + span{
+                    font-size: 1.3rem;
+                }
             }
 
             .file {
@@ -480,10 +485,18 @@
 
             &[data-shop="access"] {
                 a {
+                    
+
+                    &:has(br){
+                        line-height: 170%;
+                        
+                    }
                     &:not(.file) {
+                        display: inline-block;
+                    margin-top: 4px;
                         &::after {
-                            width: 14px;
-                            height: 14px;
+                            width: 12px;
+                            height: 12px;
                             margin-left: 4px;
                         }
                     }
@@ -503,6 +516,7 @@
             .weekdays,
             .weekend {
                 font-size: 1.5rem;
+                font-size: 1.4rem;
             }
 
             .att {

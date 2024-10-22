@@ -311,6 +311,7 @@
   line-height: 100%;
   letter-spacing: 0.02em;
   padding: 6px 8px 4px;
+  padding: 5px 8px;
 }
 .shop-one__table td .att {
   margin-top: 10px;
@@ -347,6 +348,9 @@
   .shop-one__table td p + a.file {
     margin-top: 16px;
   }
+  .shop-one__table td p br + span {
+    font-size: 1.3rem;
+  }
   .shop-one__table td .file {
     height: 40px;
     padding: 0 24px;
@@ -378,9 +382,16 @@
   .shop-one__table td .file + .file {
     margin-top: 8px;
   }
+  .shop-one__table td[data-shop=access] a:has(br) {
+    line-height: 170%;
+  }
+  .shop-one__table td[data-shop=access] a:not(.file) {
+    display: inline-block;
+    margin-top: 4px;
+  }
   .shop-one__table td[data-shop=access] a:not(.file)::after {
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
     margin-left: 4px;
   }
   .shop-one__table td[data-shop=access] p {
@@ -392,6 +403,7 @@
   .shop-one__table td .weekdays,
   .shop-one__table td .weekend {
     font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .shop-one__table td .att {
     font-size: 1.2rem;

@@ -7,6 +7,7 @@
   line-height: 186%;
   background-color: #fff;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 4px 20px 0px rgb(245, 236, 240);
   position: relative;
 }
 .voice__comment-list li::before {
