@@ -133,34 +133,35 @@ const headerBtn = document.getElementById("header__btn");
 const header = document.getElementById("header");
 const headerNav = document.getElementById("header__nav");
 
-headerBtn.addEventListener("click", function () {
-    if (headerBtn.classList.contains("is-active")) {
-        headerBtn.classList.remove("is-active");
-        header.classList.remove("is-active");
-        headerNav.classList.remove("is-active");
-    } else {
-        headerBtn.classList.add("is-active");
-        header.classList.add("is-active");
-        headerNav.classList.add("is-active");
-    }
-});
-
-headerNav.addEventListener("click", function () {
-    if (headerBtn.classList.contains("is-active")) {
-        headerBtn.classList.remove("is-active");
-        header.classList.remove("is-active");
-        headerNav.classList.remove("is-active");
-    }
-});
-
-const headerMenuItems = document.querySelectorAll("header nav ul li a");
-headerMenuItems.forEach(function (headerMenuItem) {
-    headerMenuItem.addEventListener("click", function () {
-        headerBtn.classList.remove("is-active");
-        header.classList.remove("is-active");
+if (headerBtn) {
+    headerBtn.addEventListener("click", function () {
+        if (headerBtn.classList.contains("is-active")) {
+            headerBtn.classList.remove("is-active");
+            header.classList.remove("is-active");
+            headerNav.classList.remove("is-active");
+        } else {
+            headerBtn.classList.add("is-active");
+            header.classList.add("is-active");
+            headerNav.classList.add("is-active");
+        }
     });
-});
 
+    headerNav.addEventListener("click", function () {
+        if (headerBtn.classList.contains("is-active")) {
+            headerBtn.classList.remove("is-active");
+            header.classList.remove("is-active");
+            headerNav.classList.remove("is-active");
+        }
+    });
+
+    const headerMenuItems = document.querySelectorAll("header nav ul li a");
+    headerMenuItems.forEach(function (headerMenuItem) {
+        headerMenuItem.addEventListener("click", function () {
+            headerBtn.classList.remove("is-active");
+            header.classList.remove("is-active");
+        });
+    });
+}
 
 
 /* voice__list */
@@ -235,14 +236,19 @@ if (faqList.length === 0) {
 }
 
 /* back to top */
-document.getElementById("backToTop").addEventListener("click", function (e) {
-    e.preventDefault();
-    window.scrollTo({
-        top: document.getElementById("body").offsetTop,
-        behavior: "smooth",
+const backToTopBtn = document.getElementById("backToTop");
+
+if (backToTopBtn) {
+    backToTopBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: document.getElementById("body").offsetTop,
+            behavior: "smooth",
+        });
+        history.replaceState(null, null, " ");
     });
-    history.replaceState(null, null, " ");
-});
+}
+
 
 // document.addEventListener("DOMContentLoaded", function () {
 //     const backToTop = document.querySelector("#backToTop");
