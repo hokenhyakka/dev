@@ -1927,6 +1927,11 @@ footer {
             right: clamp(10px, 2.22vw, 20px);
         }
     }
+    body:not(:has(.cmn__search-shop--stick)){
+        footer{
+            padding-bottom: calc(clamp(44px, 14.5vw, 72px) + 44px);
+        }
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -1937,6 +1942,11 @@ footer {
         #backToTop {
             bottom: clamp(68px, 19.56vw, 88px);
             right: 10px;
+        }
+    }
+    body:not(:has(.cmn__search-shop--stick)){
+        footer{
+            padding-bottom: calc(clamp(44px, 14.5vw, 72px) + clamp(32px, 9.78vw, 44px));
         }
     }
 }
