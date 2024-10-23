@@ -388,6 +388,7 @@
   .shop__inner h3 {
     font-size: 2.3rem;
     width: 176px;
+    padding-bottom: 4px;
   }
   .shop__region {
     grid-template-columns: repeat(2, 176px);
