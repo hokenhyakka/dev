@@ -162,6 +162,9 @@
                     li {
                         font-size: 12px;
                         margin-bottom: 8px;
+                        display: grid;
+                        grid-template-columns: 16px auto;
+                        
                         &::before {
                             width: 16px;
                         }

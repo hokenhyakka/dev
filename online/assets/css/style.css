@@ -140,6 +140,8 @@
   .online .online__wrap .wrap__attention-area ul li {
     font-size: 12px;
     margin-bottom: 8px;
+    display: grid;
+    grid-template-columns: 16px auto;
   }
   .online .online__wrap .wrap__attention-area ul li::before {
     width: 16px;
