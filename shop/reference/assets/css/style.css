@@ -213,4 +213,7 @@
     gap: clamp(40px, 8.89vw, 48px);
     margin-top: 32px;
   }
+}
+body:has(.special) footer {
+  padding-bottom: 24px;
 }/*# sourceMappingURL=style.css.map */

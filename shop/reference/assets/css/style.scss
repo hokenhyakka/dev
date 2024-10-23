@@ -275,3 +275,7 @@
         }
     }
 }
+
+body:has(.special) footer{
+    padding-bottom: 24px;
+}
