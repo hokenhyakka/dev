@@ -1951,6 +1951,10 @@ footer {
     }
 }
 
+body:has(.special) footer {
+    padding-bottom: 24px;
+}
+
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
