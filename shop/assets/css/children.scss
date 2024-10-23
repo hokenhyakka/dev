@@ -375,8 +375,8 @@
                     text-underline-offset: 1px;
                     text-decoration-color: #ccbbc1;
 
-                    @media (hover: hover){
-                        &:hover{
+                    @media (hover: hover) {
+                        &:hover {
                             text-decoration: none;
                         }
                     }
@@ -440,7 +440,7 @@
                     margin-top: 16px;
                 }
 
-                br + span{
+                br + span {
                     font-size: 1.3rem;
                 }
             }
@@ -485,15 +485,12 @@
 
             &[data-shop="access"] {
                 a {
-                    
-
-                    &:has(br){
+                    &:has(br) {
                         line-height: 170%;
-                        
                     }
                     &:not(.file) {
                         display: inline-block;
-                    margin-top: 4px;
+                        margin-top: 4px;
                         &::after {
                             width: 12px;
                             height: 12px;
@@ -606,6 +603,8 @@
             &[data-shop="telNum"] {
                 a {
                     text-decoration: underline;
+                    text-underline-offset: 1px;
+                    text-decoration-color: #ccbbc1;
                 }
             }
 
@@ -1298,15 +1297,14 @@
     }
 }
 
-
-@media screen and (min-width: 769px){
-    .cmn__search-shop--stick{
+@media screen and (min-width: 769px) {
+    .cmn__search-shop--stick {
         top: unset;
         bottom: 16px;
         left: 0;
         width: 100%;
 
-        a{
+        a {
             background-color: var(--pink--primary);
             writing-mode: horizontal-tb;
             text-align: center;
@@ -1316,24 +1314,24 @@
             border-radius: 50vw;
             padding-bottom: 22px;
             position: relative;
-            transition: .3s;
+            transition: 0.3s;
 
-            p{
+            p {
                 line-height: 120%;
             }
 
-            span{
+            span {
                 font-weight: 700;
                 color: inherit;
                 font-size: clamp(1.6rem, 2.08svw, 1.8rem);
             }
 
-            &::before{
+            &::before {
                 display: none;
             }
 
-            &::after{
-                content: '';
+            &::after {
+                content: "";
                 width: 10px;
                 height: 10px;
                 background-image: url(../../../assets/img/common/icon/arrow--fff.svg);
@@ -1341,15 +1339,15 @@
                 right: 32px;
             }
 
-            @media (hover: hover){
-                &:hover{
+            @media (hover: hover) {
+                &:hover {
                     background-color: #c2004c;
                 }
             }
         }
     }
-    
-    footer{
+
+    footer {
         padding-bottom: calc(24px + clamp(124px, 8.61vw, 132px));
     }
 }
