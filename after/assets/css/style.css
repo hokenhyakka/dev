@@ -164,15 +164,16 @@
     height: 100%;
     display: contents;
   }
-  .after__one table th, .after__one table td {
+  .after__one table th,
+  .after__one table td {
     align-items: start;
   }
   .after__one table th {
     font-size: var(--fs-sp--min13px);
     padding-left: 14px;
     padding-right: 14px;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    height: clamp(48px, 12vw, 56px);
+    align-items: center;
   }
   .after__one table td {
     font-size: var(--fs-sp--min12px);
