@@ -199,6 +199,7 @@
 .p-child .row-wide > p,
 .p-child section > p {
   line-height: 187%;
+  line-height: 197%;
 }
 .p-child .att::before {
   content: "※";
@@ -269,6 +270,7 @@
   .p-child .row-wide > p,
   .p-child section > p {
     font-size: var(--fs-sp--min12px);
+    letter-spacing: 0.08em;
   }
   .p-child .row > p:first-child,
   .p-child .row-nar > p:first-child,
@@ -285,6 +287,7 @@
     display: grid;
     grid-template-columns: var(--fs-sp--min10px) auto;
     gap: 2px;
+    letter-spacing: 0.04em;
   }
   .p-child .att {
     font-size: var(--fs-sp--min10px);

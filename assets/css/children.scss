@@ -252,6 +252,7 @@
     section {
         > p {
             line-height: 187%;
+            line-height: 197%;
         }
     }
     .att {
@@ -343,6 +344,7 @@
         section {
             > p {
                 font-size: var(--fs-sp--min12px);
+                letter-spacing: 0.08em;
 
                 &:first-child {
                     margin-top: clamp(32px, 8vw, 56px);
@@ -355,6 +357,7 @@
                 display: grid;
                 grid-template-columns: var(--fs-sp--min10px) auto;
                 gap: 2px;
+                letter-spacing: 0.04em;
             }
         }
         .att {
