@@ -127,6 +127,8 @@ table {
         width: 16px;
         height: 16px;
         background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 }
 .ext {
@@ -1163,6 +1165,8 @@ footer {
         &::after {
             background-image: url(../img/common/icon/ext.svg);
             background-size: cover;
+            background-size: contain;
+    background-repeat: no-repeat;
         }
     }
 }

@@ -126,6 +126,8 @@ table {
   width: 16px;
   height: 16px;
   background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .ext::after {
@@ -971,6 +973,8 @@ footer > span {
 .footer__exts .ext::after {
   background-image: url(../img/common/icon/ext.svg);
   background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @media screen and (min-width: 769px) and (max-width: 1040px) {
