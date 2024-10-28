@@ -675,6 +675,9 @@
     font-size: min(2.67vw, 1.1rem);
     margin-top: -2%;
   }
+  .recommend__slider a[data-reco=kenkou] h3 {
+    margin-top: 4%;
+  }
   .recommend__slider a[data-reco=kenkou] p {
     font-size: min(3vw, 1.5rem);
   }
