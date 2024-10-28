@@ -91,6 +91,12 @@
                 font-size: clamp(1.5rem, 4vw, 2.2rem);
                 padding-left: 10px;
             }
+
+            &.mini{
+                a{
+                    font-size: clamp(1.2rem, 2.89vw, 1.6rem);
+                }
+            }
         }
     }
 }
@@ -808,7 +814,7 @@
             }
 
             h3{
-                font-size: min(3.3vw, 2.6rem);
+                font-size: min(3.5vw, 2.8rem);
             }
 
             &[data-reco="worry"] {
@@ -991,6 +997,7 @@
 
         .btn {
             margin-top: clamp(40px, 10.67vw, 56px);
+            margin-top: clamp(24px, 7.11vw, 56px);
         }
     }
     .about__features {
