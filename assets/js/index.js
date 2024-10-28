@@ -13,8 +13,14 @@ const swiper = new Swiper(".slider", {
 const recommendSwiper = new Swiper(".recommend__slider", {
     loop: true,
     speed: 1000,
-    centeredSlides: true,
-    slidesPerView: 'auto',
+    slidesPerView: 2,
+    centeredSlides: false,
+    breakpoints: {
+        769: {
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        }
+    },
     autoplay: {
         delay: 4000,
     },
