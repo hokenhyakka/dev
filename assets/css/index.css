@@ -650,6 +650,8 @@
   .recommend__slider a::after {
     right: calc(clamp(16px, 1.56vw, 44px) / 4);
     bottom: -5px;
+    right: 0;
+    border-radius: 8px;
   }
 }
 @media screen and (max-width: 768px) and (hover: hover) {
@@ -662,7 +664,7 @@
 }
 @media screen and (max-width: 768px) {
   .recommend__slider a h3 {
-    font-size: min(3.3vw, 2.8rem);
+    font-size: min(3.5vw, 2.8rem);
   }
   .recommend__slider a[data-reco=worry] p {
     font-size: min(3vw, 1.5rem);
