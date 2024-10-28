@@ -1,4 +1,25 @@
 @charset "UTF-8";
+.index .btn.mini {
+  width: 100%;
+  display: inline-flex;
+  justify-content: end;
+}
+.index .btn.mini a {
+  background-color: transparent;
+  color: var(--pink--primary);
+  height: auto;
+  padding: 0;
+  box-shadow: none;
+}
+.index .btn.mini a::after {
+  background-image: url(../img/common/icon/arrow--prm.svg);
+}
+@media (hover: hover) {
+  .index .btn.mini a:hover {
+    transform: none;
+  }
+}
+
 @media screen and (min-width: 769px) {
   .index {
     padding-bottom: 144px;
@@ -24,6 +45,9 @@
     font-size: 2.6rem;
     height: 96px;
     padding-left: 12px;
+  }
+  .index .btn.mini a {
+    font-size: 1.6rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -542,34 +566,6 @@
   margin-top: 2%;
 }
 
-@media screen and (min-width: 769px) {
-  .recommend__slider a::after {
-    right: calc(clamp(16px, 1.56vw, 44px) / 4);
-    bottom: -6px;
-  }
-}
-@media screen and (min-width: 769px) and (hover: hover) {
-  .recommend__slider a:hover {
-    transform: translateX(calc(clamp(16px, 1.56vw, 44px) / 4)) translateY(6px);
-  }
-  .recommend__slider a:hover::after {
-    transform: translateX(calc(-1 * clamp(16px, 1.56vw, 44px) / 4)) translateY(-6px);
-  }
-}
-@media screen and (max-width: 768px) {
-  .recommend__slider a::after {
-    right: calc(clamp(16px, 1.56vw, 44px) / 4);
-    bottom: -5px;
-  }
-}
-@media screen and (max-width: 768px) and (hover: hover) {
-  .recommend__slider a:hover {
-    transform: translateX(calc(clamp(16px, 1.56vw, 44px) / 4)) translateY(5px);
-  }
-  .recommend__slider a:hover::after {
-    transform: translateX(calc(-1 * clamp(16px, 1.56vw, 44px) / 4)) translateY(-5px);
-  }
-}
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
@@ -586,11 +582,27 @@
     margin-top: 48px;
     gap: 24px;
   }
-  .recommend__slider a[data-reco=worry] h3 {
+  .recommend__slider a::after {
+    right: calc(clamp(16px, 1.56vw, 44px) / 4);
+    bottom: -6px;
+  }
+}
+@media screen and (min-width: 769px) and (hover: hover) {
+  .recommend__slider a:hover {
+    transform: translateX(calc(clamp(16px, 1.56vw, 44px) / 4)) translateY(6px);
+  }
+  .recommend__slider a:hover::after {
+    transform: translateX(calc(-1 * clamp(16px, 1.56vw, 44px) / 4)) translateY(-6px);
+  }
+}
+@media screen and (min-width: 769px) {
+  .recommend__slider a h3 {
     font-size: 2.8rem;
   }
-  .recommend__slider a[data-reco=worry] p {
+  .recommend__slider a p {
     font-size: 1.5rem;
+  }
+  .recommend__slider a[data-reco=worry] p {
     margin-top: 2%;
   }
   .recommend__slider a[data-reco=kenkou] div > span {
@@ -601,15 +613,11 @@
   .recommend__slider a[data-reco=kenkou] p {
     font-size: 1.8rem;
   }
-  .recommend__slider a[data-reco=kenkou] h3 {
-    font-size: 2.8rem;
-  }
-  .recommend__slider a[data-reco=knowledge] h3 {
-    font-size: 2.8rem;
-  }
   .recommend__slider a[data-reco=knowledge] p {
-    font-size: 1.5rem;
     line-height: 160%;
+    margin-top: 2%;
+  }
+  .recommend__slider a[data-reco=after] p {
     margin-top: 2%;
   }
 }
@@ -631,6 +639,20 @@
     height: auto;
     max-height: 266px;
   }
+  .recommend__slider a::after {
+    right: calc(clamp(16px, 1.56vw, 44px) / 4);
+    bottom: -5px;
+  }
+}
+@media screen and (max-width: 768px) and (hover: hover) {
+  .recommend__slider a:hover {
+    transform: translateX(calc(clamp(16px, 1.56vw, 44px) / 4)) translateY(5px);
+  }
+  .recommend__slider a:hover::after {
+    transform: translateX(calc(-1 * clamp(16px, 1.56vw, 44px) / 4)) translateY(-5px);
+  }
+}
+@media screen and (max-width: 768px) {
   .recommend__slider a[data-reco=worry] h3 {
     font-size: min(5.31vw, 2.6rem);
   }
@@ -712,21 +734,8 @@
     font-size: 2.8rem;
     line-height: 150%;
   }
-  .about .btns {
-    gap: 32px 20px;
-    margin-top: 56px;
-    width: 100%;
-    flex-wrap: wrap;
-  }
-  .about .btns a {
-    width: calc(50% - 10px);
-  }
-  .about .btns a:has(span) {
-    padding-bottom: 22px;
-  }
-  .about .btns a span {
-    font-size: 1.4rem;
-    bottom: 16px;
+  .about .btn {
+    margin-top: 32px;
   }
   .about > .row > p {
     font-size: clamp(1.6rem, 1.56vw, 1.8rem);
@@ -759,21 +768,8 @@
     text-align: left;
     margin-top: clamp(18px, 4.44vw, 24px);
   }
-  .about .btns {
-    flex-wrap: nowrap;
-    flex-direction: column;
-    gap: clamp(12px, 4vw, 20px);
+  .about .btn {
     margin-top: clamp(40px, 10.67vw, 56px);
-  }
-  .about .btns a {
-    width: 100%;
-  }
-  .about .btns a:has(span) {
-    padding-bottom: clamp(14px, 4vw, 22px);
-  }
-  .about .btns a span {
-    font-size: var(--fs-sp--min11px);
-    bottom: clamp(12px, 2.89vw, 16px);
   }
   .about__features {
     margin-top: clamp(42px, 10.22vw, 56px);
@@ -827,7 +823,7 @@
     margin-bottom: 120px;
   }
   .connection .btn {
-    margin-top: 72px;
+    margin-top: 48px;
   }
   .connection__list {
     margin-top: 80px;
@@ -898,7 +894,7 @@
     margin-top: 10px;
   }
   .voice .btn {
-    margin-top: 80px;
+    margin-top: 40px;
   }
   .voice__satisfaction {
     margin-top: 56px;
@@ -928,7 +924,7 @@
     margin-bottom: 120px;
   }
   .faq .btn {
-    margin-top: 48px;
+    margin-top: 32px;
   }
   .faq__list {
     margin-top: 64px;
