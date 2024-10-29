@@ -39,6 +39,7 @@ body {
     font-feature-settings: "halt";
     font-weight: normal;
     font-weight: 400;
+    text-align:justify;
 
     &::before,
     &::after {
@@ -1715,6 +1716,15 @@ footer {
     &.is-hidden {
         opacity: 0;
         z-index: -1;
+    }
+}
+
+.cmn__search-shop--stick{
+    a{
+        p{
+text-align: center;
+        }
+        
     }
 }
 

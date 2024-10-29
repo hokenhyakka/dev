@@ -42,6 +42,7 @@ body {
   font-feature-settings: "halt";
   font-weight: normal;
   font-weight: 400;
+  text-align: justify;
 }
 *::before, *::after {
   display: block;
@@ -1411,6 +1412,10 @@ footer > span {
 #backToTop.is-hidden {
   opacity: 0;
   z-index: -1;
+}
+
+.cmn__search-shop--stick a p {
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
