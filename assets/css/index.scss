@@ -658,6 +658,9 @@
                     font-weight: 100;
                 }
             }
+            small{
+                font-weight: 500;
+            }
         }
 
         &[data-reco="worry"] {
@@ -749,6 +752,7 @@
             p {
                 font-size: 1.5rem;
             }
+            
             &[data-reco="worry"] {
                 p {
                     margin-top: 2%;

@@ -537,6 +537,9 @@
 .recommend__slider a > div h3 span {
   font-weight: 100;
 }
+.recommend__slider a > div small {
+  font-weight: 500;
+}
 .recommend__slider a[data-reco=worry] h3 {
   line-height: 139%;
 }
