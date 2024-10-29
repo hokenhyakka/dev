@@ -14,12 +14,13 @@ const recommendSwiper = new Swiper(".recommend__slider", {
     loop: true,
     speed: 1000,
     slidesPerView: 2,
+
     centeredSlides: false,
     breakpoints: {
         769: {
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        }
+            slidesPerView: "auto",
+            centeredSlides: true,
+        },
     },
     autoplay: {
         delay: 4000,
@@ -38,5 +39,3 @@ document.querySelectorAll(".connection__slider").forEach((slider) => {
         ulElement.parentNode.appendChild(clonedUl);
     }
 });
-
-
