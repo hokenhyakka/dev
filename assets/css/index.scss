@@ -696,6 +696,14 @@
                 margin-top: 2%;
             }
         }
+        &[data-reco="guarantee"]{
+            p{
+                margin-top: 2%;
+            }
+            small{
+                margin-top: 1%;
+            }
+        }
     }
 }
 
@@ -765,8 +773,17 @@
                 }
             }
             &[data-reco="after"] {
+                small{
+                    margin-bottom: 1%;
+                    font-size: 1.4rem;
+                }
                 p {
                     margin-top: 2%;
+                }
+            }
+            &[data-reco="guarantee"]{
+                small{
+                    font-size: 1.1rem;
                 }
             }
         }
@@ -818,6 +835,9 @@
             h3{
                 font-size: min(3.5vw, 2.8rem);
             }
+            small{
+                    font-size: min(2.5vw, 1.1rem);
+                }
 
             &[data-reco="worry"] {
                 p {
@@ -843,6 +863,11 @@
             &[data-reco="knowledge"] {
                 p {
                     font-size: min(3vw, 1.5rem);
+                }
+            }
+            &[data-reco="after"]{
+                small{
+                    margin-bottom: 1%;
                 }
             }
         }

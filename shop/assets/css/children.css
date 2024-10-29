@@ -292,6 +292,9 @@
 .shop-one__table td[data-shop=businessHours]:has(p:nth-child(4)) p {
   width: 100%;
 }
+.shop-one__table td[data-shop=businessHours]:has(p:nth-child(4)) p:nth-of-type(3) {
+  margin-top: 8px;
+}
 .shop-one__table td[data-shop=businessHours] p {
   margin-left: 4px;
 }
@@ -804,6 +807,9 @@
   }
   .shop-one__message h2 {
     font-size: 3rem;
+  }
+  .shop-one__message h2:has(br) {
+    line-height: 140%;
   }
   .shop-one__message p {
     font-size: 1.6rem;
