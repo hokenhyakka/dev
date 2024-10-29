@@ -1172,6 +1172,7 @@ footer > span {
   line-height: 100%;
   color: var(--pink--primary);
   letter-spacing: 0.07em;
+  letter-spacing: 0.1em;
 }
 .about__features li p:not(.name) {
   text-align: left;

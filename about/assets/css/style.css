@@ -3,6 +3,7 @@
 }
 .about__main h2 {
   letter-spacing: 0.08em;
+  letter-spacing: 0.14em;
   line-height: 160%;
 }
 .about__main h2 span {
@@ -49,8 +50,9 @@
     font-size: clamp(1.5rem, 4.44vw, 2.6rem);
     margin-top: clamp(16px, 4.44vw, 34px);
   }
-  .about__main p {
+  .about__main .row-wide > p {
     margin-top: clamp(18px, 3.56vw, 24px);
+    letter-spacing: 0.06em;
   }
 }
 .about__features {
@@ -242,6 +244,7 @@
 .about__flow .name {
   color: var(--pink--primary);
   font-weight: 700;
+  letter-spacing: 0.07em;
 }
 
 @media screen and (min-width: 769px) {

@@ -5,6 +5,7 @@
 
     h2 {
         letter-spacing: 0.08em;
+        letter-spacing: 0.14em;
         line-height: 160%;
 
         span {
@@ -63,9 +64,13 @@
             margin-top: clamp(16px, 4.44vw, 34px);
         }
 
-        p {
+        .row-wide{
+            > p {
             margin-top: clamp(18px, 3.56vw, 24px);
+            letter-spacing: 0.06em;
         }
+        }
+        
     }
 }
 
@@ -320,6 +325,7 @@
     .name {
         color: var(--pink--primary);
         font-weight: 700;
+        letter-spacing: 0.07em;
     }
 }
 
@@ -371,6 +377,7 @@
         .row-nar {
             > p {
                 margin-top: clamp(12px, 3.56vw, 20px);
+                
             }
         }
 
