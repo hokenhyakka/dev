@@ -91,12 +91,7 @@
 }
 
 @media screen and (min-width: 769px) {
-    .pc {
-        display: block;
-    }
-    .sp {
-        display: none;
-    }
+
     .guarantee-one__list {
         margin-top: 96px;
 
@@ -142,12 +137,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .pc {
-        display: none;
-    }
-    .sp {
-        display: block;
-    }
+
     .guarantee-one {
         .row {
             > .att {
