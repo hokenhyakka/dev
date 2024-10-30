@@ -1957,7 +1957,7 @@ text-align: center;
 @media screen and (max-width: 450px) {
     body:has(.cmn__search-shop--stick) {
         footer {
-            padding-bottom: calc(clamp(40px, 15.56vw, 70px) + clamp(44px, 14.5vw, 72px) + 10px + 24px);
+            padding-bottom: calc(clamp(40px, 13vw, 70px) + clamp(44px, 14.5vw, 72px) + 10px + 24px);
         }
         #backToTop {
             bottom: clamp(68px, 19.56vw, 88px);
