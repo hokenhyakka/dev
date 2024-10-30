@@ -62,6 +62,7 @@
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 0 24px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 24px rgb(240, 226, 231);
   }
 }
 @media screen and (max-width: 768px) {
