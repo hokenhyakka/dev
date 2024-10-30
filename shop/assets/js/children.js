@@ -91,9 +91,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+
+const initialParent = document.querySelector(".shop-one__access-inner")?.parentElement;
+
 function moveAccessDetails() {
+    const tdElement = document.querySelector('td[data-shop="access"]');
+    const accessInner = document.querySelector(".shop-one__access-inner");
+
     if (window.innerWidth <= 768) {
-        const tdElement = document.querySelector('td[data-shop="access"]');
         if (tdElement) {
             let accessDetails = tdElement.querySelector(".shop-one__access-details");
             if (!accessDetails) {
@@ -102,12 +107,21 @@ function moveAccessDetails() {
                 tdElement.insertBefore(accessDetails, tdElement.firstChild);
             }
 
-            const accessInner = document.querySelector(".shop-one__access-inner");
             if (accessInner) {
                 const elementsToMove = accessInner.querySelectorAll("iframe, img");
                 elementsToMove.forEach(element => accessDetails.appendChild(element));
-                accessInner.remove();
             }
+        }
+    } else {
+        const accessDetails = tdElement?.querySelector(".shop-one__access-details");
+        if (accessDetails && accessInner) {
+            const elementsToMove = accessDetails.querySelectorAll("iframe, img");
+            elementsToMove.forEach(element => accessInner.appendChild(element));
+            accessDetails.remove();
+        }
+
+        if (accessInner && initialParent && !initialParent.contains(accessInner)) {
+            initialParent.appendChild(accessInner);
         }
     }
 }
