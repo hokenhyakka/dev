@@ -1500,8 +1500,11 @@ footer > span {
   }
   .cmn__search-shop--stick a:first-of-type {
     border: 2px solid #0071db;
+    border: 2px solid #0d75d5;
     color: #0071db;
+    color: #0d75d5;
     background-color: #fafdff;
+    background-color: #f4f6f8;
     background-image: url(../img/common/icon/phone.svg);
     background-repeat: no-repeat;
     background-position: -4px -4px;
@@ -1512,6 +1515,7 @@ footer > span {
   }
   .cmn__search-shop--stick a:nth-of-type(2) {
     background-color: #0071db;
+    background-color: #146aba;
     color: #fff;
     border: 2px solid #fff;
     padding-top: 1%;
