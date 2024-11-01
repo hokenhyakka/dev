@@ -704,6 +704,12 @@
     }
 }
 
+.btn{
+    a[data-shop="appointment"]{
+        background-color: var(--pink--dark);
+    }
+}
+
 .shop-one__access-inner {
     margin-top: 48px;
 
