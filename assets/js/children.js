@@ -1,10 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const h1Content = document.querySelector("h1").textContent;
+    const h1Element = document.querySelector("h1");
     const currentDirectory = document.querySelector(".currentDirectory");
-    if (currentDirectory) {
-        currentDirectory.textContent = h1Content;
+
+    if (h1Element && h1Element.textContent.trim()) {
+        const h1Content = h1Element.textContent;
+        
+        if (currentDirectory) {
+            currentDirectory.textContent = h1Content;
+        }
     }
 });
+
 
 const tagTextMap = {
     station: "駅チカ",

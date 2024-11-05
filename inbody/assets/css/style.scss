@@ -16,6 +16,7 @@
         gap: 22px;
         .popular-area__img {
             width: min(100%, 217px);
+            z-index: -1;
         }
         ul {
             li {
@@ -41,6 +42,21 @@
     }
     .btn {
         margin-top: 16px;
+    }
+}
+
+@media screen and (min-width: 769px){
+    .popular-area__wrap{
+        li{
+            gap: 4px;
+        }
+    }
+}
+@media screen and (max-width: 450px){
+    .popular-area__wrap{
+        li{
+            gap: 2px;
+        }
     }
 }
 
@@ -172,6 +188,7 @@
                     width: 100%;
                     margin-left: 10%;
                     filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.04));
+                    filter: drop-shadow(0 0 12px #f5ecf0);
                 }
             }
             ul {
