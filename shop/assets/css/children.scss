@@ -344,18 +344,18 @@
                 background-color: #fff;
             }
         }
-        // &[data-shop="access"] {
-        //     a {
-        //         &:not(.file) {
-        //             &::after {
-        //                 content: "";
-        //                 display: inline-block;
-        //                 background-image: url(../../../assets/img/common/icon/ext.svg);
-        //                 background-size: cover;
-        //             }
-        //         }
-        //     }
-        // }
+        &[data-shop="access"] {
+            a {
+                &:not(.file) {
+                    &::after {
+                        content: "";
+                        display: inline-block;
+                        background-image: url(../../../assets/img/common/icon/ext.svg);
+                        background-size: cover;
+                    }
+                }
+            }
+        }
         &[data-shop="businessHours"] {
             display: flex;
             flex-wrap: wrap;
