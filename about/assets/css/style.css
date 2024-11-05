@@ -138,10 +138,13 @@
   }
   .about__commitment hgroup h2 em {
     font-size: 4.2rem;
+    margin-left: 2px;
   }
   .about__commitment hgroup h2 span {
     font-size: 2.5rem;
     margin-bottom: -5px;
+    margin-right: 1px;
+    letter-spacing: 0.06em;
   }
   .about__commitment > .row > p {
     text-align: center;

@@ -1,4 +1,4 @@
-.header__shop{
+.header__shop {
     display: none;
 }
 
@@ -83,7 +83,7 @@
     .shop-one__appointment {
         padding-top: clamp(20px, 5.33vw, 32px);
         padding-bottom: clamp(22px, 5.33vw, 40px);
-        display :none;
+        display: none;
 
         h2 {
             font-size: clamp(1.8rem, 4.89vw, 2.8rem);
@@ -159,8 +159,8 @@
     }
 }
 
-@media screen and (max-width: 450px){
-    .shop-one__main{
+@media screen and (max-width: 450px) {
+    .shop-one__main {
         margin-top: 0;
     }
 }
@@ -366,7 +366,7 @@
                 p {
                     width: 100%;
 
-                    &:nth-of-type(3){
+                    &:nth-of-type(3) {
                         margin-top: 8px;
                     }
                 }
@@ -640,19 +640,19 @@
             line-height: 180%;
         }
     }
-    .shop-one__access-details{
+    .shop-one__access-details {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: clamp(12px, 4vw, 16px);
-        margin-bottom:clamp(12px, 4vw, 16px) ;
+        margin-bottom: clamp(12px, 4vw, 16px);
 
-        iframe{
+        iframe {
             width: 100%;
             aspect-ratio: 3/2;
         }
 
-        img{
+        img {
             width: min(480px, 100%);
         }
     }
@@ -704,8 +704,8 @@
     }
 }
 
-.btn{
-    a[data-shop="appointment"]{
+.btn {
+    a[data-shop="appointment"] {
         background-color: var(--pink--dark);
     }
 }
@@ -904,8 +904,8 @@
             gap: 32px;
             margin-top: 32px;
 
-            p{
-                & + p{
+            p {
+                & + p {
                     margin-top: 6px;
                 }
             }
@@ -951,7 +951,7 @@
                     margin-top: clamp(12px, 3.5vw, 16px);
                 }
 
-                & + p{
+                & + p {
                     margin-top: 4px;
                 }
             }
@@ -1050,14 +1050,14 @@
         h2 {
             font-size: 3rem;
 
-            &:has(br){
+            &:has(br) {
                 line-height: 140%;
             }
         }
 
         p {
             font-size: 1.6rem;
-            margin-top: 24px;
+            margin-top: 32px;
 
             & + p {
                 margin-top: 10px;
@@ -1302,8 +1302,12 @@
 }
 
 @media screen and (min-width: 769px) {
+    .shop-one__other-shop {
+        & + .shop-one__pref-list {
+            margin-top: 48px;
+        }
+    }
     .shop-one__pref-list {
-        margin-top: 48px;
         ul {
             grid-template-columns: repeat(7, 1fr);
             gap: 12px 8px;
@@ -1312,8 +1316,12 @@
 }
 
 @media screen and (max-width: 768px) {
+    .shop-one__other-shop {
+        & + .shop-one__pref-list {
+            margin-top: clamp(26px, 8.89vw, 42px);
+        }
+    }
     .shop-one__pref-list {
-        margin-top: clamp(26px, 8.89vw, 42px);
         ul {
             gap: 10px 8px;
         }
