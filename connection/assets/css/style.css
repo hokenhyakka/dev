@@ -79,6 +79,7 @@
   }
   .ins-type__one .note p {
     font-size: var(--fs-sp--min12px);
+    font-size: var(--fs-sp--min11px);
     margin-top: 10px;
   }
 }
