@@ -1361,8 +1361,9 @@
     .cmn__search-shop--stick {
         top: unset;
         bottom: 16px;
-        left: 0;
-        width: 100%;
+        width: min(560px, 100%);
+        left: 50%;
+        transform: translateX(-50%);
 
         a {
             background-color: var(--pink--primary);
